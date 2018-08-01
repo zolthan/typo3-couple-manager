@@ -1,0 +1,19 @@
+{
+    "name": "schwarzweissreutlingen/couple-manager",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Sebastian Wilhelm",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SchwarzWeissReutlingen\\CoupleManager\\": "Classes"
+        }
+    }
+}

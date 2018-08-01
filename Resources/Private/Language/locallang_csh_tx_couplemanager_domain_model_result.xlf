@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-01T18:12:27Z" product-name="couple_manager">
+		<header/>
+		<body>
+			<trans-unit id="position.description">
+				<source>position</source>
+			</trans-unit>
+			<trans-unit id="participants.description">
+				<source>participants</source>
+			</trans-unit>
+			<trans-unit id="couple.description">
+				<source>couple</source>
+			</trans-unit>
+			<trans-unit id="tournament.description">
+				<source>tournament</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
