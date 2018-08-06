@@ -8,8 +8,12 @@ CREATE TABLE tx_couplemanager_domain_model_couple (
 
 	result int(11) unsigned DEFAULT '0' NOT NULL,
 
-	name_man varchar(255) DEFAULT '' NOT NULL,
-	name_woman varchar(255) DEFAULT '' NOT NULL,
+	man_last_name varchar(255) DEFAULT '' NOT NULL,
+	man_first_name varchar(255) DEFAULT '' NOT NULL,
+	woman_last_name varchar(255) DEFAULT '' NOT NULL,
+	woman_first_name varchar(255) DEFAULT '' NOT NULL,
+	starting_class varchar(255) DEFAULT '' NOT NULL,
+	starting_group varchar(255) DEFAULT '' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

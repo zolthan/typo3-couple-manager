@@ -3,8 +3,8 @@
         {
             "config": {
                 "position": [
-                    654,
-                    219
+                    36,
+                    381
                 ]
             },
             "name": "New Model Object",
@@ -39,9 +39,9 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "nameMan",
+                            "propertyName": "manLastName",
                             "propertyType": "String",
-                            "uid": "378389246450"
+                            "uid": "613716760634"
                         },
                         {
                             "allowedFileTypes": "",
@@ -49,9 +49,49 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "nameWoman",
+                            "propertyName": "manFirstName",
                             "propertyType": "String",
-                            "uid": "1418290502930"
+                            "uid": "985383583245"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "womanLastName",
+                            "propertyType": "String",
+                            "uid": "1132316010894"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "womanFirstName",
+                            "propertyType": "String",
+                            "uid": "74875323597"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "startingClass",
+                            "propertyType": "String",
+                            "uid": "793919204501"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "startingGroup",
+                            "propertyType": "String",
+                            "uid": "163341351835"
                         }
                     ]
                 },
@@ -63,8 +103,8 @@
         {
             "config": {
                 "position": [
-                    408,
-                    12
+                    505,
+                    395
                 ]
             },
             "name": "New Model Object",
@@ -123,8 +163,8 @@
         {
             "config": {
                 "position": [
-                    374,
-                    433
+                    604,
+                    22
                 ]
             },
             "name": "New Model Object",
@@ -221,8 +261,8 @@
         },
         "extensionKey": "couple_manager",
         "name": "Couple Manager",
-        "originalExtensionKey": "",
-        "originalVendorName": "",
+        "originalExtensionKey": "couple_manager",
+        "originalVendorName": "SchwarzWeissReutlingen",
         "persons": [
             {
                 "company": "Schwarz-Wei\u00df Reutlingen e.V.",
@@ -271,7 +311,7 @@
         }
     ],
     "log": {
-        "last_modified": "2018-08-01 06:12",
+        "last_modified": "2018-08-06 01:24",
         "extension_builder_version": "8.7.0",
         "be_user": " (1)"
     }

@@ -18,58 +18,170 @@ namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
-     * nameMan
+     * manLastName
      *
      * @var string
      */
-    protected $nameMan = '';
+    protected $manLastName = '';
 
     /**
-     * nameWoman
+     * manFirstName
      *
      * @var string
      */
-    protected $nameWoman = '';
+    protected $manFirstName = '';
 
     /**
-     * Returns the nameMan
+     * womanLastName
      *
-     * @return string $nameMan
+     * @var string
      */
-    public function getNameMan()
+    protected $womanLastName = '';
+
+    /**
+     * womanFirstName
+     *
+     * @var string
+     */
+    protected $womanFirstName = '';
+
+    /**
+     * startingClass
+     *
+     * @var string
+     */
+    protected $startingClass = '';
+
+    /**
+     * startingGroup
+     *
+     * @var string
+     */
+    protected $startingGroup = '';
+
+    /**
+     * Returns the manLastName
+     *
+     * @return string $manLastName
+     */
+    public function getManLastName()
     {
-        return $this->nameMan;
+        return $this->manLastName;
     }
 
     /**
-     * Sets the nameMan
+     * Sets the manLastName
      *
-     * @param string $nameMan
+     * @param string $manLastName
      * @return void
      */
-    public function setNameMan($nameMan)
+    public function setManLastName($manLastName)
     {
-        $this->nameMan = $nameMan;
+        $this->manLastName = $manLastName;
     }
 
     /**
-     * Returns the nameWoman
+     * Returns the manFirstName
      *
-     * @return string $nameWoman
+     * @return string $manFirstName
      */
-    public function getNameWoman()
+    public function getManFirstName()
     {
-        return $this->nameWoman;
+        return $this->manFirstName;
     }
 
     /**
-     * Sets the nameWoman
+     * Sets the manFirstName
      *
-     * @param string $nameWoman
+     * @param string $manFirstName
      * @return void
      */
-    public function setNameWoman($nameWoman)
+    public function setManFirstName($manFirstName)
     {
-        $this->nameWoman = $nameWoman;
+        $this->manFirstName = $manFirstName;
+    }
+
+    /**
+     * Returns the womanLastName
+     *
+     * @return string $womanLastName
+     */
+    public function getWomanLastName()
+    {
+        return $this->womanLastName;
+    }
+
+    /**
+     * Sets the womanLastName
+     *
+     * @param string $womanLastName
+     * @return void
+     */
+    public function setWomanLastName($womanLastName)
+    {
+        $this->womanLastName = $womanLastName;
+    }
+
+    /**
+     * Returns the womanFirstName
+     *
+     * @return string $womanFirstName
+     */
+    public function getWomanFirstName()
+    {
+        return $this->womanFirstName;
+    }
+
+    /**
+     * Sets the womanFirstName
+     *
+     * @param string $womanFirstName
+     * @return void
+     */
+    public function setWomanFirstName($womanFirstName)
+    {
+        $this->womanFirstName = $womanFirstName;
+    }
+
+    /**
+     * Returns the startingClass
+     *
+     * @return string $startingClass
+     */
+    public function getStartingClass()
+    {
+        return $this->startingClass;
+    }
+
+    /**
+     * Sets the startingClass
+     *
+     * @param string $startingClass
+     * @return void
+     */
+    public function setStartingClass($startingClass)
+    {
+        $this->startingClass = $startingClass;
+    }
+
+    /**
+     * Returns the startingGroup
+     *
+     * @return string $startingGroup
+     */
+    public function getStartingGroup()
+    {
+        return $this->startingGroup;
+    }
+
+    /**
+     * Sets the startingGroup
+     *
+     * @param string $startingGroup
+     * @return void
+     */
+    public function setStartingGroup($startingGroup)
+    {
+        $this->startingGroup = $startingGroup;
     }
 }

@@ -19,16 +19,24 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <table  class="tx_couplemanager" >
 	<tr>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.name_man" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.name_woman" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_couple.man_last_name" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_couple.man_first_name" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_couple.woman_last_name" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_couple.woman_first_name" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_couple.starting_class" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_couple.starting_group" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
 
 	<f:for each="{couples}" as="couple">
 		<tr>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.nameMan}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.nameWoman}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.manLastName}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.manFirstName}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.womanLastName}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.womanFirstName}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.startingClass}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.startingGroup}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{couple : couple}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{couple : couple}">Delete</f:link.action></td>
 		</tr>
