@@ -55,13 +55,13 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $couple = null;
 
     /**
-     * tournament
+     * competition
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition>
      * @cascade remove
      * @lazy
      */
-    protected $tournament = null;
+    protected $competition = null;
 
     /**
      * __construct
@@ -83,7 +83,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected function initStorageObjects()
     {
         $this->couple = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->tournament = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->competition = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
@@ -216,43 +216,43 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Competition
      *
-     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $tournament
+     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $competition
      * @return void
      */
-    public function addTournament(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $tournament)
+    public function addCompetition(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $competition)
     {
-        $this->tournament->attach($tournament);
+        $this->competition->attach($competition);
     }
 
     /**
      * Removes a Competition
      *
-     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $tournamentToRemove The Competition to be removed
+     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $competitionToRemove The Competition to be removed
      * @return void
      */
-    public function removeTournament(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $tournamentToRemove)
+    public function removeCompetition(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $competitionToRemove)
     {
-        $this->tournament->detach($tournamentToRemove);
+        $this->competition->detach($competitionToRemove);
     }
 
     /**
-     * Returns the tournament
+     * Returns the competition
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition> $tournament
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition> $competition
      */
-    public function getTournament()
+    public function getCompetition()
     {
-        return $this->tournament;
+        return $this->competition;
     }
 
     /**
-     * Sets the tournament
+     * Sets the competition
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition> $tournament
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition> $competition
      * @return void
      */
-    public function setTournament(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $tournament)
+    public function setCompetition(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $competition)
     {
-        $this->tournament = $tournament;
+        $this->competition = $competition;
     }
 }

@@ -117,7 +117,7 @@
                     "_default4_delete": false,
                     "customActions": []
                 },
-                "name": "Competition",
+                "name": "Tournament",
                 "objectsettings": {
                     "addDeletedField": true,
                     "addHiddenField": true,
@@ -149,29 +149,9 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "dateStart",
+                            "propertyName": "date",
                             "propertyType": "NativeDate",
                             "uid": "392416502010"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "dateEnd",
-                            "propertyType": "NativeDate",
-                            "uid": "768186703577"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "type",
-                            "propertyType": "Select",
-                            "uid": "103698851328"
                         }
                     ]
                 },
@@ -232,26 +212,6 @@
                             "propertyName": "participants",
                             "propertyType": "Integer",
                             "uid": "1529900396124"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "startingClass",
-                            "propertyType": "Select",
-                            "uid": "808266965166"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "startingGroup",
-                            "propertyType": "Select",
-                            "uid": "404806873111"
                         }
                     ]
                 },
@@ -351,7 +311,7 @@
         }
     ],
     "log": {
-        "last_modified": "2018-08-07 12:46",
+        "last_modified": "2018-08-06 01:24",
         "extension_builder_version": "8.7.0",
         "be_user": " (1)"
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T12:46:41Z" product-name="couple_manager">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-06T13:24:19Z" product-name="couple_manager">
 		<header/>
 		<body>
 			<trans-unit id="position.description">
@@ -8,12 +8,6 @@
 			</trans-unit>
 			<trans-unit id="participants.description">
 				<source>participants</source>
-			</trans-unit>
-			<trans-unit id="starting_class.description">
-				<source>startingClass</source>
-			</trans-unit>
-			<trans-unit id="starting_group.description">
-				<source>startingGroup</source>
 			</trans-unit>
 			<trans-unit id="couple.description">
 				<source>couple</source>

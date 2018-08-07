@@ -190,28 +190,28 @@ class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getTournamentReturnsInitialValueForCompetition()
+    public function getCompetitionReturnsInitialValueForCompetition()
     {
         $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         self::assertEquals(
             $newObjectStorage,
-            $this->subject->getTournament()
+            $this->subject->getCompetition()
         );
     }
 
     /**
      * @test
      */
-    public function setTournamentForObjectStorageContainingCompetitionSetsTournament()
+    public function setCompetitionForObjectStorageContainingCompetitionSetsCompetition()
     {
-        $tournament = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
-        $objectStorageHoldingExactlyOneTournament = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $objectStorageHoldingExactlyOneTournament->attach($tournament);
-        $this->subject->setTournament($objectStorageHoldingExactlyOneTournament);
+        $competition = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
+        $objectStorageHoldingExactlyOneCompetition = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneCompetition->attach($competition);
+        $this->subject->setCompetition($objectStorageHoldingExactlyOneCompetition);
 
         self::assertAttributeEquals(
-            $objectStorageHoldingExactlyOneTournament,
-            'tournament',
+            $objectStorageHoldingExactlyOneCompetition,
+            'competition',
             $this->subject
         );
     }
@@ -219,34 +219,34 @@ class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function addTournamentToObjectStorageHoldingTournament()
+    public function addCompetitionToObjectStorageHoldingCompetition()
     {
-        $tournament = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
-        $tournamentObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $competition = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
+        $competitionObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
             ->getMock();
 
-        $tournamentObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($tournament));
-        $this->inject($this->subject, 'tournament', $tournamentObjectStorageMock);
+        $competitionObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($competition));
+        $this->inject($this->subject, 'competition', $competitionObjectStorageMock);
 
-        $this->subject->addTournament($tournament);
+        $this->subject->addCompetition($competition);
     }
 
     /**
      * @test
      */
-    public function removeTournamentFromObjectStorageHoldingTournament()
+    public function removeCompetitionFromObjectStorageHoldingCompetition()
     {
-        $tournament = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
-        $tournamentObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $competition = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
+        $competitionObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
             ->getMock();
 
-        $tournamentObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($tournament));
-        $this->inject($this->subject, 'tournament', $tournamentObjectStorageMock);
+        $competitionObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($competition));
+        $this->inject($this->subject, 'competition', $competitionObjectStorageMock);
 
-        $this->subject->removeTournament($tournament);
+        $this->subject->removeCompetition($competition);
     }
 }

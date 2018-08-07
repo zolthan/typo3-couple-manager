@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T12:46:41Z" product-name="couple_manager">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-06T13:24:19Z" product-name="couple_manager">
 		<header/>
 		<body>
 			<trans-unit id="tx_couplemanager_domain_model_couple">
@@ -24,20 +24,14 @@
 			<trans-unit id="tx_couplemanager_domain_model_couple.starting_group">
 				<source>Starting Group</source>
 			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition">
-				<source>Competition</source>
+			<trans-unit id="tx_couplemanager_domain_model_tournament">
+				<source>Tournament</source>
 			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.name">
+			<trans-unit id="tx_couplemanager_domain_model_tournament.name">
 				<source>Name</source>
 			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.date_start">
-				<source>Date Start</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.date_end">
-				<source>Date End</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.type">
-				<source>Type</source>
+			<trans-unit id="tx_couplemanager_domain_model_tournament.date">
+				<source>Date</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_result">
 				<source>Result</source>
@@ -47,12 +41,6 @@
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_result.participants">
 				<source>Participants</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.starting_class">
-				<source>Starting Class</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.starting_group">
-				<source>Starting Group</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_result.couple">
 				<source>Couple</source>
