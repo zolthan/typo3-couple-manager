@@ -77,6 +77,56 @@ class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
+    public function getStartingClassReturnsInitialValueForInt()
+    {
+        self::assertSame(
+            0,
+            $this->subject->getStartingClass()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setStartingClassForIntSetsStartingClass()
+    {
+        $this->subject->setStartingClass(12);
+
+        self::assertAttributeEquals(
+            12,
+            'startingClass',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getStartingGroupReturnsInitialValueForInt()
+    {
+        self::assertSame(
+            0,
+            $this->subject->getStartingGroup()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setStartingGroupForIntSetsStartingGroup()
+    {
+        $this->subject->setStartingGroup(12);
+
+        self::assertAttributeEquals(
+            12,
+            'startingGroup',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
     public function getCoupleReturnsInitialValueForCouple()
     {
         $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
@@ -140,7 +190,7 @@ class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getTournamentReturnsInitialValueForTournament()
+    public function getTournamentReturnsInitialValueForCompetition()
     {
         $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         self::assertEquals(
@@ -152,9 +202,9 @@ class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function setTournamentForObjectStorageContainingTournamentSetsTournament()
+    public function setTournamentForObjectStorageContainingCompetitionSetsTournament()
     {
-        $tournament = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Tournament();
+        $tournament = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
         $objectStorageHoldingExactlyOneTournament = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $objectStorageHoldingExactlyOneTournament->attach($tournament);
         $this->subject->setTournament($objectStorageHoldingExactlyOneTournament);
@@ -171,7 +221,7 @@ class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addTournamentToObjectStorageHoldingTournament()
     {
-        $tournament = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Tournament();
+        $tournament = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
         $tournamentObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
@@ -188,7 +238,7 @@ class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeTournamentFromObjectStorageHoldingTournament()
     {
-        $tournament = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Tournament();
+        $tournament = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
         $tournamentObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()

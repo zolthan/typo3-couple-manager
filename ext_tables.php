@@ -20,8 +20,8 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_couple', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_couple.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_couple');
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_tournament', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_tournament.xlf');
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_tournament');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_competition', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_competition.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_competition');
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_result', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_result.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_result');

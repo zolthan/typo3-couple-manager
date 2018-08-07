@@ -21,6 +21,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	<tr>
 		<th><f:translate key="tx_couplemanager_domain_model_result.position" /></th>
 		<th><f:translate key="tx_couplemanager_domain_model_result.participants" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_result.starting_class" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_result.starting_group" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
@@ -29,6 +31,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		<tr>
 			<td><f:link.action action="show" arguments="{result : result}"> {result.position}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{result : result}"> {result.participants}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{result : result}"> {result.startingClass}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{result : result}"> {result.startingGroup}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{result : result}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{result : result}">Delete</f:link.action></td>
 		</tr>

@@ -14,7 +14,7 @@ call_user_func(
             // non-cacheable actions
             [
                 'Couple' => '',
-                'Tournament' => '',
+                'Competition' => '',
                 'Result' => ''
             ]
         );

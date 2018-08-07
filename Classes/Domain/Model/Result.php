@@ -32,6 +32,20 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $participants = 0;
 
     /**
+     * startingClass
+     *
+     * @var int
+     */
+    protected $startingClass = 0;
+
+    /**
+     * startingGroup
+     *
+     * @var int
+     */
+    protected $startingGroup = 0;
+
+    /**
      * couple
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple>
@@ -43,7 +57,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * tournament
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Tournament>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition>
      * @cascade remove
      * @lazy
      */
@@ -115,6 +129,48 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * Returns the startingClass
+     *
+     * @return int $startingClass
+     */
+    public function getStartingClass()
+    {
+        return $this->startingClass;
+    }
+
+    /**
+     * Sets the startingClass
+     *
+     * @param int $startingClass
+     * @return void
+     */
+    public function setStartingClass($startingClass)
+    {
+        $this->startingClass = $startingClass;
+    }
+
+    /**
+     * Returns the startingGroup
+     *
+     * @return int $startingGroup
+     */
+    public function getStartingGroup()
+    {
+        return $this->startingGroup;
+    }
+
+    /**
+     * Sets the startingGroup
+     *
+     * @param int $startingGroup
+     * @return void
+     */
+    public function setStartingGroup($startingGroup)
+    {
+        $this->startingGroup = $startingGroup;
+    }
+
+    /**
      * Adds a Couple
      *
      * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple
@@ -158,23 +214,23 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Adds a Tournament
+     * Adds a Competition
      *
-     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Tournament $tournament
+     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $tournament
      * @return void
      */
-    public function addTournament(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Tournament $tournament)
+    public function addTournament(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $tournament)
     {
         $this->tournament->attach($tournament);
     }
 
     /**
-     * Removes a Tournament
+     * Removes a Competition
      *
-     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Tournament $tournamentToRemove The Tournament to be removed
+     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $tournamentToRemove The Competition to be removed
      * @return void
      */
-    public function removeTournament(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Tournament $tournamentToRemove)
+    public function removeTournament(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $tournamentToRemove)
     {
         $this->tournament->detach($tournamentToRemove);
     }
@@ -182,7 +238,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the tournament
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Tournament> $tournament
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition> $tournament
      */
     public function getTournament()
     {
@@ -192,7 +248,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the tournament
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Tournament> $tournament
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition> $tournament
      * @return void
      */
     public function setTournament(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $tournament)

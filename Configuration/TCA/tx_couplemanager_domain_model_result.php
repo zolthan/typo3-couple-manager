@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'position,participants,couple,tournament',
+        'searchFields' => 'position,participants,starting_class,starting_group,couple,tournament',
         'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_result.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, position, participants, couple, tournament',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, position, participants, starting_class, starting_group, couple, tournament',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, position, participants, couple, tournament, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, position, participants, starting_class, starting_group, couple, tournament, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -126,15 +126,42 @@ return [
                 'eval' => 'int'
             ]
         ],
+        'starting_class' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.starting_class',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['-- Label --', 0],
+                ],
+                'size' => 1,
+                'maxitems' => 1,
+                'eval' => ''
+            ],
+        ],
+        'starting_group' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.starting_group',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['-- Label --', 0],
+                ],
+                'size' => 1,
+                'maxitems' => 1,
+                'eval' => ''
+            ],
+        ],
         'couple' => [
             'exclude' => false,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.couple',
             'config' => [
-                'type' => 'select',
+                'type' => 'inline',
                 'foreign_table' => 'tx_couplemanager_domain_model_couple',
                 'foreign_field' => 'result',
-                'minitems' => 1,
-                'maxitems' => 1,
+                'maxitems' => 9999,
                 'appearance' => [
                     'collapseAll' => 0,
                     'levelLinksPosition' => 'top',
@@ -149,11 +176,10 @@ return [
             'exclude' => false,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.tournament',
             'config' => [
-                'type' => 'select',
-                'foreign_table' => 'tx_couplemanager_domain_model_tournament',
+                'type' => 'inline',
+                'foreign_table' => 'tx_couplemanager_domain_model_competition',
                 'foreign_field' => 'result',
-                'minitems' => 1,
-                'maxitems' => 1,
+                'maxitems' => 9999,
                 'appearance' => [
                     'collapseAll' => 0,
                     'levelLinksPosition' => 'top',

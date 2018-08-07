@@ -46,9 +46,9 @@ CREATE TABLE tx_couplemanager_domain_model_couple (
 );
 
 #
-# Table structure for table 'tx_couplemanager_domain_model_tournament'
+# Table structure for table 'tx_couplemanager_domain_model_competition'
 #
-CREATE TABLE tx_couplemanager_domain_model_tournament (
+CREATE TABLE tx_couplemanager_domain_model_competition (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -56,7 +56,9 @@ CREATE TABLE tx_couplemanager_domain_model_tournament (
 	result int(11) unsigned DEFAULT '0' NOT NULL,
 
 	name varchar(255) DEFAULT '' NOT NULL,
-	date date DEFAULT '0000-00-00',
+	date_start date DEFAULT '0000-00-00',
+	date_end date DEFAULT '0000-00-00',
+	type int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -98,6 +100,8 @@ CREATE TABLE tx_couplemanager_domain_model_result (
 
 	position int(11) DEFAULT '0' NOT NULL,
 	participants int(11) DEFAULT '0' NOT NULL,
+	starting_class int(11) DEFAULT '0' NOT NULL,
+	starting_group int(11) DEFAULT '0' NOT NULL,
 	couple int(11) unsigned DEFAULT '0' NOT NULL,
 	tournament int(11) unsigned DEFAULT '0' NOT NULL,
 
@@ -141,9 +145,9 @@ CREATE TABLE tx_couplemanager_domain_model_couple (
 );
 
 #
-# Table structure for table 'tx_couplemanager_domain_model_tournament'
+# Table structure for table 'tx_couplemanager_domain_model_competition'
 #
-CREATE TABLE tx_couplemanager_domain_model_tournament (
+CREATE TABLE tx_couplemanager_domain_model_competition (
 
 	result int(11) unsigned DEFAULT '0' NOT NULL,
 
