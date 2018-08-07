@@ -144,13 +144,15 @@ return [
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.country',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectSingle',
                 'items' => [
-                    ['-- Label --', 0],
+                    ['', 0],
                 ],
+                'foreign_table' => 'static_countries',
+                'foreign_table_where' => 'ORDER BY static_countries.cn_short_en',
+                'itemsProcFunc' => 'SJBR\\StaticInfoTables\\Hook\\Backend\\Form\\FormDataProvider\\TcaSelectItemsProcessor->translateCountriesSelector',
                 'size' => 1,
-                'maxitems' => 1,
-                'eval' => ''
+                'minitems' => 0,
+                'maxitems' => 1
             ],
         ],
         'city' => [
@@ -190,7 +192,7 @@ return [
                 'eval' => 'trim'
             ],
         ],
-    
+
         'result' => [
             'config' => [
                 'type' => 'passthrough',
