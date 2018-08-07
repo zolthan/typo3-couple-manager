@@ -27,24 +27,25 @@ class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getPositionReturnsInitialValueForInt()
+    public function getDateReturnsInitialValueForDateTime()
     {
-        self::assertSame(
-            0,
-            $this->subject->getPosition()
+        self::assertEquals(
+            null,
+            $this->subject->getDate()
         );
     }
 
     /**
      * @test
      */
-    public function setPositionForIntSetsPosition()
+    public function setDateForDateTimeSetsDate()
     {
-        $this->subject->setPosition(12);
+        $dateTimeFixture = new \DateTime();
+        $this->subject->setDate($dateTimeFixture);
 
         self::assertAttributeEquals(
-            12,
-            'position',
+            $dateTimeFixture,
+            'date',
             $this->subject
         );
     }
@@ -52,24 +53,49 @@ class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getParticipantsReturnsInitialValueForInt()
+    public function getDisciplineReturnsInitialValueForInt()
     {
         self::assertSame(
             0,
-            $this->subject->getParticipants()
+            $this->subject->getDiscipline()
         );
     }
 
     /**
      * @test
      */
-    public function setParticipantsForIntSetsParticipants()
+    public function setDisciplineForIntSetsDiscipline()
     {
-        $this->subject->setParticipants(12);
+        $this->subject->setDiscipline(12);
 
         self::assertAttributeEquals(
             12,
-            'participants',
+            'discipline',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getStartingGroupReturnsInitialValueForInt()
+    {
+        self::assertSame(
+            0,
+            $this->subject->getStartingGroup()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setStartingGroupForIntSetsStartingGroup()
+    {
+        $this->subject->setStartingGroup(12);
+
+        self::assertAttributeEquals(
+            12,
+            'startingGroup',
             $this->subject
         );
     }
@@ -102,24 +128,74 @@ class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getStartingGroupReturnsInitialValueForInt()
+    public function getPositionReturnsInitialValueForInt()
     {
         self::assertSame(
             0,
-            $this->subject->getStartingGroup()
+            $this->subject->getPosition()
         );
     }
 
     /**
      * @test
      */
-    public function setStartingGroupForIntSetsStartingGroup()
+    public function setPositionForIntSetsPosition()
     {
-        $this->subject->setStartingGroup(12);
+        $this->subject->setPosition(12);
 
         self::assertAttributeEquals(
             12,
-            'startingGroup',
+            'position',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getParticipantCountReturnsInitialValueForInt()
+    {
+        self::assertSame(
+            0,
+            $this->subject->getParticipantCount()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setParticipantCountForIntSetsParticipantCount()
+    {
+        $this->subject->setParticipantCount(12);
+
+        self::assertAttributeEquals(
+            12,
+            'participantCount',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getPromotionReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getPromotion()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setPromotionForBoolSetsPromotion()
+    {
+        $this->subject->setPromotion(true);
+
+        self::assertAttributeEquals(
+            true,
+            'promotion',
             $this->subject
         );
     }
@@ -248,5 +324,68 @@ class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         $this->inject($this->subject, 'competition', $competitionObjectStorageMock);
 
         $this->subject->removeCompetition($competition);
+    }
+
+    /**
+     * @test
+     */
+    public function getCompetitionTypeReturnsInitialValueForCompetitionType()
+    {
+        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        self::assertEquals(
+            $newObjectStorage,
+            $this->subject->getCompetitionType()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setCompetitionTypeForObjectStorageContainingCompetitionTypeSetsCompetitionType()
+    {
+        $competitionType = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType();
+        $objectStorageHoldingExactlyOneCompetitionType = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneCompetitionType->attach($competitionType);
+        $this->subject->setCompetitionType($objectStorageHoldingExactlyOneCompetitionType);
+
+        self::assertAttributeEquals(
+            $objectStorageHoldingExactlyOneCompetitionType,
+            'competitionType',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function addCompetitionTypeToObjectStorageHoldingCompetitionType()
+    {
+        $competitionType = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType();
+        $competitionTypeObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['attach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $competitionTypeObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($competitionType));
+        $this->inject($this->subject, 'competitionType', $competitionTypeObjectStorageMock);
+
+        $this->subject->addCompetitionType($competitionType);
+    }
+
+    /**
+     * @test
+     */
+    public function removeCompetitionTypeFromObjectStorageHoldingCompetitionType()
+    {
+        $competitionType = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType();
+        $competitionTypeObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['detach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $competitionTypeObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($competitionType));
+        $this->inject($this->subject, 'competitionType', $competitionTypeObjectStorageMock);
+
+        $this->subject->removeCompetitionType($competitionType);
     }
 }

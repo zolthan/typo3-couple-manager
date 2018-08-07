@@ -23,8 +23,11 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		<th><f:translate key="tx_couplemanager_domain_model_couple.man_first_name" /></th>
 		<th><f:translate key="tx_couplemanager_domain_model_couple.woman_last_name" /></th>
 		<th><f:translate key="tx_couplemanager_domain_model_couple.woman_first_name" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.starting_class" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_couple.starting_class_latin" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_couple.starting_class_standard" /></th>
 		<th><f:translate key="tx_couplemanager_domain_model_couple.starting_group" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_couple.description" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_couple.image" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
@@ -35,8 +38,11 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.manFirstName}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.womanLastName}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.womanFirstName}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.startingClass}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.startingClassLatin}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.startingClassStandard}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.startingGroup}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.description}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.image.originalResource.name}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{couple : couple}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{couple : couple}">Delete</f:link.action></td>
 		</tr>

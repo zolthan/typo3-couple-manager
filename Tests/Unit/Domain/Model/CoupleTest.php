@@ -127,24 +127,24 @@ class CoupleTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getStartingClassReturnsInitialValueForString()
+    public function getStartingClassLatinReturnsInitialValueForInt()
     {
         self::assertSame(
-            '',
-            $this->subject->getStartingClass()
+            0,
+            $this->subject->getStartingClassLatin()
         );
     }
 
     /**
      * @test
      */
-    public function setStartingClassForStringSetsStartingClass()
+    public function setStartingClassLatinForIntSetsStartingClassLatin()
     {
-        $this->subject->setStartingClass('Conceived at T3CON10');
+        $this->subject->setStartingClassLatin(12);
 
         self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'startingClass',
+            12,
+            'startingClassLatin',
             $this->subject
         );
     }
@@ -152,10 +152,35 @@ class CoupleTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getStartingGroupReturnsInitialValueForString()
+    public function getStartingClassStandardReturnsInitialValueForInt()
     {
         self::assertSame(
-            '',
+            0,
+            $this->subject->getStartingClassStandard()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setStartingClassStandardForIntSetsStartingClassStandard()
+    {
+        $this->subject->setStartingClassStandard(12);
+
+        self::assertAttributeEquals(
+            12,
+            'startingClassStandard',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getStartingGroupReturnsInitialValueForInt()
+    {
+        self::assertSame(
+            0,
             $this->subject->getStartingGroup()
         );
     }
@@ -163,13 +188,64 @@ class CoupleTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function setStartingGroupForStringSetsStartingGroup()
+    public function setStartingGroupForIntSetsStartingGroup()
     {
-        $this->subject->setStartingGroup('Conceived at T3CON10');
+        $this->subject->setStartingGroup(12);
+
+        self::assertAttributeEquals(
+            12,
+            'startingGroup',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getDescriptionReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getDescription()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setDescriptionForStringSetsDescription()
+    {
+        $this->subject->setDescription('Conceived at T3CON10');
 
         self::assertAttributeEquals(
             'Conceived at T3CON10',
-            'startingGroup',
+            'description',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getImageReturnsInitialValueForFileReference()
+    {
+        self::assertEquals(
+            null,
+            $this->subject->getImage()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setImageForFileReferenceSetsImage()
+    {
+        $fileReferenceFixture = new \TYPO3\CMS\Extbase\Domain\Model\FileReference();
+        $this->subject->setImage($fileReferenceFixture);
+
+        self::assertAttributeEquals(
+            $fileReferenceFixture,
+            'image',
             $this->subject
         );
     }

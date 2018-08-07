@@ -18,11 +18,11 @@ namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
-     * name
+     * title
      *
      * @var string
      */
-    protected $name = '';
+    protected $title = '';
 
     /**
      * dateStart
@@ -39,31 +39,59 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $dateEnd = null;
 
     /**
-     * type
+     * country
      *
      * @var int
      */
-    protected $type = 0;
+    protected $country = 0;
 
     /**
-     * Returns the name
+     * city
      *
-     * @return string $name
+     * @var string
      */
-    public function getName()
+    protected $city = '';
+
+    /**
+     * address
+     *
+     * @var string
+     */
+    protected $address = '';
+
+    /**
+     * organizer
+     *
+     * @var string
+     */
+    protected $organizer = '';
+
+    /**
+     * sizeDanceFloor
+     *
+     * @var string
+     */
+    protected $sizeDanceFloor = '';
+
+    /**
+     * Returns the title
+     *
+     * @return string $title
+     */
+    public function getTitle()
     {
-        return $this->name;
+        return $this->title;
     }
 
     /**
-     * Sets the name
+     * Sets the title
      *
-     * @param string $name
+     * @param string $title
      * @return void
      */
-    public function setName($name)
+    public function setTitle($title)
     {
-        $this->name = $name;
+        $this->title = $title;
     }
 
     /**
@@ -109,23 +137,107 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the type
+     * Returns the country
      *
-     * @return int $type
+     * @return int $country
      */
-    public function getType()
+    public function getCountry()
     {
-        return $this->type;
+        return $this->country;
     }
 
     /**
-     * Sets the type
+     * Sets the country
      *
-     * @param int $type
+     * @param int $country
      * @return void
      */
-    public function setType($type)
+    public function setCountry($country)
     {
-        $this->type = $type;
+        $this->country = $country;
+    }
+
+    /**
+     * Returns the city
+     *
+     * @return string $city
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Sets the city
+     *
+     * @param string $city
+     * @return void
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+    }
+
+    /**
+     * Returns the address
+     *
+     * @return string $address
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * Sets the address
+     *
+     * @param string $address
+     * @return void
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+    }
+
+    /**
+     * Returns the organizer
+     *
+     * @return string $organizer
+     */
+    public function getOrganizer()
+    {
+        return $this->organizer;
+    }
+
+    /**
+     * Sets the organizer
+     *
+     * @param string $organizer
+     * @return void
+     */
+    public function setOrganizer($organizer)
+    {
+        $this->organizer = $organizer;
+    }
+
+    /**
+     * Returns the sizeDanceFloor
+     *
+     * @return string $sizeDanceFloor
+     */
+    public function getSizeDanceFloor()
+    {
+        return $this->sizeDanceFloor;
+    }
+
+    /**
+     * Sets the sizeDanceFloor
+     *
+     * @param string $sizeDanceFloor
+     * @return void
+     */
+    public function setSizeDanceFloor($sizeDanceFloor)
+    {
+        $this->sizeDanceFloor = $sizeDanceFloor;
     }
 }

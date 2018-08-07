@@ -18,18 +18,25 @@ namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
-     * position
+     * date
      *
-     * @var int
+     * @var \DateTime
      */
-    protected $position = 0;
+    protected $date = null;
 
     /**
-     * participants
+     * discipline
      *
      * @var int
      */
-    protected $participants = 0;
+    protected $discipline = 0;
+
+    /**
+     * startingGroup
+     *
+     * @var int
+     */
+    protected $startingGroup = 0;
 
     /**
      * startingClass
@@ -39,11 +46,25 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $startingClass = 0;
 
     /**
-     * startingGroup
+     * position
      *
      * @var int
      */
-    protected $startingGroup = 0;
+    protected $position = 0;
+
+    /**
+     * participantCount
+     *
+     * @var int
+     */
+    protected $participantCount = 0;
+
+    /**
+     * promotion
+     *
+     * @var bool
+     */
+    protected $promotion = false;
 
     /**
      * couple
@@ -62,6 +83,15 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @lazy
      */
     protected $competition = null;
+
+    /**
+     * competitionType
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType>
+     * @cascade remove
+     * @lazy
+     */
+    protected $competitionType = null;
 
     /**
      * __construct
@@ -84,48 +114,70 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->couple = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->competition = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->competitionType = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
-     * Returns the position
+     * Returns the date
      *
-     * @return int $position
+     * @return \DateTime $date
      */
-    public function getPosition()
+    public function getDate()
     {
-        return $this->position;
+        return $this->date;
     }
 
     /**
-     * Sets the position
+     * Sets the date
      *
-     * @param int $position
+     * @param \DateTime $date
      * @return void
      */
-    public function setPosition($position)
+    public function setDate(\DateTime $date)
     {
-        $this->position = $position;
+        $this->date = $date;
     }
 
     /**
-     * Returns the participants
+     * Returns the discipline
      *
-     * @return int $participants
+     * @return int $discipline
      */
-    public function getParticipants()
+    public function getDiscipline()
     {
-        return $this->participants;
+        return $this->discipline;
     }
 
     /**
-     * Sets the participants
+     * Sets the discipline
      *
-     * @param int $participants
+     * @param int $discipline
      * @return void
      */
-    public function setParticipants($participants)
+    public function setDiscipline($discipline)
     {
-        $this->participants = $participants;
+        $this->discipline = $discipline;
+    }
+
+    /**
+     * Returns the startingGroup
+     *
+     * @return int $startingGroup
+     */
+    public function getStartingGroup()
+    {
+        return $this->startingGroup;
+    }
+
+    /**
+     * Sets the startingGroup
+     *
+     * @param int $startingGroup
+     * @return void
+     */
+    public function setStartingGroup($startingGroup)
+    {
+        $this->startingGroup = $startingGroup;
     }
 
     /**
@@ -150,24 +202,76 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the startingGroup
+     * Returns the position
      *
-     * @return int $startingGroup
+     * @return int $position
      */
-    public function getStartingGroup()
+    public function getPosition()
     {
-        return $this->startingGroup;
+        return $this->position;
     }
 
     /**
-     * Sets the startingGroup
+     * Sets the position
      *
-     * @param int $startingGroup
+     * @param int $position
      * @return void
      */
-    public function setStartingGroup($startingGroup)
+    public function setPosition($position)
     {
-        $this->startingGroup = $startingGroup;
+        $this->position = $position;
+    }
+
+    /**
+     * Returns the participantCount
+     *
+     * @return int $participantCount
+     */
+    public function getParticipantCount()
+    {
+        return $this->participantCount;
+    }
+
+    /**
+     * Sets the participantCount
+     *
+     * @param int $participantCount
+     * @return void
+     */
+    public function setParticipantCount($participantCount)
+    {
+        $this->participantCount = $participantCount;
+    }
+
+    /**
+     * Returns the promotion
+     *
+     * @return bool $promotion
+     */
+    public function getPromotion()
+    {
+        return $this->promotion;
+    }
+
+    /**
+     * Sets the promotion
+     *
+     * @param bool $promotion
+     * @return void
+     */
+    public function setPromotion($promotion)
+    {
+        $this->promotion = $promotion;
+    }
+
+    /**
+     * Returns the boolean state of promotion
+     *
+     * @return bool
+     */
+    public function isPromotion()
+    {
+        return $this->promotion;
     }
 
     /**
@@ -254,5 +358,48 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setCompetition(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $competition)
     {
         $this->competition = $competition;
+    }
+
+    /**
+     * Adds a CompetitionType
+     *
+     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType $competitionType
+     * @return void
+     */
+    public function addCompetitionType(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType $competitionType)
+    {
+        $this->competitionType->attach($competitionType);
+    }
+
+    /**
+     * Removes a CompetitionType
+     *
+     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType $competitionTypeToRemove The CompetitionType to be removed
+     * @return void
+     */
+    public function removeCompetitionType(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType $competitionTypeToRemove)
+    {
+        $this->competitionType->detach($competitionTypeToRemove);
+    }
+
+    /**
+     * Returns the competitionType
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType> $competitionType
+     */
+    public function getCompetitionType()
+    {
+        return $this->competitionType;
+    }
+
+    /**
+     * Sets the competitionType
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType> $competitionType
+     * @return void
+     */
+    public function setCompetitionType(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $competitionType)
+    {
+        $this->competitionType = $competitionType;
     }
 }

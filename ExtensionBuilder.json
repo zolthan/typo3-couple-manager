@@ -3,8 +3,8 @@
         {
             "config": {
                 "position": [
-                    36,
-                    381
+                    40,
+                    220
                 ]
             },
             "name": "New Model Object",
@@ -79,8 +79,8 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "startingClass",
-                            "propertyType": "String",
+                            "propertyName": "startingClassLatin",
+                            "propertyType": "Select",
                             "uid": "793919204501"
                         },
                         {
@@ -89,9 +89,39 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
+                            "propertyName": "startingClassStandard",
+                            "propertyType": "Select",
+                            "uid": "820944827132"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
                             "propertyName": "startingGroup",
-                            "propertyType": "String",
+                            "propertyType": "Select",
                             "uid": "163341351835"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "description",
+                            "propertyType": "RichText",
+                            "uid": "794264432623"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "image",
+                            "propertyType": "Image",
+                            "uid": "31364620983"
                         }
                     ]
                 },
@@ -103,8 +133,8 @@
         {
             "config": {
                 "position": [
-                    505,
-                    395
+                    300,
+                    221
                 ]
             },
             "name": "New Model Object",
@@ -117,7 +147,7 @@
                     "_default4_delete": false,
                     "customActions": []
                 },
-                "name": "Tournament",
+                "name": "Competition",
                 "objectsettings": {
                     "addDeletedField": true,
                     "addHiddenField": true,
@@ -139,7 +169,7 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "name",
+                            "propertyName": "title",
                             "propertyType": "String",
                             "uid": "654764239023"
                         },
@@ -149,9 +179,69 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "date",
+                            "propertyName": "dateStart",
                             "propertyType": "NativeDate",
                             "uid": "392416502010"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dateEnd",
+                            "propertyType": "NativeDate",
+                            "uid": "583604838472"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "country",
+                            "propertyType": "Select",
+                            "uid": "690470797110"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "city",
+                            "propertyType": "String",
+                            "uid": "1452191126089"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "address",
+                            "propertyType": "Text",
+                            "uid": "323954339237"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "organizer",
+                            "propertyType": "String",
+                            "uid": "1526701973408"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "sizeDanceFloor",
+                            "propertyType": "String",
+                            "uid": "567598863144"
                         }
                     ]
                 },
@@ -163,8 +253,8 @@
         {
             "config": {
                 "position": [
-                    604,
-                    22
+                    872,
+                    9
                 ]
             },
             "name": "New Model Object",
@@ -199,6 +289,46 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
+                            "propertyName": "date",
+                            "propertyType": "NativeDate",
+                            "uid": "449565856706"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "discipline",
+                            "propertyType": "Select",
+                            "uid": "680462521253"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "startingGroup",
+                            "propertyType": "Integer",
+                            "uid": "1139918841130"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "startingClass",
+                            "propertyType": "Integer",
+                            "uid": "724565095441"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
                             "propertyName": "position",
                             "propertyType": "Integer",
                             "uid": "1162154145056"
@@ -209,9 +339,19 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "participants",
+                            "propertyName": "participantCount",
                             "propertyType": "Integer",
                             "uid": "1529900396124"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "promotion",
+                            "propertyType": "Boolean",
+                            "uid": "1062650454251"
                         }
                     ]
                 },
@@ -225,7 +365,7 @@
                             "relationName": "couple",
                             "relationType": "zeroToMany",
                             "relationWire": "[wired]",
-                            "renderType": "inline",
+                            "renderType": "selectSingle",
                             "uid": "596358942941"
                         },
                         {
@@ -233,13 +373,84 @@
                             "lazyLoading": true,
                             "propertyIsExcludeField": false,
                             "relationDescription": "",
-                            "relationName": "tournament",
+                            "relationName": "competition",
                             "relationType": "zeroToMany",
                             "relationWire": "[wired]",
                             "renderType": "selectSingle",
                             "uid": "439030950190"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": true,
+                            "propertyIsExcludeField": false,
+                            "relationDescription": "",
+                            "relationName": "competitionType",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingle",
+                            "uid": "692599861870"
                         }
                     ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    560,
+                    221
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "CompetitionType",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "452325331253"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "name",
+                            "propertyType": "String",
+                            "uid": "71630883204"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "organization",
+                            "propertyType": "String",
+                            "uid": "15846762028"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
                 }
             }
         }
@@ -308,10 +519,22 @@
                 "terminal": "SOURCES",
                 "uid": "573641771507"
             }
+        },
+        {
+            "src": {
+                "moduleId": 2,
+                "terminal": "relationWire_2",
+                "uid": "692599861870"
+            },
+            "tgt": {
+                "moduleId": 3,
+                "terminal": "SOURCES",
+                "uid": "452325331253"
+            }
         }
     ],
     "log": {
-        "last_modified": "2018-08-06 01:24",
+        "last_modified": "2018-08-07 06:40",
         "extension_builder_version": "8.7.0",
         "be_user": " (1)"
     }

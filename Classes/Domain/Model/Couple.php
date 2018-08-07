@@ -46,18 +46,40 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $womanFirstName = '';
 
     /**
-     * startingClass
+     * startingClassLatin
      *
-     * @var string
+     * @var int
      */
-    protected $startingClass = '';
+    protected $startingClassLatin = 0;
+
+    /**
+     * startingClassStandard
+     *
+     * @var int
+     */
+    protected $startingClassStandard = 0;
 
     /**
      * startingGroup
      *
+     * @var int
+     */
+    protected $startingGroup = 0;
+
+    /**
+     * description
+     *
      * @var string
      */
-    protected $startingGroup = '';
+    protected $description = '';
+
+    /**
+     * image
+     *
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @cascade remove
+     */
+    protected $image = null;
 
     /**
      * Returns the manLastName
@@ -144,30 +166,51 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the startingClass
+     * Returns the startingClassLatin
      *
-     * @return string $startingClass
+     * @return int $startingClassLatin
      */
-    public function getStartingClass()
+    public function getStartingClassLatin()
     {
-        return $this->startingClass;
+        return $this->startingClassLatin;
     }
 
     /**
-     * Sets the startingClass
+     * Sets the startingClassLatin
      *
-     * @param string $startingClass
+     * @param int $startingClassLatin
      * @return void
      */
-    public function setStartingClass($startingClass)
+    public function setStartingClassLatin($startingClassLatin)
     {
-        $this->startingClass = $startingClass;
+        $this->startingClassLatin = $startingClassLatin;
+    }
+
+    /**
+     * Returns the startingClassStandard
+     *
+     * @return int $startingClassStandard
+     */
+    public function getStartingClassStandard()
+    {
+        return $this->startingClassStandard;
+    }
+
+    /**
+     * Sets the startingClassStandard
+     *
+     * @param int $startingClassStandard
+     * @return void
+     */
+    public function setStartingClassStandard($startingClassStandard)
+    {
+        $this->startingClassStandard = $startingClassStandard;
     }
 
     /**
      * Returns the startingGroup
      *
-     * @return string $startingGroup
+     * @return int $startingGroup
      */
     public function getStartingGroup()
     {
@@ -177,11 +220,53 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the startingGroup
      *
-     * @param string $startingGroup
+     * @param int $startingGroup
      * @return void
      */
     public function setStartingGroup($startingGroup)
     {
         $this->startingGroup = $startingGroup;
+    }
+
+    /**
+     * Returns the description
+     *
+     * @return string $description
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Sets the description
+     *
+     * @param string $description
+     * @return void
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * Returns the image
+     *
+     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * Sets the image
+     *
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @return void
+     */
+    public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image)
+    {
+        $this->image = $image;
     }
 }

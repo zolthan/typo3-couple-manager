@@ -19,20 +19,26 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <table  class="tx_couplemanager" >
 	<tr>
-		<th><f:translate key="tx_couplemanager_domain_model_result.position" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_result.participants" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_result.starting_class" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_result.date" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_result.discipline" /></th>
 		<th><f:translate key="tx_couplemanager_domain_model_result.starting_group" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_result.starting_class" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_result.position" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_result.participant_count" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_result.promotion" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
 
 	<f:for each="{results}" as="result">
 		<tr>
-			<td><f:link.action action="show" arguments="{result : result}"> {result.position}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{result : result}"> {result.participants}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{result : result}"> {result.startingClass}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{result : result}"> {result.date -> f:format.date()}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{result : result}"> {result.discipline}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{result : result}"> {result.startingGroup}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{result : result}"> {result.startingClass}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{result : result}"> {result.position}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{result : result}"> {result.participantCount}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{result : result}"> {result.promotion}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{result : result}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{result : result}">Delete</f:link.action></td>
 		</tr>

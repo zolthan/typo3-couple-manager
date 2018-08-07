@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-06T13:24:19Z" product-name="couple_manager">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T18:40:51Z" product-name="couple_manager">
 		<header/>
 		<body>
 			<trans-unit id="tx_couplemanager_domain_model_couple">
@@ -18,35 +18,89 @@
 			<trans-unit id="tx_couplemanager_domain_model_couple.woman_first_name">
 				<source>Woman First Name</source>
 			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.starting_class">
-				<source>Starting Class</source>
+			<trans-unit id="tx_couplemanager_domain_model_couple.starting_class_latin">
+				<source>Starting Class Latin</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_couple.starting_class_standard">
+				<source>Starting Class Standard</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple.starting_group">
 				<source>Starting Group</source>
 			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_tournament">
-				<source>Tournament</source>
+			<trans-unit id="tx_couplemanager_domain_model_couple.description">
+				<source>Description</source>
 			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_tournament.name">
-				<source>Name</source>
+			<trans-unit id="tx_couplemanager_domain_model_couple.image">
+				<source>Image</source>
 			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_tournament.date">
-				<source>Date</source>
+			<trans-unit id="tx_couplemanager_domain_model_competition">
+				<source>Competition</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competition.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competition.date_start">
+				<source>Date Start</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competition.date_end">
+				<source>Date End</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competition.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competition.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competition.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competition.organizer">
+				<source>Organizer</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competition.size_dance_floor">
+				<source>Size Dance Floor</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_result">
 				<source>Result</source>
 			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_result.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_result.discipline">
+				<source>Discipline</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_result.starting_group">
+				<source>Starting Group</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_result.starting_class">
+				<source>Starting Class</source>
+			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_result.position">
 				<source>Position</source>
 			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.participants">
-				<source>Participants</source>
+			<trans-unit id="tx_couplemanager_domain_model_result.participant_count">
+				<source>Participant Count</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_result.promotion">
+				<source>Promotion</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_result.couple">
 				<source>Couple</source>
 			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.tournament">
-				<source>Tournament</source>
+			<trans-unit id="tx_couplemanager_domain_model_result.competition">
+				<source>Competition</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_result.competition_type">
+				<source>Competition Type</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competitiontype">
+				<source>Competition Type</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competitiontype.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competitiontype.organization">
+				<source>Organization</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -19,20 +19,28 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <table  class="tx_couplemanager" >
 	<tr>
-		<th><f:translate key="tx_couplemanager_domain_model_competition.name" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_competition.title" /></th>
 		<th><f:translate key="tx_couplemanager_domain_model_competition.date_start" /></th>
 		<th><f:translate key="tx_couplemanager_domain_model_competition.date_end" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_competition.type" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_competition.country" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_competition.city" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_competition.address" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_competition.organizer" /></th>
+		<th><f:translate key="tx_couplemanager_domain_model_competition.size_dance_floor" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
 
 	<f:for each="{competitions}" as="competition">
 		<tr>
-			<td><f:link.action action="show" arguments="{competition : competition}"> {competition.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{competition : competition}"> {competition.title}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{competition : competition}"> {competition.dateStart -> f:format.date()}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{competition : competition}"> {competition.dateEnd -> f:format.date()}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{competition : competition}"> {competition.type}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{competition : competition}"> {competition.country}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{competition : competition}"> {competition.city}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{competition : competition}"> {competition.address}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{competition : competition}"> {competition.organizer}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{competition : competition}"> {competition.sizeDanceFloor}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{competition : competition}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{competition : competition}">Delete</f:link.action></td>
 		</tr>

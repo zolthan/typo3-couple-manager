@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T12:59:47Z" product-name="couple_manager">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T18:40:51Z" product-name="couple_manager">
 		<header/>
 		<body>
-			<trans-unit id="name.description">
-				<source>name</source>
+			<trans-unit id="title.description">
+				<source>title</source>
 			</trans-unit>
 			<trans-unit id="date_start.description">
 				<source>dateStart</source>
@@ -12,8 +12,20 @@
 			<trans-unit id="date_end.description">
 				<source>dateEnd</source>
 			</trans-unit>
-			<trans-unit id="type.description">
-				<source>type</source>
+			<trans-unit id="country.description">
+				<source>country</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>address</source>
+			</trans-unit>
+			<trans-unit id="organizer.description">
+				<source>organizer</source>
+			</trans-unit>
+			<trans-unit id="size_dance_floor.description">
+				<source>sizeDanceFloor</source>
 			</trans-unit>
 		</body>
 	</file>

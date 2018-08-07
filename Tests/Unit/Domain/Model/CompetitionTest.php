@@ -27,24 +27,24 @@ class CompetitionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getNameReturnsInitialValueForString()
+    public function getTitleReturnsInitialValueForString()
     {
         self::assertSame(
             '',
-            $this->subject->getName()
+            $this->subject->getTitle()
         );
     }
 
     /**
      * @test
      */
-    public function setNameForStringSetsName()
+    public function setTitleForStringSetsTitle()
     {
-        $this->subject->setName('Conceived at T3CON10');
+        $this->subject->setTitle('Conceived at T3CON10');
 
         self::assertAttributeEquals(
             'Conceived at T3CON10',
-            'name',
+            'title',
             $this->subject
         );
     }
@@ -104,24 +104,124 @@ class CompetitionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getTypeReturnsInitialValueForInt()
+    public function getCountryReturnsInitialValueForInt()
     {
         self::assertSame(
             0,
-            $this->subject->getType()
+            $this->subject->getCountry()
         );
     }
 
     /**
      * @test
      */
-    public function setTypeForIntSetsType()
+    public function setCountryForIntSetsCountry()
     {
-        $this->subject->setType(12);
+        $this->subject->setCountry(12);
 
         self::assertAttributeEquals(
             12,
-            'type',
+            'country',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getCityReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getCity()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setCityForStringSetsCity()
+    {
+        $this->subject->setCity('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'city',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getAddressReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getAddress()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setAddressForStringSetsAddress()
+    {
+        $this->subject->setAddress('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'address',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getOrganizerReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getOrganizer()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setOrganizerForStringSetsOrganizer()
+    {
+        $this->subject->setOrganizer('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'organizer',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getSizeDanceFloorReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getSizeDanceFloor()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setSizeDanceFloorForStringSetsSizeDanceFloor()
+    {
+        $this->subject->setSizeDanceFloor('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'sizeDanceFloor',
             $this->subject
         );
     }
