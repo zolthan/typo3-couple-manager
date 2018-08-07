@@ -1,4 +1,5 @@
 <?php
+
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 
 /***
@@ -268,5 +269,21 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image)
     {
         $this->image = $image;
+    }
+
+    /**
+     * Returns combined couple name
+     *
+     * @return string
+     */
+    public function getCoupleName()
+    {
+        if ($this->getManLastName() == $this->getWomanLastName()) {
+            $nameCombined = sprintf('%s & %s %s', $this->getManFirstName(), $this->getWomanFirstName(), $this->getManLastName());
+        } else {
+            $nameCombined = sprintf('%s %s / %s %s', $this->getManFirstName(), $this->getManLastName(), $this->getWomanFirstName(), $this->getWomanLastName());
+        }
+
+        return $nameCombined;
     }
 }
