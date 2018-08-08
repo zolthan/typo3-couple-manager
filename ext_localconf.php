@@ -25,7 +25,7 @@ call_user_func(
             wizards.newContentElement.wizardItems.plugins {
                 elements {
                     couple {
-                        icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('couple_manager') . 'Resources/Public/Icons/user_plugin_couple.svg
+                        icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('couple_manager') . 'Resources/Public/Icons/tx_couplemanager_domain_model_couple.svg
                         title = LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couple_manager_domain_model_couple
                         description = LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couple_manager_domain_model_couple.description
                         tt_content_defValues {

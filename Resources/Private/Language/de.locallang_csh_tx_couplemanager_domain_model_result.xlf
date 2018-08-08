@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T18:40:51Z" product-name="couple_manager">
+		<header/>
+		<body>
+			<trans-unit id="date.description">
+				<source>date</source>
+			</trans-unit>
+			<trans-unit id="discipline.description">
+				<source>discipline</source>
+			</trans-unit>
+			<trans-unit id="starting_group.description">
+				<source>startingGroup</source>
+			</trans-unit>
+			<trans-unit id="starting_class.description">
+				<source>startingClass</source>
+			</trans-unit>
+			<trans-unit id="position.description">
+				<source>position</source>
+			</trans-unit>
+			<trans-unit id="participant_count.description">
+				<source>participantCount</source>
+			</trans-unit>
+			<trans-unit id="promotion.description">
+				<source>promotion</source>
+			</trans-unit>
+			<trans-unit id="couple.description">
+				<source>couple</source>
+			</trans-unit>
+			<trans-unit id="competition.description">
+				<source>competition</source>
+			</trans-unit>
+			<trans-unit id="competition_type.description">
+				<source>competitionType</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

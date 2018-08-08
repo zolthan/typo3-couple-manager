@@ -6,6 +6,9 @@
 			<trans-unit id="tx_couplemanager_domain_model_couple">
 				<source>Couple</source>
 			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_couple.couple_name">
+				<source>Couple Name</source>
+			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple.man_last_name">
 				<source>Man Last Name</source>
 			</trans-unit>
