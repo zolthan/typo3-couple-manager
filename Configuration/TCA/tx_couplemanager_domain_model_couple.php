@@ -2,7 +2,8 @@
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple',
-        'label' => 'couple_name',
+        'label' => 'man_first_name',
+//        'label' => 'couple_name',
         'label_userFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getCoupleName',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',

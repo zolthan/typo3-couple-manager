@@ -7,10 +7,6 @@
 				<source>Couple</source>
 				<target>Paar</target>
 			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.couple_name">
-				<source>Couple Name</source>
-				<target>Paarname</target>
-			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple.man_last_name">
 				<source>Man Last Name</source>
 				<target>Herr Nachname</target>
