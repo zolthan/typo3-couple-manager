@@ -42,7 +42,7 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple
      * @return void
      */
-    public function showAction(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple)
+    public function detailAction(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple)
     {
         $this->view->assign('couple', $couple);
     }
