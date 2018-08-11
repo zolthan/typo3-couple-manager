@@ -12,11 +12,12 @@ CREATE TABLE tx_couplemanager_domain_model_couple (
 	man_first_name varchar(255) DEFAULT '' NOT NULL,
 	woman_last_name varchar(255) DEFAULT '' NOT NULL,
 	woman_first_name varchar(255) DEFAULT '' NOT NULL,
-	starting_class_latin int(11) DEFAULT '0' NOT NULL,
-	starting_class_standard int(11) DEFAULT '0' NOT NULL,
-	starting_group int(11) DEFAULT '0' NOT NULL,
+	starting_group varchar(5) DEFAULT '0' NOT NULL,
+	starting_class_latin varchar(2) DEFAULT '0' NOT NULL,
+	starting_class_standard varchar(2) DEFAULT '0' NOT NULL,
 	description text,
 	image int(11) unsigned NOT NULL default '0',
+	active_couple smallint(5) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -107,8 +108,8 @@ CREATE TABLE tx_couplemanager_domain_model_result (
 
 	date date DEFAULT '0000-00-00',
 	discipline int(11) DEFAULT '0' NOT NULL,
-	starting_group int(11) DEFAULT '0' NOT NULL,
-	starting_class int(11) DEFAULT '0' NOT NULL,
+	starting_group varchar(5) DEFAULT '0' NOT NULL,
+	starting_class varchar(2) DEFAULT '0' NOT NULL,
 	position int(11) DEFAULT '0' NOT NULL,
 	participant_count int(11) DEFAULT '0' NOT NULL,
 	promotion smallint(5) unsigned DEFAULT '0' NOT NULL,
@@ -186,32 +187,5 @@ CREATE TABLE tx_couplemanager_domain_model_competitiontype (
 	KEY parent (pid),
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
 	KEY language (l10n_parent,sys_language_uid)
-
-);
-
-#
-# Table structure for table 'tx_couplemanager_domain_model_couple'
-#
-CREATE TABLE tx_couplemanager_domain_model_couple (
-
-	result int(11) unsigned DEFAULT '0' NOT NULL,
-
-);
-
-#
-# Table structure for table 'tx_couplemanager_domain_model_competition'
-#
-CREATE TABLE tx_couplemanager_domain_model_competition (
-
-	result int(11) unsigned DEFAULT '0' NOT NULL,
-
-);
-
-#
-# Table structure for table 'tx_couplemanager_domain_model_competitiontype'
-#
-CREATE TABLE tx_couplemanager_domain_model_competitiontype (
-
-	result int(11) unsigned DEFAULT '0' NOT NULL,
 
 );
