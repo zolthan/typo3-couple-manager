@@ -124,10 +124,8 @@ return [
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.discipline',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    ['-- Label --', 0],
-                ],
+//                'renderType' => 'selectSingle',
+                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getDisciplineItems',
                 'size' => 1,
                 'maxitems' => 1,
                 'eval' => ''
@@ -189,7 +187,8 @@ return [
                 'type' => 'inline',
                 'foreign_table' => 'tx_couplemanager_domain_model_couple',
                 'foreign_field' => 'result',
-                'maxitems' => 9999,
+                'minitems' => 1,
+                'maxitems' => 1,
                 'appearance' => [
                     'collapseAll' => 0,
                     'levelLinksPosition' => 'top',
@@ -207,7 +206,8 @@ return [
                 'type' => 'inline',
                 'foreign_table' => 'tx_couplemanager_domain_model_competition',
                 'foreign_field' => 'result',
-                'maxitems' => 9999,
+                'minitems' => 1,
+                'maxitems' => 1,
                 'appearance' => [
                     'collapseAll' => 0,
                     'levelLinksPosition' => 'top',
@@ -225,7 +225,8 @@ return [
                 'type' => 'inline',
                 'foreign_table' => 'tx_couplemanager_domain_model_competitiontype',
                 'foreign_field' => 'result',
-                'maxitems' => 9999,
+                'minitems' => 1,
+                'maxitems' => 1,
                 'appearance' => [
                     'collapseAll' => 0,
                     'levelLinksPosition' => 'top',
@@ -236,6 +237,6 @@ return [
             ],
 
         ],
-    
+
     ],
 ];

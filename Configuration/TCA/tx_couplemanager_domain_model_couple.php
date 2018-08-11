@@ -2,8 +2,7 @@
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple',
-        'label' => 'man_first_name',
-//        'label' => 'couple_name',
+        'label' => 'man_last_name',
         'label_userFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getCoupleName',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -18,14 +17,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'man_last_name,man_first_name,woman_last_name,woman_first_name,starting_class_latin,starting_class_standard,starting_group,description,image',
+        'searchFields' => 'man_last_name,man_first_name,woman_last_name,woman_first_name,starting_class_latin,starting_class_standard,starting_group,description,image,active_couple',
         'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_couple.svg'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, man_last_name, man_first_name, woman_last_name, woman_first_name, starting_class_latin, starting_class_standard, starting_group, description, image',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, man_last_name, man_first_name, woman_last_name, woman_first_name, starting_group, starting_class_latin, starting_class_standard, description, active_couple, image',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, man_last_name, man_first_name, woman_last_name, woman_first_name, starting_class_latin, starting_class_standard, starting_group, description, image, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, man_last_name, man_first_name, woman_last_name, woman_first_name, starting_group, starting_class_latin, starting_class_standard, description, active_couple, image, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -146,15 +145,24 @@ return [
                 'eval' => 'trim'
             ],
         ],
+        'starting_group' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.starting_group',
+            'config' => [
+                'type' => 'select',
+                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getStartingGroupItems',
+                'size' => 1,
+                'minitems' => 1,
+                'maxitems' => 1,
+                'eval' => ''
+            ],
+        ],
         'starting_class_latin' => [
             'exclude' => true,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.starting_class_latin',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    ['-- Label --', 0],
-                ],
+                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getStartingClassItems',
                 'size' => 1,
                 'maxitems' => 1,
                 'eval' => ''
@@ -165,24 +173,7 @@ return [
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.starting_class_standard',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    ['-- Label --', 0],
-                ],
-                'size' => 1,
-                'maxitems' => 1,
-                'eval' => ''
-            ],
-        ],
-        'starting_group' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.starting_group',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    ['-- Label --', 0],
-                ],
+                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getStartingClassItems',
                 'size' => 1,
                 'maxitems' => 1,
                 'eval' => ''
@@ -198,6 +189,19 @@ return [
                 'eval' => 'trim',
             ],
             'defaultExtras' => 'richtext:rte_transform'
+        ],
+        'active_couple' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.active_couple',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 1,
+            ]
         ],
         'image' => [
             'exclude' => true,
