@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:18Z"
+          product-name="couple_manager" target-language="de">
+        <header/>
+        <body>
+            <trans-unit id="pi1_title" xml:space="preserve" approved="yes">
+				<source>Couple Manager</source>
+			</trans-unit>
+			<trans-unit id="pi1_plus_wiz_description" xml:space="preserve" approved="yes">
+				<source>Management of couples, competitions and results</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.settings" xml:space="preserve" approved="yes">
+				<source>Settings</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.additional" xml:space="preserve" approved="yes">
+				<source>Additional</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.template" xml:space="preserve" approved="yes">
+				<source>Template</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode" xml:space="preserve" approved="yes">
+				<source>What to display</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.couple_list" xml:space="preserve" approved="yes">
+				<source>List view (couples)</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.couple_detail" xml:space="preserve" approved="yes">
+				<source>Detail view (couple)</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.competition_list" xml:space="preserve" approved="yes">
+				<source>List view (competitions)</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.not_configured" xml:space="preserve" approved="yes">
+				<source>No view yet configured</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.result_list" xml:space="preserve" approved="yes">
+				<source>List view (results)</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy" xml:space="preserve" approved="yes">
+				<source>Sort by</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.uid" xml:space="preserve" approved="yes">
+				<source>Uid</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.tstamp" xml:space="preserve" approved="yes">
+				<source>Last edited</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.crdate" xml:space="preserve" approved="yes">
+				<source>Created</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.man_lastname" xml:space="preserve" approved="yes">
+				<source>Lastname Man</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderDirection" xml:space="preserve" approved="yes">
+				<source>Sort direction</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderDirection.asc" xml:space="preserve" approved="yes">
+				<source>Ascending</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderDirection.desc" xml:space="preserve" approved="yes">
+				<source>Descending</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.disciplines" xml:space="preserve" approved="yes">
+				<source>Dsicipline selection</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.activeCoupleRestriction" xml:space="preserve" approved="yes">
+				<source>Active couple</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.activeCoupleRestriction.1" xml:space="preserve" approved="yes">
+				<source>only active couples</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.activeCoupleRestriction.2" xml:space="preserve" approved="yes">
+				<source>except active couples</source>
+			</trans-unit>
+			<trans-unit id="flexforms_template.mediaMaxWidth" xml:space="preserve" approved="yes">
+				<source>Max width for media elements</source>
+			</trans-unit>
+			<trans-unit id="flexforms_template.mediaMaxHeight" xml:space="preserve" approved="yes">
+				<source>Max height for media elements</source>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.activeCouplesFirst" xml:space="preserve" approved="yes">
+				<source>Sort "Active couples" before</source>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.results" xml:space="preserve" approved="yes">
+				<source>Results</source>
+			</trans-unit>
+			<trans-unit id="pagemodule.pageNotAvailable" xml:space="preserve" approved="yes">
+				<source>Page with uid "%s" is not available anymore!</source>
+			</trans-unit>
+			<trans-unit id="pagemodule.recordNotAvailable" xml:space="preserve" approved="no">
+				<source>Record with uid "%s" is not available anymore!</source>
+				<target state="needs-translation">Der Datensatz mit der uid "%s" ist nicht mehr verfügbar!</target>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

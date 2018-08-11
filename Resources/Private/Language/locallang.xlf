@@ -1,110 +1,172 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T18:40:51Z" product-name="couple_manager">
-		<header/>
-		<body>
-			<trans-unit id="tx_couplemanager_domain_model_couple">
-				<source>Couple</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.name">
-				<source>Couple Name</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.man_last_name">
-				<source>Man Last Name</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.man_first_name">
-				<source>Man First Name</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.woman_last_name">
-				<source>Woman Last Name</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.woman_first_name">
-				<source>Woman First Name</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.starting_class_latin">
-				<source>Starting Class Latin</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.starting_class_standard">
-				<source>Starting Class Standard</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.starting_group">
-				<source>Starting Group</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.description">
-				<source>Description</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_couple.image">
-				<source>Image</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition">
-				<source>Competition</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.title">
-				<source>Title</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.date_start">
-				<source>Date Start</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.date_end">
-				<source>Date End</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.country">
-				<source>Country</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.city">
-				<source>City</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.address">
-				<source>Address</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.organizer">
-				<source>Organizer</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competition.size_dance_floor">
-				<source>Size Dance Floor</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result">
-				<source>Result</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.date">
-				<source>Date</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.discipline">
-				<source>Discipline</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.starting_group">
-				<source>Starting Group</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.starting_class">
-				<source>Starting Class</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.position">
-				<source>Position</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.participant_count">
-				<source>Participant Count</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.promotion">
-				<source>Promotion</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.couple">
-				<source>Couple</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.competition">
-				<source>Competition</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_result.competition_type">
-				<source>Competition Type</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competitiontype">
-				<source>Competition Type</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competitiontype.name">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="tx_couplemanager_domain_model_competitiontype.organization">
-				<source>Organization</source>
-			</trans-unit>
-		</body>
-	</file>
+    <file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T18:40:51Z"
+          product-name="couple_manager">
+        <header/>
+        <body>
+            <!-- custom translations -->
+            <trans-unit id="please_choose">
+                <source>-- Please choose --</source>
+            </trans-unit>
+
+            <!-- Disciplines -->
+            <trans-unit id="standard">
+                <source>Standard</source>
+            </trans-unit>
+            <trans-unit id="latin">
+                <source>Latin</source>
+            </trans-unit>
+            <trans-unit id="10dance">
+                <source>10 Dance</source>
+            </trans-unit>
+
+            <!-- Starting Groups -->
+            <trans-unit id="kinder">
+                <source>Kinder</source>
+            </trans-unit>
+            <trans-unit id="kinder1">
+                <source>Kinder I</source>
+            </trans-unit>
+            <trans-unit id="kinder2">
+                <source>Kinder II</source>
+            </trans-unit>
+            <trans-unit id="junioren1">
+                <source>Junioren I</source>
+            </trans-unit>
+            <trans-unit id="junioren2">
+                <source>Junioren II</source>
+            </trans-unit>
+            <trans-unit id="jugend">
+                <source>Jugend</source>
+            </trans-unit>
+            <trans-unit id="hauptgruppe">
+                <source>Hauptgruppe</source>
+            </trans-unit>
+            <trans-unit id="hauptgruppe2">
+                <source>Hauptgruppe II</source>
+            </trans-unit>
+            <trans-unit id="senioren1">
+                <source>Senioren I</source>
+            </trans-unit>
+            <trans-unit id="senioren2">
+                <source>Senioren II</source>
+            </trans-unit>
+            <trans-unit id="senioren3">
+                <source>Senioren III</source>
+            </trans-unit>
+            <trans-unit id="senioren4">
+                <source>Senioren IV</source>
+            </trans-unit>
+            <trans-unit id="senioren5">
+                <source>Senioren V</source>
+            </trans-unit>
+
+            <!-- generated translations -->
+            <trans-unit id="tx_couplemanager_domain_model_couple">
+                <source>Couple</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.name">
+                <source>Couple Name</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.man_last_name">
+                <source>Man Last Name</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.man_first_name">
+                <source>Man First Name</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.woman_last_name">
+                <source>Woman Last Name</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.woman_first_name">
+                <source>Woman First Name</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.starting_class_latin">
+                <source>Starting Class Latin</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.starting_class_standard">
+                <source>Starting Class Standard</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.starting_group">
+                <source>Starting Group</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.active_couple">
+                <source>Active couple</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competition">
+                <source>Competition</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competition.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competition.date_start">
+                <source>Date Start</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competition.date_end">
+                <source>Date End</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competition.country">
+                <source>Country</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competition.city">
+                <source>City</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competition.address">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competition.organizer">
+                <source>Organizer</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competition.size_dance_floor">
+                <source>Size Dance Floor</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_result">
+                <source>Result</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_result.date">
+                <source>Date</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_result.discipline">
+                <source>Discipline</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_result.starting_group">
+                <source>Starting Group</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_result.starting_class">
+                <source>Starting Class</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_result.position">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_result.participant_count">
+                <source>Participant Count</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_result.promotion">
+                <source>Promotion</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_result.couple">
+                <source>Couple</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_result.competition">
+                <source>Competition</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_result.competition_type">
+                <source>Competition Type</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competitiontype">
+                <source>Competition Type</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competitiontype.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competitiontype.organization">
+                <source>Organization</source>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>

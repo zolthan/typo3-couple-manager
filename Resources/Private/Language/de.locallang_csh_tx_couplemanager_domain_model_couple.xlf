@@ -27,6 +27,9 @@
 			<trans-unit id="description.description">
 				<source>description</source>
 			</trans-unit>
+			<trans-unit id="active_couple.description">
+				<source>activeCouple</source>
+			</trans-unit>
 			<trans-unit id="image.description">
 				<source>image</source>
 			</trans-unit>

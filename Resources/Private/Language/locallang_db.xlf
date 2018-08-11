@@ -3,6 +3,12 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T18:40:51Z" product-name="couple_manager">
 		<header/>
 		<body>
+			<trans-unit id="tx_couplemanager_domain_model_couple.plugin">
+				<source>Couple Plugin</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_couple.plugin_description">
+				<source>Couple Plugin Description</source>
+			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple">
 				<source>Couple</source>
 			</trans-unit>
@@ -29,6 +35,9 @@
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple.description">
 				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_couple.active_couple">
+				<source>Active couple</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple.image">
 				<source>Image</source>
