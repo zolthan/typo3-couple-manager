@@ -1,54 +1,42 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
-
-This Template is responsible for creating a table of domain objects.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        List.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
 <f:section name="main">
-<h1>Listing for Couple</h1>
+    <f:if condition="{couples}">
+        <div class="thumbnail-menu">
+            <f:for each="{couples}" as="couple">
+                <f:link.action action="show" arguments="{couple : couple}" title="{couple.coupleName}"
+                               class="thumbnail-menu-item">
+                    <div class="thumbnail-menu-image">
+                        <f:if condition="{couple.image}">
+                            <f:media file="{couple.image}" width="{settings.menuthumbnail.media.width}"
+                                     height="{settings.menuthumbnail.media.height}"/>
+                        </f:if>
+                    </div>
+                    <div class="thumbnail-menu-caption">
+                        <f:if condition="{couple.coupleName}">
+                            <h3 class="thumbnail-menu-caption-title">
+                                <f:format.crop maxCharacters="100">{couple.coupleName}</f:format.crop>
+                            </h3>
+                        </f:if>
+                        <f:debug title="startingGroup">{couple.startingGroup}</f:debug>
+                        <f:if condition="{couple.startingGroup}">
+                            <p class="thumbnail-menu-caption-abstract">Startgruppe: {couple.startingGroup}</p>
+                        </f:if>
+                        <f:debug title="startingClassLatin">{couple.startingClassLatin}</f:debug>
+                        <f:if condition="{couple.startingClassLatin}">
+                            <p class="thumbnail-menu-caption-abstract">Latein: {couple.startingClassLatin}</p>
+                        </f:if>
+                        <f:debug title="startingClassStandard">{couple.startingClassStandard}</f:debug>
+                        <f:if condition="{couple.startingClassStandard}">
+                            <p class="thumbnail-menu-caption-abstract">Standard: {couple.startingClassStandard}</p>
+                        </f:if>
+                    </div>
+                </f:link.action>
 
-<f:flashMessages />
 
-<table  class="tx_couplemanager" >
-	<tr>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.man_last_name" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.man_first_name" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.woman_last_name" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.woman_first_name" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.starting_class_latin" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.starting_class_standard" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.starting_group" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.description" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_couple.image" /></th>
-		<th> </th>
-		<th> </th>
-	</tr>
+            </f:for>
+        </div>
+    </f:if>
 
-	<f:for each="{couples}" as="couple">
-		<tr>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.manLastName}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.manFirstName}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.womanLastName}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.womanFirstName}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.startingClassLatin}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.startingClassStandard}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.startingGroup}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.description}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{couple : couple}"> {couple.image.originalResource.name}</f:link.action></td>
-			<td><f:link.action action="edit" arguments="{couple : couple}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{couple : couple}">Delete</f:link.action></td>
-		</tr>
-	</f:for>
-</table>
-
-<f:link.action action="new">New Couple</f:link.action>
 </f:section>
 </html>

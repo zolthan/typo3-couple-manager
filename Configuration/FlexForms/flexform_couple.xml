@@ -1,32 +1,72 @@
 <T3DataStructure>
-	<sheets>
-		<sDEF>
-			<ROOT>
-				<TCEforms>
-					<sheetTitle>Function</sheetTitle>
-				</TCEforms>
-				<type>array</type>
-				<el>
-					<switchableControllerActions>
-						<TCEforms>
-							<label>Select function</label>
-							<config>
-								<type>select</type>
-								<items>
-									<numIndex index="0">
-										<numIndex index="0">Listenansicht</numIndex>
-										<numIndex index="1">Couple-&gt;list</numIndex>
-									</numIndex>
-									<numIndex index="1">
-										<numIndex index="0">Detailansicht</numIndex>
-										<numIndex index="1">Couple-&gt;show</numIndex>
-									</numIndex>
-								</items>
-							</config>
-						</TCEforms>
-					</switchableControllerActions>
-				</el>
-			</ROOT>
-		</sDEF>
-	</sheets>
+    <sheets>
+        <!--
+            ################################
+              SHEET General Settings
+            ################################
+        -->
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.settings
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <!-- View -->
+                    <switchableControllerActions>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="1">
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.couple_list
+                                        </numIndex>
+                                        <numIndex index="1">Couple->list</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.couple_detail
+                                        </numIndex>
+                                        <numIndex index="1">Couple->detail</numIndex>
+                                    </numIndex>
+                                    <numIndex index="11">
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.competition_list
+                                        </numIndex>
+                                        <numIndex index="1">Competition->list</numIndex>
+                                    </numIndex>
+                                    <numIndex index="21">
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.result_list
+                                        </numIndex>
+                                        <numIndex index="1">Result->list</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </switchableControllerActions>
+
+                    <!-- activeCouplesFirst -->
+                    <settings.activeCouplesFirst>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_additional.activeCouplesFirst
+                            </label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.activeCouplesFirst>
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
 </T3DataStructure>

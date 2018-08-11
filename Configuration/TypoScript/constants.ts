@@ -10,6 +10,6 @@ plugin.tx_couplemanager_couple {
     }
     persistence {
         # cat=plugin.tx_couplemanager_couple//a; type=string; label=Default storage PID
-        storagePid =
+        storagePid = 137
     }
 }
