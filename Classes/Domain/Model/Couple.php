@@ -49,23 +49,30 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * startingClassLatin
      *
-     * @var int
+     * @var string
      */
-    protected $startingClassLatin = 0;
+    protected $startingClassLatin = '';
 
     /**
      * startingClassStandard
      *
-     * @var int
+     * @var string
      */
-    protected $startingClassStandard = 0;
+    protected $startingClassStandard = '';
 
     /**
      * startingGroup
      *
-     * @var int
+     * @var string
      */
-    protected $startingGroup = 0;
+    protected $startingGroup = '';
+
+    /**
+     * activeCouple
+     *
+     * @var bool
+     */
+    protected $activeCouple = true;
 
     /**
      * description
@@ -125,6 +132,37 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * Returns the activeCouple
+     *
+     * @return bool $activeCouple
+     */
+    public function getActiveCouple()
+    {
+        return $this->activeCouple;
+    }
+
+    /**
+     * Sets the activeCouple
+     *
+     * @param bool $activeCouple
+     * @return void
+     */
+    public function setActiveCouple($activeCouple)
+    {
+        $this->activeCouple = $activeCouple;
+    }
+
+    /**
+     * Returns the boolean state of activeCouple
+     *
+     * @return bool
+     */
+    public function isActiveCouple()
+    {
+        return $this->activeCouple;
+    }
+
+    /**
      * Returns the womanLastName
      *
      * @return string $womanLastName
@@ -169,7 +207,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the startingClassLatin
      *
-     * @return int $startingClassLatin
+     * @return string $startingClassLatin
      */
     public function getStartingClassLatin()
     {
@@ -179,7 +217,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the startingClassLatin
      *
-     * @param int $startingClassLatin
+     * @param string $startingClassLatin
      * @return void
      */
     public function setStartingClassLatin($startingClassLatin)
@@ -190,7 +228,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the startingClassStandard
      *
-     * @return int $startingClassStandard
+     * @return string $startingClassStandard
      */
     public function getStartingClassStandard()
     {
@@ -200,7 +238,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the startingClassStandard
      *
-     * @param int $startingClassStandard
+     * @param string $startingClassStandard
      * @return void
      */
     public function setStartingClassStandard($startingClassStandard)
@@ -211,7 +249,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the startingGroup
      *
-     * @return int $startingGroup
+     * @return string $startingGroup
      */
     public function getStartingGroup()
     {
@@ -221,7 +259,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the startingGroup
      *
-     * @param int $startingGroup
+     * @param string $startingGroup
      * @return void
      */
     public function setStartingGroup($startingGroup)
