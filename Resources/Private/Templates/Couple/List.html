@@ -2,10 +2,10 @@
 <f:layout name="Default" />
 <f:section name="main">
     <f:if condition="{couples}">
-        <div class="thumbnail-menu">
+        <div class="thumbnail-menu row">
             <f:for each="{couples}" as="couple">
                 <f:link.action action="show" arguments="{couple : couple}" title="{couple.coupleName}"
-                               class="thumbnail-menu-item">
+                               class="col-md-4">
                     <div class="thumbnail-menu-image">
                         <f:if condition="{couple.image}">
                             <f:media file="{couple.image}" width="{settings.menuthumbnail.media.width}"
@@ -18,17 +18,16 @@
                                 <f:format.crop maxCharacters="100">{couple.coupleName}</f:format.crop>
                             </h3>
                         </f:if>
-                        <f:debug title="startingGroup">{couple.startingGroup}</f:debug>
                         <f:if condition="{couple.startingGroup}">
-                            <p class="thumbnail-menu-caption-abstract">Startgruppe: {couple.startingGroup}</p>
+                            <p class="thumbnail-menu-caption-abstract">Startgruppe:
+                                {f:translate(key: couple.startingGroup, extensionName: 'couple_manager')}
+                            </p>
                         </f:if>
-                        <f:debug title="startingClassLatin">{couple.startingClassLatin}</f:debug>
                         <f:if condition="{couple.startingClassLatin}">
-                            <p class="thumbnail-menu-caption-abstract">Latein: {couple.startingClassLatin}</p>
+                            <p class="thumbnail-menu-caption-abstract">Latein: <f:format.case mode="upper">{couple.startingClassLatin}</f:format.case></p>
                         </f:if>
-                        <f:debug title="startingClassStandard">{couple.startingClassStandard}</f:debug>
                         <f:if condition="{couple.startingClassStandard}">
-                            <p class="thumbnail-menu-caption-abstract">Standard: {couple.startingClassStandard}</p>
+                            <p class="thumbnail-menu-caption-abstract">Standard: <f:format.case mode="upper">{couple.startingClassStandard}</f:format.case></p>
                         </f:if>
                     </div>
                 </f:link.action>

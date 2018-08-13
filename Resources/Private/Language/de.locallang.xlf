@@ -20,90 +20,78 @@
                 <target>10 Tänze</target>
             </trans-unit>
 
-            <!-- Starting Groups -->
-            <trans-unit id="kinder">
+            <trans-unit id="kin">
                 <target>Kinder</target>
             </trans-unit>
-            <trans-unit id="kinder1">
+            <trans-unit id="kin1">
                 <target>Kinder I</target>
             </trans-unit>
-            <trans-unit id="kinder2">
+            <trans-unit id="kin2">
                 <target>Kinder II</target>
             </trans-unit>
-            <trans-unit id="junioren1">
+            <trans-unit id="jun1">
                 <target>Junioren I</target>
             </trans-unit>
-            <trans-unit id="junioren2">
+            <trans-unit id="jun2">
                 <target>Junioren II</target>
             </trans-unit>
-            <trans-unit id="jugend">
+            <trans-unit id="jug">
                 <target>Jugend</target>
             </trans-unit>
-            <trans-unit id="hauptgruppe">
+            <trans-unit id="hgr">
                 <target>Hauptgruppe</target>
             </trans-unit>
-            <trans-unit id="hauptgruppe2">
+            <trans-unit id="hgr2">
                 <target>Hauptgruppe II</target>
             </trans-unit>
-            <trans-unit id="senioren1">
+            <trans-unit id="sen1">
                 <target>Senioren I</target>
             </trans-unit>
-            <trans-unit id="senioren2">
+            <trans-unit id="sen2">
                 <target>Senioren II</target>
             </trans-unit>
-            <trans-unit id="senioren3">
+            <trans-unit id="sen3">
                 <target>Senioren III</target>
             </trans-unit>
-            <trans-unit id="senioren4">
+            <trans-unit id="sen4">
                 <target>Senioren IV</target>
             </trans-unit>
-            <trans-unit id="senioren5">
+            <trans-unit id="sen5">
                 <target>Senioren V</target>
             </trans-unit>
 
             <!-- generated translations -->
-            <trans-unit id="tx_couplemanager_domain_model_couple">
-                <source>Couple</source>
-                <target>Paar</target>
-            </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.name">
-                <source>Couple Name</source>
                 <target>Paarname</target>
             </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple">
+                <target>Paar</target>
+            </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.man_last_name">
-                <source>Man Last Name</source>
-                <target>Herr Nachname</target>
+                <target>Nachname, Herr</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.man_first_name">
-                <source>Man First Name</source>
-                <target>Herr Vorname</target>
+                <target>Vorname, Herr</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.woman_last_name">
-                <source>Woman Last Name</source>
-                <target>Dame Nachname</target>
+                <target>Nachname, Dame</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.woman_first_name">
-                <source>Woman First Name</source>
-                <target>Dame Vorname</target>
+                <target>Vorname, Dame</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.starting_class_latin">
-                <source>Starting Class Latin</source>
                 <target>Startklasse Latein</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.starting_class_standard">
-                <source>Starting Class Standard</source>
                 <target>Startklasse Standard</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.starting_group">
-                <source>Starting Group</source>
                 <target>Startgruppe</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.description">
-                <source>Description</source>
                 <target>Beschreibung</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.active_couple">
-                <source>Active couple</source>
                 <target>Aktives Paar</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.image">

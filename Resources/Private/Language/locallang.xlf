@@ -21,43 +21,43 @@
             </trans-unit>
 
             <!-- Starting Groups -->
-            <trans-unit id="kinder">
+            <trans-unit id="kin">
                 <source>Kinder</source>
             </trans-unit>
-            <trans-unit id="kinder1">
+            <trans-unit id="kin1">
                 <source>Kinder I</source>
             </trans-unit>
-            <trans-unit id="kinder2">
+            <trans-unit id="kin2">
                 <source>Kinder II</source>
             </trans-unit>
-            <trans-unit id="junioren1">
+            <trans-unit id="jun1">
                 <source>Junioren I</source>
             </trans-unit>
-            <trans-unit id="junioren2">
+            <trans-unit id="jun2">
                 <source>Junioren II</source>
             </trans-unit>
-            <trans-unit id="jugend">
+            <trans-unit id="jug">
                 <source>Jugend</source>
             </trans-unit>
-            <trans-unit id="hauptgruppe">
+            <trans-unit id="hgr">
                 <source>Hauptgruppe</source>
             </trans-unit>
-            <trans-unit id="hauptgruppe2">
+            <trans-unit id="hgr2">
                 <source>Hauptgruppe II</source>
             </trans-unit>
-            <trans-unit id="senioren1">
+            <trans-unit id="sen1">
                 <source>Senioren I</source>
             </trans-unit>
-            <trans-unit id="senioren2">
+            <trans-unit id="sen2">
                 <source>Senioren II</source>
             </trans-unit>
-            <trans-unit id="senioren3">
+            <trans-unit id="sen3">
                 <source>Senioren III</source>
             </trans-unit>
-            <trans-unit id="senioren4">
+            <trans-unit id="sen4">
                 <source>Senioren IV</source>
             </trans-unit>
-            <trans-unit id="senioren5">
+            <trans-unit id="sen5">
                 <source>Senioren V</source>
             </trans-unit>
 
