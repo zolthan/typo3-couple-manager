@@ -1,41 +1,48 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+<f:layout name="Default"/>
 <f:section name="main">
     <f:if condition="{couples}">
-        <div class="thumbnail-menu row">
+        <div class="card-deck list row">
             <f:for each="{couples}" as="couple">
-                <f:link.action action="show" arguments="{couple : couple}" title="{couple.coupleName}"
-                               class="col-md-4">
-                    <div class="thumbnail-menu-image">
-                        <f:if condition="{couple.image}">
-                            <f:media file="{couple.image}" width="{settings.menuthumbnail.media.width}"
-                                     height="{settings.menuthumbnail.media.height}"/>
-                        </f:if>
-                    </div>
-                    <div class="thumbnail-menu-caption">
+                <div class="card col-md-4">
+                    <f:if condition="{couple.image}">
+                        <f:media file="{couple.image}" width="{settings.menuthumbnail.media.width}"
+                                 height="{settings.menuthumbnail.media.height}" class="card-img-top img-responsive"/>
+                    </f:if>
+                    <div class="card-body">
                         <f:if condition="{couple.coupleName}">
-                            <h3 class="thumbnail-menu-caption-title">
+                            <h3 class="card-title">
                                 <f:format.crop maxCharacters="100">{couple.coupleName}</f:format.crop>
                             </h3>
                         </f:if>
-                        <f:if condition="{couple.startingGroup}">
-                            <p class="thumbnail-menu-caption-abstract">Startgruppe:
-                                {f:translate(key: couple.startingGroup, extensionName: 'couple_manager')}
-                            </p>
-                        </f:if>
-                        <f:if condition="{couple.startingClassLatin}">
-                            <p class="thumbnail-menu-caption-abstract">Latein: <f:format.case mode="upper">{couple.startingClassLatin}</f:format.case></p>
-                        </f:if>
-                        <f:if condition="{couple.startingClassStandard}">
-                            <p class="thumbnail-menu-caption-abstract">Standard: <f:format.case mode="upper">{couple.startingClassStandard}</f:format.case></p>
-                        </f:if>
+                        <p class="card-text">
+                            <f:if condition="{couple.startingClassStandard}">
+                                Standard:
+                                <f:if condition="{couple.startingGroup}">{f:translate(key: couple.startingGroup,
+                                    extensionName: 'couple_manager')}
+                                </f:if>
+                                <f:format.case mode="upper">{couple.startingClassStandard}</f:format.case>
+                                <br/>
+                            </f:if>
+                            <f:if condition="{couple.startingClassLatin}">
+                                Latein:
+                                <f:if condition="{couple.startingGroup}">{f:translate(key: couple.startingGroup,
+                                    extensionName: 'couple_manager')}
+                                </f:if>
+                                <f:format.case mode="upper">{couple.startingClassLatin}</f:format.case>
+                                <br/>
+                            </f:if>
+                        </p>
                     </div>
-                </f:link.action>
-
-
+                    <div class="card-footer">
+                        <f:link.action action="detail" arguments="{couple : couple}"
+                                       title="Zur Seite von {couple.coupleName}"
+                                       class="btn btn-primary">weiter
+                        </f:link.action>
+                    </div>
+                </div>
             </f:for>
         </div>
     </f:if>
-
 </f:section>
 </html>
