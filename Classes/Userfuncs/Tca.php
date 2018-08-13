@@ -37,23 +37,24 @@ class Tca
      */
     public function __construct()
     {
-        $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
+        $this->objectManager    = GeneralUtility::makeInstance(ObjectManager::class);
         $this->coupleRepository = $this->objectManager->get(CoupleRepository::class);
     }
 
-
     /**
-     * @param $parameters
-     * @param $parentObject
+     * @param array $parameters
+     * @param Tca $parentObject
      */
     public function getCoupleName(&$parameters, $parentObject)
     {
         /** @var Couple $couple */
-        $couple = $this->coupleRepository->findByUid($parameters['row']['uid']);
+        $couple              = $this->coupleRepository->findByUid($parameters['row']['uid']);
         $parameters['title'] = $couple->getCoupleName();
     }
 
     /**
+     * @param array $config
+     *
      * @return array
      */
     public function getDisciplineItems($config)
@@ -64,10 +65,13 @@ class Tca
             [LocalizationUtility::translate('latin', 'couple_manager'), 'latin'],
             [LocalizationUtility::translate('10dance', 'couple_manager'), '10dance'],
         ];
+
         return $config;
     }
 
     /**
+     * @param array $config
+     *
      * @return array
      */
     public function getStartingClassItems($config)
@@ -80,32 +84,34 @@ class Tca
             ['C', 'c'],
             ['D', 'd'],
         ];
+
         return $config;
     }
 
     /**
+     * @param array $config
+     *
      * @return array
      */
     public function getStartingGroupItems($config)
     {
-
-
         $config['items'] = [
             [LocalizationUtility::translate('please_choose', 'couple_manager'), 0],
-            [LocalizationUtility::translate('kinder', 'couple_manager'), 'kin'],
-            [LocalizationUtility::translate('kinder1', 'couple_manager'), 'kin1'],
-            [LocalizationUtility::translate('kinder2', 'couple_manager'), 'kin2'],
-            [LocalizationUtility::translate('junioren1', 'couple_manager'), 'jun1'],
-            [LocalizationUtility::translate('junioren2', 'couple_manager'), 'jun2'],
-            [LocalizationUtility::translate('jugend', 'couple_manager'), 'jug'],
-            [LocalizationUtility::translate('hauptgruppe', 'couple_manager'), 'hgr'],
-            [LocalizationUtility::translate('hauptgruppe2', 'couple_manager'), 'hgr2'],
-            [LocalizationUtility::translate('senioren1', 'couple_manager'), 'sen1'],
-            [LocalizationUtility::translate('senioren2', 'couple_manager'), 'sen2'],
-            [LocalizationUtility::translate('senioren3', 'couple_manager'), 'sen3'],
-            [LocalizationUtility::translate('senioren4', 'couple_manager'), 'sen4'],
-            [LocalizationUtility::translate('senioren5', 'couple_manager'), 'sen5'],
+            [LocalizationUtility::translate('kin', 'couple_manager'), 'kin'],
+            [LocalizationUtility::translate('kin1', 'couple_manager'), 'kin1'],
+            [LocalizationUtility::translate('kin2', 'couple_manager'), 'kin2'],
+            [LocalizationUtility::translate('jun1', 'couple_manager'), 'jun1'],
+            [LocalizationUtility::translate('jun2', 'couple_manager'), 'jun2'],
+            [LocalizationUtility::translate('jug', 'couple_manager'), 'jug'],
+            [LocalizationUtility::translate('hgr', 'couple_manager'), 'hgr'],
+            [LocalizationUtility::translate('hgr2', 'couple_manager'), 'hgr2'],
+            [LocalizationUtility::translate('sen1', 'couple_manager'), 'sen1'],
+            [LocalizationUtility::translate('sen2', 'couple_manager'), 'sen2'],
+            [LocalizationUtility::translate('sen3', 'couple_manager'), 'sen3'],
+            [LocalizationUtility::translate('sen4', 'couple_manager'), 'sen4'],
+            [LocalizationUtility::translate('sen5', 'couple_manager'), 'sen5'],
         ];
+
         return $config;
     }
 }
