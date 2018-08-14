@@ -4,7 +4,7 @@
     <f:if condition="{couples}">
         <div class="card-deck list row">
             <f:for each="{couples}" as="couple">
-                <div class="card col-md-4">
+                <div class="card col-md-3 {f:if(condition:'{couple.activeCouple} != 1',then:'not-active',else:'active')}">
                     <f:if condition="{couple.image}">
                         <f:media file="{couple.image}" width="{settings.menuthumbnail.media.width}"
                                  height="{settings.menuthumbnail.media.height}" class="card-img-top img-responsive"/>
@@ -18,16 +18,16 @@
                         <p class="card-text">
                             <f:if condition="{couple.startingClassStandard}">
                                 Standard:
-                                <f:if condition="{couple.startingGroup}">{f:translate(key: couple.startingGroup,
-                                    extensionName: 'couple_manager')}
+                                <f:if condition="{couple.startingGroup}">
+                                    {f:translate(key: couple.startingGroup, extensionName: 'couple_manager')}
                                 </f:if>
                                 <f:format.case mode="upper">{couple.startingClassStandard}</f:format.case>
                                 <br/>
                             </f:if>
                             <f:if condition="{couple.startingClassLatin}">
                                 Latein:
-                                <f:if condition="{couple.startingGroup}">{f:translate(key: couple.startingGroup,
-                                    extensionName: 'couple_manager')}
+                                <f:if condition="{couple.startingGroup}">
+                                    {f:translate(key: couple.startingGroup, extensionName: 'couple_manager')}
                                 </f:if>
                                 <f:format.case mode="upper">{couple.startingClassLatin}</f:format.case>
                                 <br/>
@@ -39,6 +39,9 @@
                                        title="Zur Seite von {couple.coupleName}"
                                        class="btn btn-primary">weiter
                         </f:link.action>
+                        <f:if condition="{couple.activeCouple} != 1">
+                            <span class="label label-primary">nicht mehr<br/>für uns aktiv</span>
+                        </f:if>
                     </div>
                 </div>
             </f:for>

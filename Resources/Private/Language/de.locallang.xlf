@@ -95,35 +95,27 @@
                 <target>Aktives Paar</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.image">
-                <source>Image</source>
                 <target>Bild</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition">
-                <source>Competition</source>
                 <target>Wettbewerb</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition.title">
-                <source>Title</source>
                 <target>Titel</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition.date_start">
-                <source>Date Start</source>
                 <target>Startdatum</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition.date_end">
-                <source>Date End</source>
                 <target>Enddatum</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition.country">
-                <source>Country</source>
                 <target>Land</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition.city">
-                <source>City</source>
                 <target>Stadt</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition.address">
-                <source>Address</source>
                 <target>Adresse</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition.organizer">

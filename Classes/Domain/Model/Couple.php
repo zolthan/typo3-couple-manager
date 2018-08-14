@@ -319,7 +319,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         if ($this->getManLastName() == $this->getWomanLastName()) {
             $nameCombined = sprintf('%s & %s %s', $this->getManFirstName(), $this->getWomanFirstName(), $this->getManLastName());
         } else {
-            $nameCombined = sprintf('%s %s / %s %s', $this->getManFirstName(), $this->getManLastName(), $this->getWomanFirstName(), $this->getWomanLastName());
+            $nameCombined = sprintf('%s %s & %s %s', $this->getManFirstName(), $this->getManLastName(), $this->getWomanFirstName(), $this->getWomanLastName());
         }
 
         return $nameCombined;
