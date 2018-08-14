@@ -49,7 +49,9 @@ class Tca
     {
         /** @var Couple $couple */
         $couple              = $this->coupleRepository->findByUid($parameters['row']['uid']);
-        $parameters['title'] = $couple->getCoupleName();
+        if ($couple) {
+            $parameters['title'] = $couple->getCoupleName();
+        }
     }
 
     /**
