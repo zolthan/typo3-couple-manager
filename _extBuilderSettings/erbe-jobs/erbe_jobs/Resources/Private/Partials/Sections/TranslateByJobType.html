@@ -1,0 +1,16 @@
+
+<f:if condition="{job.ini} == 1">
+    <f:then>
+        <f:translate key="tx_erbejobs_domain_model_job.{transType}_init"/>
+    </f:then>
+    <f:else>
+        <f:if condition="{job.areaOfExpertise} == 'Ausbildung'">
+            <f:then>
+                <f:translate key="tx_erbejobs_domain_model_job.{transType}_training"/>
+            </f:then>
+            <f:else>
+                <f:translate key="tx_erbejobs_domain_model_job.{transType}_job"/>
+            </f:else>
+        </f:if>
+    </f:else>
+</f:if>

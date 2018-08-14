@@ -1,0 +1,52 @@
+plugin.tx_erbe-jobs {
+	view {
+		templateRootPaths {
+			0 = EXT:erbe_jobs/Resources/Private/Templates/
+			1 = {$plugin.tx_erbejobs.view.templateRootPath}
+		}
+		partialRootPaths {
+			0 = EXT:erbe_jobs/Resources/Private/Partials/
+			1 = {$plugin.tx_erbejobs.view.partialRootPath}
+		}
+		layoutRootPaths {
+			0 = EXT:erbe_jobs/Resources/Private/Layouts/
+			1 = {$plugin.tx_erbejobs.view.layoutRootPath}
+		}
+	}
+	persistence {
+		storagePid = {$plugin.tx_erbejobs.persistence.storagePid}
+	}
+	features {
+		rewrittenPropertyMapper = 1
+	}
+
+	settings {
+
+		###################################
+		# Settings for list view
+		###################################
+		list {
+
+
+		}
+
+		###################################
+		# Settings for detail view
+		###################################
+		detail {
+
+		}
+
+		# Don't touch this - this is needed to let the plugin know if the main typoscript is included - otherwise an errormessage will be shown in the frontend
+		_TypoScriptIncluded = 1
+	}
+}
+
+page {
+	includeCSS {
+		#erbejobsMain = EXT:erbejobs/Resources/Public/Css/Main.css
+	}
+	includeJSFooter {
+		#erbejobs = EXT:erbejobs/Resources/Public/JavaScripts/Erbejobs.js
+	}
+}

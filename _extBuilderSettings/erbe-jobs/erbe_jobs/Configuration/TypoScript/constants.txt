@@ -1,0 +1,18 @@
+plugin.tx_erbe-jobs {
+	view {
+		# cat=plugin.tx_femanager/file; type=string; label= Path to template root (FE)
+		templateRootPath = EXT:erbe_jobs/Resources/Private/Templates/
+
+		# cat=plugin.tx_femanager/file; type=string; label= Path to template partials (FE)
+		partialRootPath = EXT:erbe_jobs/Resources/Private/Partials/
+
+		# cat=plugin.tx_femanager/file; type=string; label= Path to template layouts (FE)
+		layoutRootPath = EXT:erbe_jobs/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_femanager//a; type=int+; label= Default storage PID
+		storagePid =
+	}
+	settings {
+	}
+}

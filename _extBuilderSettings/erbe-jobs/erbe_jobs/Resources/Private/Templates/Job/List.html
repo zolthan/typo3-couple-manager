@@ -1,0 +1,64 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+    <div class="white">
+        <div class="container">
+            <f:if condition="{jobs}">
+                <h2 class="job-category">
+                    <f:translate key="tx_erbejobs_domain_model_job.jobOffers" default="Aktuelle Stellenangebote"/>
+                </h2>
+                <div class="job-list row nopad">
+                    <div class="card-deck">
+                        <f:for each="{jobs}" as="job" iteration="iteration">
+                            <div class="card col-lg-3 job-tile job-wrapper ">
+                                 <div class="row card-block light-turquoise">
+                                <f:link.action pageUid="{settings.list.detailView}" controller="Job" action="show" arguments="{job: job}">
+                                        <h3 class="card-title">{job.title}</h3>
+                                        <span class="card-text">{job.areaOfExpertise}</span>
+                                </f:link.action>
+                                 </div>
+                            </div>
+                        </f:for>
+                    </div>
+                    </div>
+            </f:if>
+
+            <f:if condition="{traineeJobs}">
+                <h2 class="job-category">
+                    <f:translate key="tx_erbejobs_domain_model_job.traineeJobs" default="Ausbildung und Studium"/>
+                </h2>
+                <div class="row job-list">
+                    <div class="card-deck">
+                        <f:for each="{traineeJobs}" as="job" iteration="iteration">
+                            <div class="card col-lg-3 job-tile job-wrapper ">
+                                <div class="row card-block medium-turquoise">
+                                    <f:link.action pageUid="{settings.list.detailView}" controller="Job" action="show" arguments="{job: job}">
+                                        <h3 class="card-title">{job.title}</h3>
+                                        <span class="card-text">{job.areaOfExpertise}</span>
+                                    </f:link.action>
+                                 </div>
+                            </div>
+                        </f:for>
+                    </div>
+                </div>
+            </f:if>
+
+            <f:if condition="{unsolicitedApplications}">
+                <h2 class="job-category">
+                    <f:translate key="tx_erbejobs_domain_model_job.unsolicitedApplications" default="Initiativbewerbung"/>
+                </h2>
+                <div class="job-list row nopad">
+                    <div class="card-deck">
+                        <f:for each="{unsolicitedApplications}" as="job" iteration="iteration">
+                            <div class="card col-lg-3 job-tile job-wrapper ">
+                                 <div class="row card-block turquoise">
+                                     <f:link.external uri="{job.link}" target="_blank">
+                                         <h3 class="card-title">{job.title}</h3>
+                                         <span class="card-text">{job.areaOfExpertise}</span>
+                                     </f:link.external>
+                                 </div>
+                            </div>
+                        </f:for>
+                    </div>
+                </div>
+            </f:if>
+        </div>
+    </div>
