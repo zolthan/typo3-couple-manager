@@ -4,125 +4,106 @@
           product-name="couple_manager" target-language="de">
         <header/>
         <body>
-            <trans-unit id="pi1_title" xml:space="preserve" approved="yes">
-				<source>Couple Manager</source>
-				<target state="translated">Paar-Verwaltung</target>
+            <trans-unit id="pi1_title" xml:space="preserve">
+				<target>Paar-Verwaltung</target>
 			</trans-unit>
-			<trans-unit id="pi1_plus_wiz_description" xml:space="preserve" approved="yes">
-				<source>Management of couples, competitions and results</source>
-				<target state="translated">Verwaltung von paaren, Wettbewerben und Ergebnissen</target>
+			<trans-unit id="pi1_plus_wiz_description" xml:space="preserve">
+				<target>Verwaltung von paaren, Wettbewerben und Ergebnissen</target>
 			</trans-unit>
-			<trans-unit id="flexforms_tab.settings" xml:space="preserve" approved="yes">
-				<source>Settings</source>
-				<target state="translated">Einstellungen</target>
+			<trans-unit id="flexforms_tab.settings" xml:space="preserve">
+				<target>Einstellungen</target>
 			</trans-unit>
-			<trans-unit id="flexforms_tab.additional" xml:space="preserve" approved="yes">
-				<source>Additional</source>
-				<target state="translated">Weitere Einstellungen</target>
+			<trans-unit id="flexforms_tab.list" xml:space="preserve">
+				<target>Listenansicht</target>
 			</trans-unit>
-			<trans-unit id="flexforms_tab.template" xml:space="preserve" approved="yes">
-				<source>Template</source>
-				<target state="translated">Vorlage</target>
+			<trans-unit id="flexforms_tab.list.active_couples_first" xml:space="preserve">
+				<target>"Aktive Paare" oberhalb</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.mode" xml:space="preserve" approved="yes">
-				<source>What to display</source>
-				<target state="translated">Ausgabemodus wählen</target>
+			<trans-unit id="flexforms_tab.list.select_detail_view" xml:space="preserve">
+				<target>Detailseite wählen</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.mode.couple_list" xml:space="preserve" approved="yes">
-				<source>List view (couples)</source>
-				<target state="translated">Listenansicht (Paare)</target>
+
+			<trans-unit id="flexforms_tab.additional" xml:space="preserve">
+				<target>Weitere Einstellungen</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.mode.couple_detail" xml:space="preserve" approved="yes">
-				<source>Detail view (couple)</source>
-				<target state="translated">Detailansicht (Paar)</target>
+			<trans-unit id="flexforms_tab.template" xml:space="preserve">
+				<target>Vorlage</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.mode.competition_list" xml:space="preserve" approved="yes">
-				<source>List view (competitions)</source>
-				<target state="translated">Listenansicht (Wettbewerbe)</target>
+			<trans-unit id="flexforms_general.mode" xml:space="preserve">
+				<target>Ausgabemodus wählen</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.mode.not_configured" xml:space="preserve" approved="yes">
-				<source>No view yet configured</source>
-				<target state="translated">Noch keine Ansicht konfiguriert</target>
+			<trans-unit id="flexforms_general.mode.couple_list" xml:space="preserve">
+				<target>Listenansicht (Paare)</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.mode.optgroup_search" xml:space="preserve" approved="yes">
+			<trans-unit id="flexforms_general.mode.couple_detail" xml:space="preserve">
+				<target>Detailansicht (Paar)</target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.competition_list" xml:space="preserve">
+				<target>Listenansicht (Wettbewerbe)</target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.not_configured" xml:space="preserve">
+				<target>Noch keine Ansicht konfiguriert</target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.optgroup_search" xml:space="preserve">
 				<source>Search</source>
-			<target state="translated">Suche</target></trans-unit>
-			<trans-unit id="flexforms_general.mode.result_list" xml:space="preserve" approved="yes">
-				<source>List view (results)</source>
-				<target state="translated">Listenansicht (Ergebnisse)</target>
+			<target>Suche</target></trans-unit>
+			<trans-unit id="flexforms_general.mode.result_list" xml:space="preserve">
+				<target>Listenansicht (Ergebnisse)</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.orderBy" xml:space="preserve" approved="yes">
-				<source>Sort by</source>
-				<target state="translated">Sortieren nach</target>
+			<trans-unit id="flexforms_general.orderBy" xml:space="preserve">
+				<target>Sortieren nach</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.orderBy.uid" xml:space="preserve" approved="yes">
-				<source>Uid</source>
-				<target state="translated">Uid</target>
+			<trans-unit id="flexforms_general.orderBy.uid" xml:space="preserve">
+				<target>Uid</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.orderBy.tstamp" xml:space="preserve" approved="yes">
-				<source>Last edited</source>
-				<target state="translated">Zuletzt bearbeitet</target>
+			<trans-unit id="flexforms_general.orderBy.tstamp" xml:space="preserve">
+				<target>Zuletzt bearbeitet</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.orderBy.crdate" xml:space="preserve" approved="yes">
-				<source>Created</source>
-				<target state="translated">Erstellt</target>
+			<trans-unit id="flexforms_general.orderBy.crdate" xml:space="preserve">
+				<target>Erstellt</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.orderBy.man_lastname" xml:space="preserve" approved="yes">
-				<source>Lastname Man</source>
-				<target state="translated">Nachname, Herr</target>
+			<trans-unit id="flexforms_general.orderBy.man_lastname" xml:space="preserve">
+				<target>Nachname, Herr</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.orderDirection" xml:space="preserve" approved="yes">
-				<source>Sort direction</source>
-				<target state="translated">Sortierung</target>
+			<trans-unit id="flexforms_general.orderDirection" xml:space="preserve">
+				<target>Sortierung</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.orderDirection.asc" xml:space="preserve" approved="yes">
-				<source>Ascending</source>
-				<target state="translated">aufsteigend</target>
+			<trans-unit id="flexforms_general.orderDirection.asc" xml:space="preserve">
+				<target>aufsteigend</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.orderDirection.desc" xml:space="preserve" approved="yes">
-				<source>Descending</source>
-				<target state="translated">absteigend</target>
+			<trans-unit id="flexforms_general.orderDirection.desc" xml:space="preserve">
+				<target>absteigend</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.disciplines" xml:space="preserve" approved="yes">
-				<source>Dsicipline selection</source>
-				<target state="translated">Disziplin-Auswahl</target>
+			<trans-unit id="flexforms_general.disciplines" xml:space="preserve">
+				<target>Disziplin-Auswahl</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.activeCoupleRestriction" xml:space="preserve" approved="yes">
-				<source>Active couple</source>
-				<target state="translated">Aktives Paar</target>
+			<trans-unit id="flexforms_general.activeCoupleRestriction" xml:space="preserve">
+				<target>Aktives Paar</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.activeCoupleRestriction.1" xml:space="preserve" approved="yes">
-				<source>only active couples</source>
-				<target state="translated">Nur Aktive Paare</target>
+			<trans-unit id="flexforms_general.activeCoupleRestriction.1" xml:space="preserve">
+				<target>Nur Aktive Paare</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.activeCoupleRestriction.2" xml:space="preserve" approved="yes">
-				<source>except active couples</source>
-				<target state="translated">Keine aktiven Paare</target>
+			<trans-unit id="flexforms_general.activeCoupleRestriction.2" xml:space="preserve">
+				<target>Keine aktiven Paare</target>
 			</trans-unit>
-			<trans-unit id="flexforms_template.mediaMaxWidth" xml:space="preserve" approved="yes">
-				<source>Max width for media elements</source>
-				<target state="translated">Maximale Breite für Medienelemente</target>
+			<trans-unit id="flexforms_template.mediaMaxWidth" xml:space="preserve">
+				<target>Maximale Breite für Medienelemente</target>
 			</trans-unit>
-			<trans-unit id="flexforms_template.mediaMaxHeight" xml:space="preserve" approved="yes">
-				<source>Max height for media elements</source>
-				<target state="translated">Maximale Höhe für Medienelemente</target>
+			<trans-unit id="flexforms_template.mediaMaxHeight" xml:space="preserve">
+				<target>Maximale Höhe für Medienelemente</target>
 			</trans-unit>
-			<trans-unit id="flexforms_additional.activeCouplesFirst" xml:space="preserve" approved="yes">
-				<source>Sort "Active couples" before</source>
-				<target state="translated">"Aktive Paare" oberhalb</target>
+			<trans-unit id="flexforms_additional.tags" xml:space="preserve">
+				<target>Ergebnisse</target>
 			</trans-unit>
-			<trans-unit id="flexforms_additional.tags" xml:space="preserve" approved="yes">
-				<source>Results</source>
-				<target state="translated">Ergebnisse</target>
+			<trans-unit id="pagemodule.pageNotAvailable" xml:space="preserve">
+				<target>Die Seite mit der uid "%s" ist nicht mehr verfügbar!</target>
 			</trans-unit>
-			<trans-unit id="pagemodule.pageNotAvailable" xml:space="preserve" approved="yes">
-				<source>Page with uid "%s" is not available anymore!</source>
-				<target state="translated">Die Seite mit der uid "%s" ist nicht mehr verfügbar!</target>
+			<trans-unit id="pagemodule.recordNotAvailable" xml:space="preserve">
+				<target>Der Datensatz mit der uid "%s" ist nicht mehr verfügbar!</target>
 			</trans-unit>
-			<trans-unit id="pagemodule.recordNotAvailable" xml:space="preserve" approved="no">
-				<source>Record with uid "%s" is not available anymore!</source>
-				<target state="needs-translation">Der Datensatz mit der uid "%s" ist nicht mehr verfügbar!</target>
+			<trans-unit id="pleaseChoose" xml:space="preserve">
+				<target>--- Bitte wählen ---</target>
 			</trans-unit>
-        </body>
+		</body>
     </file>
 </xliff>

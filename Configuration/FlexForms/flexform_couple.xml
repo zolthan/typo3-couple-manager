@@ -5,7 +5,7 @@
               SHEET General Settings
             ################################
         -->
-        <sDEF>
+        <main>
             <ROOT>
                 <TCEforms>
                     <sheetTitle>
@@ -14,59 +14,87 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
+
                     <!-- View -->
                     <switchableControllerActions>
                         <TCEforms>
                             <label>
                                 LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode
                             </label>
+                            <onChange>reload</onChange>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
+
                                 <items>
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:pleaseChoose</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
                                     <numIndex index="1">
-                                        <numIndex index="0">
-                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.couple_list
-                                        </numIndex>
+                                        <numIndex index="0">LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.couple_list</numIndex>
                                         <numIndex index="1">Couple->list</numIndex>
                                     </numIndex>
                                     <numIndex index="2">
-                                        <numIndex index="0">
-                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.couple_detail
-                                        </numIndex>
+                                        <numIndex index="0">LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.couple_detail</numIndex>
                                         <numIndex index="1">Couple->detail</numIndex>
                                     </numIndex>
                                     <numIndex index="11">
-                                        <numIndex index="0">
-                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.competition_list
-                                        </numIndex>
+                                        <numIndex index="0">LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.competition_list</numIndex>
                                         <numIndex index="1">Competition->list</numIndex>
                                     </numIndex>
                                     <numIndex index="21">
-                                        <numIndex index="0">
-                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.result_list
-                                        </numIndex>
+                                        <numIndex index="0">LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.result_list</numIndex>
                                         <numIndex index="1">Result->list</numIndex>
                                     </numIndex>
                                 </items>
                             </config>
                         </TCEforms>
                     </switchableControllerActions>
+                </el>
+            </ROOT>
+        </main>
 
+        <list>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list</sheetTitle>
+                    <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Couple->list]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
                     <!-- activeCouplesFirst -->
-                    <settings.activeCouplesFirst>
+                    <settings.list.activeCouplesFirst>
                         <TCEforms>
-                            <label>
-                                LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_additional.activeCouplesFirst
-                            </label>
+                            <label>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list.active_couples_first</label>
                             <config>
                                 <type>check</type>
                             </config>
                         </TCEforms>
-                    </settings.activeCouplesFirst>
+                    </settings.list.activeCouplesFirst>
 
+                    <settings.list.detailView>
+                        <TCEforms>
+                            <label>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list.select_detail_view</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>1</minitems>
+                                <show_thumbs>1</show_thumbs>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.list.detailView>
                 </el>
             </ROOT>
-        </sDEF>
+        </list>
+
     </sheets>
 </T3DataStructure>

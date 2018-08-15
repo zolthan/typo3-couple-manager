@@ -7,7 +7,7 @@ call_user_func(
         if (TYPO3_MODE === 'BE') {
             $icons        = [
 //                'apps-pagetree-folder-contains-news' => 'ext-news-folder-tree.svg',
-                'ext-couple_manager-wizard-icon' => 'tx_couplemanager_domain_model_couple.svg',
+                'ext-couple_manager-wizard-icon' => 'Extension.svg',
 //                'ext-news-type-default' => 'news_domain_model_news.svg',
 //                'ext-news-type-internal' => 'news_domain_model_news_internal.svg',
 //                'ext-news-type-external' => 'news_domain_model_news_external.svg',
