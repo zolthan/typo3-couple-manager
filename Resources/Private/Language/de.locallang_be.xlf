@@ -22,6 +22,9 @@
 			<trans-unit id="flexforms_tab.list.select_detail_view" xml:space="preserve">
 				<target>Detailseite wählen</target>
 			</trans-unit>
+			<trans-unit id="couples-folder" xml:space="preserve">
+				<target>Paar-Verwaltung</target>
+			</trans-unit>
 
 			<trans-unit id="flexforms_tab.additional" xml:space="preserve">
 				<target>Weitere Einstellungen</target>

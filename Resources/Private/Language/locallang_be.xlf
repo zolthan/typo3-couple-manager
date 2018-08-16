@@ -22,6 +22,9 @@
 			<trans-unit id="flexforms_tab.list.select_detail_view" xml:space="preserve">
 				<source>Select Detail View</source>
 			</trans-unit>
+			<trans-unit id="couples-folder" xml:space="preserve">
+				<source>Couple management</source>
+			</trans-unit>
 
 			<trans-unit id="flexforms_tab.additional" xml:space="preserve">
 				<source>Additional</source>
