@@ -9,17 +9,16 @@
             <ROOT>
                 <TCEforms>
                     <sheetTitle>
-                        LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.settings
+                        LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode
                     </sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
-
                     <!-- View -->
                     <switchableControllerActions>
                         <TCEforms>
                             <label>
-                                LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode
+                                LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode
                             </label>
                             <onChange>reload</onChange>
                             <config>
@@ -32,19 +31,33 @@
                                         <numIndex index="1"></numIndex>
                                     </numIndex>
                                     <numIndex index="1">
-                                        <numIndex index="0">LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.couple_list</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.couple_list
+                                        </numIndex>
                                         <numIndex index="1">Couple->list</numIndex>
                                     </numIndex>
                                     <numIndex index="2">
-                                        <numIndex index="0">LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.couple_detail</numIndex>
-                                        <numIndex index="1">Couple->detail</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.couple_list_simple
+                                        </numIndex>
+                                        <numIndex index="1">Couple->listSimple;Couple->detail</numIndex>
                                     </numIndex>
                                     <numIndex index="11">
-                                        <numIndex index="0">LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.competition_list</numIndex>
-                                        <numIndex index="1">Competition->list</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.couple_detail
+                                        </numIndex>
+                                        <numIndex index="1">Couple->detail</numIndex>
                                     </numIndex>
                                     <numIndex index="21">
-                                        <numIndex index="0">LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.result_list</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.competition_list
+                                        </numIndex>
+                                        <numIndex index="1">Competition->list</numIndex>
+                                    </numIndex>
+                                    <numIndex index="31">
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.result_list
+                                        </numIndex>
                                         <numIndex index="1">Result->list</numIndex>
                                     </numIndex>
                                 </items>

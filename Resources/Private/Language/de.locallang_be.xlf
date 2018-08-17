@@ -10,11 +10,30 @@
 			<trans-unit id="pi1_plus_wiz_description" xml:space="preserve">
 				<target>Verwaltung von paaren, Wettbewerben und Ergebnissen</target>
 			</trans-unit>
-			<trans-unit id="flexforms_tab.settings" xml:space="preserve">
-				<target>Einstellungen</target>
+
+            <!-- View modes -->
+            <trans-unit id="flexforms_tab.mode" xml:space="preserve">
+				<target>Ausgabemodus</target>
 			</trans-unit>
-			<trans-unit id="flexforms_tab.list" xml:space="preserve">
-				<target>Listenansicht</target>
+			<trans-unit id="flexforms_tab.mode.couple_list" xml:space="preserve">
+				<target>Listenansicht (Paare)</target>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.couple_list_simple" xml:space="preserve">
+				<target>Listenansicht einfach (Paare)</target>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.couple_detail" xml:space="preserve">
+				<target>Detailansicht (Paar)</target>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.competition_list" xml:space="preserve">
+				<target>Listenansicht (Wettbewerbe)</target>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.result_list" xml:space="preserve">
+				<target>Listenansicht (Ergebnisse)</target>
+			</trans-unit>
+
+            <!-- List view settings -->
+            <trans-unit id="flexforms_tab.list" xml:space="preserve">
+				<target>Einstellungen Listenansicht</target>
 			</trans-unit>
 			<trans-unit id="flexforms_tab.list.active_couples_first" xml:space="preserve">
 				<target>"Aktive Paare" oberhalb</target>
@@ -32,26 +51,11 @@
 			<trans-unit id="flexforms_tab.template" xml:space="preserve">
 				<target>Vorlage</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.mode" xml:space="preserve">
-				<target>Ausgabemodus wählen</target>
-			</trans-unit>
-			<trans-unit id="flexforms_general.mode.couple_list" xml:space="preserve">
-				<target>Listenansicht (Paare)</target>
-			</trans-unit>
-			<trans-unit id="flexforms_general.mode.couple_detail" xml:space="preserve">
-				<target>Detailansicht (Paar)</target>
-			</trans-unit>
-			<trans-unit id="flexforms_general.mode.competition_list" xml:space="preserve">
-				<target>Listenansicht (Wettbewerbe)</target>
-			</trans-unit>
 			<trans-unit id="flexforms_general.mode.not_configured" xml:space="preserve">
 				<target>Noch keine Ansicht konfiguriert</target>
 			</trans-unit>
 			<trans-unit id="flexforms_general.mode.optgroup_search" xml:space="preserve">
-				<source>Search</source>
-			<target>Suche</target></trans-unit>
-			<trans-unit id="flexforms_general.mode.result_list" xml:space="preserve">
-				<target>Listenansicht (Ergebnisse)</target>
+			    <target>Suche</target>
 			</trans-unit>
 			<trans-unit id="flexforms_general.orderBy" xml:space="preserve">
 				<target>Sortieren nach</target>
@@ -107,6 +111,6 @@
 			<trans-unit id="pleaseChoose" xml:space="preserve">
 				<target>--- Bitte wählen ---</target>
 			</trans-unit>
-		</body>
+        </body>
     </file>
 </xliff>

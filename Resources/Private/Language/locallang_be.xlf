@@ -10,11 +10,30 @@
 			<trans-unit id="pi1_plus_wiz_description" xml:space="preserve">
 				<source>Management of couples, competitions and results</source>
 			</trans-unit>
-			<trans-unit id="flexforms_tab.settings" xml:space="preserve">
-				<source>Settings</source>
+
+            <!-- View modes -->
+            <trans-unit id="flexforms_tab.mode" xml:space="preserve">
+				<source>Display mode</source>
 			</trans-unit>
-			<trans-unit id="flexforms_tab.list" xml:space="preserve">
-				<source>List view</source>
+			<trans-unit id="flexforms_tab.mode.couple_list" xml:space="preserve">
+				<source>List view (couples)</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.couple_list_simple" xml:space="preserve">
+				<source>List view simple (couples)</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.couple_detail" xml:space="preserve">
+				<source>Detail view (couple)</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.competition_list" xml:space="preserve">
+				<source>List view (competitions)</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.result_list" xml:space="preserve">
+				<source>List view (results)</source>
+			</trans-unit>
+
+            <!-- List view settings -->
+            <trans-unit id="flexforms_tab.list" xml:space="preserve">
+				<source>List view settings</source>
 			</trans-unit>
 			<trans-unit id="flexforms_tab.list.active_couples_first" xml:space="preserve">
 				<source>Sort "Active couples" before</source>
@@ -32,23 +51,8 @@
 			<trans-unit id="flexforms_tab.template" xml:space="preserve">
 				<source>Template</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.mode" xml:space="preserve">
-				<source>What to display</source>
-			</trans-unit>
-			<trans-unit id="flexforms_general.mode.couple_list" xml:space="preserve">
-				<source>List view (couples)</source>
-			</trans-unit>
-			<trans-unit id="flexforms_general.mode.couple_detail" xml:space="preserve">
-				<source>Detail view (couple)</source>
-			</trans-unit>
-			<trans-unit id="flexforms_general.mode.competition_list" xml:space="preserve">
-				<source>List view (competitions)</source>
-			</trans-unit>
 			<trans-unit id="flexforms_general.mode.not_configured" xml:space="preserve">
 				<source>No view yet configured</source>
-			</trans-unit>
-			<trans-unit id="flexforms_general.mode.result_list" xml:space="preserve">
-				<source>List view (results)</source>
 			</trans-unit>
 			<trans-unit id="flexforms_general.orderBy" xml:space="preserve">
 				<source>Sort by</source>
