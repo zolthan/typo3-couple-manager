@@ -7,7 +7,7 @@
                 <div class="gallery-row row">
                     <div class="gallery-item col-xs-12">
                         <figure class="image">
-                            <a href="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_05286f085d.jpg"
+                            <!--<a href="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_05286f085d.jpg"
                                title="" data-lightbox-caption=""
                                class="lightbox"
                                data-lightbox-width="300" data-lightbox-height="300"
@@ -25,7 +25,10 @@
                                     <img src="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_ea4dc11757.jpg"
                                          title="" alt=""/>
                                 </noscript>
-                            </a>
+                            </a>-->
+                            <f:media file="{couple.image}" width="{settings.menuthumbnail.media.width}"
+                                     height="{settings.menuthumbnail.media.height}"
+                                     class="card-img-top img-responsive"/>
                         </figure>
                     </div>
                 </div>
@@ -33,13 +36,11 @@
             <div class="col-md-6 col-xs-12">
                 <header>
                     <h1 class="element-header text-center">
-                        Dieter &amp; Annette Kuchenbecker
+                        {couple.coupleName}
                     </h1>
                 </header>
-                <p>Dieter Kuchenbecker &amp; Annette Kuchenbecker tanzen im Seniorenbereich seit Januar 1990.</p>
-                <p>Ihr erster Wettbewerb,&nbsp;war im Mai 2004 in Frankfurt am Main. EWines Ihrer besten Ergebnisse ist unter anderem der der 1. Platz im Senior III S Standard&nbsp;auf dem Bodensee Dance Feestival in Höchst / Österreich,&nbsp;am Samstag, 01. April 2017.</p>
+                <f:format.html>{couple.description}</f:format.html>
             </div>
         </div>
-
 	</f:section>
 </html>

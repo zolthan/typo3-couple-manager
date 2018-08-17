@@ -36,8 +36,8 @@
                         </p>
                     </div>
                     <div class="card-footer">
-                        <f:link.action action="detail" arguments="{couple : couple}"
-                                       title="Zur Seite von {couple.coupleName}"
+                        <f:link.action pageUid="{settings.list.detailView}" controller="Couple" action="detail"
+                                       arguments="{couple : couple}" title="Zur Seite von {couple.coupleName}"
                                        class="btn btn-primary">weiter
                         </f:link.action>
                         <f:if condition="{couple.activeCouple} != 1">

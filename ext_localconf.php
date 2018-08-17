@@ -34,7 +34,7 @@ call_user_func(
             'SchwarzWeissReutlingen.CoupleManager',
             'Couple',
             [
-                'Couple'      => 'list, listSimple, detail',
+                'Couple' => 'list,detail',
                 'Competition' => 'list',
                 'Result'      => 'list',
             ],

@@ -1,4 +1,5 @@
 <?php
+
 namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 
 /***
@@ -61,6 +62,13 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function listAction()
     {
+        $orderArray = [
+            'man_last_name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+        ];
+        if ($this->settings['list']['activeCouplesFirst']) {
+            $orderArray = ['active_couple' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING] + $orderArray;
+        }
+        $this->coupleRepository->setDefaultOrderings($orderArray);
         $couples = $this->coupleRepository->findAll();
         $this->view->assign('couples', $couples);
     }

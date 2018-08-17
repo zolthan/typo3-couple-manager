@@ -13,12 +13,14 @@ namespace SchwarzWeissReutlingen\CoupleManager\Userfuncs;
  *
  ***/
 
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Result;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-use TYPO3\CMS\Lang\LanguageService;
 
 /**
  * Tca renderer
@@ -39,6 +41,24 @@ class Tca
     {
         $this->objectManager    = GeneralUtility::makeInstance(ObjectManager::class);
         $this->coupleRepository = $this->objectManager->get(CoupleRepository::class);
+        $this->resultRepository = $this->objectManager->get(ResultRepository::class);
+    }
+
+    /**
+     * @param array $parameters
+     * @param Tca $parentObject
+     */
+    public function getResultTitle(&$parameters, $parentObject)
+    {
+        /** @var Result $result */
+        $result = $this->resultRepository->findByUid($parameters['row']['uid']);
+        if ($result) {
+            /** @var Competition $competition */
+            $competition = $result->getCompetition()->current();
+            /** @var Couple $couple */
+            $couple = $result->getCouple()->current();
+            $parameters['title'] = sprintf('%s - %s - %s', $result->getDate()->format('d.m.Y'), $couple->getCoupleName(), $competition->getTitle());
+        }
     }
 
     /**
