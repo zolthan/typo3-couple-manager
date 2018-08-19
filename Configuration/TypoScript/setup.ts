@@ -1,11 +1,22 @@
 plugin.tx_couplemanager {
     view {
-        templateRootPaths.0 = EXT:couple_manager/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_couplemanager.view.templateRootPath}
-        partialRootPaths.0 = EXT:couple_manager/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_couplemanager.view.partialRootPath}
-        layoutRootPaths.0 = EXT:couple_manager/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_couplemanager.view.layoutRootPath}
+        templateRootPaths {
+            10 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements/
+            20 = EXT:couple_manager/Resources/Private/Templates/
+            30 = {$plugin.tx_couplemanager.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            10 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+            20 = EXT:couple_manager/Resources/Private/Partials/
+            30 = {$plugin.tx_couplemanager.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            10 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements/
+            20 = EXT:couple_manager/Resources/Private/Layouts/
+            30 = {$plugin.tx_couplemanager.view.layoutRootPath}
+        }
     }
 
     persistence {

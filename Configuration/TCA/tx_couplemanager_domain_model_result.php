@@ -21,7 +21,7 @@ return [
         'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_result.svg'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, date, discipline, starting_group, starting_class, position, participant_count, promotion, couple, competition, competition_type',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, couple, date, discipline, starting_group, starting_class, position, participant_count, promotion, competition, competition_type',
     ],
     'types' => [
         '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, date, discipline, starting_group, starting_class, position, participant_count, promotion, couple, competition, competition_type, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
@@ -109,6 +109,66 @@ return [
             ],
         ],
 
+        'couple' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.couple',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_couplemanager_domain_model_couple',
+                'foreign_field' => 'result',
+                'foreign_table_where' => 'ORDER BY tx_couplemanager_domain_model_couple.man_last_name',
+                'items' => [
+                    ['LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:pleaseChoose', 0],
+                ],
+                'minitems' => 1,
+                'maxitems' => 1,
+                'appearance' => [
+                    'collapseAll' => 1,
+                    'expandSingle' => 1,
+                ],
+            ],
+        ],
+        'competition' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.competition',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_couplemanager_domain_model_competition',
+                'foreign_field' => 'result',
+                'foreign_table_where' => 'ORDER BY tx_couplemanager_domain_model_competition.title ASC, tx_couplemanager_domain_model_competition.date_start DESC',
+                'items' => [
+                    ['LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:pleaseChoose', 0],
+                ],
+                'minitems' => 1,
+                'maxitems' => 1,
+                'appearance' => [
+                    'collapseAll' => 1,
+                    'expandSingle' => 1,
+                ],
+            ],
+        ],
+        'competition_type' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.competition_type',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_couplemanager_domain_model_competitiontype',
+                'foreign_field' => 'result',
+                'foreign_table_where' => 'ORDER BY tx_couplemanager_domain_model_competitiontype.organization ASC, tx_couplemanager_domain_model_competitiontype.name ASC',
+                'items' => [
+                    ['LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:pleaseChoose', 0],
+                ],
+                'minitems' => 1,
+                'maxitems' => 1,
+                'appearance' => [
+                    'collapseAll' => 1,
+                    'expandSingle' => 1,
+                ],
+            ],
+        ],
         'date' => [
             'exclude' => true,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.date',
@@ -120,35 +180,43 @@ return [
                 'default' => '0000-00-00'
             ],
         ],
-        'discipline' => [
+        'starting_group' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.discipline',
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.starting_group',
             'config' => [
                 'type' => 'select',
-//                'renderType' => 'selectSingle',
-                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getDisciplineItems',
+                'renderType' => 'selectSingle',
+                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getStartingGroupItems',
                 'size' => 1,
+                'minitems' => 1,
                 'maxitems' => 1,
                 'eval' => ''
             ],
-        ],
-        'starting_group' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.starting_group',
-            'config' => [
-                'type' => 'input',
-                'size' => 4,
-                'eval' => 'int'
-            ]
         ],
         'starting_class' => [
             'exclude' => true,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.starting_class',
             'config' => [
-                'type' => 'input',
-                'size' => 4,
-                'eval' => 'int'
-            ]
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getStartingClassItems',
+                'size' => 1,
+                'maxitems' => 1,
+                'eval' => ''
+            ],
+        ],
+        'discipline' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.discipline',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getDisciplineItems',
+                'size' => 1,
+                'minitems' => 1,
+                'maxitems' => 1,
+                'eval' => ''
+            ],
         ],
         'position' => [
             'exclude' => true,
@@ -181,63 +249,5 @@ return [
                 'default' => 0,
             ]
         ],
-        'couple' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.couple',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_couplemanager_domain_model_couple',
-                'foreign_field' => 'result',
-                'minitems' => 1,
-                'maxitems' => 1,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
-            ],
-
-        ],
-        'competition' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.competition',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_couplemanager_domain_model_competition',
-                'foreign_field' => 'result',
-                'minitems' => 1,
-                'maxitems' => 1,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
-            ],
-
-        ],
-        'competition_type' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.competition_type',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_couplemanager_domain_model_competitiontype',
-                'foreign_field' => 'result',
-                'minitems' => 1,
-                'maxitems' => 1,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
-            ],
-
-        ],
-
     ],
 ];

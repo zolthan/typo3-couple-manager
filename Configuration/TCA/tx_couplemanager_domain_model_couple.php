@@ -150,6 +150,7 @@ return [
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.starting_group',
             'config' => [
                 'type' => 'select',
+                'renderType' => 'selectSingle',
                 'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getStartingGroupItems',
                 'size' => 1,
                 'minitems' => 1,
@@ -162,6 +163,7 @@ return [
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.starting_class_latin',
             'config' => [
                 'type' => 'select',
+                'renderType' => 'selectSingle',
                 'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getStartingClassItems',
                 'size' => 1,
                 'maxitems' => 1,
@@ -173,6 +175,7 @@ return [
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.starting_class_standard',
             'config' => [
                 'type' => 'select',
+                'renderType' => 'selectSingle',
                 'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getStartingClassItems',
                 'size' => 1,
                 'maxitems' => 1,

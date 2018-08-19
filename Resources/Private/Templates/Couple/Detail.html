@@ -2,45 +2,44 @@
 <f:layout name="Default"/>
 <f:section name="main">
     <f:flashMessages/>
-        <div class="row">
-            <div class="col-md-6 col-xs-12">
-                <div class="gallery-row row">
-                    <div class="gallery-item col-xs-12">
-                        <figure class="image">
-                            <!--<a href="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_05286f085d.jpg"
-                               title="" data-lightbox-caption=""
-                               class="lightbox"
-                               data-lightbox-width="300" data-lightbox-height="300"
-                               rel="lightbox-group-199">
-                                <img src="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_045c0bd231.jpg"
-                                     data-src="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_ea4dc11757.jpg"
-                                     data-large="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_045c0bd231.jpg"
-                                     data-medium="/fileadmin/swrt/images/inhalte/paare/turnierpaar-kuchenbecker.jpg"
-                                     data-small="/fileadmin/swrt/images/inhalte/paare/turnierpaar-kuchenbecker.jpg"
-                                     data-extrasmall="/fileadmin/swrt/images/inhalte/paare/turnierpaar-kuchenbecker.jpg"
-                                     title="" alt=""
-                                     class="lazyload" data-preload="false"
-                                     style="opacity: 1;">
-                                <noscript>
-                                    <img src="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_ea4dc11757.jpg"
-                                         title="" alt=""/>
-                                </noscript>
-                            </a>-->
-                            <f:media file="{couple.image}" width="{settings.menuthumbnail.media.width}"
-                                     height="{settings.menuthumbnail.media.height}"
-                                     class="card-img-top img-responsive"/>
-                        </figure>
-                    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-12">
+            <div class="gallery-row row">
+                <div class="gallery-item col-xs-12">
+                    <figure class="image">
+                        <!--<a href="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_05286f085d.jpg"
+                           title="" data-lightbox-caption=""
+                           class="lightbox"
+                           data-lightbox-width="300" data-lightbox-height="300"
+                           rel="lightbox-group-199">
+                            <img src="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_045c0bd231.jpg"
+                                 data-src="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_ea4dc11757.jpg"
+                                 data-large="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_045c0bd231.jpg"
+                                 data-medium="/fileadmin/swrt/images/inhalte/paare/turnierpaar-kuchenbecker.jpg"
+                                 data-small="/fileadmin/swrt/images/inhalte/paare/turnierpaar-kuchenbecker.jpg"
+                                 data-extrasmall="/fileadmin/swrt/images/inhalte/paare/turnierpaar-kuchenbecker.jpg"
+                                 title="" alt=""
+                                 class="lazyload" data-preload="false"
+                                 style="opacity: 1;">
+                            <noscript>
+                                <img src="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_ea4dc11757.jpg"
+                                     title="" alt=""/>
+                            </noscript>
+                        </a>-->
+                        <f:render partial="Image"
+                                  arguments="{file: couple.image, settings: settings, class: 'card-img-top img-responsive'}"/>
+                    </figure>
                 </div>
             </div>
-            <div class="col-md-6 col-xs-12">
-                <header>
-                    <h1 class="element-header text-center">
-                        {couple.coupleName}
-                    </h1>
-                </header>
-                <f:format.html>{couple.description}</f:format.html>
-            </div>
         </div>
-	</f:section>
+        <div class="col-md-6 col-xs-12">
+            <header>
+                <h1 class="element-header text-center">
+                    {couple.coupleName}
+                </h1>
+            </header>
+            <f:format.html>{couple.description}</f:format.html>
+        </div>
+    </div>
+</f:section>
 </html>

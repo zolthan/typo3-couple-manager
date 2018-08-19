@@ -57,7 +57,8 @@ class Tca
             $competition = $result->getCompetition()->current();
             /** @var Couple $couple */
             $couple = $result->getCouple()->current();
-            $parameters['title'] = sprintf('%s - %s - %s', $result->getDate()->format('d.m.Y'), $couple->getCoupleName(), $competition->getTitle());
+//            $parameters['title'] = sprintf('%s - %s - %s', $result->getDate()->format('d.m.Y'), $couple->getCoupleName(), $competition->getTitle());
+//            $parameters['title'] = sprintf('%s - %s - %s', 1, $couple->getCoupleName(), $competition->getTitle());
         }
     }
 
