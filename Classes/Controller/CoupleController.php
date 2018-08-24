@@ -91,6 +91,8 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function detailAction(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple)
     {
+//        \TYPO3\CMS\Core\Utility\DebugUtility::debug($this, sprintf('%s|%s' . PHP_EOL, __METHOD__, __LINE__));
+
         $this->view->assign('couple', $couple);
     }
 }

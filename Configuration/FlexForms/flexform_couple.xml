@@ -36,17 +36,17 @@
                                         </numIndex>
                                         <numIndex index="1">Couple->list</numIndex>
                                     </numIndex>
-                                    <numIndex index="2">
+                                    <!--<numIndex index="2">
                                         <numIndex index="0">
                                             LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.couple_list_simple
                                         </numIndex>
-                                        <numIndex index="1">Couple->listSimple;Couple->detail</numIndex>
-                                    </numIndex>
+                                        <numIndex index="1">Couple->list;Couple->detail</numIndex>
+                                    </numIndex>-->
                                     <numIndex index="11">
                                         <numIndex index="0">
                                             LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.couple_detail
                                         </numIndex>
-                                        <numIndex index="1">Couple->detail</numIndex>
+                                        <numIndex index="1">Couple->detail;Couple->list;Result->list</numIndex>
                                     </numIndex>
                                     <numIndex index="21">
                                         <numIndex index="0">
@@ -58,7 +58,7 @@
                                         <numIndex index="0">
                                             LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.result_list
                                         </numIndex>
-                                        <numIndex index="1">Result->list</numIndex>
+                                        <numIndex index="1">Result->list;Couple->list;Couple->detail</numIndex>
                                     </numIndex>
                                 </items>
                             </config>
@@ -72,7 +72,7 @@
             <ROOT>
                 <TCEforms>
                     <sheetTitle>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list</sheetTitle>
-                    <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Couple->list]]></displayCond>
+                    <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Couple->list;Couple->detail;Result->list]]></displayCond>
                 </TCEforms>
                 <type>array</type>
                 <el>
@@ -111,3 +111,28 @@
 
     </sheets>
 </T3DataStructure>
+<!--
+http://www.typo3forum.net/discussion/74891/74891-plugin-2x-selben-seite-funktioniert.html#post212800
+                     <settings.view.action>
+                        <TCEforms>
+                            <label>Select View</label>
+                            <config>
+                                <type>select</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">List</numIndex>
+                                        <numIndex index="1">list</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">Detail</numIndex>
+                                        <numIndex index="1">show</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.view.action>
+-->
