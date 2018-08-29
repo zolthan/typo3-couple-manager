@@ -1,0 +1,218 @@
+<div class="slides_container">
+<section class="slider">
+	<div class="flexslider">	
+		<ul class="slides">
+		<f:for each="{slider}" as="slide" iteration="i" key="j">
+			<li>
+				<img src="uploads/slideshow/pics/{slide.0}" alt="{slide.1}" title="{slide.1}" width="100%" />
+			</li>
+		</f:for>
+		</ul>
+	</div>
+</section>
+</div>
+	
+    <div class="slidepoints" id="slidepoints">
+    <f:for each="{imagecaption}" as="text" key="i" iteration="it">
+        <f:if condition="{it.isFirst} == 1">
+            <f:then>
+                <f:if condition="{text}">
+                    <div id="slideshow-{i}" class="display">{text}</div>
+                </f:if>
+            </f:then>
+            <f:else>
+                <f:if condition="{text}">
+                    <div id="slideshow-{i}" class="display" >{text}</div>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:for>
+</div>
+	
+
+<div class="box-content">
+    <div id="products-single">
+        <div class="single-intro">
+            <f:if condition="{products.motherdescription}">
+			<f:then>
+				<f:format.raw>{products.motherdescription}</f:format.raw>
+		</div>
+	</div>
+</div>
+<f:if condition="{variations}">
+	<f:then>
+	<div class="application-list">
+		<f:for each="{variations}" as="variation" iteration="it">
+	   
+				   <span class="variation-item {variation.active}">
+				<f:link.page additionalAttributes="{data-ignore: 'push'}" additionalParams="{tx_rathgeberproducts_products: {productid: variation.uid }}"><f:format.raw>{variation.name}</f:format.raw></f:link.page>
+			</span>
+	  
+	   </f:for>
+	</div>
+        <div class="pointer">
+            <div class="arrow-bot"></div>
+        </div>
+	</f:then>
+</f:if>			
+<div class="box-content">
+    <div id="products-single">
+        <div class="single-intro">	
+				<f:format.raw>{products.description}</f:format.raw>
+			</f:then>
+            <f:else>
+				<f:format.raw>{products.description}</f:format.raw>
+			</f:else>
+            </f:if>
+            <div class="request">
+                <f:if condition="{settings.domain}==1">
+                    <f:then>
+                        <f:link.page pageUid="568" additionalAttributes="{data-ignore: 'push'}"  additionalParams="{product: {pname: products.name}}"> <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.request" /></f:link.page>
+                    </f:then>
+                    <f:else>
+                        <f:link.page pageUid="467" additionalAttributes="{data-ignore: 'push'}"  additionalParams="{product: {pname: products.name}}"> <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.request" /></f:link.page>
+                    </f:else>
+                </f:if>
+            </div>
+            <div class="phonerequest">
+                <p><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.phonerequest" /></p>
+                <div class="number">
+                    <f:if condition="{settings.domain}==1">
+                        <f:then>
+                            <a href="tel:+498961300780"><div class="phone-sym"></div><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.numbers" /></a>
+                        </f:then>
+                        <f:else>
+                            <a href="{settings.phonenumber}"><div class="phone-sym"></div><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.number" /></a>
+                        </f:else>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="sc-product segmented-control">
+    <f:link.page additionalAttributes="{data-ignore: 'push'}" class="control-item active info-sym" additionalParams="{tx_rathgeberproducts_products: {productid: products.uid }}" section="item1mobile" >
+        <div class="info"></div>
+    </f:link.page>
+    <f:link.page additionalAttributes="{data-ignore: 'push'}" class="control-item" additionalParams="{tx_rathgeberproducts_products: {productid: products.uid }}" section="item2mobile">
+        <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.techspec" />
+    </f:link.page>
+    <f:if condition="{products.verarbeitung}">
+        <f:link.page additionalAttributes="{data-ignore: 'push'}" class="control-item" section="item3mobile">
+            <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.verarbeitung" />
+        </f:link.page>
+    </f:if>
+</div>
+    <div class="card">
+        <span id="item1mobile" class="control-content active info-back">
+            <div class="rating-box">
+                <f:for each="{attributes}" as="attribute" iteration="counter">
+                    <f:if condition="{counter.isLast} == 1">
+                        <f:then>
+                            <f:if condition="{attribute.value.0}==0">
+                                <div class="rating-box-inner last">
+                                    <div class="rating-title"><span>{attribute.name}</span></div>
+                                    <div class="rating">
+                                        <f:for each="{attribute.value}" as="obj">
+                                            <div class="rated"></div>
+                                        </f:for>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </f:if>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{attribute.value.0}==0">
+                                <div class="rating-box-inner">
+                                    <div class="rating-title"><span>{attribute.name}</span></div>
+                                    <div class="rating">
+                                        <f:for each="{attribute.value}" as="obj">
+                                            <div class="rated"></div>
+                                        </f:for>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+
+                </f:for>
+            </div>
+        </span>
+        <span id="item2mobile" class="control-content">
+                <div class="inner-headline">
+                    <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.techspec" />
+                </div>
+                <div class="single-tech-content">
+                    <f:for each="{properties}" as="property" iteration="it1">
+                        <f:if condition="{it1.index} == {properties_split_count}">
+                </div>
+                <div class="single-tech-content">
+                    </f:if>
+                    <div class="attribute-item">
+                        <div class="left-cl">
+                            <f:alias map="{colourm: 'colour'}">
+                                <f:if condition="{property.propertyname} == {colourm}">
+                                    <f:then>
+                                        <strong><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.colourm1" /><br>
+                                            <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.colourm2" />:</strong>
+                                    </f:then>
+                                    <f:else>
+                                        <f:alias map="{resistancem : 'resistance'}">
+                                            <f:if condition="{property.propertyname} == {resistancem}">
+                                                <f:then>
+                                                    <strong><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.resistancem1" /><br>
+                                                        <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.resistancem2" />:</strong>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:alias map="{temperaturem: 'temperature'}">
+                                                        <f:if condition="{property.propertyname} == {temperaturem}">
+                                                            <f:then>
+                                                                <strong><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.temperaturem1" /><br>
+                                                                    <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.temperaturem2" />:</strong>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:alias map="{surfacerefinementm: 'surfacerefinement'}">
+                                                                    <f:if condition="{property.propertyname} == {surfacerefinementm}">
+                                                                        <f:then>
+                                                                            <strong><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.surfacerefinementm1" /><br>
+                                                                                <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.surfacerefinementm2" />:</strong>
+                                                                        </f:then>
+                                                                        <f:else>
+                                                                            <strong><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.{property.propertyname}" />:</strong>
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                </f:alias>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:alias>
+                                                </f:else>
+                                            </f:if>
+                                        </f:alias>
+                                    </f:else>
+                                </f:if>
+                            </f:alias>
+                        </div>
+                        <div class="right-cl">
+                        <f:for each="{property.propertyvalue}" as="value" iteration="it">
+                            {value.name}<f:if condition="{it.isLast} != 1">,</f:if>
+                        </f:for>
+                        </div>
+                    </div>
+                    </f:for>
+                </div>
+                <div class="clear"></div>
+            </span>
+
+                    <span id="item3mobile" class="control-content">
+						<div class="top-margin">
+						<f:format.raw>
+							{products.verarbeitung}
+						</f:format.raw>
+						</div>
+                </span>
+       
+</div>

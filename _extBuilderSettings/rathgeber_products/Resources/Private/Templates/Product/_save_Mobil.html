@@ -1,0 +1,134 @@
+<div class="slides_container">
+    <div id="slider">
+            <f:for each="{slider}" as="slide" iteration="i" key="j">
+                <div>
+                    <img src="uploads/slideshow/pics/{slide.0}" alt="{slide.1}" title="{slide.1}" width="100%" />
+                </div>
+            </f:for>
+    </div>
+    <div class="slidepoints">
+        <p><f:format.stripTags>{products.name}</f:format.stripTags></p>
+    </div>
+</div>
+<div class="box-content">
+    <div id="products-single">
+        <div class="single-intro">
+            <!--<f:if condition="{products.motherdescription}">-->
+                    <!--<f:format.raw>{products.motherdescription}</f:format.raw>-->
+            <!--</f:if>-->
+            <f:if condition="{products.description}">
+                    <f:format.raw>{products.description}</f:format.raw>
+            </f:if>
+            <div class="request">
+                <f:link.page pageUid="467" additionalParams="{product: {pname: products.name}}"> <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.request" /></f:link.page>
+            </div>
+            <div class="phonerequest">
+                <p><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.phonerequest" /></p>
+                <div class="number">
+                    <a href="tel:+498961300799"><div class="phone-sym"></div><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.number" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sc-product segmented-control">
+    <f:link.page class="control-item active info-sym" section="item1mobile" >
+        <div class="info"></div>
+    </f:link.page>
+    <f:link.page class="control-item" section="item2mobile">
+        <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.techspec" />
+    </f:link.page>
+    <f:if condition="{variations}">
+    <f:link.page class="control-item" section="item3mobile">
+        <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.variations" />
+    </f:link.page>
+    </f:if>
+</div>
+    <div class="card">
+        <span id="item1mobile" class="control-content active info-back">
+            <div class="rating-box">
+                <f:for each="{attributes}" as="attribute" iteration="counter">
+                    <f:if condition="{counter.isLast} == 1">
+                        <f:then>
+                            <f:if condition="{attribute.value.0}==0">
+                                <div class="rating-box-inner last">
+                                    <div class="rating-title"><span>{attribute.name}</span></div>
+                                    <div class="rating">
+                                        <f:for each="{attribute.value}" as="obj">
+                                            <div class="rated"></div>
+                                        </f:for>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </f:if>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{attribute.value.0}==0">
+                                <div class="rating-box-inner">
+                                    <div class="rating-title"><span>{attribute.name}</span></div>
+                                    <div class="rating">
+                                        <f:for each="{attribute.value}" as="obj">
+                                            <div class="rated"></div>
+                                        </f:for>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+
+                </f:for>
+            </div>
+        </span>
+        <span id="item2mobile" class="control-content">
+                <div class="inner-headline">
+                    <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.techspec" />
+                </div>
+                <div class="single-tech-content">
+                    <f:for each="{properties}" as="property" iteration="it1">
+                        <f:if condition="{it1.index} == {properties_split_count}">
+                </div>
+                <div class="single-tech-content">
+                    </f:if>
+                    <div class="attribute-item">
+                        <div class="left-cl"><strong><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.{property.propertyname}" />:</strong></div>
+                        <div class="right-cl">
+                        <f:for each="{property.propertyvalue}" as="value" iteration="it">
+                            {value.name}<f:if condition="{it.isLast} != 1">,</f:if>
+                        </f:for>
+                        </div>
+                    </div>
+                    </f:for>
+                </div>
+                <div class="clear"></div>
+            </span>
+			<f:if condition="{variations}">
+                <f:then>
+                    <span id="item3mobile" class="control-content">
+                    <div class="inner-headline">
+                        <f:if condition="{products.mothername}">
+                            <f:then>
+                                {products.mothername}
+                            </f:then>
+                            <f:else>
+                                {products.name}
+                            </f:else>
+                        </f:if>
+                    <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.var" />
+                    </div>
+                        <f:for each="{variations}" as="variation" iteration="it">
+                            <f:if condition="{variation.uid} == {products.uid}">
+                                <f:then>
+                                </f:then>
+                                <f:else>
+                                   <span class="variation-item {variation.active}">
+								<f:link.page additionalParams="{tx_rathgeberproducts_products: {productid: variation.uid }}"><f:format.raw>{variation.name}</f:format.raw></f:link.page>
+							</span>
+                                </f:else>
+                            </f:if>
+                       </f:for>
+
+                </span>
+                </f:then>
+            </f:if>
+</div>

@@ -1,0 +1,164 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.baseTab</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>			
+			<switchableControllerActions>
+				<TCEforms>	
+					<label>LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.viewType</label>
+          			<config>
+	          			<type>select</type>
+				        <items>
+				        	<numIndex index="0">
+					            <numIndex index="0">LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.viewList</numIndex>
+					            <numIndex index="1">Product->list</numIndex>
+				            </numIndex>
+							<numIndex index="1">
+				                <numIndex index="0">LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.viewSingle</numIndex>
+				                <numIndex index="1">Product->single</numIndex>
+				            </numIndex>
+                            <numIndex index="2">
+                                <numIndex index="0">LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.viewMobil</numIndex>
+                                <numIndex index="1">Product->mobil</numIndex>
+                            </numIndex>
+                        </items>
+          			</config>          
+				</TCEforms>
+			</switchableControllerActions>
+			<settings.type>
+				<TCEforms>
+					<label>LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.group</label>
+          			<config>
+	          			<type>select</type>
+			          	<items>
+			            	<numIndex index="0">
+				                <numIndex index="0">LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.product</numIndex>
+				                <numIndex index="1">0</numIndex>
+			            	</numIndex>
+							<numIndex index="1">
+			                	<numIndex index="0">LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.application</numIndex>
+			                	<numIndex index="1">1</numIndex>
+			            	</numIndex>           
+			            </items>
+		            </config>
+				</TCEforms>
+			</settings.type>
+            <settings.phonenumber>
+                <TCEforms>
+                    <label>LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.phonenumber</label>
+                    <config>
+                        <type>input</type>
+                        <size>10</size>
+                    </config>
+                </TCEforms>
+            </settings.phonenumber>
+			<settings.detail_page_id>
+				<TCEforms>
+					<label>LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.detailId</label>
+					<config>
+						<type>input</type>
+						<size>10</size>
+						<eval>trim</eval>
+						<wizards type="array">
+							<_PADDING>2</_PADDING>
+							<link type="array">
+								<type>popup</type>
+								<title>Link</title>
+								<icon>link_popup.gif</icon>
+								<script>browse_links.php?mode=wizard&amp;act=page</script>
+								<params type="array">
+									<blindLinkOptions>folder,file,url,mail,spec</blindLinkOptions>
+								</params>
+								<JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+							</link>
+						</wizards>
+					</config>
+				</TCEforms>
+			</settings.detail_page_id>
+			<settings.formpage_id>
+				<TCEforms>
+					<label>LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.formpage_id</label>
+					<config>
+						<type>input</type>
+						<size>10</size>
+						<eval>trim</eval>
+						<wizards type="array">
+							<_PADDING>2</_PADDING>
+							<link type="array">
+								<type>popup</type>
+								<title>Link</title>
+								<icon>link_popup.gif</icon>
+								<script>browse_links.php?mode=wizard&amp;act=page</script>
+								<params type="array">
+									<blindLinkOptions>folder,file,url,mail,spec</blindLinkOptions>
+								</params>
+								<JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+							</link>
+						</wizards>
+					</config>
+				</TCEforms>
+			</settings.formpage_id>
+			<settings.domain>
+				<TCEforms>
+					<label>LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.domain</label>
+					<config>
+						<type>select</type>
+						<items type="array">
+				        	<numIndex index="0">
+					            <numIndex index="0">RATHGEBER</numIndex>
+					            <numIndex index="1">0</numIndex>
+				            </numIndex>
+							<numIndex index="1">
+				                <numIndex index="0">smart-TEC</numIndex>
+				                <numIndex index="1">1</numIndex>
+				            </numIndex>    
+						</items>
+					</config>
+				</TCEforms>
+			</settings.domain>			
+        </el>
+      </ROOT>
+    </sDEF>
+	<sList>
+    	<ROOT>        
+	        <TCEforms>
+	          <sheetTitle>LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.listTab</sheetTitle>
+	        </TCEforms>
+	        <type>array</type>
+	        <el>		
+				<settings.introduction>
+					<TCEforms>
+						<label>LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.intro</label>
+	          			<config>
+							<type>text</type>
+						  	<size>40</size>
+						  	<max>80</max>
+						  	<eval>trim</eval>
+			            </config>
+					</TCEforms>
+				</settings.introduction>				
+	        </el>
+		</ROOT>
+	</sList>
+	<!--
+	<sDetail>
+    	<ROOT>        
+	        <TCEforms>
+	          <sheetTitle>LLL:EXT:rathgeber_products/Resources/Private/Language/locallang.xml:tx_rathgeberproducts_flex.singleTab</sheetTitle>
+	        </TCEforms>
+	        <type>array</type>
+	        <el>		
+
+	        </el>
+		</ROOT>
+	</sDetail>
+	-->
+  </sheets>
+</T3DataStructure>

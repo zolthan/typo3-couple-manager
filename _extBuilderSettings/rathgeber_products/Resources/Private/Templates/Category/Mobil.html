@@ -1,0 +1,142 @@
+<div id="categories-headline">
+    <h1>{categories.name}
+        <div class="change-view">
+            <div class="change-view-tile">
+                &nbsp;
+            </div>
+            <div class="change-view-list">
+                &nbsp;
+            </div>
+        </div>
+    </h1>
+</div>
+<div class="categories-introduction">
+    {categories.description}
+</div>
+<div id="categories-tiles">
+    <div style="overflow:hidden;">
+        <f:if condition="{categories.cattype}==0">
+            <f:for each="{products}" as="product" >
+                <div class="category-tiled-img">
+                    <f:link.page pageUid="{settings.detailpage_id}" additionalParams="{tx_rathgeberproducts_products: {productid: product.uid }}">
+                        <div class="category-tiled-label">
+                            {product.short}
+                            <!-- <f:if condition="{product.short}">
+                                <f:then>
+                                </f:then>
+                                <f:else>
+                                    <f:format.raw>{product.name}</f:format.raw>
+                                </f:else>
+                            </f:if>
+                        -->
+                        </div>
+                        <f:if condition="{product.catpreview}">
+                            <f:then>
+                                <f:image src="uploads/products/pics/{product.catpreview}" width="188" height="124" alt="{product.name}" />
+                            </f:then>
+                            <f:else>
+                                <f:image src="uploads/products/pics/_blank.jpg" width="188" height="124" alt="{product.name}" />
+                            </f:else>
+                        </f:if>
+                        <!--<f:image src="fileadmin/user_upload/products/pics/{product.catpreview}" width="188" height="124" alt="{product.name}" />-->
+                    </f:link.page>
+                </div>
+            </f:for>
+        </f:if>
+        <f:if condition="{categories.cattype}==1">
+            <f:for each="{products}" as="product" >
+                <div class="category-tiled-img">
+                    <f:link.page pageUid="{settings.detailpage_id}" additionalParams="{tx_rathgeberproducts_applications: {appid: product.uid }}">
+                        <div class="category-tiled-label">
+                            {product.short}
+                        </div>
+
+                        <f:if condition="{product.catpreview}">
+                            <f:then>
+                                <f:image src="uploads/products/pics/{product.catpreview}" width="188" height="124" alt="{product.name}" />
+                            </f:then>
+                            <f:else>
+                                <f:image src="uploads/products/pics/_blank.jpg" width="188" height="124" alt="{product.name}" />
+                            </f:else>
+                        </f:if>
+                    </f:link.page>
+                </div>
+            </f:for>
+        </f:if>
+        <f:if condition="{categories.cattype}==2">
+            <f:for each="{products}" as="product" >
+                <div class="category-tiled-img">
+                    <f:link.page pageUid="{settings.detailpage_id}" additionalParams="{tx_rathgeberproducts_applications: {appid: product.uid }}">
+                        <div class="category-tiled-label">
+                            {product.short}
+                        </div>
+
+                        <f:if condition="{product.catpreview}">
+                            <f:then>
+                                <f:image src="uploads/products/pics/{product.catpreview}" width="188" height="124" alt="{product.name}" />
+                            </f:then>
+                            <f:else>
+                                <f:image src="uploads/products/pics/_blank.jpg" width="188" height="124" alt="{product.name}" />
+                            </f:else>
+                        </f:if>
+                    </f:link.page>
+                </div>
+            </f:for>
+        </f:if>
+        <f:if condition="{categories.cattype}==3">
+            <f:for each="{products}" as="product" >
+                <div class="category-tiled-img">
+                    <f:link.page pageUid="{settings.detailpage_id}" additionalParams="{tx_rathgeberproducts_applications: {appid: product.uid }}">
+                        <div class="category-tiled-label">
+                            {product.short}
+                        </div>
+
+                        <f:if condition="{product.catpreview}">
+                            <f:then>
+                                <f:image src="uploads/products/pics/{product.catpreview}" width="188" height="124" alt="{product.name}" />
+                            </f:then>
+                            <f:else>
+                                <f:image src="uploads/products/pics/_blank.jpg" width="188" height="124" alt="{product.name}" />
+                            </f:else>
+                        </f:if>
+                    </f:link.page>
+                </div>
+            </f:for>
+        </f:if>
+    </div>
+</div>
+<div id="categories-list">
+    <f:for each="{products}" as="product">
+        <hr class="divider" />
+        <div class="text-item">
+            {product.name}
+        </div>
+        <div class="text-item-link">
+            <f:if condition="{categories.cattype}==0">
+                <f:link.page pageUid="{settings.detailpage_id}" additionalParams="{tx_rathgeberproducts_products: {productid: product.uid }}">
+                    >>
+                    <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.view" />
+                </f:link.page>
+            </f:if>
+            <f:if condition="{categories.cattype}==1">
+                <f:link.page pageUid="{settings.detailpage_id}" additionalParams="{tx_rathgeberproducts_applications: {appid: product.uid }}">
+                    >>
+                    <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.view" />
+                </f:link.page>
+            </f:if>
+            <f:if condition="{categories.cattype}==2">
+                <f:link.page pageUid="{settings.detailpage_id}" additionalParams="{tx_rathgeberproducts_applications: {appid: product.uid }}">
+                    >>
+                    <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.view" />
+                </f:link.page>
+            </f:if>
+            <f:if condition="{categories.cattype}==3">
+                <f:link.page pageUid="{settings.detailpage_id}" additionalParams="{tx_rathgeberproducts_applications: {appid: product.uid }}">
+                    >>
+                    <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.view" />
+                </f:link.page>
+            </f:if>
+        </div>
+        <div class="clear"></div>
+    </f:for>
+</div>
