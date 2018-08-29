@@ -1,0 +1,312 @@
+<div id="filter-box">
+	<h1><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.filter" /></h1>
+	<div id="filter-inner">
+
+		<f:form class="filter-form" pageUid="{settings.filterpage_id}">
+
+			<f:if condition="{colours}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.colour" /></label><br />
+					<f:for each="{colours}" as="colour" iteration="i">				
+						<f:if condition="{colour.checked}">
+							<f:then>
+								<li><f:form.checkbox name="colour[]" value="{colour.uid}" class="filter-checkbox" checked="{colour.uid}" id="colour[{i.cycle}]"/><label class="pointer-on" for="colour[{i.cycle}]">{colour.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="colour[]" value="{colour.uid}" class="filter-checkbox" checked="" id="colour[{i.cycle}]"/><label class="pointer-on" for="colour[{i.cycle}]">{colour.name}</label></li>
+							</f:else>
+						</f:if>	
+					</f:for>
+				</ul>
+			</f:if>
+			
+			<f:if condition="{forms}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.forms" /></label><br />
+					<f:for each="{forms}" as="form" iteration="i">				
+						<f:if condition="{form.checked}">
+							<f:then>
+								<li><f:form.checkbox name="form[]" value="{form.uid}" class="filter-checkbox" checked="{form.uid}" id="form[{i.cycle}]"/><label class="pointer-on" for="form[{i.cycle}]">{form.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="form[]" value="{form.uid}" class="filter-checkbox" checked="" id="form[{i.cycle}]"/><label class="pointer-on" for="form[{i.cycle}]">{form.name}</label></li>
+							</f:else>
+						</f:if>			
+					</f:for>
+				</ul>
+			</f:if>
+			
+			<f:if condition="{sizes}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.size" /></label><br />
+					<f:for each="{sizes}" as="size" iteration="i">				
+						<f:if condition="{size.checked}">
+							<f:then>
+								<li><f:form.checkbox name="size[]" value="{size.uid}" class="filter-checkbox" checked="{size.uid}" id="size[{i.cycle}]"/><label class="pointer-on" for="size[{i.cycle}]">{size.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="size[]" value="{size.uid}" class="filter-checkbox" checked="" id="size[{i.cycle}]"/><label class="pointer-on" for="size[{i.cycle}]">{size.name}</label></li>
+							</f:else>
+						</f:if>					
+					</f:for>
+				</ul>
+			</f:if>
+				
+			<f:if condition="{strengths}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.strength" /></label><br />
+					<f:for each="{strengths}" as="strength" iteration="i">		
+						<f:if condition="{strength.checked}">
+							<f:then>
+								<li><f:form.checkbox name="strength[]" value="{strength.uid}" class="filter-checkbox" checked="{strength.uid}" id="strength[{i.cycle}]"/><label class="pointer-on" for="strength[{i.cycle}]">{strength.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="strength[]" value="{strength.uid}" class="filter-checkbox" checked="" id="strength[{i.cycle}]"/><label class="pointer-on" for="strength[{i.cycle}]">{strength.name}</label></li>
+							</f:else>
+						</f:if>								
+					</f:for>
+				</ul>
+			</f:if>
+				
+			<f:if condition="{productnames}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.productname" /></label><br />
+					<f:for each="{productnames}" as="productname" iteration="i">
+						<f:if condition="{productname.checked}">
+							<f:then>
+								<li><f:form.checkbox name="productname[]" value="{productname.uid}" class="filter-checkbox" checked="{productname.uid}" id="identification[{i.cycle}]"/><label class="pointer-on" for="productname[{i.cycle}]">{productname.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="productname[]" value="{productname.uid}" class="filter-checkbox" checked="" id="productname[{i.cycle}]"/><label class="pointer-on" for="productname[{i.cycle}]">{productname.name}</label></li>
+							</f:else>
+						</f:if>								
+					</f:for>
+				</ul>			
+			</f:if>
+				
+			<f:if condition="{materials}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.material" /></label><br />
+					<f:for each="{materials}" as="material" iteration="i">
+						<f:if condition="{material.checked}">
+							<f:then>
+								<li><f:form.checkbox name="material[]" value="{material.uid}" class="filter-checkbox" checked="{material.uid}" id="material[{i.cycle}]"/><label class="pointer-on" for="material[{i.cycle}]">{material.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="material[]" value="{material.uid}" class="filter-checkbox" checked="" id="material[{i.cycle}]"/><label class="pointer-on" for="material[{i.cycle}]">{material.name}</label></li>
+							</f:else>
+						</f:if>								
+					</f:for>
+				</ul>
+			</f:if>
+				
+			<f:if condition="{printings}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.printing" /></label><br />
+					<f:for each="{printings}" as="printing" iteration="i">
+						<f:if condition="{printing.checked}">
+							<f:then>
+								<li><f:form.checkbox name="printing[]" value="{printing.uid}" class="filter-checkbox" checked="{printing.uid}" id="printing[{i.cycle}]"/><label class="pointer-on" for="printing[{i.cycle}]">{printing.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="printing[]" value="{printing.uid}" class="filter-checkbox" checked="" id="printing[{i.cycle}]"/><label class="pointer-on" for="printing[{i.cycle}]">{printing.name}</label></li>
+							</f:else>
+						</f:if>							
+					</f:for>
+				</ul>
+			</f:if>
+				
+			<f:if condition="{fixations}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.fixation" /></label><br />
+					<f:for each="{fixations}" as="fixation" iteration="i">
+						<f:if condition="{fixation.checked}">
+							<f:then>
+								<li><f:form.checkbox name="fixation[]" value="{fixation.uid}" class="filter-checkbox" checked="{fixation.uid}" id="fixation[{i.cycle}]"/><label class="pointer-on" for="fixation[{i.cycle}]">{fixation.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="fixation[]" value="{fixation.uid}" class="filter-checkbox" checked="" id="fixation[{i.cycle}]"/><label class="pointer-on" for="fixation[{i.cycle}]">{fixation.name}</label></li>
+							</f:else>
+						</f:if>								
+					</f:for>
+				</ul>
+			</f:if>
+			
+			<f:if condition="{temperatures}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.temperature" /></label><br />
+					<f:for each="{temperatures}" as="temperature" iteration="i">
+						<f:if condition="{temperature.checked}">
+							<f:then>
+								<li><f:form.checkbox name="temperature[]" value="{temperature.uid}" class="filter-checkbox" checked="{temperature.uid}" id="temperature[{i.cycle}]"/><label class="pointer-on" for="temperature[{i.cycle}]">{temperature.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="temperature[]" value="{temperature.uid}" class="filter-checkbox" checked="" id="temperature[{i.cycle}]"/><label class="pointer-on" for="temperature[{i.cycle}]">{temperature.name}</label></li>
+							</f:else>
+						</f:if>								
+					</f:for>
+				</ul>
+			</f:if>
+			
+			<f:if condition="{deliveries}">			
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.delivery" /></label><br />
+					<f:for each="{deliveries}" as="delivery" iteration="i">
+						<f:if condition="{delivery.checked}">
+							<f:then>
+								<li><f:form.checkbox name="delivery[]" value="{delivery.uid}" class="filter-checkbox" checked="{delivery.uid}" id="delivery[{i.cycle}]"/><label class="pointer-on" for="delivery[{i.cycle}]">{delivery.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="delivery[]" value="{delivery.uid}" class="filter-checkbox" checked="" id="delivery[{i.cycle}]"/><label class="pointer-on" for="delivery[{i.cycle}]">{delivery.name}</label></li>
+							</f:else>
+						</f:if>								
+					</f:for>
+				</ul>	
+			</f:if>
+				
+			<f:if condition="{resistances}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.resistance" /></label><br />
+					<f:for each="{resistances}" as="resistance" iteration="i">
+						<f:if condition="{resistance.checked}">
+							<f:then>
+								<li><f:form.checkbox name="resistance[]" value="{resistance.uid}" class="filter-checkbox" checked="{resistance.uid}" id="resistance[{i.cycle}]"/><label class="pointer-on" for="resistance[{i.cycle}]">{resistance.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="resistance[]" value="{resistance.uid}" class="filter-checkbox" checked="" id="resistance[{i.cycle}]"/><label class="pointer-on" for="resistance[{i.cycle}]">{resistance.name}</label></li>
+							</f:else>
+						</f:if>								
+					</f:for>
+				</ul>
+			</f:if>
+				
+			<f:if condition="{pcolours}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.pcolour" /></label><br />
+					<f:for each="{pcolours}" as="pcolour" iteration="i">
+						<f:if condition="{pcolour.checked}">
+							<f:then>
+								<li><f:form.checkbox name="pcolour[]" value="{pcolour.uid}" class="filter-checkbox" checked="{pcolour.uid}" id="pcolour[{i.cycle}]"/><label class="pointer-on" for="pcolour[{i.cycle}]">{pcolour.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="pcolour[]" value="{pcolour.uid}" class="filter-checkbox" checked="" id="pcolour[{i.cycle}]"/><label class="pointer-on" for="pcolour[{i.cycle}]">{pcolour.name}</label></li>
+							</f:else>
+						</f:if>								
+					</f:for>
+				</ul>			
+			</f:if>
+			<f:if condition="{surfacerefinements}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.surfacerefinement" /></label><br />
+					<f:for each="{surfacerefinements}" as="surfacerefinement" iteration="i">
+						<f:if condition="{surfacerefinement.checked}">
+							<f:then>
+								<li><f:form.checkbox name="surfacerefinement[]" value="{surfacerefinement.uid}" class="filter-checkbox" checked="{surfacerefinement.uid}" id="surfacerefinement[{i.cycle}]"/><label class="pointer-on" for="surfacerefinement[{i.cycle}]">{surfacerefinement.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="surfacerefinement[]" value="{surfacerefinement.uid}" class="filter-checkbox" checked="" id="surfacerefinement[{i.cycle}]"/><label class="pointer-on" for="surfacerefinement[{i.cycle}]">{surfacerefinement.name}</label></li>
+							</f:else>
+						</f:if>								
+					</f:for>
+				</ul>			
+			</f:if>
+			<f:if condition="{identifications}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.identification" /></label><br />
+					<f:for each="{identifications}" as="identification" iteration="i">
+						<f:if condition="{identification.checked}">
+							<f:then>
+								<li><f:form.checkbox name="identification[]" value="{identification.uid}" class="filter-checkbox" checked="{identification.uid}" id="identification[{i.cycle}]"/><label class="pointer-on" for="identification[{i.cycle}]">{identification.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="identification[]" value="{identification.uid}" class="filter-checkbox" checked="" id="identification[{i.cycle}]"/><label class="pointer-on" for="identification[{i.cycle}]">{identification.name}</label></li>
+							</f:else>
+						</f:if>								
+					</f:for>
+				</ul>			
+			</f:if>
+			<f:if condition="{certifications}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.certification" /></label><br />
+					<f:for each="{certifications}" as="certification" iteration="i">
+						<f:if condition="{certification.checked}">
+							<f:then>
+								<li><f:form.checkbox name="certification[]" value="{certification.uid}" class="filter-checkbox" checked="{certification.uid}" id="certification[{i.cycle}]"/><label class="pointer-on" for="certification[{i.cycle}]">{certification.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="certification[]" value="{certification.uid}" class="filter-checkbox" checked="" id="certification[{i.cycle}]"/><label class="pointer-on" for="certification[{i.cycle}]">{certification.name}</label></li>
+							</f:else>
+						</f:if>								
+					</f:for>
+				</ul>			
+			</f:if>
+			<f:if condition="{frequencies}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.frequency" /></label><br />
+					<f:for each="{frequencies}" as="frequency" iteration="i">
+						<f:if condition="{frequency.checked}">
+							<f:then>
+								<li><f:form.checkbox name="frequency[]" value="{frequency.uid}" class="filter-checkbox" checked="{frequency.uid}" id="frequency[{i.cycle}]"/><label class="pointer-on" for="frequency[{i.cycle}]">{frequency.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="frequency[]" value="{frequency.uid}" class="filter-checkbox" checked="" id="frequency[{i.cycle}]"/><label class="pointer-on" for="frequency[{i.cycle}]">{frequency.name}</label></li>
+							</f:else>
+						</f:if>							
+					</f:for>
+				</ul>			
+			</f:if>
+			<f:if condition="{dimensions}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.dimension" /></label><br />
+					<f:for each="{dimensions}" as="dimension" iteration="i">
+						<f:if condition="{dimension.checked}">
+							<f:then>
+								<li><f:form.checkbox name="dimension[]" value="{dimension.uid}" class="filter-checkbox" checked="{dimension.uid}" id="dimension[{i.cycle}]"/><label class="pointer-on" for="dimension[{i.cycle}]">{dimension.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="dimension[]" value="{dimension.uid}" class="filter-checkbox" checked="" id="dimension[{i.cycle}]"/><label class="pointer-on" for="dimension[{i.cycle}]">{dimension.name}</label></li>
+							</f:else>
+						</f:if>							
+					</f:for>
+				</ul>			
+			</f:if>
+			<f:if condition="{imprints}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.imprint" /></label><br />
+					<f:for each="{imprints}" as="imprint" iteration="i">
+						<f:if condition="{imprint.checked}">
+							<f:then>
+								<li><f:form.checkbox name="imprint[]" value="{imprint.uid}" class="filter-checkbox" checked="{imprint.uid}" id="imprint[{i.cycle}]"/><label class="pointer-on" for="imprint[{i.cycle}]">{imprint.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="imprint[]" value="{imprint.uid}" class="filter-checkbox" checked="" id="imprint[{i.cycle}]"/><label class="pointer-on" for="imprint[{i.cycle}]">{imprint.name}</label></li>
+							</f:else>
+						</f:if>							
+					</f:for>
+				</ul>			
+			</f:if>			
+			<f:if condition="{metals}">
+				<ul>
+					<label class="filter-label"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.metal" /></label><br />
+					<f:for each="{metals}" as="metal" iteration="i">
+						<f:if condition="{metal.checked}">
+							<f:then>
+								<li><f:form.checkbox name="metal[]" value="{metal.uid}" class="filter-checkbox" checked="{metal.uid}" id="metal[{i.cycle}]"/><label class="pointer-on" for="metal[{i.cycle}]">{metal.name}</label></li>
+							</f:then>
+							<f:else>
+								<li><f:form.checkbox name="metal[]" value="{metal.uid}" class="filter-checkbox" checked="" id="metal[{i.cycle}]"/><label class="pointer-on" for="metal[{i.cycle}]">{metal.name}</label></li>
+							</f:else>
+						</f:if>							
+					</f:for>
+				</ul>			
+			</f:if>						
+			
+			
+			
+			<div class="filter-submit-field">
+				<f:form.submit id="filter-submit" value="{f:translate(key:'LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.tofilter')}" class="filter-submit" />
+				<label for="filter-submit" class="filter-submit-arrow">&nbsp;</label>
+			</div>
+		</f:form>
+	</div>
+</div>

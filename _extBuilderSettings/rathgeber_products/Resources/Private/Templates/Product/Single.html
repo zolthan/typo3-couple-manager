@@ -1,0 +1,229 @@
+<div class="slideshow-products">
+	<!-- <div class="slides_container"> -->
+	<div id="slider">
+		<f:for each="{slider}" as="slide" iteration="i" key="j">
+            <f:image src="uploads/slideshow/pics/{slide.0}" width="568" height="375" alt="{slide.1}" title="{slide.1}" additionalAttributes="{caption:'#slideshow-{j}'}"/>
+		</f:for>
+	</div>
+	<a class="navPrev" onclick="Slide.To(1);"></a>
+	<a class="navNext" onclick="Slide.To(0);"></a>
+	<div class="slider-active">&nbsp;</div>
+	<div id="slider-caption" style="display: none;">
+		<f:for each="{imagecaption}" as="text" key="i">
+			<div id="slideshow-{i}">{text}</div>
+		</f:for>
+	</div>
+</div>
+</div>
+<div id="products-thumbs" class="standard-box center">
+	<f:if condition="{products.motherthumbsheadline}">
+		<f:then>
+			<h1>{products.motherthumbsheadline}<span class="slideshow-counter">({slide_count})</span></h1>
+		</f:then>
+		<f:else>
+			<h1>{products.thumbsheadline}<span class="slideshow-counter">({slide_count})</span></h1>
+		</f:else>
+	</f:if>
+	<div id="mcts1">
+		<f:for each="{thumbs}" as="thumb" iteration="i">
+			<f:if condition="{products.mothername}">
+				<f:then>
+					<f:image src="uploads/slideshow/pics/{thumb}" width="100" height="75" alt="{slide_count}{f:translate(key:'LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.more')} {products.mothername}" title="{slide_count}{f:translate(key:'LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.more')} {products.mothername}" />
+				</f:then>
+				<f:else>
+					<f:image src="uploads/slideshow/pics/{thumb}" width="100" height="75" alt="{slide_count}{f:translate(key:'LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.more')} {products.name}" title="{slide_count}{f:translate(key:'LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.more')} {products.name}" />
+				</f:else>
+			</f:if>
+		</f:for>
+	</div>
+</div>
+<a id="details" name="details"></a>
+<div class="csc-default">
+	<f:if condition="{products.motherheadline}">
+		<f:then>
+			<h1><f:format.raw>{products.motherheadline}</f:format.raw></h1>
+		</f:then>
+		<f:else>
+			<f:then>
+				<h1><f:format.raw>{products.headline}</f:format.raw></h1>
+			</f:then>
+		</f:else>
+	</f:if>
+	<div id="products-single">
+		<div class="single-intro">
+			<f:if condition="{products.motherdescription}">
+				<f:then>
+					<f:format.raw>{products.motherdescription}</f:format.raw>
+				</f:then>
+				<f:else>
+					<f:then>
+						<f:format.raw>{products.description}</f:format.raw>
+					</f:then>
+				</f:else>
+			</f:if>
+			<f:if condition="{variations}">
+				<f:then>
+					<div id="variations-container">
+						{products.mothername}
+						<f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.var" />
+						<br />
+						<f:for each="{variations}" as="variation" iteration="it">
+							<span class="variation-item {variation.active}">
+								<f:link.page additionalParams="{tx_rathgeberproducts_products: {productid: variation.uid }}" section="details"><f:format.raw>{variation.name}</f:format.raw></f:link.page>
+								<f:if condition="{it.isLast} != 1">/</f:if>
+							</span>
+						</f:for>
+						<div class="variations-description">
+							<f:if condition="{products.motherdescription}">
+								<f:then>
+									<!--{products.mothername} {products.name}: --><f:format.raw>{products.description}</f:format.raw>
+								</f:then>
+							</f:if>
+						</div>
+					</div>
+
+				</f:then>
+			</f:if>
+			<div class="detailview-links">
+				<div class="first">
+					<span class="merkzettel-add" data-value="{products.name}">
+						<f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.notepad" />
+					</span>
+					<span class="arrow merkzettel-arrow">&nbsp;</span>
+				</div>				
+				<div class="third">
+					<f:link.page pageUid="{settings.formpage_id}">
+						<div class="produktanfrage-button" data-value="{products.name}"><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.productreq" /><div class="arrow-white"></div></div>
+					</f:link.page >
+				</div>	
+				<div class="clear"></div>			
+			</div>
+		</div>
+		
+		<div id="single-tech_1" class="box-opened">
+			<h1 class="inner-headline">
+				<f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.techspec" />
+			</h1>
+			
+			<div class="box-content">
+				<div class="single-tech-content">
+					<f:for each="{properties}" as="property" iteration="it1">
+						<f:if condition="{it1.index} == {properties_split_count}">
+							</div>
+							<div class="single-tech-content">
+						</f:if>
+                                <div class="attribute-item">
+							<strong><f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.{property.propertyname}" />:</strong>
+							<f:for each="{property.propertyvalue}" as="value" iteration="it">
+								 {value.name}<f:if condition="{it.isLast} != 1">,</f:if>
+							</f:for>
+						</div>
+                                </f:for>
+				</div>
+				<div class="clear"></div>		
+				<div class="rating-box">
+					<f:for each="{attributes}" as="attribute">
+						<f:if condition="{attribute.value.0}==0">
+							<div class="rating-box-inner">
+								 <div class="rating-title"><span>{attribute.name}</span></div>
+								 <div class="rating">
+								 	<f:for each="{attribute.value}" as="obj">
+								 		<div class="rated"></div>
+								 	</f:for>
+								 	<div class="clear"></div>
+								 </div>
+							</div>
+						</f:if>
+					</f:for>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="box-button"></div>
+		</div>
+		
+		<f:if condition="{products.technologies}">
+			<div id="single-tech_2" class="box-closed">
+				<h1 class="inner-headline">
+				<f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.technologies" />
+				</h1>
+				<div class="box-content">
+					<f:format.raw>
+						{products.technologies}
+					</f:format.raw>
+				</div>	
+				<div class="box-button"></div>
+			</div>
+		</f:if>
+
+		<f:if condition="{products.verarbeitung}">
+			<div id="single-tech_3" class="box-closed">
+				<h1 class="inner-headline">
+				<f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.verarbeitung" />
+				</h1>
+				<div class="box-content">
+					<div id="single-tech_3-content" class="fluffy">
+						<f:format.raw>
+							{products.verarbeitung}
+						</f:format.raw>
+					</div>
+				</div>
+				<div class="box-button"></div>
+			</div>
+		</f:if>
+		
+		<f:if condition="{videos}">
+			<div id="single-video" class="box-closed">
+				<h1 class="inner-headline">
+				<f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.videos" />
+				</h1>
+				<div class="box-content">
+					<f:for each="{videos}" as="video">
+						<div class="single-video-inner">
+							<f:link.external rel="lightbox[9999]" uri="http://www.youtube.com/v/{video.id}" >
+								<f:image src="http://img.youtube.com/vi/{video.id}/default.jpg" width="152" height="102" alt=" {video.cap}" />
+							</f:link.external>
+							<span> {video.cap}</span>
+						</div>
+					</f:for>
+				</div>
+				<div class="box-button"></div>
+				<div class="clear"></div>
+			</div>
+		</f:if>	
+		
+		<f:if condition="{downloads}">		
+			<div id="single-downloads" class="box-closed">
+				<h1 class="inner-headline">
+				<f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.downloads" />
+				</h1>
+				<div class="box-content">
+					<div class="single-download-inner">
+						<f:for each="{downloads}" as="download">
+							<div class="download-line" >
+								<div class="pdf-icon"></div>
+									<f:if condition="{settings.domain}==0">
+										<f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.prodsheet" />
+										<strong>{download.name}</strong> <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.for" />
+									</f:if>
+									<f:if condition="{settings.domain}==1">{download.name}</f:if>
+									<f:if condition="{products.uid}==21"><f:if condition="{language_id}==3"><br /></f:if></f:if>
+									<f:if condition="{products.uid}==26"><f:if condition="{language_id}==3"><br /></f:if></f:if>
+									<f:if condition="{products.uid}==28"><f:if condition="{language_id}==3"><br /></f:if></f:if>
+									<f:if condition="{download.type}==0">
+                                        <f:then>
+                                            <a href="http://www.rathgeber.eu/{download.file}&attachment=1&filename={download.name}.pdf&no_cache=1&lang={language_id}{no_variant_language_id}" target="_blank">
+                                        </f:then>
+                                        <f:else>
+									        <a href="{download.file}" target="_blank">
+                                        </f:else>
+                                    </f:if>&gt;&gt; <f:translate key="LLL:EXT:rathgeber_products/Resources/Private/Language/locallang_fluid.xml:tx_rathgeberproducts_template.download" /></a>
+                                <br />
+							</div>
+						</f:for>
+					</div>
+				</div>
+				<div class="box-button"></div>
+			</div>
+		</f:if>
+	</div>
+	<div class="clear"></div>

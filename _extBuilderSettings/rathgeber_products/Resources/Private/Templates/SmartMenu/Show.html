@@ -1,0 +1,108 @@
+<script type="text/javascript">
+
+	function counter_obj() {
+        this.i = 0;
+    }
+
+    jQuery(function ($)	{
+
+        var counter = new counter_obj();
+
+        runSlider(counter);
+
+        jQuery(jQuery('div.smm')[0]).addClass('a');
+
+        var runner = window.setInterval(function(){
+            runSlider(counter);
+        },3000,counter);
+
+
+        var clearer = window.setInterval(function() {
+            jQuery('.a').removeClass('a');
+        },2999);
+
+        $("div.smm").hover(function()
+        {
+            $("div.smm").each(function() {
+                $(this).removeClass('a');
+            });
+            var catid = this.id.substring(4);
+            $(".image-image").css("display", "none");
+            $(".image-label").css("display", "none");
+            $("#ii-"+catid).css("display", "block");
+            $(this).addClass("a");
+            window.clearInterval(runner);
+            window.clearInterval(clearer);
+        },function(e){
+            elems = $('div.smm');
+            for(i = 0; i < elems.length;i++) {
+                if($(this).attr('id') === $(elems[i]).attr('id')) {
+                    if(e.originalEvent !== undefined) {
+                        counter.i = i;
+                        counter.i++;
+                        if(counter.i >= elems.length) {
+                            counter.i = 0;
+                        }
+
+                    } else {
+                        counter.i = i;
+                    }
+                    runner = window.setInterval(function(){
+                        runSlider(counter);
+                    },3000,counter);
+
+                    clearer = window.setInterval(function() {
+                        jQuery('.a').removeClass('a');
+                    },2999);
+                    break;
+                }
+            }
+        });
+    });
+</script>
+
+<div id="smartmenu">
+	<div id="menupart">
+		<f:for each="{categories}" as="cat">
+			<div class="smm" id="smm-{cat.uid}">
+				<f:link.action pageUid="182"  arguments="{arg: 0}" additionalParams="{tx_rathgeberproducts_categories: {catid: cat.uid}}">
+					<div class="smartmenu-item">				
+						<span class="text">{cat.name}</span>
+					</div>
+					<div class="smartmenu-item-arrow"></div>
+				</f:link.action>
+			</div>
+		</f:for>
+	</div>
+	<div id="imagepart" style="height:{sizes.complete}px;">
+		<f:for each="{categories}" as="cat">
+<!-- 				<div class="image-spacer" id="is-{cat.uid}"></div> -->
+			<div class="image-image" id="ii-{cat.uid}" >
+				<f:image src="uploads/products/pics/{cat.image}" width="666" height="276" alt="" />
+			</div>
+<!--			<div class="image-label" id="il-{cat.uid}" style="background-color: transparent;">{cat.name}</div> -->
+			
+		</f:for>
+	</div>
+</div>
+<div class="clear"></div>
+<script>
+
+function runSlider(counter) {
+    divs = jQuery('div.smm');
+    l = divs.length;
+    if(jQuery('.a').length <= 0) {
+        divs.each(function(j, v) {
+            if(j == counter.i) {
+                jQuery(v).trigger('mouseenter');
+                jQuery(v).trigger('mouseleave');
+            }
+        });
+        counter.i++;
+    }
+
+    if(counter.i >= l) {
+        counter.i = 0;
+    }
+}
+</script>
