@@ -14,8 +14,10 @@ namespace SchwarzWeissReutlingen\CoupleManager\Userfuncs;
  ***/
 
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Result;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionTypeRepository;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -33,20 +35,23 @@ class Tca
     protected $coupleRepository;
     /** @var LocalizationUtility */
     protected $localize;
+    protected $resultRepository;
+    protected $competitionTypeRepository;
 
     /**
      * Tca constructor.
      */
     public function __construct()
     {
-        $this->objectManager    = GeneralUtility::makeInstance(ObjectManager::class);
-        $this->coupleRepository = $this->objectManager->get(CoupleRepository::class);
-        $this->resultRepository = $this->objectManager->get(ResultRepository::class);
+        $this->objectManager             = GeneralUtility::makeInstance(ObjectManager::class);
+        $this->coupleRepository          = $this->objectManager->get(CoupleRepository::class);
+        $this->resultRepository          = $this->objectManager->get(ResultRepository::class);
+        $this->competitionTypeRepository = $this->objectManager->get(CompetitionTypeRepository::class);
     }
 
     /**
      * @param array $parameters
-     * @param Tca $parentObject
+     * @param Tca   $parentObject
      */
     public function getResultTitle(&$parameters, $parentObject)
     {
@@ -54,22 +59,43 @@ class Tca
         $result = $this->resultRepository->findByUid($parameters['row']['uid']);
         if ($result) {
             /** @var Competition $competition */
-            $competition = $result->getCompetition()->current();
+            $competition     = $result->getCompetition()->current();
+            $competitionName = '[N/A]';
+            if ($competition) {
+                $competitionName = $competition->getTitle();
+            }
+
             /** @var Couple $couple */
-            $couple = $result->getCouple()->current();
-//            $parameters['title'] = sprintf('%s - %s - %s', $result->getDate()->format('d.m.Y'), $couple->getCoupleName(), $competition->getTitle());
-//            $parameters['title'] = sprintf('%s - %s - %s', 1, $couple->getCoupleName(), $competition->getTitle());
+            $couple     = $result->getCouple()->current();
+            $coupleName = '[N/A]';
+            if ($couple) {
+                $coupleName = $couple->getCoupleName();
+            }
+            $parameters['title'] = sprintf('%s - %s - %s', $result->getDate()->format('d.m.Y'), $coupleName, $competitionName);
         }
     }
 
     /**
      * @param array $parameters
-     * @param Tca $parentObject
+     * @param Tca   $parentObject
+     */
+    public function getCompetitionTypeTitle(&$parameters, $parentObject)
+    {
+        /** @var CompetitionType $type */
+        $type = $this->competitionTypeRepository->findByUid($parameters['row']['uid']);
+        if ($type) {
+            $parameters['title'] = sprintf('%s (%s)', $type->getName(), $type->getOrganization());
+        }
+    }
+
+    /**
+     * @param array $parameters
+     * @param Tca   $parentObject
      */
     public function getCoupleName(&$parameters, $parentObject)
     {
         /** @var Couple $couple */
-        $couple              = $this->coupleRepository->findByUid($parameters['row']['uid']);
+        $couple = $this->coupleRepository->findByUid($parameters['row']['uid']);
         if ($couple) {
             $parameters['title'] = $couple->getCoupleName();
         }

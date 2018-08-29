@@ -1,4 +1,5 @@
 <?php
+
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Repository;
 
 /***
@@ -17,4 +18,4 @@ namespace SchwarzWeissReutlingen\CoupleManager\Domain\Repository;
  */
 class CompetitionTypeRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-    }
+}
