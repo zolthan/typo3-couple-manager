@@ -84,26 +84,32 @@ return [
         ],
         'starttime' => [
             'exclude' => true,
-            'l10n_mode' => 'mergeIfNotBlank',
             'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
             'config' => [
                 'type' => 'input',
+                'renderType' => 'inputDateTime',
                 'size' => 13,
                 'eval' => 'datetime',
                 'default' => 0,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'endtime' => [
             'exclude' => true,
-            'l10n_mode' => 'mergeIfNotBlank',
             'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'input',
+                'renderType' => 'inputDateTime',
                 'size' => 13,
                 'eval' => 'datetime',
                 'default' => 0,
                 'range' => [
                     'upper' => mktime(0, 0, 0, 1, 1, 2038)
+                ],
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
                 ],
             ],
         ],
@@ -123,6 +129,7 @@ return [
             'config' => [
                 'dbType' => 'date',
                 'type' => 'input',
+                'renderType' => 'inputDateTime',
                 'size' => 7,
                 'eval' => 'date',
                 'default' => '0000-00-00'
@@ -134,6 +141,7 @@ return [
             'config' => [
                 'dbType' => 'date',
                 'type' => 'input',
+                'renderType' => 'inputDateTime',
                 'size' => 7,
                 'eval' => 'date',
                 'default' => '0000-00-00'
