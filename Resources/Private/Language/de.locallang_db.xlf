@@ -9,6 +9,18 @@
             <trans-unit id="tx_couplemanager_domain_model_couple.plugin_description">
                 <target>Plugin der Paar-Verwaltung</target>
             </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_organizer">
+                <target>Veranstalter</target>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_organizer.name">
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_organizer.city">
+                <target>Stadt</target>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_organizer.country">
+                <target>Land</target>
+            </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple">
                 <target>Paar</target>
             </trans-unit>

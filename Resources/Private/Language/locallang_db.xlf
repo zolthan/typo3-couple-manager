@@ -9,6 +9,18 @@
 			<trans-unit id="tx_couplemanager_domain_model_couple.plugin_description">
 				<source>Couple Plugin Description</source>
 			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_organizer">
+				<source>Organizer</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_organizer.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_organizer.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_organizer.country">
+				<source>Country</source>
+			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple">
 				<source>Couple</source>
 			</trans-unit>
