@@ -2,8 +2,7 @@
 defined('TYPO3_MODE') || die('Access denied.');
 
 call_user_func(
-    function()
-    {
+    function () {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'SchwarzWeissReutlingen.CoupleManager',
@@ -17,17 +16,17 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('couple_manager', 'Configuration/TypoScript', 'Couple Manager');
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_couple', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_couple.xlf');
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_couple');
-
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_competition', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_competition.xlf');
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_competition');
-
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_result', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_result.xlf');
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_result');
-
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_competitiontype', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_competitiontype.xlf');
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_competitiontype');
+//        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_couple', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_couple.xlf');
+//        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_couple');
+//
+//        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_competition', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_competition.xlf');
+//        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_competition');
+//
+//        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_result', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_result.xlf');
+//        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_result');
+//
+//        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_couplemanager_domain_model_competitiontype', 'EXT:couple_manager/Resources/Private/Language/locallang_csh_tx_couplemanager_domain_model_competitiontype.xlf');
+//        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_couplemanager_domain_model_competitiontype');
 
     }
 );
