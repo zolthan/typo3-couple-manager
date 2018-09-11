@@ -7,23 +7,23 @@ return [
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'versioningWS' => true,
-        'languageField' => 'sys_language_uid',
-        'transOrigPointerField' => 'l10n_parent',
-        'transOrigDiffSourceField' => 'l10n_diffsource',
+//        'languageField' => 'sys_language_uid',
+//        'transOrigPointerField' => 'l10n_parent',
+//        'transOrigDiffSourceField' => 'l10n_diffsource',
         'delete' => 'deleted',
         'enablecolumns' => [
             'disabled' => 'hidden',
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'title,date_start,date_end,country,city,address,organizer,size_dance_floor',
+        'searchFields' => 'title,date_start,date_end,organizer,size_dance_floor,country,city,address',
         'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_competition.svg'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, date_start, date_end, country, city, address, organizer, size_dance_floor',
+        'showRecordFieldList' => 'hidden,title,date_start,date_end,organizer,size_dance_floor,country,city,address',
     ],
     'types' => [
-        '1' => ['showitem' => 'hidden, title, date_start, date_end, country, city, address, organizer, size_dance_floor'],
+        '0' => ['showitem' => 'hidden,title,organizer,date_start,date_end,size_dance_floor,city,country,address'],
     ],
     'columns' => [
         't3ver_label' => [
@@ -53,6 +53,7 @@ return [
                 'type' => 'input',
                 'size' => 30,
                 'eval' => 'trim'
+
             ],
         ],
         'date_start' => [
@@ -79,6 +80,26 @@ return [
                 'default' => '0000-00-00'
             ],
         ],
+        'organizer' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.organizer',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'size_dance_floor' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.size_dance_floor',
+            'config' => [
+                'type' => 'input',
+                'size' => 7,
+                'max' => 15,
+                'eval' => 'trim'
+            ],
+        ],
+
         'country' => [
             'exclude' => true,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.country',
@@ -90,7 +111,7 @@ return [
                 ],
                 'foreign_table' => 'static_countries',
                 'foreign_table_where' => 'ORDER BY static_countries.cn_short_en',
-                'itemsProcFunc' => 'SJBR\\StaticInfoTables\\Hook\\Backend\\Form\\FormDataProvider\\TcaSelectItemsProcessor->translateCountriesSelector',
+                'itemsProcFunc' => SJBR\StaticInfoTables\Hook\Backend\Form\FormDataProvider\TcaSelectItemsProcessor::class . '->translateCountriesSelector',
                 'size' => 1,
                 'minitems' => 0,
                 'maxitems' => 1
@@ -110,28 +131,10 @@ return [
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.address',
             'config' => [
                 'type' => 'text',
-                'cols' => 40,
-                'rows' => 15,
+                'cols' => 30,
+                'rows' => 5,
                 'eval' => 'trim'
             ]
-        ],
-        'organizer' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.organizer',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
-        'size_dance_floor' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.size_dance_floor',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
         ],
 
         'result' => [
