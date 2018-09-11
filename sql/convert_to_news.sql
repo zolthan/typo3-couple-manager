@@ -128,6 +128,69 @@ INSERT INTO d02b2c81.tx_news_domain_model_news (uid, pid, tstamp, crdate, cruser
         AND c.hidden = 0
   ORDER BY p.uid DESC;
 
+-- INSERT INTO sys_file_reference (uid, pid, tstamp, crdate, cruser_id, sorting, deleted, hidden, t3ver_oid, t3ver_id, t3ver_wsid, t3ver_label, t3ver_state, t3ver_stage, t3ver_count, t3ver_tstamp, t3ver_move_id, t3_origuid, sys_language_uid, l10n_parent, l10n_diffsource, uid_local, uid_foreign, tablenames, fieldname, sorting_foreign, table_local, title, description, alternative, link, crop, autoplay, showinpreview, l10n_state)
+SELECT
+  -- uid
+  NULL                                                                                                    AS uid,
+  -- pid
+  163                                                                                                     AS pid,
+  -- tstamp
+  unix_timestamp()                                                                                        AS tstamp,
+  -- crdate
+  unix_timestamp()                                                                                        AS crdate,
+  -- cruser_id
+  1                                                                                                       AS cruser_id,
+  -- sorting
+  -- deleted
+  -- hidden
+  -- t3ver_oid
+  -- t3ver_id
+  -- t3ver_wsid
+  -- t3ver_label
+  -- t3ver_state
+  -- t3ver_stage
+  -- t3ver_count
+  -- t3ver_tstamp
+  -- t3ver_move_id
+  -- t3_origuid
+  -- sys_language_uid
+  -- l10n_parent
+  -- l10n_diffsource
+  -- uid_local
+  529                                                                                                     AS uid_local,
+  -- uid_foreign
+  4127                                                                                                    AS uid_foreign,
+  -- tablenames
+  'tx_news_domain_model_news'                                                                             AS tablenames,
+  -- fieldname
+  'fal_media'                                                                                             AS fieldname,
+  -- sorting_foreign
+  3                                                                                                       AS sorting_foreign,
+  -- table_local
+  'sys_file'                                                                                              AS table_local,
+  -- title
+  -- description
+  -- alternative
+  -- link
+  -- crop
+  '{"default":{"cropArea":{"x":0, "y":0, "width":1, "height":1},"selectedRatio":"NaN","focusArea":null}}' AS crop,
+  -- autoplay
+  0                                                                                                       AS autoplay,
+  -- showinpreview
+  0                                                                                                       AS showinpreview
+  -- l10n_state
+  ,
+  c.*
+FROM
+  d02b2c81.tt_content_OLD c
+WHERE image <> '';
+
+SELECT concat('insert into sys_file_reference_temp select null, ', uid, ',img from (select NULL img union select "',
+              replace(image, ',', '" union select "'), '") A where image IS NOT NULL;') ImageQueries
+FROM tt_content_OLD
+WHERE image <> '';
+
+
 SELECT *
 FROM d02b2c81.tt_content_OLD
 WHERE length(image) < 5 AND image <> '';
