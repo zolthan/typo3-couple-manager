@@ -134,7 +134,26 @@ WHERE p.pid IN (35, 3672, 3182, 2742, 2412, 1772, 1391, 862, 482, 201, 184, 183,
 GROUP BY c.pid
 ORDER BY p.uid ASC;
 
--- INSERT INTO sys_file_reference (uid, pid, tstamp, crdate, cruser_id, sorting, deleted, hidden, t3ver_oid, t3ver_id, t3ver_wsid, t3ver_label, t3ver_state, t3ver_stage, t3ver_count, t3ver_tstamp, t3ver_move_id, t3_origuid, sys_language_uid, l10n_parent, l10n_diffsource, uid_local, uid_foreign, tablenames, fieldname, sorting_foreign, table_local, title, description, alternative, link, crop, autoplay, showinpreview, l10n_state)
+/** REPLACE OLD FILE REFERENCES WITH IMAGE NAMES **/
+UPDATE d02b2c81.tt_content_OLD c1
+SET image = (SELECT GROUP_CONCAT(name)
+             FROM d02b2c81.sys_file_reference_OLD sfr
+                    INNER JOIN d02b2c81.sys_file__OLD sf ON sfr.uid_local = sf.uid AND sfr.deleted = 0
+             WHERE sfr.uid_foreign = c1.uid
+             GROUP BY sfr.uid_foreign)
+WHERE length(c1.image) < 5;
+
+/** PUT ALL IMAGES INTO A TEMPTABLE **/
+SELECT concat('REPLACE INTO sys_file_reference_temp
+SELECT NULL, ', pid, ', img
+FROM (
+  SELECT NULL img
+  UNION SELECT "', replace(image, ',', '" UNION SELECT "'), '") A WHERE img IS NOT NULL;') ImageQueries
+FROM tt_content_OLD
+WHERE image <> '';
+
+/** WRITE OLD IMAGES TO sys_file_reference **/
+INSERT INTO sys_file_reference (uid, pid, tstamp, crdate, cruser_id, uid_local, uid_foreign, tablenames, fieldname, sorting_foreign, table_local, crop, autoplay, showinpreview)
 SELECT
     -- uid
        NULL                        AS uid,
@@ -183,29 +202,8 @@ SELECT
     -- autoplay
        0                           AS autoplay,
     -- showinpreview
-       0                           AS showinpreview,
+       0                           AS showinpreview
     -- l10n_state
-       sfrt.*,
-       sf.*
 FROM d02b2c81.sys_file_reference_temp sfrt
        INNER JOIN tx_news_domain_model_news as n ON concat('pid-', sfrt.tt_content_uid) = n.import_id
        INNER JOIN sys_file as sf ON sfrt.img = sf.name;
-
-/** REPLACE OLD FILE REFERENCES WITH IMAGE NAMES **/
-UPDATE d02b2c81.tt_content_OLD c1
-SET image = (SELECT GROUP_CONCAT(name)
-             FROM d02b2c81.sys_file_reference_OLD sfr
-                    INNER JOIN d02b2c81.sys_file__OLD sf ON sfr.uid_local = sf.uid AND sfr.deleted = 0
-             WHERE sfr.uid_foreign = c1.uid
-             GROUP BY sfr.uid_foreign)
-WHERE length(c1.image) < 5;
-
-/** PUT ALL IMAGES INTO A TEMPTABLE **/
-SELECT concat('REPLACE INTO sys_file_reference_temp
-SELECT NULL, ', pid, ', img
-FROM (
-  SELECT NULL img
-  UNION SELECT "', replace(image, ',', '" UNION SELECT "'), '") A WHERE img IS NOT NULL;') ImageQueries
-FROM tt_content_OLD
-WHERE image <> '';
-
