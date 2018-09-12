@@ -1,763 +1,3815 @@
-REPLACE INTO sys_file_reference_temp select null, 1,img from (select NULL img union select "tcemblem.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 5,img from (select NULL img union select "tcemblem2.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 6,img from (select NULL img union select "jt02.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 285,img from (select NULL img union select "002_Jubilaeum.jpg" union select "004_Jubilaeum.jpg" union select "DSC06433.JPG" union select "DSC06435.JPG" union select "DSC06470.JPG" union select "DSC06483.JPG" union select "DSC06494.JPG" union select "DSC06507.JPG" union select "DSC06545.JPG" union select "DSC06548.JPG" union select "DSC06554.JPG" union select "DSC06563.JPG" union select "DSC06596_01.jpg" union select "DSC06574.JPG" union select "DSC06576.JPG" union select "DSC06578.JPG" union select "DSC06606.JPG" union select "DSC06614.JPG" union select "DSC06623.JPG" union select "DSC06627.JPG" union select "DSC06651.JPG" union select "IMG_4259.jpg" union select "DSC06656.JPG" union select "DSC06518.JPG" union select "DSC06659_01.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 11,img from (select NULL img union select "jt02_01.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 13,img from (select NULL img union select "halle_tumb.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 18,img from (select NULL img union select "Moni.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2192,img from (select NULL img union select "IMG_0357_1.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 15,img from (select NULL img union select "Tanzsportzentrum.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 30,img from (select NULL img union select "AndreasIwanitza.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 19,img from (select NULL img union select "Walter_Schmitt_05.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 20,img from (select NULL img union select "goetz.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 31,img from (select NULL img union select "marianne_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 320,img from (select NULL img union select "lucas_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 153,img from (select NULL img union select "Turnierpaar_Kuchenbecker.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 239,img from (select NULL img union select "TC_Beitrittserklaerung_2016-V3.3.pdf" union select "TC_Beitrittserklaerung_2016-V3.3_Formular.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 32,img from (select NULL img union select "DSC00131.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 23,img from (select NULL img union select "my5.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 3221,img from (select NULL img union select "TSCR_Saal_1.jpg" union select "TSCR_Saal_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 274,img from (select NULL img union select "Unbenannt-1b__1024x768_.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 24,img from (select NULL img union select "klein.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9042,img from (select NULL img union select "2018_SaisonstartBohn.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4862,img from (select NULL img union select "IMG_0223_hp.jpg" union select "IMG_0221_hp.jpg" union select "IMG_4696_hp.jpg" union select "IMG_4691.jpg" union select "IMG_0237_hp.jpg" union select "IMG_4697.jpg" union select "IMG_0229_hp.jpg" union select "IMG_4698.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4982,img from (select NULL img union select "Cover_2013-2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4872,img from (select NULL img union select "Disco-Fox_2013.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4892,img from (select NULL img union select "TC_TdoT_02_DRUCK_Kopie_klein_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4902,img from (select NULL img union select "DSC_7826_hp.jpg" union select "DSC_7798_hp.jpg" union select "DSC_7820_hp.jpg" union select "DSC_7839_hp.jpg" union select "DSC_7851_hp.jpg" union select "DSC_7859_hp.jpg" union select "DSC_7868_hp.jpg" union select "DSC_7871_hp.jpg" union select "DSC_7881_hp.jpg" union select "DSC_7886_hp.jpg" union select "DSC_7892_hp.jpg" union select "DSC_7896_hp.jpg" union select "DSC_7900_hp.jpg" union select "DSC_7956_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4302,img from (select NULL img union select "1_Latein_hp.jpg" union select "2_Standard_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4332,img from (select NULL img union select "fasching_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3631,img from (select NULL img union select "TC_Weihnachten_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2561,img from (select NULL img union select "20140806_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2562,img from (select NULL img union select "DSC_7196-hp.jpg" union select "DSC_7212-hp.jpg" union select "DSC_7214-hp.jpg" union select "DSC_7229-hp.jpg" union select "DSC_7240-hp.jpg" union select "DSC_7248-hp.jpg" union select "DSC_7249-hp.jpg" union select "2012_Bild_217-hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 529,img from (select NULL img union select "phoca_thumb_l_hgr2d-st_1_1_500.jpg" union select "phoca_thumb_l_jugd-lat_2_1_500.jpg" union select "CIMG3960_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 504,img from (select NULL img union select "IMG_6578.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 25,img from (select NULL img union select "enzo_klein.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 207,img from (select NULL img union select "20071209_Kinderweihnachtsfeier_070_homepage_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 26,img from (select NULL img union select "brunobohn.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 33,img from (select NULL img union select "SaskiaHeim.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 466,img from (select NULL img union select "Unbenannt-1b__1024x768__06.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 27,img from (select NULL img union select "IMG_0373_1.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 34,img from (select NULL img union select "lena_hoehne.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 28,img from (select NULL img union select "greiner.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 35,img from (select NULL img union select "enzo_klein_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 44,img from (select NULL img union select "Webmaster_KlausThrien.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 46,img from (select NULL img union select "juergen.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 47,img from (select NULL img union select "typo3logo.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 48,img from (select NULL img union select "php.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 49,img from (select NULL img union select "mysql.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 50,img from (select NULL img union select "apache.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 68,img from (select NULL img union select "Turnierpaar_Cierpka_l.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 69,img from (select NULL img union select "PresseCierpka.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1701,img from (select NULL img union select "Unbenannt-3_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 70,img from (select NULL img union select "platzhalter_neu_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 83,img from (select NULL img union select "floppy_disk_walking_md_wht.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 71,img from (select NULL img union select "dudek_patzelt.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 72,img from (select NULL img union select "karrer02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 73,img from (select NULL img union select "karrer01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 74,img from (select NULL img union select "liersch.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 75,img from (select NULL img union select "Turnierpaar_Neumaier.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 76,img from (select NULL img union select "repss_a.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8032,img from (select NULL img union select "HP_Vogel_Wien_2016.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7382,img from (select NULL img union select "Siegerehrung_LM_Sen_III_A-2015-a.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 77,img from (select NULL img union select "repss__640x480__01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 380,img from (select NULL img union select "Unbenannt-1.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2302,img from (select NULL img union select "2011_LM-1-hp4.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2241,img from (select NULL img union select "2011_Vogel_Weinmann_Mitte.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 91,img from (select NULL img union select "Bild2_02.jpg" union select "Bild3_02.jpg" union select "Bild4_02.jpg" union select "Bild5_02.jpg" union select "Bild6_02.jpg" union select "Bild7_02.jpg" union select "Bild8_01.jpg" union select "Bild9.jpg" union select "Bild10.jpg" union select "Bild11.jpg" union select "Bild12.jpg" union select "Bild13.jpg" union select "Bild14.jpg" union select "Bild15.jpg" union select "Bild16.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 95,img from (select NULL img union select "Bild2_01.jpg" union select "Bild3_01.jpg" union select "Bild4_01.jpg" union select "Bild5_01.jpg" union select "Bild6_01.jpg" union select "Bild7_01.jpg" union select "Bild8.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 97,img from (select NULL img union select "Bild5.jpg" union select "Bild6.jpg" union select "Bild7.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 96,img from (select NULL img union select "Bild1_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 103,img from (select NULL img union select "dtsa06.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 98,img from (select NULL img union select "Bild4.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 105,img from (select NULL img union select "005.jpg" union select "010.jpg" union select "021.jpg" union select "025.jpg" union select "040.jpg" union select "050.jpg" union select "051.jpg" union select "053.jpg" union select "055.jpg" union select "061.jpg" union select "064.jpg" union select "070.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 99,img from (select NULL img union select "Bild3.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 100,img from (select NULL img union select "Bild2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 101,img from (select NULL img union select "Bild1.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 107,img from (select NULL img union select "TCSWRT_Siegerehrung_SEN_III_S_141006_klein_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 110,img from (select NULL img union select "tcemblem2_01.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 2501,img from (select NULL img union select "2011_Weihnachtsfeier-hp_01.jpg" union select "20111203tscr4880a02_350g.jpg" union select "20111203tscr4886a02_350g.jpg" union select "DSC_6828-hp.jpg" union select "DSC_6832-hp.jpg" union select "DSC_6843-hp.JPG" union select "DSC_6868-hp.jpg" union select "DSC_6874-hp.jpg" union select "DSC_6879-hp.jpg" union select "DSC_6869-hp.jpg" union select "DSC_6924-hp.jpg" union select "DSC_6954-hp.jpg" union select "DSC_6916-hp.jpg" union select "IMG_5858-hp.JPG" union select "DSC_6992-hp.jpg" union select "20111203tscr4982a01_350g.jpg" union select "20111203tscr4982b01_350g.jpg" union select "DSC_7014-hp.jpg" union select "IMG_5752-hp.JPG" union select "IMG_5829-hp.JPG" union select "IMG_5833-hp.jpg" union select "IMG_5762-hp.JPG" union select "IMG_5842-hp.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 240,img from (select NULL img union select "Satzungsheft_TC__01.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 7482,img from (select NULL img union select "Landesmeister_Bruno_und_Monika_Bohn._Foto_Bolcz_HP.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 117,img from (select NULL img union select "Tanzpartnersuche.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 127,img from (select NULL img union select "fasching02.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 128,img from (select NULL img union select "fasching01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 130,img from (select NULL img union select "Kinderfasching_TSCR_neu.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 132,img from (select NULL img union select "IMG_0410.jpg" union select "IMG_0406.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 133,img from (select NULL img union select "IMG_0001.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 134,img from (select NULL img union select "2007_03_Vizelandesmeister_Cierpka.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 136,img from (select NULL img union select "001_Standard.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 139,img from (select NULL img union select "P4212777.JPG" union select "P4212778.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 143,img from (select NULL img union select "P4222834.JPG" union select "P4222836.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 140,img from (select NULL img union select "P4212730.JPG" union select "P4212753.JPG" union select "P4212755.JPG" union select "P4212762.JPG" union select "P4212765.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 144,img from (select NULL img union select "P4222831.JPG" union select "P4222832.JPG" union select "P4222833.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 141,img from (select NULL img union select "P4212725.JPG" union select "P4212727.JPG" union select "P4212728.JPG" union select "P4212729.JPG" union select "P4212731.JPG" union select "P4212732.JPG" union select "P4212736.JPG" union select "P4212747.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 145,img from (select NULL img union select "P4222796.JPG" union select "P4222812.JPG" union select "P4222813.JPG" union select "P4222814.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 146,img from (select NULL img union select "P4222791.JPG" union select "P4222793.JPG" union select "P4222794.JPG" union select "P4222795.JPG" union select "P4222801.JPG" union select "P4222810.JPG" union select "P4222811.JPG" union select "P4222815.JPG" union select "P4222816.JPG" union select "P4222817.JPG" union select "P4222825.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 150,img from (select NULL img union select "Tango_Argentino_Flyer_A5.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 206,img from (select NULL img union select "jessica.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 168,img from (select NULL img union select "IMG_0496__640x480__01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 170,img from (select NULL img union select "IMG_0496__640x480__02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 172,img from (select NULL img union select "chronik_markus_silke_1a__640x480__01.jpg" union select "chronik_markus_silke_2__640x480_.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 173,img from (select NULL img union select "Cierpkas_Kuchenbecker_Neumaier.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 175,img from (select NULL img union select "Ferienprogramm.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8802,img from (select NULL img union select "201711_BSW.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 191,img from (select NULL img union select "2007_09_23_Geburtstagsfeier_Margret_TSCR_56.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 194,img from (select NULL img union select "20071104_Breitensportwettbewerb_Homepage.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 195,img from (select NULL img union select "Bild_Ausflug_Aalen1.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 198,img from (select NULL img union select "Patrick_Chris_8_Internet.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 199,img from (select NULL img union select "Flamenco_1.jpg" union select "Flamenco_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 200,img from (select NULL img union select "Kindergruppe_250306_Internet.jpg" union select "Liersch_2_Internet.jpg" union select "Siegerehrung_Hpt_B_Lat_250306_Internet.jpg" union select "Siegerehrung_Hpt_S_250306_1_Internet.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 202,img from (select NULL img union select "Cowgirls_TC_SWRT_Kinder.JPG" union select "Gruppenbild_TC_SWRT_Kinder_red.jpg" union select "Eltern_TC_SWRT_Tanznachmittag.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 204,img from (select NULL img union select "003.JPG" union select "007.jpg" union select "050_01.jpg" union select "051.JPG" union select "060.jpg" union select "065.jpg" union select "069.jpg" union select "072.jpg" union select "073.jpg" union select "093.jpg" union select "096.jpg" union select "200.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 205,img from (select NULL img union select "071111_sieger_senivs.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 208,img from (select NULL img union select "20071209_Kinderweihnachtsfeier_013.jpg" union select "20071209_Kinderweihnachtsfeier_015.jpg" union select "20071209_Kinderweihnachtsfeier_021_Homepage.jpg" union select "20071209_Kinderweihnachtsfeier_070_homepage.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 212,img from (select NULL img union select "logo-lch.png" union select "pro133.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 213,img from (select NULL img union select "20071209_Kinderweihnachtsfeier_021_Homepage_01.jpg" union select "20071209_Kinderweihnachtsfeier_057_Homepage.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 214,img from (select NULL img union select "DSC05180_20071208_Babenschneider__Homepage_01.jpg" union select "DSC05181_20071208_Jugendgruppe_01.jpg" union select "DSC05182_20071208_Jugendgruppe_02.jpg" union select "DSC05193_20071208_Flamenco_01.jpg" union select "DSC05193_20071208_Mitgliedertanz_Krysyna_12.jpg" union select "DSC05188_20071208_Mitgliedertanz_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 216,img from (select NULL img union select "pc310717.jpg" union select "pc310703_01.jpg" union select "pc310707.jpg" union select "01_Tisch.jpg" union select "02_Tisch.jpg" union select "03_Tisch.jpg" union select "04_Tisch.jpg" union select "05_Tisch.jpg" union select "06_Tisch.jpg" union select "07_Tisch.jpg" union select "01_Publikumstanz.jpg" union select "DC_Toyota.jpg" union select "01_Walter_Helga.jpg" union select "01_Gerti_01.jpg" union select "01_Heinz_Margret.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 219,img from (select NULL img union select "10_Homepage.jpg" union select "01_Homepage.jpg" union select "02_Homepage.jpg" union select "03_Homepage.jpg" union select "04_Homepage.jpg" union select "05_Homepage.jpg" union select "06_Homepage.jpg" union select "07_Homepage.jpg" union select "08_Homepage.jpg" union select "09_Homepage.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 218,img from (select NULL img union select "MarkusUndSilke_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 221,img from (select NULL img union select "DSC_3901.JPG" union select "DSC_3902.JPG" union select "DSC_3905.JPG" union select "DSC_3906.JPG" union select "DSC_3907.JPG" union select "DSC_3912.JPG" union select "DSC_3915.JPG" union select "DSC_3919.JPG" union select "DSC_3928.JPG" union select "DSC_3934.JPG" union select "DSC_3944.JPG" union select "DSC_3948.JPG" union select "DSC_3949.JPG" union select "DSC_3950.JPG" union select "DSC_3957.JPG" union select "DSC_3967.JPG" union select "DSC_3974.JPG" union select "DSC_3980.JPG" union select "DSC_3981.JPG" union select "DSC_3985.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 225,img from (select NULL img union select "Plakat_Homepage_Fruehlingsball08.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8162,img from (select NULL img union select "Pokalturnier_Illingen_2017-02-12.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7552,img from (select NULL img union select "Vorne_Innenblatt_Fruehlingsball.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4512,img from (select NULL img union select "DSC_4713_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4522,img from (select NULL img union select "Tanz_in_den_Mai_2013.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3021,img from (select NULL img union select "DSC_8118_hp.jpg" union select "DSC_8124_hp.jpg" union select "DSC_8132_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 228,img from (select NULL img union select "2008_02_16_Kuchenbecker_Sindelfingen.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 229,img from (select NULL img union select "Tango_Argentino_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 235,img from (select NULL img union select "2008_0223_Tag_der_offenen_Tuer0115.JPG" union select "2008_0223_Zeitungsfotos0123.JPG" union select "2008_0223_Zeitungsfotos0125.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 233,img from (select NULL img union select "tcemblem2_02.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 236,img from (select NULL img union select "2008_03_01_Fruehlingsball_Siegerehrung_Latein_01.jpg" union select "2008_03_01_Fruehlingsball_Siegerehrung_Latein_C_01.jpg" union select "2008_03_01_Fruehlingsball_Siegerehrung_SI_Standard.jpg" union select "2008_03_01_Fruehlingsball_Siegerehrung_SIV_Standard.jpg" union select "2008_03_01_Fruehlingsball_Neumaier.jpg" union select "2008_03_01_Fruehlingsball_Latein_09.jpg" union select "2008_03_01_Fruehlingsball_Latein_012.jpg" union select "2008_03_01_Fruehlingsball_Cierpka_06.jpg" union select "2008_03_01_Fruehlingsball_Liersch_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 237,img from (select NULL img union select "20080308_LM_Cierpka_Trembo_Pressefoto.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 238,img from (select NULL img union select "20080308_LM_Cierpka_Trembo_Pressefoto_01.jpg" union select "20080308_LM_Cierpka_Siegerehrung_18_Homepage.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 250,img from (select NULL img union select "008_FlamencoGruppe_Homepage.jpg" union select "007_FlamencoGruppe_Homepage.jpg" union select "DSC05751_Homepage.jpg" union select "DSC05760_Homepage_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 255,img from (select NULL img union select "2008_03_01_Fruehlingsball_Markus_Silke.jpg" union select "Hessentanz.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 256,img from (select NULL img union select "montag.png") A;
-REPLACE INTO sys_file_reference_temp select null, 257,img from (select NULL img union select "dienstag_Kopie.png") A;
-REPLACE INTO sys_file_reference_temp select null, 258,img from (select NULL img union select "mittwoch.png") A;
-REPLACE INTO sys_file_reference_temp select null, 259,img from (select NULL img union select "donnerstag_rolandas_trembo.png") A;
-REPLACE INTO sys_file_reference_temp select null, 260,img from (select NULL img union select "freitag_engel.png") A;
-REPLACE INTO sys_file_reference_temp select null, 261,img from (select NULL img union select "samstag.png") A;
-REPLACE INTO sys_file_reference_temp select null, 2132,img from (select NULL img union select "IMG_1736_400.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8712,img from (select NULL img union select "2017_09_09_LM_HGR_II_Sinsheim_1.jpg" union select "2017_09_09_LM_HGR_II_Sinsheim_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 266,img from (select NULL img union select "Markus_Silke_Homepage.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 267,img from (select NULL img union select "001_Heinz_und__Margret_Cierpka.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 268,img from (select NULL img union select "2008_0621_Tanzauftritt_Stadt0018.JPG" union select "2008_0621_Tanzauftritt_Stadt0010.JPG" union select "2008_0621_Tanzauftritt_Stadt0004.JPG" union select "2008_0621_Tanzauftritt_Stadt0015.JPG" union select "2008_0621_Tanzauftritt_Stadt0028_01.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 269,img from (select NULL img union select "kostorz.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 270,img from (select NULL img union select "2008_Gea-JugendArt_bearbeitet.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 271,img from (select NULL img union select "2008_Gea-JugendArt_bearbeitet_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 272,img from (select NULL img union select "DerHipHopKurs.JPG" union select "TanzminisinAction.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 273,img from (select NULL img union select "LMSENIIIS2008Liersch_bearbeitet_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 275,img from (select NULL img union select "Unbenannt-1b__1024x768__01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 277,img from (select NULL img union select "CIMG1018.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 276,img from (select NULL img union select "linkerhahn1.png") A;
-REPLACE INTO sys_file_reference_temp select null, 278,img from (select NULL img union select "Jessica_Felix-2012_2_hp.jpg" union select "Jessica_Felix_2012_1.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 280,img from (select NULL img union select "Nicola_Martin_20130303_hp_links.JPG" union select "Nicola_Martin_Homepage_20130303.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 282,img from (select NULL img union select "sebastian_hoehne_1.jpg" union select "sebastian_hoehne_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 284,img from (select NULL img union select "DSC_3632_20130106_hp.jpg" union select "Vogel_GOC_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 288,img from (select NULL img union select "2007_04_22_Trophy_Cierpka_013.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 304,img from (select NULL img union select "001_Foto.jpg" union select "002_Foto.jpg" union select "003_Foto.jpg" union select "004_Foto.jpg" union select "005_Foto.jpg" union select "006_Foto.jpg" union select "007_Foto.jpg" union select "009_Foto.jpg" union select "010_Foto.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 339,img from (select NULL img union select "IMG_3837.jpg" union select "IMG_3867.jpg" union select "IMG_3870.jpg" union select "IMG_3900.jpg" union select "IMG_3895.jpg" union select "2009_0704_Stocherkahn_TUE_0166.jpg" union select "IMG_3912.jpg" union select "IMG_3883.jpg" union select "IMG_3876.jpg" union select "IMG_3892.jpg" union select "IMG_3874.jpg" union select "IMG_3864.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 331,img from (select NULL img union select "platzhalter.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 296,img from (select NULL img union select "Jessy_Felix_640x480_.jpg" union select "Unbenannt-2__640x480__02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 300,img from (select NULL img union select "Bild_1.png") A;
-REPLACE INTO sys_file_reference_temp select null, 301,img from (select NULL img union select "2008_1207_Kinderweihnachten0022_600x450.JPG" union select "2008_1207_Kinderweihnachten0042_600x450.JPG" union select "2008_1207_Kinderweihnachten0094_600x450.JPG" union select "2008_1207_Kinderweihnachten0010_600x450.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 307,img from (select NULL img union select "20090228_Cierpka_Homepage.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7542,img from (select NULL img union select "Minis_HP_01.jpeg" union select "Kinder_HP_01.jpeg" union select "Hip_Hop_HP_01.jpeg" union select "Mit_Tanzlehrerin_HP_01.jpeg" union select "Nikolaus_HP_01.jpeg") A;
-REPLACE INTO sys_file_reference_temp select null, 8062,img from (select NULL img union select "Begruessung_der_Gaeste_durch_die_2._Vorsitzende__Gerti_Goetz.jpg" union select "ChaChaCha_zu_viert.jpg" union select "Paso_Doble.jpg" union select "Slow-Rumba-Mix.jpg" union select "Gaeste_tanzen_1.jpg" union select "Gaeste_tanzen_2.jpg" union select "Gaeste_tanzen_3.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4482,img from (select NULL img union select "IMG-20130317-WA0002.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1402,img from (select NULL img union select "Alle_Teilnehmer_500.jpg" union select "Reutlingen_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 612,img from (select NULL img union select "P6123557_500_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 483,img from (select NULL img union select "Unbenannt-2_01.jpg" union select "Unbenannt-1_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 472,img from (select NULL img union select "SDC10509_klein.jpg" union select "P1011143_klein.jpg" union select "P1011649_klein.jpg" union select "gruppenbild.jpg" union select "jessy_jassy.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 408,img from (select NULL img union select "p9130031_klein.jpg" union select "p9130052_klein.jpg" union select "p9130073_klein.jpg" union select "p9130149_klein.jpg" union select "p9130522_klein.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 410,img from (select NULL img union select "p9130031_klein_01.jpg" union select "p9130052_klein_02.jpg" union select "p9130073_klein_02.jpg" union select "p9130149_klein_01.jpg" union select "p9130522_klein_02.jpg" union select "p9140536_klein.jpg" union select "p9140583_klein.jpg" union select "p9140631_klein.jpg" union select "p9140733_klein.jpg" union select "p9140929_klein.jpg" union select "1.jpg" union select "9.jpg" union select "16.jpg" union select "26.jpg" union select "18.jpg" union select "20.jpg" union select "2.jpg" union select "5.jpg" union select "6.jpg" union select "8.jpg" union select "10.jpg" union select "11.jpg" union select "13.jpg" union select "14.jpg" union select "7.jpg" union select "15.jpg" union select "17.jpg" union select "4.jpg" union select "22.jpg" union select "23.jpg" union select "24.jpg" union select "25.jpg" union select "28.jpg" union select "30.jpg" union select "31.jpg" union select "33.jpg" union select "32.jpg" union select "35.jpg" union select "36.jpg" union select "37.jpg" union select "p9130343_klein.jpg" union select "6_01.jpg" union select "8_01.jpg" union select "9_01.jpg" union select "10_01.jpg" union select "12.jpg" union select "38.jpg" union select "39.jpg" union select "43.jpg" union select "41.jpg" union select "42.jpg" union select "40.jpg" union select "p9140891_klein.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 411,img from (select NULL img union select "p9130052_klein_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 412,img from (select NULL img union select "p9130073_klein_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 413,img from (select NULL img union select "p9130149_klein_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 414,img from (select NULL img union select "p9130522_klein_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 417,img from (select NULL img union select "p9140528_01.jpg" union select "p9140536_01.jpg" union select "p9140554_01.jpg" union select "p9140583_01.jpg" union select "p9140587_01.jpg" union select "p9140589_01.jpg" union select "p9140631_01.jpg" union select "p9140652_01.jpg" union select "p9140653_01.jpg" union select "p9140655_01.jpg" union select "p9140691_01.jpg" union select "p9140695_01.jpg" union select "p9140720_01.jpg" union select "p9140733__01.jpg" union select "p9140750_01.jpg" union select "p9140756_01.jpg" union select "p9140774_01.jpg" union select "p9140796_01.jpg" union select "p9140816_01.jpg" union select "p9140819_01.jpg" union select "p9140841_01.jpg" union select "p9140891_01.jpg" union select "p9140839_01.jpg" union select "p9140897_01.jpg" union select "p9140842_01.jpg" union select "p9140835_01.jpg" union select "p9140833_01.jpg" union select "p9140929_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 415,img from (select NULL img union select "p9130012_.jpg" union select "p9130021.jpg" union select "p9130026.jpg" union select "p9130031.jpg" union select "p9130039.jpg" union select "p9130041.jpg" union select "p9130044.jpg" union select "p9130052.jpg" union select "p9130064.jpg" union select "p9130073_01.jpg" union select "p9130082.jpg" union select "p9130093.jpg" union select "p9130115.jpg" union select "p9130124.jpg" union select "p9130144.jpg" union select "p9130149.jpg" union select "p9130155.jpg" union select "p9130159.jpg" union select "p9130171.jpg" union select "p9130173.jpg" union select "p9130181.jpg" union select "p9130182.jpg" union select "p9130185.jpg" union select "p9130406.jpg" union select "p9130256.jpg" union select "p9130266.jpg" union select "p9130267.jpg" union select "p9130283.jpg" union select "p9130305.jpg" union select "p9130334.jpg" union select "p9130335.jpg" union select "p9130343.jpg" union select "p9130344.jpg" union select "p9130353.jpg" union select "p9130396.jpg" union select "p9130416.jpg" union select "p9130460.jpg" union select "p9130467.jpg" union select "p9130488.jpg" union select "p9130495.jpg" union select "p9130498.jpg" union select "p9130522.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 416,img from (select NULL img union select "p9140528.jpg" union select "p9140536.jpg" union select "p9140554.jpg" union select "p9140583.jpg" union select "p9140587.jpg" union select "p9140589.jpg" union select "p9140631.jpg" union select "p9140652.jpg" union select "p9140653.jpg" union select "p9140655.jpg" union select "p9140691.jpg" union select "p9140695.jpg" union select "p9140720.jpg" union select "p9140733_.jpg" union select "p9140750.jpg" union select "p9140756.jpg" union select "p9140774.jpg" union select "p9140796.jpg" union select "p9140816.jpg" union select "p9140819.jpg" union select "p9140841.jpg" union select "p9140891.jpg" union select "p9140839.jpg" union select "p9140897.jpg" union select "p9140842.jpg" union select "p9140835.jpg" union select "p9140833.jpg" union select "p9140929.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 457,img from (select NULL img union select "formation.JPG" union select "neumaier.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 447,img from (select NULL img union select "chor_03.png") A;
-REPLACE INTO sys_file_reference_temp select null, 448,img from (select NULL img union select "chor_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 312,img from (select NULL img union select "001_Fruelingsball09.jpg" union select "2009_Fruehlingsball_Dieter_undAnnette_Kuchenbecker.jpg" union select "002_Fruelingsball09.jpg" union select "004_Fruelingsball09.jpg" union select "005_Fruelingsball09.jpg" union select "006_Fruelingsball09.jpg" union select "007_Fruelingsball09.jpg" union select "008_Fruelingsball09.jpg" union select "010_Fruelingsball09.jpg" union select "012_Fruelingsball09.jpg" union select "013_Fruelingsball09.jpg" union select "015_Fruelingsball09.jpg" union select "2009_Fruehlingsball_Dieter_und_Annette_Kuchenbecker.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 315,img from (select NULL img union select "newyorker_rand.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 316,img from (select NULL img union select "Helmut-Marlies_Schneider.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 317,img from (select NULL img union select "Renaldo-Vanessa_Mueller.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 318,img from (select NULL img union select "lucas.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 319,img from (select NULL img union select "christine.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 321,img from (select NULL img union select "lucas_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 322,img from (select NULL img union select "lucas_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 323,img from (select NULL img union select "Unbenannt-4.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 325,img from (select NULL img union select "hessen_d-lat_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 328,img from (select NULL img union select "aktuell_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 333,img from (select NULL img union select "IMG-Pressebilder_0002_klein.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 335,img from (select NULL img union select "hessen_d-lat_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 337,img from (select NULL img union select "Unbenannt-1b__1024x768__02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 338,img from (select NULL img union select "platzhalter_neu.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 347,img from (select NULL img union select "Herbstball_2009-281_klein.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 341,img from (select NULL img union select "siegertreppchen.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 345,img from (select NULL img union select "siegertreppchen_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 343,img from (select NULL img union select "IMG_3837_02.jpg" union select "IMG_3867_02.jpg" union select "IMG_3870_02.jpg" union select "IMG_3900_02.jpg" union select "IMG_3895_02.jpg" union select "2009_0704_Stocherkahn_TUE_0166_02.jpg" union select "IMG_3912_02.jpg" union select "IMG_3883_02.jpg" union select "IMG_3876_02.jpg" union select "IMG_3892_02.jpg" union select "IMG_3874_02.jpg" union select "IMG_3864_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 348,img from (select NULL img union select "Unbenannt-1b__1024x768__03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 349,img from (select NULL img union select "Unbenannt2_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 350,img from (select NULL img union select "Unbenannt-1b__1024x768__04.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 351,img from (select NULL img union select "addy_mel.png") A;
-REPLACE INTO sys_file_reference_temp select null, 352,img from (select NULL img union select "Unbenannt-1b__1024x768__05.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 353,img from (select NULL img union select "jassy_viktor.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 354,img from (select NULL img union select "kostorz_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 355,img from (select NULL img union select "jessica_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 356,img from (select NULL img union select "christine_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 357,img from (select NULL img union select "lena_hoehne_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 358,img from (select NULL img union select "marianne_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 359,img from (select NULL img union select "SaskiaHeim_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 360,img from (select NULL img union select "lucas_04.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 361,img from (select NULL img union select "silke_link_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 364,img from (select NULL img union select "jugendgruppen_vorne.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 365,img from (select NULL img union select "jugendgruppen_vorne.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 366,img from (select NULL img union select "jugendgruppen_hinten.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 367,img from (select NULL img union select "siegerehrung.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 369,img from (select NULL img union select "tanzen_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 370,img from (select NULL img union select "siegerehrung_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 371,img from (select NULL img union select "siegerehrung_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 372,img from (select NULL img union select "tanzen.jpg" union select "siegerehrung_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 373,img from (select NULL img union select "tanzen_02.jpg" union select "siegerehrung_04.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 430,img from (select NULL img union select "Unbenannt-3_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 376,img from (select NULL img union select "patrick_andrea.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 378,img from (select NULL img union select "cirpka_c_01.jpg" union select "cirpka_d_01.jpg" union select "cirpka20337_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 379,img from (select NULL img union select "patzelt.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 382,img from (select NULL img union select "Unbenannt-2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 383,img from (select NULL img union select "Unbenannt-1b.jpg" union select "Unbenannt-2b.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 386,img from (select NULL img union select "sonntag_02.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 387,img from (select NULL img union select "samstag_01.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 388,img from (select NULL img union select "freitag_01.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 389,img from (select NULL img union select "donnerstag_01.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 390,img from (select NULL img union select "mittwoch_01.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 391,img from (select NULL img union select "dienstag_01.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 392,img from (select NULL img union select "ferienplan.png") A;
-REPLACE INTO sys_file_reference_temp select null, 399,img from (select NULL img union select "jugendgruppen_hinten_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 400,img from (select NULL img union select "jugendgruppen_vorne_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 401,img from (select NULL img union select "jugendgruppen_hinten_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 402,img from (select NULL img union select "jugendgruppen_vorne_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 421,img from (select NULL img union select "p9140528_02.jpg" union select "p9140536_02.jpg" union select "p9140554_02.jpg" union select "p9140583_02.jpg" union select "p9140587_02.jpg" union select "p9140589_02.jpg" union select "p9140631_02.jpg" union select "p9140652_02.jpg" union select "p9140653_02.jpg" union select "p9140655_02.jpg" union select "p9140691_02.jpg" union select "p9140695_02.jpg" union select "p9140720_02.jpg" union select "p9140733__02.jpg" union select "p9140750_02.jpg" union select "p9140756_02.jpg" union select "p9140774_02.jpg" union select "p9140796_02.jpg" union select "p9140816_02.jpg" union select "p9140819_02.jpg" union select "p9140841_02.jpg" union select "p9140891_02.jpg" union select "p9140839_02.jpg" union select "p9140897_02.jpg" union select "p9140842_02.jpg" union select "p9140835_02.jpg" union select "p9140833_02.jpg" union select "p9140929_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 422,img from (select NULL img union select "p9130012__02.jpg" union select "p9130021_02.jpg" union select "p9130026_02.jpg" union select "p9130031_02.jpg" union select "p9130039_02.jpg" union select "p9130041_02.jpg" union select "p9130044_02.jpg" union select "p9130052_02.jpg" union select "p9130064_02.jpg" union select "p9130073_03.jpg" union select "p9130082_02.jpg" union select "p9130093_02.jpg" union select "p9130115_02.jpg" union select "p9130124_02.jpg" union select "p9130144_02.jpg" union select "p9130149_02.jpg" union select "p9130155_02.jpg" union select "p9130159_02.jpg" union select "p9130171_02.jpg" union select "p9130173_02.jpg" union select "p9130181_02.jpg" union select "p9130182_02.jpg" union select "p9130185_02.jpg" union select "p9130406_02.jpg" union select "p9130256_02.jpg" union select "p9130266_02.jpg" union select "p9130267_02.jpg" union select "p9130283_02.jpg" union select "p9130305_02.jpg" union select "p9130334_02.jpg" union select "p9130335_02.jpg" union select "p9130343_02.jpg" union select "p9130344_02.jpg" union select "p9130353_02.jpg" union select "p9130396_02.jpg" union select "p9130416_02.jpg" union select "p9130460_02.jpg" union select "p9130467_02.jpg" union select "p9130488_02.jpg" union select "p9130495_02.jpg" union select "p9130498_02.jpg" union select "p9130522_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 418,img from (select NULL img union select "p9130012__01.jpg" union select "p9130021_01.jpg" union select "p9130026_01.jpg" union select "p9130031_01.jpg" union select "p9130039_01.jpg" union select "p9130041_01.jpg" union select "p9130044_01.jpg" union select "p9130052_01.jpg" union select "p9130064_01.jpg" union select "p9130073_02.jpg" union select "p9130082_01.jpg" union select "p9130093_01.jpg" union select "p9130115_01.jpg" union select "p9130124_01.jpg" union select "p9130144_01.jpg" union select "p9130149_01.jpg" union select "p9130155_01.jpg" union select "p9130159_01.jpg" union select "p9130171_01.jpg" union select "p9130173_01.jpg" union select "p9130181_01.jpg" union select "p9130182_01.jpg" union select "p9130185_01.jpg" union select "p9130406_01.jpg" union select "p9130256_01.jpg" union select "p9130266_01.jpg" union select "p9130267_01.jpg" union select "p9130283_01.jpg" union select "p9130305_01.jpg" union select "p9130334_01.jpg" union select "p9130335_01.jpg" union select "p9130343_01.jpg" union select "p9130344_01.jpg" union select "p9130353_01.jpg" union select "p9130396_01.jpg" union select "p9130416_01.jpg" union select "p9130460_01.jpg" union select "p9130467_01.jpg" union select "p9130488_01.jpg" union select "p9130495_01.jpg" union select "p9130498_01.jpg" union select "p9130522_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 470,img from (select NULL img union select "IMG_4576_klein500.jpg" union select "IMG_4584_klein500.jpg" union select "IMG_4586_klein500.jpg" union select "IMG_4594_klein500.jpg" union select "IMG_4605_klein500.jpg" union select "IMG_4607_klein500.jpg" union select "IMGA0598.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 425,img from (select NULL img union select "lm2009.png") A;
-REPLACE INTO sys_file_reference_temp select null, 426,img from (select NULL img union select "Unbenannt-3.png") A;
-REPLACE INTO sys_file_reference_temp select null, 428,img from (select NULL img union select "tanzen2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 429,img from (select NULL img union select "tanzen_04.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 433,img from (select NULL img union select "HGR_D_Lat.png") A;
-REPLACE INTO sys_file_reference_temp select null, 435,img from (select NULL img union select "LM_standard_1_102009_010_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 459,img from (select NULL img union select "pc130245_.jpg" union select "pc130256_.jpg" union select "pc130260_.jpg" union select "pc130273_.jpg" union select "pc130279_.jpg" union select "pc130283_.jpg" union select "pc130351_.jpg" union select "pc130364_.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 441,img from (select NULL img union select "LM_standard_1_102009_010_02.png") A;
-REPLACE INTO sys_file_reference_temp select null, 438,img from (select NULL img union select "Einladung.jpg" union select "Grafik8.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 440,img from (select NULL img union select "1719090_1.1.png") A;
-REPLACE INTO sys_file_reference_temp select null, 443,img from (select NULL img union select "chor_02.jpg" union select "chor_03_Kopie.jpg" union select "chor_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 445,img from (select NULL img union select "LM_standard_1_102009_010_04.png") A;
-REPLACE INTO sys_file_reference_temp select null, 451,img from (select NULL img union select "tanzumdieuhr.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 454,img from (select NULL img union select "esslingen.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 455,img from (select NULL img union select "Unbenannt-1_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 461,img from (select NULL img union select "Weihnachtsmarkt_2009_2_klein.jpg" union select "Weihnachtsmarkt_2009_6_klein.jpg" union select "Weihnachtsmarkt_2009_1_klein.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 463,img from (select NULL img union select "pc120228.jpg" union select "pc120229.jpg" union select "pc120236_.jpg" union select "pc120234_.jpg" union select "pc120239_.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 467,img from (select NULL img union select "Turnierpaar_Bohn_l.jpg" union select "Turnierpaar_Bohn_r.jpg" union select "Turnierpaar_Bohn.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 468,img from (select NULL img union select "Peter_Hahn1.jpg" union select "Silvesterbueffet-1_2009_klein.jpg" union select "Silvesterbueffet-2_2009_klein.jpg" union select "Silvester_2009_Saal_klein.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 476,img from (select NULL img union select "gruppebild_500.jpg" union select "P1301748_500.jpg" union select "P1301751_500.jpg" union select "P1301758_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 478,img from (select NULL img union select "Hgr2CLat_500.jpg" union select "HgrCLat_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 485,img from (select NULL img union select "Unbenannt-9.jpg" union select "Unbenannt-8.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 487,img from (select NULL img union select "Unbenannt-2_02.jpg" union select "Unbenannt-1_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 489,img from (select NULL img union select "Unbenannt-9_01.jpg" union select "Unbenannt-8_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 491,img from (select NULL img union select "Unbenannt-2_03.jpg" union select "Unbenannt-1_04.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 493,img from (select NULL img union select "Unbenannt-2_04.jpg" union select "Unbenannt-1_05.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 500,img from (select NULL img union select "Unbenannt-5.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 499,img from (select NULL img union select "platzhalter_neu_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 502,img from (select NULL img union select "Kinderfasching_2010_019_500.jpg" union select "Kinderfasching_2010_072_500.jpg" union select "Kinderfasching_2010_093_500.jpg" union select "p2140646__Bearbeitet__500.jpg" union select "p2140661__Bearbeitet__500.jpg" union select "p2140737__Bearbeitet__500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 505,img from (select NULL img union select "IMG_6580.JPG" union select "P1020358.JPG" union select "P1020363.JPG" union select "P1020392.JPG" union select "P1020402.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 526,img from (select NULL img union select "20101211_Weihnachtsfeier_im_TSCR_2010-1.png" union select "20101211_Weihnachtsfeier_im_TSCR_2010-2.png") A;
-REPLACE INTO sys_file_reference_temp select null, 506,img from (select NULL img union select "plakat.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 517,img from (select NULL img union select "gea_500.jpg" union select "cierpka_lm_500.jpg" union select "DSC_4030_500.jpg" union select "vogel_lm_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 702,img from (select NULL img union select "Open_Air_Turnier_Ludwigsburg_25.7.2010_007_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 520,img from (select NULL img union select "Mutlangen_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 516,img from (select NULL img union select "Turnierpaar_Engel_l.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 519,img from (select NULL img union select "Vienna_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 522,img from (select NULL img union select "DSC_0055_500.jpg" union select "DSC_0073_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 524,img from (select NULL img union select "Unbenannt-0_500.jpg" union select "Unbenannt-1_500.jpg" union select "Unbenannt-2_500.jpg" union select "Unbenannt-3_500.jpg" union select "Unbenannt-4_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 535,img from (select NULL img union select "Moni___Peter_Braunlage_2010_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 531,img from (select NULL img union select "IMG_8935_ausschnitt_500.jpg" union select "IMG_8937_ausschnitt_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 533,img from (select NULL img union select "Frauen_tanzen.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 534,img from (select NULL img union select "Unbenannt-2.png") A;
-REPLACE INTO sys_file_reference_temp select null, 541,img from (select NULL img union select "P6123008_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 571,img from (select NULL img union select "P6123512_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 561,img from (select NULL img union select "P6123298_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 581,img from (select NULL img union select "P6123557_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 582,img from (select NULL img union select "fleischer.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 602,img from (select NULL img union select "Turnierpaar_Goetz.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8262,img from (select NULL img union select "Turnierpaar_RoswagHuamanBodemer.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2211,img from (select NULL img union select "20110430_02.jpg" union select "IMG_0362_01.jpg" union select "IMG_0360_01.jpg" union select "IMG_0355_01.jpg" union select "IMG_0356_01.jpg" union select "IMG_0373_02.jpg" union select "IMG_0380_01.jpg" union select "IMG_0385_01.jpg" union select "IMG_0384_01.jpg" union select "IMG_0383_01.jpg" union select "IMG_0374_01.jpg" union select "IMG_0373_03.jpg" union select "IMG_0381_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 622,img from (select NULL img union select "P6123512_500_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 632,img from (select NULL img union select "P6123298_500_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 642,img from (select NULL img union select "Bild_2_500.png") A;
-REPLACE INTO sys_file_reference_temp select null, 2081,img from (select NULL img union select "fruehlingsball_500.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1102,img from (select NULL img union select "CIMG6368_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 741,img from (select NULL img union select "isi.png") A;
-REPLACE INTO sys_file_reference_temp select null, 832,img from (select NULL img union select "isi_02.png") A;
-REPLACE INTO sys_file_reference_temp select null, 812,img from (select NULL img union select "ksk70.png") A;
-REPLACE INTO sys_file_reference_temp select null, 822,img from (select NULL img union select "dvag.png") A;
-REPLACE INTO sys_file_reference_temp select null, 831,img from (select NULL img union select "isi_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 891,img from (select NULL img union select "ksk70_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 871,img from (select NULL img union select "dvag_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 881,img from (select NULL img union select "dvag_02.png") A;
-REPLACE INTO sys_file_reference_temp select null, 941,img from (select NULL img union select "Visitenkarte_Bernd_Leimig.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 962,img from (select NULL img union select "Coupon.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 982,img from (select NULL img union select "P6123557_500_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 992,img from (select NULL img union select "IMG_0480_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1002,img from (select NULL img union select "IMG_0461_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1012,img from (select NULL img union select "IMG_0448_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1032,img from (select NULL img union select "P6123557_500_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1042,img from (select NULL img union select "P6123512_500_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1052,img from (select NULL img union select "P6123298_500_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1062,img from (select NULL img union select "P6123008_500_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1112,img from (select NULL img union select "CIMG6347_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1122,img from (select NULL img union select "CIMG6339_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1142,img from (select NULL img union select "CIMG6376_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8412,img from (select NULL img union select "Vorstand_AlexanderEngel.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4652,img from (select NULL img union select "TC_Discofox_2013_A3_Druck_Kopie-1.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4392,img from (select NULL img union select "neckaralb_tanzfestival_web_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2152,img from (select NULL img union select "hoehne.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2071,img from (select NULL img union select "fruehlingsball_500_2_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1172,img from (select NULL img union select "Unbenannt-1b__1024x768__07.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1182,img from (select NULL img union select "kersten_bechler.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1212,img from (select NULL img union select "turniertage2010_v4_Kopie_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1262,img from (select NULL img union select "SDC13101_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1221,img from (select NULL img union select "IMG_0164_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1231,img from (select NULL img union select "dsc_5233__Bearbeitet__500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1232,img from (select NULL img union select "dsc_5330__Bearbeitet__500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1242,img from (select NULL img union select "dsc_5441__Bearbeitet__500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1252,img from (select NULL img union select "dsc_5568__Bearbeitet__500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1272,img from (select NULL img union select "SDC13121_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1282,img from (select NULL img union select "SDC13121_500_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1292,img from (select NULL img union select "SDC13104_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1302,img from (select NULL img union select "dsc_5734__Bearbeitet__500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1312,img from (select NULL img union select "dsc_5751__Bearbeitet__500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1322,img from (select NULL img union select "dsc_5765__Bearbeitet__500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1332,img from (select NULL img union select "SDC13121_500_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1342,img from (select NULL img union select "KinderJugendtanzen.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1351,img from (select NULL img union select "CIMG6376_500_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1361,img from (select NULL img union select "CIMG6368_500_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1371,img from (select NULL img union select "SANY1226_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1381,img from (select NULL img union select "SANY1215_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1421,img from (select NULL img union select "Alle_Teilnehmer_500_01.jpg" union select "Reutlingen_500_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1442,img from (select NULL img union select "Lilli_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1461,img from (select NULL img union select "TC_Silvester.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1631,img from (select NULL img union select "Unbenannt-4_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1471,img from (select NULL img union select "Unbenannt-1.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1491,img from (select NULL img union select "kostorz_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1501,img from (select NULL img union select "jessica_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1511,img from (select NULL img union select "christine_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1521,img from (select NULL img union select "lena_hoehne_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1531,img from (select NULL img union select "marianne_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1541,img from (select NULL img union select "SaskiaHeim_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1551,img from (select NULL img union select "lucas_05.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1561,img from (select NULL img union select "enzo_klein_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1591,img from (select NULL img union select "Jorunal_2010-2_Deckblatt.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1611,img from (select NULL img union select "Jorunal_2010-2_Deckblatt_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1621,img from (select NULL img union select "Jorunal_2010-2_Deckblatt_02.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1641,img from (select NULL img union select "Unbenannt-3.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1651,img from (select NULL img union select "Unbenannt-2_05.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1661,img from (select NULL img union select "Bild_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1691,img from (select NULL img union select "Journal_2010-2_Deckblatt.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1711,img from (select NULL img union select "Unbenannt-2_06.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1721,img from (select NULL img union select "Bild_2_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1731,img from (select NULL img union select "20101212_Kinderweihnachtsfeier_im_TSCR_2010-1.png" union select "20101212_Kinderweihnachtsfeier_im_TSCR_2010-2.png" union select "20101212_Kinderweihnachtsfeier_im_TSCR_2010-3.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1822,img from (select NULL img union select "dsc_1143_500.jpg" union select "dsc_1151_500.jpg" union select "dsc_1170_500.jpg" union select "DSC_1187_500.jpg" union select "dsc_1241_500.jpg" union select "dsc_1255_500.jpg" union select "dsc_1296_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1752,img from (select NULL img union select "CIMG0752_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1782,img from (select NULL img union select "Kinderweihnachtsfeier_im_TSCR_2010_Seite_2_500.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1792,img from (select NULL img union select "Kinderweihnachtsfeier_im_TSCR_2010_Seite_1_500.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1802,img from (select NULL img union select "Kinderweihnachtsfeier_im_TSCR_2010_Seite_1_500_01.png" union select "Kinderweihnachtsfeier_im_TSCR_2010_Seite_2_500_01.png" union select "Kinderweihnachtsfeier_im_TSCR_2010_Seite_3_500_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1812,img from (select NULL img union select "Kinderweihnachtsfeier_im_TSCR_2010_Seite_3_500.png") A;
-REPLACE INTO sys_file_reference_temp select null, 2082,img from (select NULL img union select "LM_Sen_IV_S_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1842,img from (select NULL img union select "Engel_500_Kopie.jpg" union select "IMG_0457_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2042,img from (select NULL img union select "Neumaier_Saxonian_Classics_Coswig_2011_500.jpg" union select "Neumaier_Saxonian_Classics_Coswig_2011_2_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1871,img from (select NULL img union select "sonntag_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1881,img from (select NULL img union select "samstag_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1891,img from (select NULL img union select "freitag_02.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1901,img from (select NULL img union select "donnerstag_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1911,img from (select NULL img union select "mittwoch_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1921,img from (select NULL img union select "dienstag_Kopie_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 1931,img from (select NULL img union select "montag_01.png") A;
-REPLACE INTO sys_file_reference_temp select null, 2012,img from (select NULL img union select "IMG_0689_500.jpg" union select "IMG_0797_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2031,img from (select NULL img union select "Kinderfasching_2011_062_500.jpg" union select "Kinderfasching_2011_086_500.jpg" union select "dsc_1863__Bearbeitet__500.jpg" union select "dsc_1895__Bearbeitet__500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 1991,img from (select NULL img union select "Faschingsparty_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2122,img from (select NULL img union select "Tango_Argentino_2_500.png") A;
-REPLACE INTO sys_file_reference_temp select null, 2061,img from (select NULL img union select "Faschingsparty_500_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2102,img from (select NULL img union select "P1000762_500.jpg" union select "P1000762_500_Kopie.jpg" union select "P10007622_500.jpg" union select "P1000843_500.jpg" union select "P1000948_500.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2172,img from (select NULL img union select "ostsee1_500.png" union select "ostesee2_300.png") A;
-REPLACE INTO sys_file_reference_temp select null, 2202,img from (select NULL img union select "20110430_01.jpg" union select "IMG_0362.jpg" union select "IMG_0360.jpg" union select "IMG_0355.jpg" union select "IMG_0356.jpg" union select "IMG_0373.jpg" union select "IMG_0380.jpg" union select "IMG_0385.jpg" union select "IMG_0383.jpg" union select "IMG_0374.jpg" union select "IMG_0381.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2221,img from (select NULL img union select "IMG_1736_400_01.jpg" union select "CIMG7217_ausschnitt_400_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2242,img from (select NULL img union select "2011_Vogel_Weinmann_Mitte_01.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 2272,img from (select NULL img union select "2011_Vaegler_Gloeckle_2_01.jpg" union select "2011_Vogel_Weinmann_IMG_2434_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2622,img from (select NULL img union select "Plakat_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2541,img from (select NULL img union select "20120121_Disco-Fox.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4161,img from (select NULL img union select "Tanzparty-Januar-2013-Plakat_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2262,img from (select NULL img union select "2011_Moni___Peter_Enzkloesterle-hp.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 2271,img from (select NULL img union select "20110806__cierpka.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2312,img from (select NULL img union select "2011-Bohn_LM_V1_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2331,img from (select NULL img union select "20111008rtkn1544a01_350.jpg" union select "20111008rtkn1549a01_350.jpg" union select "20111008rtkn1559a01_350.jpg" union select "20111008rtkn1564a01_350.jpg" union select "20111008rtkn1621a02_350.jpg" union select "20111008rtkn1661a01_350.jpg" union select "20111008rtkn1684a02_350.jpg" union select "20111008rtkn1742a01_350.jpg" union select "20111008rtkn1760a01_350.jpg" union select "20111008rtkn1768a01_350.jpg" union select "20111008rtkn1787a01_350.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2332,img from (select NULL img union select "danceshooting1.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 7452,img from (select NULL img union select "35ac115de8.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2531,img from (select NULL img union select "Bad_Camberg_17-12-11_Siegerehrung_SEN_IV_S.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 2401,img from (select NULL img union select "20110611_trohpy-hoefingen.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2402,img from (select NULL img union select "IMG_5624-hp.JPG" union select "IMG_5625-hp.JPG" union select "IMG_5635-hp.JPG" union select "IMG_5650-hp.JPG" union select "IMG_5657-hp.JPG" union select "IMG_5681-hp.JPG" union select "IMG_5686-hp.JPG" union select "IMG_5687-hp.JPG" union select "IMG_5694-hp.JPG" union select "IMG_5703-hp.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 2351,img from (select NULL img union select "DSC_5983.jpg" union select "DSC_6022.jpg" union select "DSC_6122.jpg" union select "DSC_6131.jpg" union select "DSC_6235.jpg" union select "DSC_6370.jpg" union select "DSC_6502.jpg" union select "DSC_6027.jpg" union select "DSC_6033.jpg" union select "DSC_5963.jpg" union select "DSC_6056.jpg" union select "DSC_6153.jpg" union select "DSC_6241.jpg" union select "DSC_6477.jpg" union select "DSC_5986.jpg" union select "DSC_6518.jpg" union select "DSC_6083.jpg" union select "DSC_6105.jpg" union select "DSC_6124.jpg" union select "DSC_6151.jpg" union select "DSC_6361.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2362,img from (select NULL img union select "20111106tscr4045a.jpg" union select "20111106tscr4298a.jpg" union select "20111106tscr4266a.jpg" union select "20111106tscr4012d.jpg" union select "20111106tscr4487a.jpg" union select "20111106tscr4449a.jpg" union select "20111106tscr4447a.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2372,img from (select NULL img union select "danceshooting1_01.gif") A;
-REPLACE INTO sys_file_reference_temp select null, 2381,img from (select NULL img union select "2011_turnier_oehringen_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2382,img from (select NULL img union select "2011_Weihnachtsfeier-hp.jpg" union select "Weihnachtsfeier_Kinder-hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2452,img from (select NULL img union select "Silvesterparty_Web.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2441,img from (select NULL img union select "2011-setrophy-sen4s.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3271,img from (select NULL img union select "Hesse_04082012-Sen-II-D_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2511,img from (select NULL img union select "Weihnachtsfeier_Kinder-hp_01.jpg" union select "20111204tscr5270a1_350g.jpg" union select "IMG_5916-hp.JPG" union select "20111204tscr5285a01_350g.jpg" union select "20111204tscr5307a01_350g.jpg" union select "20111204tscr5288a01_350g.jpg" union select "20111204tscr5293a01_350g.jpg" union select "20111204tscr5302a01_350g.jpg" union select "20111204tscr5328a01_350g.jpg" union select "20111204tscr5369a01_350g.jpg" union select "20111204tscr5380a02_350g.jpg" union select "20111204tscr5414a01_350g.jpg" union select "20111204tscr5426a02_350g.jpg" union select "20111204tscr5464_350g.jpg" union select "IMG_5928-hp.JPG" union select "IMG_5931-hp.jpg" union select "20111204tscr5476a01_350g.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3052,img from (select NULL img union select "DSC_8682_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2572,img from (select NULL img union select "Turnierpaar_Hesse_l.jpg" union select "Turnierpaar_Hesse_r.jpg" union select "Turnierpaar_Hesse.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6902,img from (select NULL img union select "VorstandVorsitzenderWalterGreiner_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2592,img from (select NULL img union select "IMG_6155_hp1.jpg" union select "IMG_6166-hp1.jpg" union select "IMG_6177_hp1.jpg" union select "IMG_6183-hp1.jpg" union select "IMG_6184_hp1.jpg" union select "IMG_6186_hp1.jpg" union select "IMG_6191-hp1.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2611,img from (select NULL img union select "CIMG2149.JPG" union select "CIMG2112.JPG" union select "CIMG2126.JPG" union select "Bild0090.JPG" union select "Bild0091.JPG" union select "Bild0092.JPG" union select "Bild0093.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 2662,img from (select NULL img union select "Einladung_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2621,img from (select NULL img union select "Plakat.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2632,img from (select NULL img union select "20120212_Kinderfasching.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2642,img from (select NULL img union select "Sinsheim_15-01-12_SEN_IV_S_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2652,img from (select NULL img union select "Neu_P1010572-hp.jpg" union select "Neu_P1010571-hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2661,img from (select NULL img union select "20120121_Disco-Fox_01.jpg" union select "Neu_P1010572-hp_01.jpg" union select "Neu_P1010571-hp_01.jpg" union select "Neu_P1010573-hp.jpg" union select "Neu_P1010585-hp.jpg" union select "Neu_P1010577-hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2731,img from (select NULL img union select "DSC_7657_01_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2732,img from (select NULL img union select "DSC_7657_01_hp_01.jpg" union select "DSC_7437_01_hp.jpg" union select "DSC_7552_01_hp.jpg" union select "DSC_7558_01_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2741,img from (select NULL img union select "DSC_7657_01_hp_02.jpg" union select "DSC_7437_01_hp_01.jpg" union select "DSC_7552_01_hp_01.jpg" union select "DSC_7558_01_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2742,img from (select NULL img union select "Cover_0112_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2772,img from (select NULL img union select "20120212_Kinderfasching_01.jpg" union select "IMG_6227-hp.jpg" union select "IMG_6222-hp.jpg" union select "IMG_6224-hp.jpg" union select "IMG_6242-hp.jpg" union select "IMG_6244-hp.jpg" union select "IMG_6230-hp.jpg" union select "IMG_6239-hp.jpg" union select "IMG_6271-hp.jpg" union select "IMG_6280-hp.jpg" union select "IMG_6284-hp.jpg" union select "IMG_6285-hp.jpg" union select "IMG_6289-hp.jpg" union select "IMG_6295-hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2782,img from (select NULL img union select "IMG_6309-hp.jpg" union select "IMG_6322-hp.jpg" union select "IMG_6307-hp.jpg" union select "IMG_6310-hp.jpg" union select "IMG_6311-hp.jpg" union select "IMG_6314-hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2791,img from (select NULL img union select "Einladung_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2792,img from (select NULL img union select "IMG_6329-hp.jpg" union select "Pfarrer.jpg" union select "Pfarrer2.jpg" union select "IMG_6385-hp.jpg" union select "IMG_6366-hp.jpg" union select "IMG_6371-hp.jpg" union select "IMG_6394-hp.jpg" union select "IMG_6395-hp.jpg" union select "IMG_6402-hp.jpg" union select "IMG_6416-hp.jpg" union select "Pfarrer3.jpg" union select "Teufel_hp.jpg" union select "IMG_6421-hp.jpg" union select "IMG_6422-hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2802,img from (select NULL img union select "Turniervorschau_20120221.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2811,img from (select NULL img union select "wer-tanzt-wo.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 2831,img from (select NULL img union select "Mitgliederordnung_TC_2018_01_01.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 2841,img from (select NULL img union select "Marc_Jasmin_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4011,img from (select NULL img union select "TC_Diashow_DRUCK_Kopie.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2861,img from (select NULL img union select "Landesmeister_2012_Cierpka.jpg" union select "Vizeladesmeister_2012__Neumaier.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2871,img from (select NULL img union select "Plakat_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2872,img from (select NULL img union select "Turnierbuero.jpg" union select "Sieger_Latein.jpg" union select "Tanzpaare_3.jpg" union select "Tanzpaare_4.jpg" union select "Deutscher_Vizemeister.jpg" union select "Kuchenbecker.jpg" union select "Tanzpaar_2.jpg" union select "Einmarsch.jpg" union select "Tanzpaare_1.jpg" union select "Publkum_1.jpg" union select "Publikum_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2882,img from (select NULL img union select "Ehrung_Latein.jpg" union select "Ehrung_Standard.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2921,img from (select NULL img union select "20120406_Hesse.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3001,img from (select NULL img union select "P1000762_500_01.jpg" union select "P1000762_500_Kopie_01.jpg" union select "P10007622_500_01.jpg" union select "P1000843_500_01.jpg" union select "P1000948_500_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2931,img from (select NULL img union select "IMG_2019_hp.jpg" union select "IMG_2021_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2961,img from (select NULL img union select "Cierpka_20120422_hp.jpg" union select "Neumaier_20120422_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2962,img from (select NULL img union select "DiscoFox_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2981,img from (select NULL img union select "Neu_P1030683-hp.jpg" union select "Neu_P1030684_hp.jpg" union select "Neu_P1030686_hp.jpg" union select "Neu_P1030689_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2982,img from (select NULL img union select "DiscoFox_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 2991,img from (select NULL img union select "Neu_P1030683-hp_01.jpg" union select "Neu_P1030684_hp_01.jpg" union select "Neu_P1030686_hp_01.jpg" union select "Neu_P1030689_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3042,img from (select NULL img union select "image.jpeg" union select "image_2.jpeg") A;
-REPLACE INTO sys_file_reference_temp select null, 3072,img from (select NULL img union select "P1010455-1-hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3091,img from (select NULL img union select "DSC_0188_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3101,img from (select NULL img union select "Wernigerode_26-05-2012_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3121,img from (select NULL img union select "DSC_8342_hp.jpg" union select "DSC_8349_hp.jpg" union select "DSC_8339_hp.jpg" union select "DSC_8340_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3131,img from (select NULL img union select "DSC_8347__hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3151,img from (select NULL img union select "DSC_8492b_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3171,img from (select NULL img union select "IMG_0125_hp.jpg" union select "IMG_0129_hp.jpg" union select "IMG_0138_hp.jpg" union select "IMG_0140_hp.jpg" union select "IMG_0144_hp.jpg" union select "IMG_0150_hp.jpg" union select "IMG_0153-hp.jpg" union select "IMG_0155_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3191,img from (select NULL img union select "DSC_8528_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3211,img from (select NULL img union select "P1060852-neu_hp.jpg" union select "P1060869-hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3231,img from (select NULL img union select "TSCR_1.jpg" union select "TSCR_2.jpg" union select "TSCR_Gym.jpg" union select "Kemmlerhalle.jpg" union select "Beger_Turnhalle.jpg" union select "Festhalle_Sondelfingen.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5992,img from (select NULL img union select "Blickle_2014_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3261,img from (select NULL img union select "DSC_0053_hp.jpg" union select "DSC_0208_hp.jpg" union select "Bohn_20120721_hp.jpg" union select "Vogel_Weinmann_20120721_hp.jpg" union select "IMG_6609-hp.jpg" union select "IMG_6618-hp.jpg" union select "IMG_6638_hp.jpg" union select "IMG_6665_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3311,img from (select NULL img union select "Plakat_03.jpg" union select "Flyer_Programm_20120930.jpg" union select "Flyer_Uebersicht_20120930.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3331,img from (select NULL img union select "Bild-1-1-20120909_hp.jpg" union select "DSC_9245_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3341,img from (select NULL img union select "DSC_9152_hp.jpg" union select "DSC_9193_hp.jpg" union select "DSC_9236_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3351,img from (select NULL img union select "IMG_2850.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3361,img from (select NULL img union select "Neumaier_St._Ingbert__hp_16-09-12.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3371,img from (select NULL img union select "ARAG_Sportversicherung_2009.pdf" union select "Kfz-Zusatzversicherung_mit_Rechtsschutz.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 3381,img from (select NULL img union select "Infojournal_02_2012.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3401,img from (select NULL img union select "Plakat_04.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3411,img from (select NULL img union select "IMG_6720_hp.jpg" union select "IMG_6724_hp.jpg" union select "IMG_6728_hp.jpg" union select "20120930tscr7099_ji350.jpg" union select "20120930tscr7076_ji_ji350.jpg" union select "20120930tscr7107_ji_ji350.jpg" union select "DSC_9388_hp.jpg" union select "DSC_9390_hp.jpg" union select "DSC_9425_hp.jpg" union select "DSC_9442_hp.jpg" union select "DSC_9434_hp.jpg" union select "DSC_9552_hp.jpg" union select "IMG_6710_hp.jpg" union select "IMG_6764_hp.jpg" union select "IMG_6783_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3421,img from (select NULL img union select "IMG_6800_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4922,img from (select NULL img union select "Schuelerkurs_Fruejahr-2014.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3451,img from (select NULL img union select "Heddesheim_Turnier_0001a_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3461,img from (select NULL img union select "Reutlinger_Turniertag.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3471,img from (select NULL img union select "IMG_6907_1.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 3491,img from (select NULL img union select "DSC_0021_HGR_C_L.jpg" union select "HGR_B_L.jpg" union select "HGR_A_L.jpg" union select "SEN_III_D.jpg" union select "HGR_C.jpg" union select "SEN_IV_S.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3501,img from (select NULL img union select "DSC_0005_hp.jpg" union select "Andi.jpg" union select "Wertungsrichter.jpg" union select "Musik.jpg" union select "Tanz_C.jpg" union select "Bohn_Lilly.jpg" union select "Tanz_1_C.jpg" union select "Roswag_3.jpg" union select "Tanz_.jpg" union select "Roswag_2.jpg" union select "Roswag_1.jpg" union select "Greiner_Lilly.jpg" union select "Link_1.jpg" union select "Link_2.jpg" union select "Link_3.jpg" union select "Greiner_Lilly_2.jpg" union select "Tanz_2.jpg" union select "Tanz_3.jpg" union select "Cierpka_1.jpg" union select "Neumaier_2.jpg" union select "Cierpka_2.jpg" union select "Neumaier_1.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3551,img from (select NULL img union select "IMG_5383-1_hp.jpg" union select "IMG_5390_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3561,img from (select NULL img union select "Neumaier_Kitzingen_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3581,img from (select NULL img union select "Sen-IV_S_hp.jpg" union select "Sen_II_C.jpg" union select "Sen_II_D_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3601,img from (select NULL img union select "PC020014_hp.jpg" union select "PC020017_hp.jpg" union select "PC020041_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3611,img from (select NULL img union select "DSC_2674_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3641,img from (select NULL img union select "TC_Silvester_2012_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3651,img from (select NULL img union select "Tanzparty-Januar-2013-Plakat.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3661,img from (select NULL img union select "TC_Weihnachten_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3671,img from (select NULL img union select "DSC_2880_hp.jpg" union select "DSC_2868_hp.jpg" union select "DSC_2872_hp.jpg" union select "DSC_2908_hp.jpg" union select "DSC_0161_hp.jpg" union select "DSC_0188_hp_01.jpg" union select "DSC_2924_hp.jpg" union select "DSC_2939_hp.jpg" union select "DSC_0147_hp.jpg" union select "DSC_0146_hp.jpg" union select "DSC_0190_hp.jpg" union select "DSC_2994_hp.jpg" union select "DSC_2997_hp.jpg" union select "DSC_3005_hp.jpg" union select "DSC_0198_hp.jpg" union select "DSC_0194_hp.jpg" union select "DSC_3010_hp.jpg" union select "DSC_3016_hp.jpg" union select "DSC_0191_hp.jpg" union select "DSC_2883_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3711,img from (select NULL img union select "Turnierpaar_SchweizerSchuster.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3731,img from (select NULL img union select "DSC_3380_hp.jpg" union select "DSC_3373_hp.jpg" union select "DSC_3388-hp.jpg" union select "DSC_3410-hp.jpg" union select "DSC_3412_hp.jpg" union select "DSC_3415-1_hp.jpg" union select "DSC_3422-1_hp.jpg" union select "DSC_3421_hp.jpg" union select "DSC_3430_hp.jpg" union select "DSC_3440_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3751,img from (select NULL img union select "Stadthalle_quer-1_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 3761,img from (select NULL img union select "Stadthalle_quer-1_hp_01.jpg" union select "DSC_3569_hp.jpg" union select "DSC_3609_hp.jpg" union select "DSC_3632_hp.jpg" union select "DSC_3637_hp.jpg" union select "DSC_3653_01_hp.jpg" union select "DSC_3667_hp.jpg" union select "DSC_3686-hp.jpg" union select "DSC_3691-1_hp.jpg" union select "DSC_3696_hp.jpg" union select "DSC_3713_hp.jpg" union select "DSC_3756_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4001,img from (select NULL img union select "easysportlogo_01.bmp") A;
-REPLACE INTO sys_file_reference_temp select null, 3981,img from (select NULL img union select "easysportlogo.bmp") A;
-REPLACE INTO sys_file_reference_temp select null, 3791,img from (select NULL img union select "dvag_03.png") A;
-REPLACE INTO sys_file_reference_temp select null, 3811,img from (select NULL img union select "dvag_04.png") A;
-REPLACE INTO sys_file_reference_temp select null, 3821,img from (select NULL img union select "ksk70_02.png") A;
-REPLACE INTO sys_file_reference_temp select null, 3911,img from (select NULL img union select "dvag_05.png") A;
-REPLACE INTO sys_file_reference_temp select null, 3931,img from (select NULL img union select "dvag_06.png") A;
-REPLACE INTO sys_file_reference_temp select null, 3941,img from (select NULL img union select "ksk70_03.png") A;
-REPLACE INTO sys_file_reference_temp select null, 4061,img from (select NULL img union select "Raumreservierung-Anleitung.pdf" union select "Screenshot-1.pdf" union select "Screenshot-aendern_oder_loeschen.pdf" union select "Screenshot-neu.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 4121,img from (select NULL img union select "DSC_4037_hp.jpg" union select "DSC_3855_hp.jpg" union select "DSC_3860_hp.jpg" union select "DSC_3850_hp.jpg" union select "DSC_3866_hp.jpg" union select "DSC_3896_hp.jpg" union select "DSC_3906_hp.jpg" union select "DSC_3913_hp.jpg" union select "DSC_3918_hp.jpg" union select "DSC_3922_hp.jpg" union select "DSC_3928_hp.jpg" union select "DSC_3937_hp.jpg" union select "DSC_3942_hp.jpg" union select "DSC_3945_hp.jpg" union select "DSC_4008_hp.jpg" union select "DSC_4022_hp.jpg" union select "DSC_4040_hp.jpg" union select "DSC_4087_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4131,img from (select NULL img union select "DSC_4093_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4141,img from (select NULL img union select "IMG_6415a_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4151,img from (select NULL img union select "IMG_6415a_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4171,img from (select NULL img union select "fasching.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4181,img from (select NULL img union select "DSC_0236_hp.jpg" union select "DSC_0238_hp.jpg" union select "DSC_4199_hp.jpg" union select "DSC_0242_hp.jpg" union select "DSC_0241_hp.jpg" union select "DSC_4206_hp.jpg" union select "DSC_0243_hp.jpg" union select "DSC_0244_hp.jpg" union select "DSC_4202p.jpg" union select "DSC_0247_hp.jpg" union select "DSC_0246_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4191,img from (select NULL img union select "TC_Diashow_DRUCK_Kopie_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4201,img from (select NULL img union select "P1050014_hp.jpg" union select "P1050001_hp.jpg" union select "P1050011_hp.jpg" union select "P1050002_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4231,img from (select NULL img union select "Logo_NeckarAlb_Tanzfestival_final_Web.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4251,img from (select NULL img union select "Turnier_Botnang_20130202.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4271,img from (select NULL img union select "DSC_00452_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4291,img from (select NULL img union select "DSC_4388_hp.jpg" union select "DSC_4261_hp.jpg" union select "DSC_4257_hp.jpg" union select "DSC_4274_hp.jpg" union select "DSC_4282_hp.jpg" union select "DSC_4290_hp.jpg" union select "DSC_4294_hp.jpg" union select "DSC_4299_hp.jpg" union select "DSC_4303_hp.jpg" union select "DSC_4328_hp.jpg" union select "DSC_4333_hp.jpg" union select "DSC_4334_hp.jpg" union select "DSC_4335_hp.jpg" union select "DSC_4336_hp.jpg" union select "DSC_4339-hp.jpg" union select "DSC_4347_hp.jpg" union select "DSC_4390_hp.jpg" union select "DSC_4393_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4362,img from (select NULL img union select "P1000387_hp.jpg" union select "P1000389_hp.jpg" union select "P1000395_hp.jpg" union select "P1000400_hp.jpg" union select "fasching_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4412,img from (select NULL img union select "IMG_7692_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4432,img from (select NULL img union select "DSC_6954_Cierpka_hp.jpg" union select "DSC_4470_hesse_hp.jpg" union select "DSC_4494_hesse_hp.jpg" union select "DSCF6245_cierpka_hp.jpg" union select "DSC_4496_hesse_hp.jpg" union select "DSCF6248_cierpka_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4842,img from (select NULL img union select "NeckarAlb_TanzFestival_Flyer_Rueckseite_A6.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4452,img from (select NULL img union select "DSC_4818_SEN_III_D_hp.jpg" union select "DSC_4858_SEN_III_C_hp.jpg" union select "DSC_4878_SEN_III_B_hp.jpg" union select "DSC_4910_SEN_III_A_hp.jpg" union select "DSC_4927_SEN_III_S_hp.jpg" union select "DSC_5005_SEN_IV_S_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4462,img from (select NULL img union select "DSC_4592.jpg" union select "DSC_4597.jpg" union select "DSC_4727_01.jpg" union select "DSC_4713.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4472,img from (select NULL img union select "Goetz_20130317_hp.jpg" union select "DSC_4890.jpg" union select "DSC_4904.jpg" union select "DSC_4917.jpg" union select "DSC_4937.jpg" union select "DSC_4930.jpg" union select "DSC_4981.jpg" union select "IMG_7455_hp.jpg" union select "IMG_7459_hp.jpg" union select "IMG_7461_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4552,img from (select NULL img union select "DSC_6442_v1_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4582,img from (select NULL img union select "Infojournal_114.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4622,img from (select NULL img union select "DSC_5330_hp.jpg" union select "DSC_5328_hp.jpg" union select "DSC_5337-1_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5302,img from (select NULL img union select "DSC_6380.jpg" union select "DSC_8682_hp_02.jpg" union select "Kuchenbeckert-2013_hp_2013_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4672,img from (select NULL img union select "DSC_5613_hp.jpg" union select "DSC_5616_hp.jpg" union select "DSC_5620_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4682,img from (select NULL img union select "Turnierpaar_Zamorski.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4712,img from (select NULL img union select "GrosserSaal-1_hp.jpg" union select "VogelWeinmannSiegerehrung-1_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4832,img from (select NULL img union select "TC_TdoT_02_DRUCK_Kopie_klein_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4732,img from (select NULL img union select "DSC_5710-1_hp.jpg" union select "IMG_1806_hp.jpg" union select "IMG_1828_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4762,img from (select NULL img union select "2013-07-21__hp.jpg" union select "IMG_7662_2_hp.jpg" union select "IMG_7656_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4792,img from (select NULL img union select "IMG_1962_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4802,img from (select NULL img union select "Siegerehrung_LS66_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4822,img from (select NULL img union select "DSC_0041_hp.jpg" union select "DSC_0038_hp.jpg" union select "DSC_0019_hp.jpg" union select "DSC_0031_hp.jpg" union select "LM_Biberach__Hesse_LM_SEN_III_B_hp.jpg" union select "DSC_7669_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4942,img from (select NULL img union select "IMG_6504_hp.jpg" union select "IMG_6528_hp.jpg" union select "IMG_6552_hp.jpg" union select "IMG_6586_hp.jpg" union select "IMG_7807_hp.jpg" union select "IMG_7812_hp.jpg" union select "IMG_7830_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4952,img from (select NULL img union select "Vogel_hp.jpg" union select "Lilly_hp_1.jpg" union select "IMG_6483_hp.jpg" union select "IMG_7800_hp.jpg" union select "IMG_7795_hp.jpg" union select "IMG_7814_hp.jpg" union select "IMG_7797_hp.jpg" union select "IMG_6499_hp.jpg" union select "IMG_6533_hp.jpg" union select "IMG_6569_hp.jpg" union select "IMG_6584_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4962,img from (select NULL img union select "sieger_hgr_d_lat_hp.jpg" union select "sieger_hgr_c_lat_hp.jpg" union select "sieger_hgr_b_lat6_hp.jpg" union select "sieger_hgr_a_lat3_hp.jpg" union select "sieger_d_std_hp.jpg" union select "sieger_hgr_c_std_hp.jpg" union select "sieger_hgr__b_std-hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 4972,img from (select NULL img union select "TC_Tanzparty_2013_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5022,img from (select NULL img union select "IMG_3018_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5032,img from (select NULL img union select "Schweitzer-Schuster_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5052,img from (select NULL img union select "DSC_8267_hp.jpg" union select "DSC_8280_hp.jpg" union select "DSC_8300_hp.jpg" union select "SEN_IV_S_Siegerehrung_02-11-2013.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5062,img from (select NULL img union select "TC_Salsa_2013_A3_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5102,img from (select NULL img union select "TC_Weihnachten_2013.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5112,img from (select NULL img union select "TC_Kids_Weihnachten_2013.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5122,img from (select NULL img union select "TC_Soiree-Parisienne_2014.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5142,img from (select NULL img union select "DSC_8361_hp.jpg" union select "DSC_8366-hp.jpg" union select "DSC_8410_hp.jpg" union select "DSC_8392_hp.jpg" union select "DSC_8414_hp.jpg" union select "DSC_8431_hp.jpg" union select "DSC_8442_hp.jpg" union select "DSC_8458-hp.jpg" union select "DSC_8459-hp.jpg" union select "DSC_8471_hp.jpg" union select "DSC_8492_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5152,img from (select NULL img union select "DSC_8500_hp.jpg" union select "DSC_8504_hp.jpg" union select "DSC_8506_hp.jpg" union select "DSC_8523_hp.jpg" union select "DSC_8526_hp.jpg" union select "DSC_8531_hp.jpg" union select "DSC_8533_hp.jpg" union select "DSC_8542_hp.jpg" union select "DSC_8550_hp.jpg" union select "DSC_8570_hp.jpg" union select "DSC_8574_hp.jpg" union select "DSC_8613_hp.jpg" union select "IMG_7908_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5182,img from (select NULL img union select "TC_Soiree-Parisienne_2014_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8452,img from (select NULL img union select "Tanz_in_den_Mai_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5202,img from (select NULL img union select "JM_HP_2_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5222,img from (select NULL img union select "DSC_8669_hp.jpg" union select "DSC_8672_hp.jpg" union select "DSC_8682_hp.jpg" union select "DSC_8711_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5322,img from (select NULL img union select "DSC_8719_hp.jpg" union select "DSC_8737_hp.jpg" union select "DSC_8755_hp.jpg" union select "DSC_8789_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5312,img from (select NULL img union select "TC_Soiree-Parisienne_2014_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5342,img from (select NULL img union select "IMG-20140126-WA0000.jpg" union select "Roswag_20140126_hp.jpg" union select "Bohn_20140126_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5392,img from (select NULL img union select "DSC_8851_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5402,img from (select NULL img union select "DSC_8882_hp.jpg" union select "DSC_8891_hp.jpg" union select "DSC_8935_hp.jpg" union select "DSC_9035_hp.jpg" union select "DSC_9044_hp.jpg" union select "DSC_9071_hp.jpg" union select "DSC_9075_hp.jpg" union select "DSC_9083_hp.jpg" union select "DSC_9086_hp.jpg" union select "DSC_9092_hp.jpg" union select "DSC_9102_hp.jpg" union select "DSC_9125_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5412,img from (select NULL img union select "DSC_2662_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5422,img from (select NULL img union select "TC_Fruehling2014_A3_DRUCK.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5432,img from (select NULL img union select "platzhalter_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5452,img from (select NULL img union select "DSC_8471_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5462,img from (select NULL img union select "Studentenkurs_2014_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5472,img from (select NULL img union select "tanz_um_den_strombergpokal_februar_2014_Wu_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5482,img from (select NULL img union select "tanz_um_den_strombergpokal_februar_2014_Wu.jpg" union select "tanz_m_den_strombergpokal_februar_2014_58_20140218_1670479407.jpg" union select "tanz_m_den_strombergpokal_februar_2014_72_20140218_2037683180.jpg" union select "tanz_um_den_strombergpokal_februar_2014_107_20140218_1457788726.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5492,img from (select NULL img union select "Fruehlingsball.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5502,img from (select NULL img union select "plakat_neu.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5542,img from (select NULL img union select "Herrenberg_20140223.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5552,img from (select NULL img union select "NeckarAlb_TanzFestival_2014.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5582,img from (select NULL img union select "DSC_8669_hp_01.jpg" union select "DSC_8672_hp_01.jpg" union select "DSC_8682_hp_03.jpg" union select "DSC_8711_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5602,img from (select NULL img union select "LM_SEN_II_D_Standard.jpg" union select "LM_SEN_II_C_Standard.jpg" union select "LM_SEN_IV_S_Standard.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5642,img from (select NULL img union select "NeckarAlb_TanzFestival_2014_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5652,img from (select NULL img union select "natf_hesse-2_hp_20140315.jpg" union select "DSC_0104-hp.jpg" union select "DSC_0111_hp.jpg" union select "DSC_0124_hp.jpg" union select "DSC_0152_hp.jpg" union select "DSC_9370_hp.jpg" union select "DSC_9379-hp.jpg" union select "DSC_9384_hp.jpg" union select "DSC_9390_hp_01.jpg" union select "DSC_9414_hp.jpg" union select "DSC_9438_hp.jpg" union select "DSC_9457_01_hp.jpg" union select "DSC_9461_hp.jpg" union select "DSC_9514_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5662,img from (select NULL img union select "DSC_9339_hp.jpg" union select "DSC_9232-hp.jpg" union select "DSC_9210-hp.jpg" union select "DSC_9260_hp.jpg" union select "DSC_0046_hp.jpg" union select "DSC_9313_hp.jpg" union select "DSC_9299_01_hp.jpg" union select "DSC_9350_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5732,img from (select NULL img union select "sitzplan-ball.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5792,img from (select NULL img union select "Turniervorschau_20140909.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6102,img from (select NULL img union select "platzhalter_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9142,img from (select NULL img union select "2018_TanzInDenMai.png") A;
-REPLACE INTO sys_file_reference_temp select null, 5852,img from (select NULL img union select "Cover_01-2014-116.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5862,img from (select NULL img union select "DSC_8682_hp_05.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5872,img from (select NULL img union select "IMG_5768-1_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5882,img from (select NULL img union select "Hesse_Waiblingen__hp_01.jpg" union select "Bohn_2014_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5892,img from (select NULL img union select "IMG_1122_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5902,img from (select NULL img union select "Wu_20140609_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5922,img from (select NULL img union select "IMG_1180_hp_01.jpg" union select "Roswag_20140705_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5932,img from (select NULL img union select "DSC_9968-1_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 5962,img from (select NULL img union select "WP_20140413_040-1_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6002,img from (select NULL img union select "DSCN3923_hp_01.jpg" union select "WP_20140412_009_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6012,img from (select NULL img union select "DSC_9582_hp_01.jpg" union select "DSC_9585_hp_01.jpg" union select "DSC_9587_hp_01.jpg" union select "DSC_9591-hp_01.jpg" union select "DSC_9601-hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6022,img from (select NULL img union select "140622_hgrtrophy_hgr2sst_9970_pd-220x195_01.jpg" union select "Vogel_20140621-hp_01.jpg" union select "140622_trophy_hgr2blat_sieger_9914_pd-150x150_01.jpg" union select "140622_trophy_hgralat_sieger_0023_pd-150x150_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6032,img from (select NULL img union select "DSC_9976_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6042,img from (select NULL img union select "DSC_0335_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6302,img from (select NULL img union select "Foto.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 6122,img from (select NULL img union select "Viernheim_kwok-wai_hp.jpg" union select "IMG_6111_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6132,img from (select NULL img union select "Schuelerkurs_Herbst_2014.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6282,img from (select NULL img union select "Plakat_05.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6212,img from (select NULL img union select "NeckarAlb_TanzFestival_2014-Herbst.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6292,img from (select NULL img union select "DSC_0041_hp_01.jpg" union select "DSC_0005_hp_01.jpg" union select "DSC_0027-hp.jpg" union select "DSC_0019_hp_01.jpg" union select "DSC_1023_hp.jpg" union select "DSC_1026_hp.jpg" union select "DSC_0958_hp.jpg" union select "DSC_0091_hp.jpg" union select "DSC_0098_hp.jpg" union select "DSC_0091_hp_01.jpg" union select "DSC_0044_hp.jpg" union select "DSC_0185_hp.jpg" union select "DSC_0192-hp.jpg" union select "DSC_0138_hp.jpg" union select "DSC_1127_hp.jpg" union select "DSC_1125_hp.jpg" union select "DSC_1068_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6322,img from (select NULL img union select "DSC_0124_hp_01.jpg" union select "DSC_0125_hp.jpg" union select "DSC_0143_hp.jpg" union select "DSC_0154_hp.jpg" union select "DSC_0167_hp.jpg" union select "DSC_0172_hp.jpg" union select "DSC_0180_hp.jpg" union select "DSC_0185_hp_01.jpg" union select "DSC_0200_hp.jpg" union select "DSC_0207_hp.jpg" union select "DSC_0223_hp.jpg" union select "DSC_0243_hp_01.jpg" union select "DSC_0127_hp.jpg" union select "DSC_0174_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6332,img from (select NULL img union select "IMG_6192_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6352,img from (select NULL img union select "platzhalter_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6372,img from (select NULL img union select "platzhalter_04.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6402,img from (select NULL img union select "DSC_0020_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6392,img from (select NULL img union select "IMG_6192_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6412,img from (select NULL img union select "DSC_1517_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6422,img from (select NULL img union select "DSC_1511_hp.jpg" union select "DSC_1561_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6432,img from (select NULL img union select "85eabe34b1_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6442,img from (select NULL img union select "Cover_2014_nr_117.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6462,img from (select NULL img union select "Siegerpaare_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6472,img from (select NULL img union select "Siegerehrung_C-Latein_hp.jpg" union select "2366_-_1014_hp.jpg" union select "Siegerehrung_B_latein_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6482,img from (select NULL img union select "TC_Silvester_2014_A2_DRUCK.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6512,img from (select NULL img union select "DSC_1570_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6522,img from (select NULL img union select "DSC_1575_hp.jpg" union select "DSC_1572_hp.jpg" union select "DSC_1580-hp.jpg" union select "DSC_1584_hp.jpg" union select "DSC_1606_hp.jpg" union select "DSC_1617_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6532,img from (select NULL img union select "DSC_1608_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6542,img from (select NULL img union select "DSC_1619-hp.jpg" union select "DSC_1710_hp.jpg" union select "DSC_1638_hp.jpg" union select "DSC_1702_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6552,img from (select NULL img union select "DSC_1620-hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6562,img from (select NULL img union select "DSC_1726_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6592,img from (select NULL img union select "DSC_1965_hp.jpg" union select "DSC_1955_hp.jpg" union select "DSC_1968_hp.jpg" union select "DSC_1975_hp.jpg" union select "DSC_2021_hp.jpg" union select "DSC_2046_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6572,img from (select NULL img union select "DSC_1757_hp.jpg" union select "DSC_1752_hp.jpg" union select "DSC_1768_hp.jpg" union select "DSC_1780_hp.jpg" union select "DSC_1775_hp.jpg" union select "DSC_1794_hp.jpg" union select "DSC_1801_hp.jpg" union select "IMG_8257_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6622,img from (select NULL img union select "greiner_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6632,img from (select NULL img union select "IMG_1351-1_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6642,img from (select NULL img union select "2018_Fruehlingsball_1.jpg" union select "2018_Fruehlingsball_2.jpg" union select "2018_Fruehlingsball_3.jpg" union select "2018_Fruehlingsball_4.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8322,img from (select NULL img union select "DM_S_Latein.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8192,img from (select NULL img union select "Sitzplan-Fruehlingsball-2017_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8332,img from (select NULL img union select "Finnish_Open_17.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6652,img from (select NULL img union select "DSC_0008_hp_01.jpg" union select "DSC_0019_hp_03.jpg" union select "DSC_0037_hp_01.jpg" union select "DSC_0040_hp.jpg" union select "DSC_0041_hp_02.jpg" union select "DSC_0044_1_hp.jpg" union select "DSC_0050_hp.jpg" union select "DSC_0057-1_hp.jpg" union select "DSC_0065_hp.jpg" union select "DSC_0102_hp.jpg" union select "DSC_0104-1_hp.jpg" union select "DSC_0106-1_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6662,img from (select NULL img union select "85eabe34b1.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6692,img from (select NULL img union select "IMG_0373_1_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6712,img from (select NULL img union select "DSC_6954_Cierpka_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6742,img from (select NULL img union select "2015_Plakat_Fruehlingsball_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6762,img from (select NULL img union select "Goetz_hp.jpg" union select "IMG_8381_hp.jpg" union select "IMG_8385_hp.jpg" union select "IMG_8383_hp.jpg" union select "Siegerehrung_Latein_hp.jpg" union select "IMG_8402_1_hp.jpg" union select "Lever_Laiblin_hp.jpg" union select "Blickle_Graeser_hp.jpg" union select "Siegerehrung_SEN_II_hp.jpg" union select "Kuchenbecker_hp_01.jpg" union select "DSC_2328_hp.jpg" union select "DSC_2215_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6812,img from (select NULL img union select "MarkusSilkeVogel_hp.jpg" union select "MarkusSilkeVogelAktion_hp_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6772,img from (select NULL img union select "Tiurnierleiter_hp.jpg" union select "IMG_8470_hp.jpg" union select "Wertungsrichter_hp.jpg" union select "Siegerehrung_SEN_III_D_hp.jpg" union select "Siegerehrung_SEN_III_C_hp.jpg" union select "Sieger_SEN_III_C_Standard.jpg" union select "Goetz_2_hp_01.jpg" union select "Goetz_2_hp.jpg" union select "Siegerehrung_SEN_III_B_1_hp.jpg" union select "Sieger_SEN_III_B_hp.jpg" union select "Siegerehrung_SEN_III_A_hp.jpg" union select "Sieger_SEN_III_A_hp.jpg" union select "Hesse_hp.jpg" union select "Wolk_hp.jpg" union select "Siegerehrung_SEN_III_S_hp.jpg" union select "Sieger_SEN_III_S_hp.jpg" union select "Siegerehrung_SEN_IV_S_hp.jpg" union select "IMG_8487_hp.jpg" union select "Cierpka_hp.jpg" union select "IMG_8503_hp.jpg" union select "IMG_8497_1_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6782,img from (select NULL img union select "2366_-_0698_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6792,img from (select NULL img union select "LetsDance_1.jpg" union select "LetsDance_2.jpg" union select "LetsDance_3.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6822,img from (select NULL img union select "MarkusSilkeVogelAktion_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7332,img from (select NULL img union select "2015_07_Trophy_Tuebingen_MarkusSilkeVogel3vl.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6832,img from (select NULL img union select "Cover_2015_118.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6852,img from (select NULL img union select "MarkusSilkeVogel_hp_01.jpg" union select "MarkusSilkeVogelAktion_hp_02.jpg" union select "Gruppenfoto_hp.jpg" union select "Ssiegerehrung_C-Latein.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6892,img from (select NULL img union select "DSC_0038_hp_01.jpg" union select "DSC_0039_hp.jpg" union select "DSC_0041_hp_03.jpg" union select "IMG_8529_hp.jpg" union select "DSC_0043_hp.jpg" union select "DSC_0044_hp_01.jpg" union select "DSC_0045_hp.jpg" union select "DSC_0048_hp.jpg" union select "DSC_0059_hp.jpg" union select "DSC_0090_hp_01.jpg" union select "IMG_8531_hp.jpg" union select "DSC_0093_hp.jpg" union select "DSC_0101_hp.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6912,img from (select NULL img union select "VorstandFinanzreferentPeterNeumaier.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6922,img from (select NULL img union select "Vorstand_WolfgangHesse.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6932,img from (select NULL img union select "VorstandBeisitzerSportreferentMarcelBlickle2014.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6942,img from (select NULL img union select "Vorstand_BeateLever.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6952,img from (select NULL img union select "Vorstand_GertiGoetz.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 6962,img from (select NULL img union select "Vorstand_ChristineSchuster.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8732,img from (select NULL img union select "Turnieruebersicht_NaTaFe.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 6982,img from (select NULL img union select "Vorstand_MonikaNeumeier.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7182,img from (select NULL img union select "IMG_3618_02.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 7252,img from (select NULL img union select "IMG_1734_2.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 7142,img from (select NULL img union select "VorstandVorsitzendeGabrieleOlbrichAlber.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 7162,img from (select NULL img union select "Vorstand_PeterNeumeier.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7202,img from (select NULL img union select "IMG_3618.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 7212,img from (select NULL img union select "IMG_3618_01.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 7222,img from (select NULL img union select "HP_Hessen_tanzt_MarkusundSilkeVogel.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7322,img from (select NULL img union select "Plakat_West_Coast_Swing.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 7412,img from (select NULL img union select "Meldeuebersicht_Seite_1.pdf" union select "Meldeuebersicht_Seite_2.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 7422,img from (select NULL img union select "Meldeuebersicht_01.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 7432,img from (select NULL img union select "Meldeuebersicht_02.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 7462,img from (select NULL img union select "D-Standard.jpg" union select "C-Standard.jpg" union select "B-Standard.jpg" union select "D-Latein.jpg" union select "C-Latein.jpg" union select "B-Latein.jpg" union select "Turnierbuero_01.jpg" union select "Auftritt.jpg" union select "Auftritt_2.jpg" union select "Auftritt_3_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7492,img from (select NULL img union select "Salsa_Workshop.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7512,img from (select NULL img union select "Walter_Greiner_HP.jpeg" union select "Klavierduo_HP.jpeg" union select "Gerti_Goetz_HP.jpeg" union select "Christine_und_Florian_HP.jpeg" union select "Markus_und_Silke_HP.jpeg" union select "Marcel_und_Jessica_HP.jpeg" union select "Hesse_HP_01.jpg" union select "Helfer_01.jpeg" union select "UEbungsleiter_HP_01.jpeg" union select "Bruno_und_Monika_HP_01.jpeg" union select "Tanzrunde_HP_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7732,img from (select NULL img union select "Markus_und_Silke_Vogel.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7572,img from (select NULL img union select "DTSA-korr.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7582,img from (select NULL img union select "2016-02-07-Salsa__Kurs_jpg.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7592,img from (select NULL img union select "2016-01-25-Disco__Kurs_Fortsetzung-1.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7912,img from (select NULL img union select "Wolfgang_und_Petra_Hesse_GOC_Stuttgart.jpg" union select "Vogel_GOC.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7772,img from (select NULL img union select "2016-05-08Salsa_Kurs_neu.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 7692,img from (select NULL img union select "Illingen.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7712,img from (select NULL img union select "Walter_Greiner_01.jpg" union select "Band_01.jpg" union select "Marcel_Blickle_und_Jessica_Graeser_01.JPG" union select "Finale_HGR_A_01.jpg" union select "Senioren_II_S_STD_01.jpg" union select "Helfer_01.jpg" union select "Tanzrunde_01.jpg" union select "Tanzrunde2_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7722,img from (select NULL img union select "Sen_III_A_13.3..jpg" union select "Sen_III_S_13.3..jpg" union select "Tanzbild_Hesse_13.3..jpg" union select "Sen_IV_S_13.3..jpg" union select "Cierpka_13.3..jpg" union select "Lilly_13.3..jpg" union select "Gerti_13.3..jpg" union select "Kasse_13.3..jpg" union select "Kuchen_13.3..jpg" union select "Turnierbuero2_13.3..jpg" union select "Turnierbuero_13.3..jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7742,img from (select NULL img union select "Neumaier_Heiligenhafen_Foto_Butenschoen.jpg" union select "Neumaier_Heiligenhafen_2_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7752,img from (select NULL img union select "Neumaier_Heiligenhafen_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7782,img from (select NULL img union select "Vorstand_mv.jpg" union select "ehrungen.jpg" union select "Abzeichen.jpg" union select "DSC_3435_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7792,img from (select NULL img union select "Vogel_Hessen.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7812,img from (select NULL img union select "LM_D_Standard.png" union select "LM_D_Standard_Tanz.png" union select "LM_Standard_Vogel.png" union select "Urkunden_LM_Standard.png") A;
-REPLACE INTO sys_file_reference_temp select null, 7852,img from (select NULL img union select "platzhalter_06.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7862,img from (select NULL img union select "Turnierpaar_QuangBarth.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7872,img from (select NULL img union select "Platzhalter_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7892,img from (select NULL img union select "Dance_Comp_16.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7922,img from (select NULL img union select "Quang_Barth_LM.jpg" union select "Hesse_LM.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7942,img from (select NULL img union select "Flyer_Homepage_Silvesterparty_2016_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 7952,img from (select NULL img union select "Flyer_Homepage_Weihnachtsfeier_2016.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8182,img from (select NULL img union select "Turnieruebersicht_NaTaFe_01.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 7992,img from (select NULL img union select "Trophy-Sieger_2016.jpg" union select "Siegerehrung_Turnier_am_09-10-16.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8012,img from (select NULL img union select "Siegerehrung_Turnier_am_09-10-16_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8022,img from (select NULL img union select "NaTaFe_1.jpg" union select "Turnierleiterin_Silke_Vogel.jpg" union select "Turnierbuero_bei_der_Arbeit.jpg" union select "Silke_und_Marcel.jpg" union select "Siegerehrung_D_Latein.jpg" union select "Siegerehrung_C_Latein.jpg" union select "Siegerehrung_Jug_C_Standard.jpg" union select "Siergehrung_HGR_C_Standard.jpg" union select "Siegerehrung_Jug_B_Latein.jpg" union select "Siegerehrung_HGR_B_Latein.jpg" union select "Siegerehrung_Jug_B_Standard.jpg" union select "Siegerehrung_HGR_B_Standard.jpg" union select "Kuchenbuffet.jpg" union select "Turnierbuero_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8642,img from (select NULL img union select "Vogel_GOC_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8082,img from (select NULL img union select "Fruehlingsball_2017.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8092,img from (select NULL img union select "NeckarAlb_Tanz-Festival.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8042,img from (select NULL img union select "KWF_16_1.jpg" union select "KWF_16_2.jpg" union select "KWF_16_3.jpg" union select "KWF_16_4.jpg" union select "KWF_16_5.jpg" union select "KWF_16_6.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8052,img from (select NULL img union select "WF_16_1.jpg" union select "WF_16_2.jpg" union select "WF_16_3.jpg" union select "WF_16_4.jpg" union select "WF_16_5.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8102,img from (select NULL img union select "Sitzplan-Fruehlingsball-2017.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8112,img from (select NULL img union select "Sitzplan-Fruehlingsball-2017_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8122,img from (select NULL img union select "Sitzplan-Fruehlingsball-2017_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8132,img from (select NULL img union select "2017_02_04_Siegerehrung_Sen._IV_S.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8342,img from (select NULL img union select "20170325_lm-standard-pia-marc.jpg" union select "20170325_Siegerehrung_II_D_lat.jpg" union select "20170325_Siegerehrung_D_Std.jpg" union select "20170325_Siegergehrung_C_Std.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8202,img from (select NULL img union select "LM_Heidenheim_Neumaier.jpg" union select "LM_Heidenheim_Siegerehrung2017_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8172,img from (select NULL img union select "Saalplan_01.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 8212,img from (select NULL img union select "LM_Heidenheim_Siegerehrung2017.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8252,img from (select NULL img union select "platzhalter_05.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8752,img from (select NULL img union select "Siegerehrung-Bohn-LM_2017.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8762,img from (select NULL img union select "Oktoberfest_17.jpg" union select "Oktoberfest_2017_2.jpg" union select "Oktoberfest_Deko_2017.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8772,img from (select NULL img union select "___aaa.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8782,img from (select NULL img union select "Turnierpaar_SchollLever_l.jpg" union select "Turnierpaar_SchollLever_r.jpg" union select "Turnierpaar_SchollLever.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8282,img from (select NULL img union select "NaTaFe_17_1.JPG" union select "NaTaFe_17_2.JPG" union select "NaTaFe_17_3.JPG" union select "NaTaFe_17_4.JPG" union select "NaTaFe_17_5.JPG" union select "NaTaFe_17_6.JPG" union select "NaTaFe_17_7.JPG" union select "NaTaFe_17_8.JPG" union select "NaTaFe_17_9.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 8292,img from (select NULL img union select "FB_17_Band.JPG" union select "FB_17_Turnierleiterin.jpg" union select "FB_17_Wertungsrichter.jpg" union select "FB_17_Siegerehrung_A_Lat.jpg" union select "FB_17_Siegertanz_A_Lat.jpg" union select "FB_17_Kuchenbecker_Tanz.jpg" union select "FB_17_Siegerehrung_STD.jpg" union select "FB_17_Turniermusik.jpg" union select "FB_17_Vorstand.JPG" union select "FB_17_Tanzrunde.jpg" union select "FB_17_Tanzrunde_2_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8302,img from (select NULL img union select "ErdeUndMond.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8372,img from (select NULL img union select "Bodenseetanzfest_2017.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8382,img from (select NULL img union select "Finnish_Open_01.jpg" union select "Vienna_Dance_Concours.png") A;
-REPLACE INTO sys_file_reference_temp select null, 8392,img from (select NULL img union select "MV_17_Ehrungen.jpg" union select "MV_17_Dank_Vorstand.jpg" union select "MV_17_Neuer_Vorstand.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8442,img from (select NULL img union select "2017_Dt.Meisterschaft_Hesse.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8432,img from (select NULL img union select "Vogel_GOC_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8492,img from (select NULL img union select "Tanz_in_den_Mai_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8502,img from (select NULL img union select "Muttertag_01.jpg" union select "Muttertag_2_02.jpg" union select "Muttertag_3.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8522,img from (select NULL img union select "Muttertag_03.jpg" union select "Muttertag_2_01.jpg" union select "Muttertag_3_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8532,img from (select NULL img union select "FB_17_Kuchenbecker_Tanz_02.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8542,img from (select NULL img union select "FB_17_Kuchenbecker_Tanz_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8572,img from (select NULL img union select "Bohn_Hessen_tanzt.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8602,img from (select NULL img union select "2017_05_27_Paris_Open.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8632,img from (select NULL img union select "Grillabend.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 8652,img from (select NULL img union select "170730_LS_66.jpg" union select "17_07_30_LS_66_Siegerehrung.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8662,img from (select NULL img union select "GOC_2017_Vogel.jpg" union select "GOC_2017_Vogel_2.jpg" union select "GOC_2017_FloTine.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8682,img from (select NULL img union select "20170827_Bembelturnier_Siegerehrung.jpg" union select "20170827_Bembelturnier.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8702,img from (select NULL img union select "Oktoberfest_2017.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 8742,img from (select NULL img union select "Foto-Bohn-LM_2017.jpg" union select "Siegerehrung-Bohn-LM_2017_01.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8812,img from (select NULL img union select "Trophy_Senioren.jpg" union select "Trophy_Senioren_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8832,img from (select NULL img union select "Weihnachtsfeier_17.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 8842,img from (select NULL img union select "20171126_BSW_Siegerehrung.jpg" union select "20171126_BSW_Felix_Mona_Latein.jpg" union select "20171126_BSW_Gunther_Beate_Standard.jpg" union select "20171126_BSW_Felix_Mona_Standard.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8852,img from (select NULL img union select "Mutscheltag_18.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 8862,img from (select NULL img union select "2018_SalsaKurs.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8872,img from (select NULL img union select "2018_NeueKurse.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8882,img from (select NULL img union select "WF17_Begruessung_Gerti_HP.jpg" union select "WF17_Klaviermusik_HP.jpg" union select "WF17_Deko_Liedblatt_HP.jpg" union select "WF17_Gaeste_HP.jpg" union select "WF_17_Tanzrunden_HP.jpg" union select "WF_17_Dank_Helfer_HP.jpg" union select "WF_17_Dank_UEbungsleiter_HP.jpg" union select "WF17_Franzi_und_Felix_HP.jpg" union select "WF17_Markus_und_Silke_HP.jpg" union select "WF17_Nonnen_HP.jpg" union select "WF17_Nonnen_und_Jive_HP.jpg" union select "KFW_2_HP.jpg" union select "KFW_3_HP.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8892,img from (select NULL img union select "2018_DiscoFoxKurs.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8902,img from (select NULL img union select "2018_Mutscheln_1.jpg" union select "2018_Mutscheln_2.jpg" union select "2018_Mutscheln_3.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8912,img from (select NULL img union select "2018_AachenerTanzsporttage_1.jpg" union select "2018_AachenerTanzsporttage_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8922,img from (select NULL img union select "2018_TanzsporttagSinsheim_1.jpg" union select "2018_TanzsporttagSinsheim_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8962,img from (select NULL img union select "Saalplan.JPG") A;
-REPLACE INTO sys_file_reference_temp select null, 8982,img from (select NULL img union select "2018_Fasching_01.jpg" union select "2018_Fasching_02.jpg" union select "2018_Fasching_03.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 8992,img from (select NULL img union select "NeckarAlb_TanzFestival_Progr._Sonntag.pdf") A;
-REPLACE INTO sys_file_reference_temp select null, 9202,img from (select NULL img union select "2018_VierfachesTurnierwochenende_1.jpg" union select "2018_VierfachesTurnierwochenende_2.jpg" union select "2018_VierfachesTurnierwochenende_3.jpg" union select "2018_VierfachesTurnierwochenende_4.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9102,img from (select NULL img union select "2018_Breitensportwettbewerb.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9112,img from (select NULL img union select "FB-18_-Band-HP.jpg" union select "FB-18_Siegerehrung-B-HP.jpg" union select "FB-18_Siegerehrung-STD-hp.jpg" union select "FB-18_Tanzrunde-HP.jpg" union select "NATF-18_Lever-Scholl-HP.jpg" union select "NATF-Ingrid-Werner-HP.jpg" union select "NATF_Gabi-Thomas-HP.jpg" union select "NATF_Cierpka-HP.jpg" union select "NATF_Hesse-HP.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9162,img from (select NULL img union select "Botafe_LeverScholl.jpg" union select "BOTAFE_18.jpg" union select "Botafe_Siegerehrung_C.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9172,img from (select NULL img union select "2018_TurnierStylingkurs_01.jpg" union select "2018_TurnierStylingkurs_02.jpg" union select "2018_TurnierStylingkurs_03.jpg" union select "2018_TurnierStylingkurs_04.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9182,img from (select NULL img union select "2018_Deutschlandpokal_1.jpg" union select "2018_Deutschlandpokal_2.jpg" union select "2018_Deutschlandpokal_3.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9192,img from (select NULL img union select "2018_BlauesBandBerlin.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9212,img from (select NULL img union select "2018_HessenTanzt_1.jpg" union select "2018_HessenTanzt_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9222,img from (select NULL img union select "2018_Hochrhein_Tanzsporttage_1.jpg" union select "2018_Hochrhein_Tanzsporttage_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9232,img from (select NULL img union select "201805_LindyHopWorkshop.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9252,img from (select NULL img union select "201805_WM_SenIIIS_Kuchenbecker.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9262,img from (select NULL img union select "2018_ThropyKarlsruhe.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9272,img from (select NULL img union select "201805_Mitgliederversammlung_LangjaehrigeMitglieder.jpg" union select "201805_Mitgliederversammlung_Vorstand.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9372,img from (select NULL img union select "Hesse_Siegerehrung_2.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9382,img from (select NULL img union select "DanceComp_Hesse.jpg" union select "DanceComp_MC.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9482,img from (select NULL img union select "1807_Rosenheim.jpg") A;
-REPLACE INTO sys_file_reference_temp select null, 9552,img from (select NULL img union select "201808_Hesse.jpg" union select "201808_Rieker.jpg" union select "201808_LeverScholl.jpg") A;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tcemblem.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 7, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tcemblem2.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 7, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jt02.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 121, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "002_Jubilaeum.jpg" UNION SELECT "004_Jubilaeum.jpg" UNION SELECT "DSC06433.JPG" UNION SELECT "DSC06435.JPG" UNION SELECT "DSC06470.JPG" UNION SELECT "DSC06483.JPG" UNION SELECT "DSC06494.JPG" UNION SELECT "DSC06507.JPG" UNION SELECT "DSC06545.JPG" UNION SELECT "DSC06548.JPG" UNION SELECT "DSC06554.JPG" UNION SELECT "DSC06563.JPG" UNION SELECT "DSC06596_01.jpg" UNION SELECT "DSC06574.JPG" UNION SELECT "DSC06576.JPG" UNION SELECT "DSC06578.JPG" UNION SELECT "DSC06606.JPG" UNION SELECT "DSC06614.JPG" UNION SELECT "DSC06623.JPG" UNION SELECT "DSC06627.JPG" UNION SELECT "DSC06651.JPG" UNION SELECT "IMG_4259.jpg" UNION SELECT "DSC06656.JPG" UNION SELECT "DSC06518.JPG" UNION SELECT "DSC06659_01.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 8, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jt02_01.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 8, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "halle_tumb.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Moni.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0357_1.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 8, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Tanzsportzentrum.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "AndreasIwanitza.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Walter_Schmitt_05.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "goetz.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "marianne_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "lucas_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 64, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_Kuchenbecker.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Beitrittserklaerung_2016-V3.3.pdf" UNION SELECT "TC_Beitrittserklaerung_2016-V3.3_Formular.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC00131.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "my5.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 16, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TSCR_Saal_1.jpg" UNION SELECT "TSCR_Saal_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 116, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1b__1024x768_.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "klein.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3752, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_SaisonstartBohn.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1622, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0223_hp.jpg" UNION SELECT "IMG_0221_hp.jpg" UNION SELECT "IMG_4696_hp.jpg" UNION SELECT "IMG_4691.jpg" UNION SELECT "IMG_0237_hp.jpg" UNION SELECT "IMG_4697.jpg" UNION SELECT "IMG_0229_hp.jpg" UNION SELECT "IMG_4698.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Cover_2013-2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1632, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Disco-Fox_2013.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1612, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_TdoT_02_DRUCK_Kopie_klein_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1612, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_7826_hp.jpg" UNION SELECT "DSC_7798_hp.jpg" UNION SELECT "DSC_7820_hp.jpg" UNION SELECT "DSC_7839_hp.jpg" UNION SELECT "DSC_7851_hp.jpg" UNION SELECT "DSC_7859_hp.jpg" UNION SELECT "DSC_7868_hp.jpg" UNION SELECT "DSC_7871_hp.jpg" UNION SELECT "DSC_7881_hp.jpg" UNION SELECT "DSC_7886_hp.jpg" UNION SELECT "DSC_7892_hp.jpg" UNION SELECT "DSC_7896_hp.jpg" UNION SELECT "DSC_7900_hp.jpg" UNION SELECT "DSC_7956_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1392, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "1_Latein_hp.jpg" UNION SELECT "2_Standard_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "fasching_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1211, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Weihnachten_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 761, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20140806_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 712, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_7196-hp.jpg" UNION SELECT "DSC_7212-hp.jpg" UNION SELECT "DSC_7214-hp.jpg" UNION SELECT "DSC_7229-hp.jpg" UNION SELECT "DSC_7240-hp.jpg" UNION SELECT "DSC_7248-hp.jpg" UNION SELECT "DSC_7249-hp.jpg" UNION SELECT "2012_Bild_217-hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 214, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "phoca_thumb_l_hgr2d-st_1_1_500.jpg" UNION SELECT "phoca_thumb_l_jugd-lat_2_1_500.jpg" UNION SELECT "CIMG3960_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 200, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6578.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "enzo_klein.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 82, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20071209_Kinderweihnachtsfeier_070_homepage_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "brunobohn.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "SaskiaHeim.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 179, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1b__1024x768__06.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0373_1.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "lena_hoehne.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "greiner.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "enzo_klein_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 12, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Webmaster_KlausThrien.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 12, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "juergen.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 12, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "typo3logo.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 12, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "php.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 12, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "mysql.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 12, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "apache.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 27, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_Cierpka_l.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 27, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "PresseCierpka.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 421, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-3_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 26, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "platzhalter_neu_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "floppy_disk_walking_md_wht.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 25, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dudek_patzelt.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 24, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "karrer02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 24, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "karrer01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 23, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "liersch.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 22, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_Neumaier.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 21, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "repss_a.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3062, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "HP_Vogel_Wien_2016.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2672, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Siegerehrung_LM_Sen_III_A-2015-a.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 21, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "repss__640x480__01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 154, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 652, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2011_LM-1-hp4.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 592, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2011_Vogel_Weinmann_Mitte.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 37, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild2_02.jpg" UNION SELECT "Bild3_02.jpg" UNION SELECT "Bild4_02.jpg" UNION SELECT "Bild5_02.jpg" UNION SELECT "Bild6_02.jpg" UNION SELECT "Bild7_02.jpg" UNION SELECT "Bild8_01.jpg" UNION SELECT "Bild9.jpg" UNION SELECT "Bild10.jpg" UNION SELECT "Bild11.jpg" UNION SELECT "Bild12.jpg" UNION SELECT "Bild13.jpg" UNION SELECT "Bild14.jpg" UNION SELECT "Bild15.jpg" UNION SELECT "Bild16.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 38, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild2_01.jpg" UNION SELECT "Bild3_01.jpg" UNION SELECT "Bild4_01.jpg" UNION SELECT "Bild5_01.jpg" UNION SELECT "Bild6_01.jpg" UNION SELECT "Bild7_01.jpg" UNION SELECT "Bild8.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 39, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild5.jpg" UNION SELECT "Bild6.jpg" UNION SELECT "Bild7.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 38, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild1_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 40, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dtsa06.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 39, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild4.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 41, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "005.jpg" UNION SELECT "010.jpg" UNION SELECT "021.jpg" UNION SELECT "025.jpg" UNION SELECT "040.jpg" UNION SELECT "050.jpg" UNION SELECT "051.jpg" UNION SELECT "053.jpg" UNION SELECT "055.jpg" UNION SELECT "061.jpg" UNION SELECT "064.jpg" UNION SELECT "070.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 39, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild3.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 39, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 39, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild1.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 41, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TCSWRT_Siegerehrung_SEN_III_S_141006_klein_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 42, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tcemblem2_01.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 692, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2011_Weihnachtsfeier-hp_01.jpg" UNION SELECT "20111203tscr4880a02_350g.jpg" UNION SELECT "20111203tscr4886a02_350g.jpg" UNION SELECT "DSC_6828-hp.jpg" UNION SELECT "DSC_6832-hp.jpg" UNION SELECT "DSC_6843-hp.JPG" UNION SELECT "DSC_6868-hp.jpg" UNION SELECT "DSC_6874-hp.jpg" UNION SELECT "DSC_6879-hp.jpg" UNION SELECT "DSC_6869-hp.jpg" UNION SELECT "DSC_6924-hp.jpg" UNION SELECT "DSC_6954-hp.jpg" UNION SELECT "DSC_6916-hp.jpg" UNION SELECT "IMG_5858-hp.JPG" UNION SELECT "DSC_6992-hp.jpg" UNION SELECT "20111203tscr4982a01_350g.jpg" UNION SELECT "20111203tscr4982b01_350g.jpg" UNION SELECT "DSC_7014-hp.jpg" UNION SELECT "IMG_5752-hp.JPG" UNION SELECT "IMG_5829-hp.JPG" UNION SELECT "IMG_5833-hp.jpg" UNION SELECT "IMG_5762-hp.JPG" UNION SELECT "IMG_5842-hp.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Satzungsheft_TC__01.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2702, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Landesmeister_Bruno_und_Monika_Bohn._Foto_Bolcz_HP.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 11, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Tanzpartnersuche.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 50, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "fasching02.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 50, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "fasching01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 52, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Kinderfasching_TSCR_neu.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 55, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0410.jpg" UNION SELECT "IMG_0406.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 35, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0001.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 56, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2007_03_Vizelandesmeister_Cierpka.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 58, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "001_Standard.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 60, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P4212777.JPG" UNION SELECT "P4212778.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 61, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P4222834.JPG" UNION SELECT "P4222836.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 60, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P4212730.JPG" UNION SELECT "P4212753.JPG" UNION SELECT "P4212755.JPG" UNION SELECT "P4212762.JPG" UNION SELECT "P4212765.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 61, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P4222831.JPG" UNION SELECT "P4222832.JPG" UNION SELECT "P4222833.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 60, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P4212725.JPG" UNION SELECT "P4212727.JPG" UNION SELECT "P4212728.JPG" UNION SELECT "P4212729.JPG" UNION SELECT "P4212731.JPG" UNION SELECT "P4212732.JPG" UNION SELECT "P4212736.JPG" UNION SELECT "P4212747.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 61, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P4222796.JPG" UNION SELECT "P4222812.JPG" UNION SELECT "P4222813.JPG" UNION SELECT "P4222814.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 61, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P4222791.JPG" UNION SELECT "P4222793.JPG" UNION SELECT "P4222794.JPG" UNION SELECT "P4222795.JPG" UNION SELECT "P4222801.JPG" UNION SELECT "P4222810.JPG" UNION SELECT "P4222811.JPG" UNION SELECT "P4222815.JPG" UNION SELECT "P4222816.JPG" UNION SELECT "P4222817.JPG" UNION SELECT "P4222825.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 62, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Tango_Argentino_Flyer_A5.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jessica.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 65, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0496__640x480__01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 66, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0496__640x480__02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 67, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "chronik_markus_silke_1a__640x480__01.jpg" UNION SELECT "chronik_markus_silke_2__640x480_.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 68, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Cierpkas_Kuchenbecker_Neumaier.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 69, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Ferienprogramm.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3562, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "201711_BSW.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 72, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2007_09_23_Geburtstagsfeier_Margret_TSCR_56.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 74, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20071104_Breitensportwettbewerb_Homepage.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 76, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild_Ausflug_Aalen1.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 78, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Patrick_Chris_8_Internet.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 78, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Flamenco_1.jpg" UNION SELECT "Flamenco_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 78, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Kindergruppe_250306_Internet.jpg" UNION SELECT "Liersch_2_Internet.jpg" UNION SELECT "Siegerehrung_Hpt_B_Lat_250306_Internet.jpg" UNION SELECT "Siegerehrung_Hpt_S_250306_1_Internet.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 79, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Cowgirls_TC_SWRT_Kinder.JPG" UNION SELECT "Gruppenbild_TC_SWRT_Kinder_red.jpg" UNION SELECT "Eltern_TC_SWRT_Tanznachmittag.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 80, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "003.JPG" UNION SELECT "007.jpg" UNION SELECT "050_01.jpg" UNION SELECT "051.JPG" UNION SELECT "060.jpg" UNION SELECT "065.jpg" UNION SELECT "069.jpg" UNION SELECT "072.jpg" UNION SELECT "073.jpg" UNION SELECT "093.jpg" UNION SELECT "096.jpg" UNION SELECT "200.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 81, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "071111_sieger_senivs.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 82, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20071209_Kinderweihnachtsfeier_013.jpg" UNION SELECT "20071209_Kinderweihnachtsfeier_015.jpg" UNION SELECT "20071209_Kinderweihnachtsfeier_021_Homepage.jpg" UNION SELECT "20071209_Kinderweihnachtsfeier_070_homepage.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 83, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "logo-lch.png" UNION SELECT "pro133.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 84, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20071209_Kinderweihnachtsfeier_021_Homepage_01.jpg" UNION SELECT "20071209_Kinderweihnachtsfeier_057_Homepage.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 85, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC05180_20071208_Babenschneider__Homepage_01.jpg" UNION SELECT "DSC05181_20071208_Jugendgruppe_01.jpg" UNION SELECT "DSC05182_20071208_Jugendgruppe_02.jpg" UNION SELECT "DSC05193_20071208_Flamenco_01.jpg" UNION SELECT "DSC05193_20071208_Mitgliedertanz_Krysyna_12.jpg" UNION SELECT "DSC05188_20071208_Mitgliedertanz_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 86, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "pc310717.jpg" UNION SELECT "pc310703_01.jpg" UNION SELECT "pc310707.jpg" UNION SELECT "01_Tisch.jpg" UNION SELECT "02_Tisch.jpg" UNION SELECT "03_Tisch.jpg" UNION SELECT "04_Tisch.jpg" UNION SELECT "05_Tisch.jpg" UNION SELECT "06_Tisch.jpg" UNION SELECT "07_Tisch.jpg" UNION SELECT "01_Publikumstanz.jpg" UNION SELECT "DC_Toyota.jpg" UNION SELECT "01_Walter_Helga.jpg" UNION SELECT "01_Gerti_01.jpg" UNION SELECT "01_Heinz_Margret.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 88, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "10_Homepage.jpg" UNION SELECT "01_Homepage.jpg" UNION SELECT "02_Homepage.jpg" UNION SELECT "03_Homepage.jpg" UNION SELECT "04_Homepage.jpg" UNION SELECT "05_Homepage.jpg" UNION SELECT "06_Homepage.jpg" UNION SELECT "07_Homepage.jpg" UNION SELECT "08_Homepage.jpg" UNION SELECT "09_Homepage.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 87, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "MarkusUndSilke_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 89, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_3901.JPG" UNION SELECT "DSC_3902.JPG" UNION SELECT "DSC_3905.JPG" UNION SELECT "DSC_3906.JPG" UNION SELECT "DSC_3907.JPG" UNION SELECT "DSC_3912.JPG" UNION SELECT "DSC_3915.JPG" UNION SELECT "DSC_3919.JPG" UNION SELECT "DSC_3928.JPG" UNION SELECT "DSC_3934.JPG" UNION SELECT "DSC_3944.JPG" UNION SELECT "DSC_3948.JPG" UNION SELECT "DSC_3949.JPG" UNION SELECT "DSC_3950.JPG" UNION SELECT "DSC_3957.JPG" UNION SELECT "DSC_3967.JPG" UNION SELECT "DSC_3974.JPG" UNION SELECT "DSC_3980.JPG" UNION SELECT "DSC_3981.JPG" UNION SELECT "DSC_3985.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 92, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Plakat_Homepage_Fruehlingsball08.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3192, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Pokalturnier_Illingen_2017-02-12.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2752, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vorne_Innenblatt_Fruehlingsball.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1452, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_4713_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Tanz_in_den_Mai_2013.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 882, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8118_hp.jpg" UNION SELECT "DSC_8124_hp.jpg" UNION SELECT "DSC_8132_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 93, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2008_02_16_Kuchenbecker_Sindelfingen.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 63, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Tango_Argentino_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 95, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2008_0223_Tag_der_offenen_Tuer0115.JPG" UNION SELECT "2008_0223_Zeitungsfotos0123.JPG" UNION SELECT "2008_0223_Zeitungsfotos0125.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tcemblem2_02.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 96, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2008_03_01_Fruehlingsball_Siegerehrung_Latein_01.jpg" UNION SELECT "2008_03_01_Fruehlingsball_Siegerehrung_Latein_C_01.jpg" UNION SELECT "2008_03_01_Fruehlingsball_Siegerehrung_SI_Standard.jpg" UNION SELECT "2008_03_01_Fruehlingsball_Siegerehrung_SIV_Standard.jpg" UNION SELECT "2008_03_01_Fruehlingsball_Neumaier.jpg" UNION SELECT "2008_03_01_Fruehlingsball_Latein_09.jpg" UNION SELECT "2008_03_01_Fruehlingsball_Latein_012.jpg" UNION SELECT "2008_03_01_Fruehlingsball_Cierpka_06.jpg" UNION SELECT "2008_03_01_Fruehlingsball_Liersch_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 35, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20080308_LM_Cierpka_Trembo_Pressefoto.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 97, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20080308_LM_Cierpka_Trembo_Pressefoto_01.jpg" UNION SELECT "20080308_LM_Cierpka_Siegerehrung_18_Homepage.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 101, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "008_FlamencoGruppe_Homepage.jpg" UNION SELECT "007_FlamencoGruppe_Homepage.jpg" UNION SELECT "DSC05751_Homepage.jpg" UNION SELECT "DSC05760_Homepage_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 109, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2008_03_01_Fruehlingsball_Markus_Silke.jpg" UNION SELECT "Hessentanz.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 16, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "montag.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 16, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dienstag_Kopie.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 16, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "mittwoch.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 16, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "donnerstag_rolandas_trembo.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 16, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "freitag_engel.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 16, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "samstag.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 542, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_1736_400.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3502, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2017_09_09_LM_HGR_II_Sinsheim_1.jpg" UNION SELECT "2017_09_09_LM_HGR_II_Sinsheim_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 110, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Markus_Silke_Homepage.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 111, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "001_Heinz_und__Margret_Cierpka.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 112, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2008_0621_Tanzauftritt_Stadt0018.JPG" UNION SELECT "2008_0621_Tanzauftritt_Stadt0010.JPG" UNION SELECT "2008_0621_Tanzauftritt_Stadt0004.JPG" UNION SELECT "2008_0621_Tanzauftritt_Stadt0015.JPG" UNION SELECT "2008_0621_Tanzauftritt_Stadt0028_01.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "kostorz.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 35, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2008_Gea-JugendArt_bearbeitet.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 113, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2008_Gea-JugendArt_bearbeitet_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 114, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DerHipHopKurs.JPG" UNION SELECT "TanzminisinAction.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 115, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "LMSENIIIS2008Liersch_bearbeitet_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 116, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1b__1024x768__01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 117, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "CIMG1018.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 116, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "linkerhahn1.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 117, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Jessica_Felix-2012_2_hp.jpg" UNION SELECT "Jessica_Felix_2012_1.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 119, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Nicola_Martin_20130303_hp_links.JPG" UNION SELECT "Nicola_Martin_Homepage_20130303.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 118, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "sebastian_hoehne_1.jpg" UNION SELECT "sebastian_hoehne_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 120, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_3632_20130106_hp.jpg" UNION SELECT "Vogel_GOC_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 122, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2007_04_22_Trophy_Cierpka_013.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 127, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "001_Foto.jpg" UNION SELECT "002_Foto.jpg" UNION SELECT "003_Foto.jpg" UNION SELECT "004_Foto.jpg" UNION SELECT "005_Foto.jpg" UNION SELECT "006_Foto.jpg" UNION SELECT "007_Foto.jpg" UNION SELECT "009_Foto.jpg" UNION SELECT "010_Foto.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 142, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_3837.jpg" UNION SELECT "IMG_3867.jpg" UNION SELECT "IMG_3870.jpg" UNION SELECT "IMG_3900.jpg" UNION SELECT "IMG_3895.jpg" UNION SELECT "2009_0704_Stocherkahn_TUE_0166.jpg" UNION SELECT "IMG_3912.jpg" UNION SELECT "IMG_3883.jpg" UNION SELECT "IMG_3876.jpg" UNION SELECT "IMG_3892.jpg" UNION SELECT "IMG_3874.jpg" UNION SELECT "IMG_3864.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 137, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "platzhalter.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 124, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Jessy_Felix_640x480_.jpg" UNION SELECT "Unbenannt-2__640x480__02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 126, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild_1.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 126, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2008_1207_Kinderweihnachten0022_600x450.JPG" UNION SELECT "2008_1207_Kinderweihnachten0042_600x450.JPG" UNION SELECT "2008_1207_Kinderweihnachten0094_600x450.JPG" UNION SELECT "2008_1207_Kinderweihnachten0010_600x450.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 129, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20090228_Cierpka_Homepage.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2732, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Minis_HP_01.jpeg" UNION SELECT "Kinder_HP_01.jpeg" UNION SELECT "Hip_Hop_HP_01.jpeg" UNION SELECT "Mit_Tanzlehrerin_HP_01.jpeg" UNION SELECT "Nikolaus_HP_01.jpeg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3102, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Begruessung_der_Gaeste_durch_die_2._Vorsitzende__Gerti_Goetz.jpg" UNION SELECT "ChaChaCha_zu_viert.jpg" UNION SELECT "Paso_Doble.jpg" UNION SELECT "Slow-Rumba-Mix.jpg" UNION SELECT "Gaeste_tanzen_1.jpg" UNION SELECT "Gaeste_tanzen_2.jpg" UNION SELECT "Gaeste_tanzen_3.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1442, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG-20130317-WA0002.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 352, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Alle_Teilnehmer_500.jpg" UNION SELECT "Reutlingen_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 232, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123557_500_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 190, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-2_01.jpg" UNION SELECT "Unbenannt-1_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 185, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "SDC10509_klein.jpg" UNION SELECT "P1011143_klein.jpg" UNION SELECT "P1011649_klein.jpg" UNION SELECT "gruppenbild.jpg" UNION SELECT "jessy_jassy.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 159, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9130031_klein.jpg" UNION SELECT "p9130052_klein.jpg" UNION SELECT "p9130073_klein.jpg" UNION SELECT "p9130149_klein.jpg" UNION SELECT "p9130522_klein.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 159, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9130031_klein_01.jpg" UNION SELECT "p9130052_klein_02.jpg" UNION SELECT "p9130073_klein_02.jpg" UNION SELECT "p9130149_klein_01.jpg" UNION SELECT "p9130522_klein_02.jpg" UNION SELECT "p9140536_klein.jpg" UNION SELECT "p9140583_klein.jpg" UNION SELECT "p9140631_klein.jpg" UNION SELECT "p9140733_klein.jpg" UNION SELECT "p9140929_klein.jpg" UNION SELECT "1.jpg" UNION SELECT "9.jpg" UNION SELECT "16.jpg" UNION SELECT "26.jpg" UNION SELECT "18.jpg" UNION SELECT "20.jpg" UNION SELECT "2.jpg" UNION SELECT "5.jpg" UNION SELECT "6.jpg" UNION SELECT "8.jpg" UNION SELECT "10.jpg" UNION SELECT "11.jpg" UNION SELECT "13.jpg" UNION SELECT "14.jpg" UNION SELECT "7.jpg" UNION SELECT "15.jpg" UNION SELECT "17.jpg" UNION SELECT "4.jpg" UNION SELECT "22.jpg" UNION SELECT "23.jpg" UNION SELECT "24.jpg" UNION SELECT "25.jpg" UNION SELECT "28.jpg" UNION SELECT "30.jpg" UNION SELECT "31.jpg" UNION SELECT "33.jpg" UNION SELECT "32.jpg" UNION SELECT "35.jpg" UNION SELECT "36.jpg" UNION SELECT "37.jpg" UNION SELECT "p9130343_klein.jpg" UNION SELECT "6_01.jpg" UNION SELECT "8_01.jpg" UNION SELECT "9_01.jpg" UNION SELECT "10_01.jpg" UNION SELECT "12.jpg" UNION SELECT "38.jpg" UNION SELECT "39.jpg" UNION SELECT "43.jpg" UNION SELECT "41.jpg" UNION SELECT "42.jpg" UNION SELECT "40.jpg" UNION SELECT "p9140891_klein.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 159, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9130052_klein_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 159, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9130073_klein_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 159, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9130149_klein_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 159, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9130522_klein_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 160, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9140528_01.jpg" UNION SELECT "p9140536_01.jpg" UNION SELECT "p9140554_01.jpg" UNION SELECT "p9140583_01.jpg" UNION SELECT "p9140587_01.jpg" UNION SELECT "p9140589_01.jpg" UNION SELECT "p9140631_01.jpg" UNION SELECT "p9140652_01.jpg" UNION SELECT "p9140653_01.jpg" UNION SELECT "p9140655_01.jpg" UNION SELECT "p9140691_01.jpg" UNION SELECT "p9140695_01.jpg" UNION SELECT "p9140720_01.jpg" UNION SELECT "p9140733__01.jpg" UNION SELECT "p9140750_01.jpg" UNION SELECT "p9140756_01.jpg" UNION SELECT "p9140774_01.jpg" UNION SELECT "p9140796_01.jpg" UNION SELECT "p9140816_01.jpg" UNION SELECT "p9140819_01.jpg" UNION SELECT "p9140841_01.jpg" UNION SELECT "p9140891_01.jpg" UNION SELECT "p9140839_01.jpg" UNION SELECT "p9140897_01.jpg" UNION SELECT "p9140842_01.jpg" UNION SELECT "p9140835_01.jpg" UNION SELECT "p9140833_01.jpg" UNION SELECT "p9140929_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 159, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9130012_.jpg" UNION SELECT "p9130021.jpg" UNION SELECT "p9130026.jpg" UNION SELECT "p9130031.jpg" UNION SELECT "p9130039.jpg" UNION SELECT "p9130041.jpg" UNION SELECT "p9130044.jpg" UNION SELECT "p9130052.jpg" UNION SELECT "p9130064.jpg" UNION SELECT "p9130073_01.jpg" UNION SELECT "p9130082.jpg" UNION SELECT "p9130093.jpg" UNION SELECT "p9130115.jpg" UNION SELECT "p9130124.jpg" UNION SELECT "p9130144.jpg" UNION SELECT "p9130149.jpg" UNION SELECT "p9130155.jpg" UNION SELECT "p9130159.jpg" UNION SELECT "p9130171.jpg" UNION SELECT "p9130173.jpg" UNION SELECT "p9130181.jpg" UNION SELECT "p9130182.jpg" UNION SELECT "p9130185.jpg" UNION SELECT "p9130406.jpg" UNION SELECT "p9130256.jpg" UNION SELECT "p9130266.jpg" UNION SELECT "p9130267.jpg" UNION SELECT "p9130283.jpg" UNION SELECT "p9130305.jpg" UNION SELECT "p9130334.jpg" UNION SELECT "p9130335.jpg" UNION SELECT "p9130343.jpg" UNION SELECT "p9130344.jpg" UNION SELECT "p9130353.jpg" UNION SELECT "p9130396.jpg" UNION SELECT "p9130416.jpg" UNION SELECT "p9130460.jpg" UNION SELECT "p9130467.jpg" UNION SELECT "p9130488.jpg" UNION SELECT "p9130495.jpg" UNION SELECT "p9130498.jpg" UNION SELECT "p9130522.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 159, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9140528.jpg" UNION SELECT "p9140536.jpg" UNION SELECT "p9140554.jpg" UNION SELECT "p9140583.jpg" UNION SELECT "p9140587.jpg" UNION SELECT "p9140589.jpg" UNION SELECT "p9140631.jpg" UNION SELECT "p9140652.jpg" UNION SELECT "p9140653.jpg" UNION SELECT "p9140655.jpg" UNION SELECT "p9140691.jpg" UNION SELECT "p9140695.jpg" UNION SELECT "p9140720.jpg" UNION SELECT "p9140733_.jpg" UNION SELECT "p9140750.jpg" UNION SELECT "p9140756.jpg" UNION SELECT "p9140774.jpg" UNION SELECT "p9140796.jpg" UNION SELECT "p9140816.jpg" UNION SELECT "p9140819.jpg" UNION SELECT "p9140841.jpg" UNION SELECT "p9140891.jpg" UNION SELECT "p9140839.jpg" UNION SELECT "p9140897.jpg" UNION SELECT "p9140842.jpg" UNION SELECT "p9140835.jpg" UNION SELECT "p9140833.jpg" UNION SELECT "p9140929.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 175, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "formation.JPG" UNION SELECT "neumaier.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 169, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "chor_03.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 169, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "chor_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 130, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "001_Fruelingsball09.jpg" UNION SELECT "2009_Fruehlingsball_Dieter_undAnnette_Kuchenbecker.jpg" UNION SELECT "002_Fruelingsball09.jpg" UNION SELECT "004_Fruelingsball09.jpg" UNION SELECT "005_Fruelingsball09.jpg" UNION SELECT "006_Fruelingsball09.jpg" UNION SELECT "007_Fruelingsball09.jpg" UNION SELECT "008_Fruelingsball09.jpg" UNION SELECT "010_Fruelingsball09.jpg" UNION SELECT "012_Fruelingsball09.jpg" UNION SELECT "013_Fruelingsball09.jpg" UNION SELECT "015_Fruelingsball09.jpg" UNION SELECT "2009_Fruehlingsball_Dieter_und_Annette_Kuchenbecker.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 134, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "newyorker_rand.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 133, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Helmut-Marlies_Schneider.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 132, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Renaldo-Vanessa_Mueller.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "lucas.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "christine.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "lucas_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 10, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "lucas_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-4.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 135, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "hessen_d-lat_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 131, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "aktuell_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 139, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG-Pressebilder_0002_klein.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 140, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "hessen_d-lat_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 141, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1b__1024x768__02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 141, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "platzhalter_neu.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 137, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Herbstball_2009-281_klein.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 143, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "siegertreppchen.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 145, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "siegertreppchen_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 144, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_3837_02.jpg" UNION SELECT "IMG_3867_02.jpg" UNION SELECT "IMG_3870_02.jpg" UNION SELECT "IMG_3900_02.jpg" UNION SELECT "IMG_3895_02.jpg" UNION SELECT "2009_0704_Stocherkahn_TUE_0166_02.jpg" UNION SELECT "IMG_3912_02.jpg" UNION SELECT "IMG_3883_02.jpg" UNION SELECT "IMG_3876_02.jpg" UNION SELECT "IMG_3892_02.jpg" UNION SELECT "IMG_3874_02.jpg" UNION SELECT "IMG_3864_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 146, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1b__1024x768__03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 146, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt2_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 147, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1b__1024x768__04.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 147, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "addy_mel.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 148, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1b__1024x768__05.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 148, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jassy_viktor.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 149, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "kostorz_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 149, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jessica_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 149, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "christine_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 149, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "lena_hoehne_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 149, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "marianne_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 149, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "SaskiaHeim_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 149, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "lucas_04.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 149, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "silke_link_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 150, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jugendgruppen_vorne.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 150, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jugendgruppen_vorne.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 150, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jugendgruppen_hinten.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 151, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "siegerehrung.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 151, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tanzen_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 151, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "siegerehrung_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 151, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "siegerehrung_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 151, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tanzen.jpg" UNION SELECT "siegerehrung_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 151, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tanzen_02.jpg" UNION SELECT "siegerehrung_04.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 163, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-3_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 152, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "patrick_andrea.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 153, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "cirpka_c_01.jpg" UNION SELECT "cirpka_d_01.jpg" UNION SELECT "cirpka20337_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 153, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "patzelt.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 154, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 154, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1b.jpg" UNION SELECT "Unbenannt-2b.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 155, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "sonntag_02.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 155, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "samstag_01.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 155, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "freitag_01.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 155, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "donnerstag_01.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 155, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "mittwoch_01.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 155, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dienstag_01.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 155, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "ferienplan.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 156, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jugendgruppen_hinten_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 156, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jugendgruppen_vorne_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 157, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jugendgruppen_hinten_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 157, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jugendgruppen_vorne_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 161, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9140528_02.jpg" UNION SELECT "p9140536_02.jpg" UNION SELECT "p9140554_02.jpg" UNION SELECT "p9140583_02.jpg" UNION SELECT "p9140587_02.jpg" UNION SELECT "p9140589_02.jpg" UNION SELECT "p9140631_02.jpg" UNION SELECT "p9140652_02.jpg" UNION SELECT "p9140653_02.jpg" UNION SELECT "p9140655_02.jpg" UNION SELECT "p9140691_02.jpg" UNION SELECT "p9140695_02.jpg" UNION SELECT "p9140720_02.jpg" UNION SELECT "p9140733__02.jpg" UNION SELECT "p9140750_02.jpg" UNION SELECT "p9140756_02.jpg" UNION SELECT "p9140774_02.jpg" UNION SELECT "p9140796_02.jpg" UNION SELECT "p9140816_02.jpg" UNION SELECT "p9140819_02.jpg" UNION SELECT "p9140841_02.jpg" UNION SELECT "p9140891_02.jpg" UNION SELECT "p9140839_02.jpg" UNION SELECT "p9140897_02.jpg" UNION SELECT "p9140842_02.jpg" UNION SELECT "p9140835_02.jpg" UNION SELECT "p9140833_02.jpg" UNION SELECT "p9140929_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 161, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9130012__02.jpg" UNION SELECT "p9130021_02.jpg" UNION SELECT "p9130026_02.jpg" UNION SELECT "p9130031_02.jpg" UNION SELECT "p9130039_02.jpg" UNION SELECT "p9130041_02.jpg" UNION SELECT "p9130044_02.jpg" UNION SELECT "p9130052_02.jpg" UNION SELECT "p9130064_02.jpg" UNION SELECT "p9130073_03.jpg" UNION SELECT "p9130082_02.jpg" UNION SELECT "p9130093_02.jpg" UNION SELECT "p9130115_02.jpg" UNION SELECT "p9130124_02.jpg" UNION SELECT "p9130144_02.jpg" UNION SELECT "p9130149_02.jpg" UNION SELECT "p9130155_02.jpg" UNION SELECT "p9130159_02.jpg" UNION SELECT "p9130171_02.jpg" UNION SELECT "p9130173_02.jpg" UNION SELECT "p9130181_02.jpg" UNION SELECT "p9130182_02.jpg" UNION SELECT "p9130185_02.jpg" UNION SELECT "p9130406_02.jpg" UNION SELECT "p9130256_02.jpg" UNION SELECT "p9130266_02.jpg" UNION SELECT "p9130267_02.jpg" UNION SELECT "p9130283_02.jpg" UNION SELECT "p9130305_02.jpg" UNION SELECT "p9130334_02.jpg" UNION SELECT "p9130335_02.jpg" UNION SELECT "p9130343_02.jpg" UNION SELECT "p9130344_02.jpg" UNION SELECT "p9130353_02.jpg" UNION SELECT "p9130396_02.jpg" UNION SELECT "p9130416_02.jpg" UNION SELECT "p9130460_02.jpg" UNION SELECT "p9130467_02.jpg" UNION SELECT "p9130488_02.jpg" UNION SELECT "p9130495_02.jpg" UNION SELECT "p9130498_02.jpg" UNION SELECT "p9130522_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 160, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "p9130012__01.jpg" UNION SELECT "p9130021_01.jpg" UNION SELECT "p9130026_01.jpg" UNION SELECT "p9130031_01.jpg" UNION SELECT "p9130039_01.jpg" UNION SELECT "p9130041_01.jpg" UNION SELECT "p9130044_01.jpg" UNION SELECT "p9130052_01.jpg" UNION SELECT "p9130064_01.jpg" UNION SELECT "p9130073_02.jpg" UNION SELECT "p9130082_01.jpg" UNION SELECT "p9130093_01.jpg" UNION SELECT "p9130115_01.jpg" UNION SELECT "p9130124_01.jpg" UNION SELECT "p9130144_01.jpg" UNION SELECT "p9130149_01.jpg" UNION SELECT "p9130155_01.jpg" UNION SELECT "p9130159_01.jpg" UNION SELECT "p9130171_01.jpg" UNION SELECT "p9130173_01.jpg" UNION SELECT "p9130181_01.jpg" UNION SELECT "p9130182_01.jpg" UNION SELECT "p9130185_01.jpg" UNION SELECT "p9130406_01.jpg" UNION SELECT "p9130256_01.jpg" UNION SELECT "p9130266_01.jpg" UNION SELECT "p9130267_01.jpg" UNION SELECT "p9130283_01.jpg" UNION SELECT "p9130305_01.jpg" UNION SELECT "p9130334_01.jpg" UNION SELECT "p9130335_01.jpg" UNION SELECT "p9130343_01.jpg" UNION SELECT "p9130344_01.jpg" UNION SELECT "p9130353_01.jpg" UNION SELECT "p9130396_01.jpg" UNION SELECT "p9130416_01.jpg" UNION SELECT "p9130460_01.jpg" UNION SELECT "p9130467_01.jpg" UNION SELECT "p9130488_01.jpg" UNION SELECT "p9130495_01.jpg" UNION SELECT "p9130498_01.jpg" UNION SELECT "p9130522_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 181, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_4576_klein500.jpg" UNION SELECT "IMG_4584_klein500.jpg" UNION SELECT "IMG_4586_klein500.jpg" UNION SELECT "IMG_4594_klein500.jpg" UNION SELECT "IMG_4605_klein500.jpg" UNION SELECT "IMG_4607_klein500.jpg" UNION SELECT "IMGA0598.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 162, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "lm2009.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 162, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-3.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 159, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tanzen2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 159, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tanzen_04.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 165, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "HGR_D_Lat.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 163, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "LM_standard_1_102009_010_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 176, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "pc130245_.jpg" UNION SELECT "pc130256_.jpg" UNION SELECT "pc130260_.jpg" UNION SELECT "pc130273_.jpg" UNION SELECT "pc130279_.jpg" UNION SELECT "pc130283_.jpg" UNION SELECT "pc130351_.jpg" UNION SELECT "pc130364_.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 168, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "LM_standard_1_102009_010_02.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 166, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Einladung.jpg" UNION SELECT "Grafik8.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 167, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "1719090_1.1.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 169, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "chor_02.jpg" UNION SELECT "chor_03_Kopie.jpg" UNION SELECT "chor_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 170, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "LM_standard_1_102009_010_04.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 172, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tanzumdieuhr.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 173, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "esslingen.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 174, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 177, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Weihnachtsmarkt_2009_2_klein.jpg" UNION SELECT "Weihnachtsmarkt_2009_6_klein.jpg" UNION SELECT "Weihnachtsmarkt_2009_1_klein.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 178, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "pc120228.jpg" UNION SELECT "pc120229.jpg" UNION SELECT "pc120236_.jpg" UNION SELECT "pc120234_.jpg" UNION SELECT "pc120239_.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 179, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_Bohn_l.jpg" UNION SELECT "Turnierpaar_Bohn_r.jpg" UNION SELECT "Turnierpaar_Bohn.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 180, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Peter_Hahn1.jpg" UNION SELECT "Silvesterbueffet-1_2009_klein.jpg" UNION SELECT "Silvesterbueffet-2_2009_klein.jpg" UNION SELECT "Silvester_2009_Saal_klein.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 187, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "gruppebild_500.jpg" UNION SELECT "P1301748_500.jpg" UNION SELECT "P1301751_500.jpg" UNION SELECT "P1301758_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 188, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Hgr2CLat_500.jpg" UNION SELECT "HgrCLat_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 191, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-9.jpg" UNION SELECT "Unbenannt-8.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 192, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-2_02.jpg" UNION SELECT "Unbenannt-1_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 193, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-9_01.jpg" UNION SELECT "Unbenannt-8_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 194, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-2_03.jpg" UNION SELECT "Unbenannt-1_04.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 195, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-2_04.jpg" UNION SELECT "Unbenannt-1_05.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 198, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-5.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 197, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "platzhalter_neu_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 199, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Kinderfasching_2010_019_500.jpg" UNION SELECT "Kinderfasching_2010_072_500.jpg" UNION SELECT "Kinderfasching_2010_093_500.jpg" UNION SELECT "p2140646__Bearbeitet__500.jpg" UNION SELECT "p2140661__Bearbeitet__500.jpg" UNION SELECT "p2140737__Bearbeitet__500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 200, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6580.JPG" UNION SELECT "P1020358.JPG" UNION SELECT "P1020363.JPG" UNION SELECT "P1020392.JPG" UNION SELECT "P1020402.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 213, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20101211_Weihnachtsfeier_im_TSCR_2010-1.png" UNION SELECT "20101211_Weihnachtsfeier_im_TSCR_2010-2.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 196, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "plakat.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 207, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "gea_500.jpg" UNION SELECT "cierpka_lm_500.jpg" UNION SELECT "DSC_4030_500.jpg" UNION SELECT "vogel_lm_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 262, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Open_Air_Turnier_Ludwigsburg_25.7.2010_007_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 209, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Mutlangen_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 206, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_Engel_l.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 208, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vienna_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 210, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0055_500.jpg" UNION SELECT "DSC_0073_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 211, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-0_500.jpg" UNION SELECT "Unbenannt-1_500.jpg" UNION SELECT "Unbenannt-2_500.jpg" UNION SELECT "Unbenannt-3_500.jpg" UNION SELECT "Unbenannt-4_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 217, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Moni___Peter_Braunlage_2010_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 215, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_8935_ausschnitt_500.jpg" UNION SELECT "IMG_8937_ausschnitt_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 216, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Frauen_tanzen.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 216, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-2.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 221, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123008_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 221, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123512_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 221, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123298_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 221, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123557_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 131, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "fleischer.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 222, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_Goetz.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3152, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_RoswagHuamanBodemer.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 581, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20110430_02.jpg" UNION SELECT "IMG_0362_01.jpg" UNION SELECT "IMG_0360_01.jpg" UNION SELECT "IMG_0355_01.jpg" UNION SELECT "IMG_0356_01.jpg" UNION SELECT "IMG_0373_02.jpg" UNION SELECT "IMG_0380_01.jpg" UNION SELECT "IMG_0385_01.jpg" UNION SELECT "IMG_0384_01.jpg" UNION SELECT "IMG_0383_01.jpg" UNION SELECT "IMG_0374_01.jpg" UNION SELECT "IMG_0373_03.jpg" UNION SELECT "IMG_0381_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 232, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123512_500_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 232, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123298_500_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 232, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild_2_500.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 252, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "fruehlingsball_500.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 322, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "CIMG6368_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 271, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "isi.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 272, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "isi_02.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 272, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "ksk70.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 272, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dvag.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 272, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "isi_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 272, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "ksk70_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 272, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dvag_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 272, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dvag_02.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 272, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Visitenkarte_Bernd_Leimig.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 204, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Coupon.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 292, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123557_500_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 292, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0480_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 292, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0461_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 292, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0448_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 302, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123557_500_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 302, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123512_500_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 302, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123298_500_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 302, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P6123008_500_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 322, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "CIMG6347_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 322, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "CIMG6339_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 322, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "CIMG6376_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vorstand_AlexanderEngel.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1522, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Discofox_2013_A3_Druck_Kopie-1.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1392, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "neckaralb_tanzfestival_web_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 552, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "hoehne.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 252, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "fruehlingsball_500_2_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 332, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1b__1024x768__07.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 332, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "kersten_bechler.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "turniertage2010_v4_Kopie_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "SDC13101_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0164_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dsc_5233__Bearbeitet__500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dsc_5330__Bearbeitet__500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dsc_5441__Bearbeitet__500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dsc_5568__Bearbeitet__500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "SDC13121_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "SDC13121_500_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "SDC13104_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dsc_5734__Bearbeitet__500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dsc_5751__Bearbeitet__500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dsc_5765__Bearbeitet__500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "SDC13121_500_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 342, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "KinderJugendtanzen.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 351, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "CIMG6376_500_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 351, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "CIMG6368_500_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 351, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "SANY1226_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 351, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "SANY1215_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 361, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Alle_Teilnehmer_500_01.jpg" UNION SELECT "Reutlingen_500_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 371, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Lilli_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 381, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Silvester.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 411, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-4_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 391, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-1.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 401, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "kostorz_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 401, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "jessica_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 401, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "christine_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 401, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "lena_hoehne_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 401, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "marianne_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 401, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "SaskiaHeim_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 401, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "lucas_05.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 401, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "enzo_klein_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 401, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Jorunal_2010-2_Deckblatt.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 401, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Jorunal_2010-2_Deckblatt_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 401, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Jorunal_2010-2_Deckblatt_02.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 411, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-3.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 411, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-2_05.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 411, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Journal_2010-2_Deckblatt.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 421, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Unbenannt-2_06.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 421, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild_2_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 421, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20101212_Kinderweihnachtsfeier_im_TSCR_2010-1.png" UNION SELECT "20101212_Kinderweihnachtsfeier_im_TSCR_2010-2.png" UNION SELECT "20101212_Kinderweihnachtsfeier_im_TSCR_2010-3.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 442, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dsc_1143_500.jpg" UNION SELECT "dsc_1151_500.jpg" UNION SELECT "dsc_1170_500.jpg" UNION SELECT "DSC_1187_500.jpg" UNION SELECT "dsc_1241_500.jpg" UNION SELECT "dsc_1255_500.jpg" UNION SELECT "dsc_1296_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 422, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "CIMG0752_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 432, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Kinderweihnachtsfeier_im_TSCR_2010_Seite_2_500.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 432, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Kinderweihnachtsfeier_im_TSCR_2010_Seite_1_500.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 432, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Kinderweihnachtsfeier_im_TSCR_2010_Seite_1_500_01.png" UNION SELECT "Kinderweihnachtsfeier_im_TSCR_2010_Seite_2_500_01.png" UNION SELECT "Kinderweihnachtsfeier_im_TSCR_2010_Seite_3_500_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 432, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Kinderweihnachtsfeier_im_TSCR_2010_Seite_3_500.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 512, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "LM_Sen_IV_S_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 452, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Engel_500_Kopie.jpg" UNION SELECT "IMG_0457_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 502, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Neumaier_Saxonian_Classics_Coswig_2011_500.jpg" UNION SELECT "Neumaier_Saxonian_Classics_Coswig_2011_2_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 461, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "sonntag_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 461, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "samstag_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 461, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "freitag_02.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 461, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "donnerstag_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 461, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "mittwoch_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 461, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dienstag_Kopie_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 461, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "montag_01.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 492, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0689_500.jpg" UNION SELECT "IMG_0797_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 501, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Kinderfasching_2011_062_500.jpg" UNION SELECT "Kinderfasching_2011_086_500.jpg" UNION SELECT "dsc_1863__Bearbeitet__500.jpg" UNION SELECT "dsc_1895__Bearbeitet__500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 471, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Faschingsparty_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 532, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Tango_Argentino_2_500.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 511, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Faschingsparty_500_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 522, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P1000762_500.jpg" UNION SELECT "P1000762_500_Kopie.jpg" UNION SELECT "P10007622_500.jpg" UNION SELECT "P1000843_500.jpg" UNION SELECT "P1000948_500.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 562, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "ostsee1_500.png" UNION SELECT "ostesee2_300.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 572, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20110430_01.jpg" UNION SELECT "IMG_0362.jpg" UNION SELECT "IMG_0360.jpg" UNION SELECT "IMG_0355.jpg" UNION SELECT "IMG_0356.jpg" UNION SELECT "IMG_0373.jpg" UNION SELECT "IMG_0380.jpg" UNION SELECT "IMG_0385.jpg" UNION SELECT "IMG_0383.jpg" UNION SELECT "IMG_0374.jpg" UNION SELECT "IMG_0381.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 591, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_1736_400_01.jpg" UNION SELECT "CIMG7217_ausschnitt_400_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 601, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2011_Vogel_Weinmann_Mitte_01.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 602, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2011_Vaegler_Gloeckle_2_01.jpg" UNION SELECT "2011_Vogel_Weinmann_IMG_2434_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 782, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Plakat_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 751, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20120121_Disco-Fox.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1231, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Tanzparty-Januar-2013-Plakat_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 612, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2011_Moni___Peter_Enzkloesterle-hp.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 631, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20110806__cierpka.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 651, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2011-Bohn_LM_V1_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 641, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20111008rtkn1544a01_350.jpg" UNION SELECT "20111008rtkn1549a01_350.jpg" UNION SELECT "20111008rtkn1559a01_350.jpg" UNION SELECT "20111008rtkn1564a01_350.jpg" UNION SELECT "20111008rtkn1621a02_350.jpg" UNION SELECT "20111008rtkn1661a01_350.jpg" UNION SELECT "20111008rtkn1684a02_350.jpg" UNION SELECT "20111008rtkn1742a01_350.jpg" UNION SELECT "20111008rtkn1760a01_350.jpg" UNION SELECT "20111008rtkn1768a01_350.jpg" UNION SELECT "20111008rtkn1787a01_350.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 641, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "danceshooting1.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2682, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "35ac115de8.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 741, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bad_Camberg_17-12-11_Siegerehrung_SEN_IV_S.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 701, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20110611_trohpy-hoefingen.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 672, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_5624-hp.JPG" UNION SELECT "IMG_5625-hp.JPG" UNION SELECT "IMG_5635-hp.JPG" UNION SELECT "IMG_5650-hp.JPG" UNION SELECT "IMG_5657-hp.JPG" UNION SELECT "IMG_5681-hp.JPG" UNION SELECT "IMG_5686-hp.JPG" UNION SELECT "IMG_5687-hp.JPG" UNION SELECT "IMG_5694-hp.JPG" UNION SELECT "IMG_5703-hp.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 662, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_5983.jpg" UNION SELECT "DSC_6022.jpg" UNION SELECT "DSC_6122.jpg" UNION SELECT "DSC_6131.jpg" UNION SELECT "DSC_6235.jpg" UNION SELECT "DSC_6370.jpg" UNION SELECT "DSC_6502.jpg" UNION SELECT "DSC_6027.jpg" UNION SELECT "DSC_6033.jpg" UNION SELECT "DSC_5963.jpg" UNION SELECT "DSC_6056.jpg" UNION SELECT "DSC_6153.jpg" UNION SELECT "DSC_6241.jpg" UNION SELECT "DSC_6477.jpg" UNION SELECT "DSC_5986.jpg" UNION SELECT "DSC_6518.jpg" UNION SELECT "DSC_6083.jpg" UNION SELECT "DSC_6105.jpg" UNION SELECT "DSC_6124.jpg" UNION SELECT "DSC_6151.jpg" UNION SELECT "DSC_6361.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 672, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20111106tscr4045a.jpg" UNION SELECT "20111106tscr4298a.jpg" UNION SELECT "20111106tscr4266a.jpg" UNION SELECT "20111106tscr4012d.jpg" UNION SELECT "20111106tscr4487a.jpg" UNION SELECT "20111106tscr4449a.jpg" UNION SELECT "20111106tscr4447a.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 672, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "danceshooting1_01.gif") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 682, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2011_turnier_oehringen_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 692, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2011_Weihnachtsfeier-hp.jpg" UNION SELECT "Weihnachtsfeier_Kinder-hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 712, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Silvesterparty_Web.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 702, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2011-setrophy-sen4s.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1041, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Hesse_04082012-Sen-II-D_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 721, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Weihnachtsfeier_Kinder-hp_01.jpg" UNION SELECT "20111204tscr5270a1_350g.jpg" UNION SELECT "IMG_5916-hp.JPG" UNION SELECT "20111204tscr5285a01_350g.jpg" UNION SELECT "20111204tscr5307a01_350g.jpg" UNION SELECT "20111204tscr5288a01_350g.jpg" UNION SELECT "20111204tscr5293a01_350g.jpg" UNION SELECT "20111204tscr5302a01_350g.jpg" UNION SELECT "20111204tscr5328a01_350g.jpg" UNION SELECT "20111204tscr5369a01_350g.jpg" UNION SELECT "20111204tscr5380a02_350g.jpg" UNION SELECT "20111204tscr5414a01_350g.jpg" UNION SELECT "20111204tscr5426a02_350g.jpg" UNION SELECT "20111204tscr5464_350g.jpg" UNION SELECT "IMG_5928-hp.JPG" UNION SELECT "IMG_5931-hp.jpg" UNION SELECT "20111204tscr5476a01_350g.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 942, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8682_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 762, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_Hesse_l.jpg" UNION SELECT "Turnierpaar_Hesse_r.jpg" UNION SELECT "Turnierpaar_Hesse.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "VorstandVorsitzenderWalterGreiner_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 771, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6155_hp1.jpg" UNION SELECT "IMG_6166-hp1.jpg" UNION SELECT "IMG_6177_hp1.jpg" UNION SELECT "IMG_6183-hp1.jpg" UNION SELECT "IMG_6184_hp1.jpg" UNION SELECT "IMG_6186_hp1.jpg" UNION SELECT "IMG_6191-hp1.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 772, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "CIMG2149.JPG" UNION SELECT "CIMG2112.JPG" UNION SELECT "CIMG2126.JPG" UNION SELECT "Bild0090.JPG" UNION SELECT "Bild0091.JPG" UNION SELECT "Bild0092.JPG" UNION SELECT "Bild0093.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 811, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Einladung_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 782, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Plakat.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 791, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20120212_Kinderfasching.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 801, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Sinsheim_15-01-12_SEN_IV_S_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 751, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Neu_P1010572-hp.jpg" UNION SELECT "Neu_P1010571-hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 751, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20120121_Disco-Fox_01.jpg" UNION SELECT "Neu_P1010572-hp_01.jpg" UNION SELECT "Neu_P1010571-hp_01.jpg" UNION SELECT "Neu_P1010573-hp.jpg" UNION SELECT "Neu_P1010585-hp.jpg" UNION SELECT "Neu_P1010577-hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 821, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_7657_01_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 821, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_7657_01_hp_01.jpg" UNION SELECT "DSC_7437_01_hp.jpg" UNION SELECT "DSC_7552_01_hp.jpg" UNION SELECT "DSC_7558_01_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 821, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_7657_01_hp_02.jpg" UNION SELECT "DSC_7437_01_hp_01.jpg" UNION SELECT "DSC_7552_01_hp_01.jpg" UNION SELECT "DSC_7558_01_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Cover_0112_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 791, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20120212_Kinderfasching_01.jpg" UNION SELECT "IMG_6227-hp.jpg" UNION SELECT "IMG_6222-hp.jpg" UNION SELECT "IMG_6224-hp.jpg" UNION SELECT "IMG_6242-hp.jpg" UNION SELECT "IMG_6244-hp.jpg" UNION SELECT "IMG_6230-hp.jpg" UNION SELECT "IMG_6239-hp.jpg" UNION SELECT "IMG_6271-hp.jpg" UNION SELECT "IMG_6280-hp.jpg" UNION SELECT "IMG_6284-hp.jpg" UNION SELECT "IMG_6285-hp.jpg" UNION SELECT "IMG_6289-hp.jpg" UNION SELECT "IMG_6295-hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 841, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6309-hp.jpg" UNION SELECT "IMG_6322-hp.jpg" UNION SELECT "IMG_6307-hp.jpg" UNION SELECT "IMG_6310-hp.jpg" UNION SELECT "IMG_6311-hp.jpg" UNION SELECT "IMG_6314-hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 811, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Einladung_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 811, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6329-hp.jpg" UNION SELECT "Pfarrer.jpg" UNION SELECT "Pfarrer2.jpg" UNION SELECT "IMG_6385-hp.jpg" UNION SELECT "IMG_6366-hp.jpg" UNION SELECT "IMG_6371-hp.jpg" UNION SELECT "IMG_6394-hp.jpg" UNION SELECT "IMG_6395-hp.jpg" UNION SELECT "IMG_6402-hp.jpg" UNION SELECT "IMG_6416-hp.jpg" UNION SELECT "Pfarrer3.jpg" UNION SELECT "Teufel_hp.jpg" UNION SELECT "IMG_6421-hp.jpg" UNION SELECT "IMG_6422-hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 671, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turniervorschau_20120221.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 671, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "wer-tanzt-wo.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Mitgliederordnung_TC_2018_01_01.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 851, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Marc_Jasmin_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1291, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Diashow_DRUCK_Kopie.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 852, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Landesmeister_2012_Cierpka.jpg" UNION SELECT "Vizeladesmeister_2012__Neumaier.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 782, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Plakat_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 782, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierbuero.jpg" UNION SELECT "Sieger_Latein.jpg" UNION SELECT "Tanzpaare_3.jpg" UNION SELECT "Tanzpaare_4.jpg" UNION SELECT "Deutscher_Vizemeister.jpg" UNION SELECT "Kuchenbecker.jpg" UNION SELECT "Tanzpaar_2.jpg" UNION SELECT "Einmarsch.jpg" UNION SELECT "Tanzpaare_1.jpg" UNION SELECT "Publkum_1.jpg" UNION SELECT "Publikum_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 782, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Ehrung_Latein.jpg" UNION SELECT "Ehrung_Standard.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 881, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20120406_Hesse.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 921, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P1000762_500_01.jpg" UNION SELECT "P1000762_500_Kopie_01.jpg" UNION SELECT "P10007622_500_01.jpg" UNION SELECT "P1000843_500_01.jpg" UNION SELECT "P1000948_500_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 871, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_2019_hp.jpg" UNION SELECT "IMG_2021_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 901, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Cierpka_20120422_hp.jpg" UNION SELECT "Neumaier_20120422_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 911, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DiscoFox_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 911, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Neu_P1030683-hp.jpg" UNION SELECT "Neu_P1030684_hp.jpg" UNION SELECT "Neu_P1030686_hp.jpg" UNION SELECT "Neu_P1030689_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 911, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DiscoFox_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 911, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Neu_P1030683-hp_01.jpg" UNION SELECT "Neu_P1030684_hp_01.jpg" UNION SELECT "Neu_P1030686_hp_01.jpg" UNION SELECT "Neu_P1030689_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 941, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "image.jpeg" UNION SELECT "image_2.jpeg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 951, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P1010455-1-hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 952, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0188_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 961, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Wernigerode_26-05-2012_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 971, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8342_hp.jpg" UNION SELECT "DSC_8349_hp.jpg" UNION SELECT "DSC_8339_hp.jpg" UNION SELECT "DSC_8340_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 971, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8347__hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 981, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8492b_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 991, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0125_hp.jpg" UNION SELECT "IMG_0129_hp.jpg" UNION SELECT "IMG_0138_hp.jpg" UNION SELECT "IMG_0140_hp.jpg" UNION SELECT "IMG_0144_hp.jpg" UNION SELECT "IMG_0150_hp.jpg" UNION SELECT "IMG_0153-hp.jpg" UNION SELECT "IMG_0155_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1001, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8528_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1011, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P1060852-neu_hp.jpg" UNION SELECT "P1060869-hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 16, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TSCR_1.jpg" UNION SELECT "TSCR_2.jpg" UNION SELECT "TSCR_Gym.jpg" UNION SELECT "Kemmlerhalle.jpg" UNION SELECT "Beger_Turnhalle.jpg" UNION SELECT "Festhalle_Sondelfingen.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 9, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Blickle_2014_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1031, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0053_hp.jpg" UNION SELECT "DSC_0208_hp.jpg" UNION SELECT "Bohn_20120721_hp.jpg" UNION SELECT "Vogel_Weinmann_20120721_hp.jpg" UNION SELECT "IMG_6609-hp.jpg" UNION SELECT "IMG_6618-hp.jpg" UNION SELECT "IMG_6638_hp.jpg" UNION SELECT "IMG_6665_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1061, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Plakat_03.jpg" UNION SELECT "Flyer_Programm_20120930.jpg" UNION SELECT "Flyer_Uebersicht_20120930.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1071, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bild-1-1-20120909_hp.jpg" UNION SELECT "DSC_9245_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1071, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_9152_hp.jpg" UNION SELECT "DSC_9193_hp.jpg" UNION SELECT "DSC_9236_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1081, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_2850.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1091, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Neumaier_St._Ingbert__hp_16-09-12.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "ARAG_Sportversicherung_2009.pdf" UNION SELECT "Kfz-Zusatzversicherung_mit_Rechtsschutz.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Infojournal_02_2012.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1061, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Plakat_04.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1061, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6720_hp.jpg" UNION SELECT "IMG_6724_hp.jpg" UNION SELECT "IMG_6728_hp.jpg" UNION SELECT "20120930tscr7099_ji350.jpg" UNION SELECT "20120930tscr7076_ji_ji350.jpg" UNION SELECT "20120930tscr7107_ji_ji350.jpg" UNION SELECT "DSC_9388_hp.jpg" UNION SELECT "DSC_9390_hp.jpg" UNION SELECT "DSC_9425_hp.jpg" UNION SELECT "DSC_9442_hp.jpg" UNION SELECT "DSC_9434_hp.jpg" UNION SELECT "DSC_9552_hp.jpg" UNION SELECT "IMG_6710_hp.jpg" UNION SELECT "IMG_6764_hp.jpg" UNION SELECT "IMG_6783_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1061, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6800_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1642, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Schuelerkurs_Fruejahr-2014.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1111, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Heddesheim_Turnier_0001a_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1121, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Reutlinger_Turniertag.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1131, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6907_1.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1121, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0021_HGR_C_L.jpg" UNION SELECT "HGR_B_L.jpg" UNION SELECT "HGR_A_L.jpg" UNION SELECT "SEN_III_D.jpg" UNION SELECT "HGR_C.jpg" UNION SELECT "SEN_IV_S.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1121, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0005_hp.jpg" UNION SELECT "Andi.jpg" UNION SELECT "Wertungsrichter.jpg" UNION SELECT "Musik.jpg" UNION SELECT "Tanz_C.jpg" UNION SELECT "Bohn_Lilly.jpg" UNION SELECT "Tanz_1_C.jpg" UNION SELECT "Roswag_3.jpg" UNION SELECT "Tanz_.jpg" UNION SELECT "Roswag_2.jpg" UNION SELECT "Roswag_1.jpg" UNION SELECT "Greiner_Lilly.jpg" UNION SELECT "Link_1.jpg" UNION SELECT "Link_2.jpg" UNION SELECT "Link_3.jpg" UNION SELECT "Greiner_Lilly_2.jpg" UNION SELECT "Tanz_2.jpg" UNION SELECT "Tanz_3.jpg" UNION SELECT "Cierpka_1.jpg" UNION SELECT "Neumaier_2.jpg" UNION SELECT "Cierpka_2.jpg" UNION SELECT "Neumaier_1.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1151, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_5383-1_hp.jpg" UNION SELECT "IMG_5390_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1161, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Neumaier_Kitzingen_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1171, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Sen-IV_S_hp.jpg" UNION SELECT "Sen_II_C.jpg" UNION SELECT "Sen_II_D_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1181, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "PC020014_hp.jpg" UNION SELECT "PC020017_hp.jpg" UNION SELECT "PC020041_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1191, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_2674_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1221, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Silvester_2012_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1231, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Tanzparty-Januar-2013-Plakat.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1211, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Weihnachten_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1211, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_2880_hp.jpg" UNION SELECT "DSC_2868_hp.jpg" UNION SELECT "DSC_2872_hp.jpg" UNION SELECT "DSC_2908_hp.jpg" UNION SELECT "DSC_0161_hp.jpg" UNION SELECT "DSC_0188_hp_01.jpg" UNION SELECT "DSC_2924_hp.jpg" UNION SELECT "DSC_2939_hp.jpg" UNION SELECT "DSC_0147_hp.jpg" UNION SELECT "DSC_0146_hp.jpg" UNION SELECT "DSC_0190_hp.jpg" UNION SELECT "DSC_2994_hp.jpg" UNION SELECT "DSC_2997_hp.jpg" UNION SELECT "DSC_3005_hp.jpg" UNION SELECT "DSC_0198_hp.jpg" UNION SELECT "DSC_0194_hp.jpg" UNION SELECT "DSC_3010_hp.jpg" UNION SELECT "DSC_3016_hp.jpg" UNION SELECT "DSC_0191_hp.jpg" UNION SELECT "DSC_2883_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1251, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_SchweizerSchuster.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1221, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_3380_hp.jpg" UNION SELECT "DSC_3373_hp.jpg" UNION SELECT "DSC_3388-hp.jpg" UNION SELECT "DSC_3410-hp.jpg" UNION SELECT "DSC_3412_hp.jpg" UNION SELECT "DSC_3415-1_hp.jpg" UNION SELECT "DSC_3422-1_hp.jpg" UNION SELECT "DSC_3421_hp.jpg" UNION SELECT "DSC_3430_hp.jpg" UNION SELECT "DSC_3440_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1261, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Stadthalle_quer-1_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1261, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Stadthalle_quer-1_hp_01.jpg" UNION SELECT "DSC_3569_hp.jpg" UNION SELECT "DSC_3609_hp.jpg" UNION SELECT "DSC_3632_hp.jpg" UNION SELECT "DSC_3637_hp.jpg" UNION SELECT "DSC_3653_01_hp.jpg" UNION SELECT "DSC_3667_hp.jpg" UNION SELECT "DSC_3686-hp.jpg" UNION SELECT "DSC_3691-1_hp.jpg" UNION SELECT "DSC_3696_hp.jpg" UNION SELECT "DSC_3713_hp.jpg" UNION SELECT "DSC_3756_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1281, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "easysportlogo_01.bmp") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1281, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "easysportlogo.bmp") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1271, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dvag_03.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1271, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dvag_04.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1271, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "ksk70_02.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1281, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dvag_05.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1281, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "dvag_06.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1281, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "ksk70_03.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1301, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Raumreservierung-Anleitung.pdf" UNION SELECT "Screenshot-1.pdf" UNION SELECT "Screenshot-aendern_oder_loeschen.pdf" UNION SELECT "Screenshot-neu.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1321, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_4037_hp.jpg" UNION SELECT "DSC_3855_hp.jpg" UNION SELECT "DSC_3860_hp.jpg" UNION SELECT "DSC_3850_hp.jpg" UNION SELECT "DSC_3866_hp.jpg" UNION SELECT "DSC_3896_hp.jpg" UNION SELECT "DSC_3906_hp.jpg" UNION SELECT "DSC_3913_hp.jpg" UNION SELECT "DSC_3918_hp.jpg" UNION SELECT "DSC_3922_hp.jpg" UNION SELECT "DSC_3928_hp.jpg" UNION SELECT "DSC_3937_hp.jpg" UNION SELECT "DSC_3942_hp.jpg" UNION SELECT "DSC_3945_hp.jpg" UNION SELECT "DSC_4008_hp.jpg" UNION SELECT "DSC_4022_hp.jpg" UNION SELECT "DSC_4040_hp.jpg" UNION SELECT "DSC_4087_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1321, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_4093_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1331, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6415a_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1331, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6415a_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "fasching.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1231, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0236_hp.jpg" UNION SELECT "DSC_0238_hp.jpg" UNION SELECT "DSC_4199_hp.jpg" UNION SELECT "DSC_0242_hp.jpg" UNION SELECT "DSC_0241_hp.jpg" UNION SELECT "DSC_4206_hp.jpg" UNION SELECT "DSC_0243_hp.jpg" UNION SELECT "DSC_0244_hp.jpg" UNION SELECT "DSC_4202p.jpg" UNION SELECT "DSC_0247_hp.jpg" UNION SELECT "DSC_0246_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1291, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Diashow_DRUCK_Kopie_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1291, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P1050014_hp.jpg" UNION SELECT "P1050001_hp.jpg" UNION SELECT "P1050011_hp.jpg" UNION SELECT "P1050002_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1351, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Logo_NeckarAlb_Tanzfestival_final_Web.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1361, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnier_Botnang_20130202.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1371, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_00452_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1381, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_4388_hp.jpg" UNION SELECT "DSC_4261_hp.jpg" UNION SELECT "DSC_4257_hp.jpg" UNION SELECT "DSC_4274_hp.jpg" UNION SELECT "DSC_4282_hp.jpg" UNION SELECT "DSC_4290_hp.jpg" UNION SELECT "DSC_4294_hp.jpg" UNION SELECT "DSC_4299_hp.jpg" UNION SELECT "DSC_4303_hp.jpg" UNION SELECT "DSC_4328_hp.jpg" UNION SELECT "DSC_4333_hp.jpg" UNION SELECT "DSC_4334_hp.jpg" UNION SELECT "DSC_4335_hp.jpg" UNION SELECT "DSC_4336_hp.jpg" UNION SELECT "DSC_4339-hp.jpg" UNION SELECT "DSC_4347_hp.jpg" UNION SELECT "DSC_4390_hp.jpg" UNION SELECT "DSC_4393_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1341, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "P1000387_hp.jpg" UNION SELECT "P1000389_hp.jpg" UNION SELECT "P1000395_hp.jpg" UNION SELECT "P1000400_hp.jpg" UNION SELECT "fasching_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1412, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_7692_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1422, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_6954_Cierpka_hp.jpg" UNION SELECT "DSC_4470_hesse_hp.jpg" UNION SELECT "DSC_4494_hesse_hp.jpg" UNION SELECT "DSCF6245_cierpka_hp.jpg" UNION SELECT "DSC_4496_hesse_hp.jpg" UNION SELECT "DSCF6248_cierpka_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1351, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "NeckarAlb_TanzFestival_Flyer_Rueckseite_A6.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1432, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_4818_SEN_III_D_hp.jpg" UNION SELECT "DSC_4858_SEN_III_C_hp.jpg" UNION SELECT "DSC_4878_SEN_III_B_hp.jpg" UNION SELECT "DSC_4910_SEN_III_A_hp.jpg" UNION SELECT "DSC_4927_SEN_III_S_hp.jpg" UNION SELECT "DSC_5005_SEN_IV_S_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1392, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_4592.jpg" UNION SELECT "DSC_4597.jpg" UNION SELECT "DSC_4727_01.jpg" UNION SELECT "DSC_4713.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1432, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Goetz_20130317_hp.jpg" UNION SELECT "DSC_4890.jpg" UNION SELECT "DSC_4904.jpg" UNION SELECT "DSC_4917.jpg" UNION SELECT "DSC_4937.jpg" UNION SELECT "DSC_4930.jpg" UNION SELECT "DSC_4981.jpg" UNION SELECT "IMG_7455_hp.jpg" UNION SELECT "IMG_7459_hp.jpg" UNION SELECT "IMG_7461_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1472, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_6442_v1_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Infojournal_114.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_5330_hp.jpg" UNION SELECT "DSC_5328_hp.jpg" UNION SELECT "DSC_5337-1_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1842, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_6380.jpg" UNION SELECT "DSC_8682_hp_02.jpg" UNION SELECT "Kuchenbeckert-2013_hp_2013_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1532, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_5613_hp.jpg" UNION SELECT "DSC_5616_hp.jpg" UNION SELECT "DSC_5620_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1542, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_Zamorski.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1552, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "GrosserSaal-1_hp.jpg" UNION SELECT "VogelWeinmannSiegerehrung-1_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1612, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_TdoT_02_DRUCK_Kopie_klein_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1562, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_5710-1_hp.jpg" UNION SELECT "IMG_1806_hp.jpg" UNION SELECT "IMG_1828_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1572, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2013-07-21__hp.jpg" UNION SELECT "IMG_7662_2_hp.jpg" UNION SELECT "IMG_7656_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1592, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_1962_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1582, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Siegerehrung_LS66_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1602, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0041_hp.jpg" UNION SELECT "DSC_0038_hp.jpg" UNION SELECT "DSC_0019_hp.jpg" UNION SELECT "DSC_0031_hp.jpg" UNION SELECT "LM_Biberach__Hesse_LM_SEN_III_B_hp.jpg" UNION SELECT "DSC_7669_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1652, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6504_hp.jpg" UNION SELECT "IMG_6528_hp.jpg" UNION SELECT "IMG_6552_hp.jpg" UNION SELECT "IMG_6586_hp.jpg" UNION SELECT "IMG_7807_hp.jpg" UNION SELECT "IMG_7812_hp.jpg" UNION SELECT "IMG_7830_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1652, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vogel_hp.jpg" UNION SELECT "Lilly_hp_1.jpg" UNION SELECT "IMG_6483_hp.jpg" UNION SELECT "IMG_7800_hp.jpg" UNION SELECT "IMG_7795_hp.jpg" UNION SELECT "IMG_7814_hp.jpg" UNION SELECT "IMG_7797_hp.jpg" UNION SELECT "IMG_6499_hp.jpg" UNION SELECT "IMG_6533_hp.jpg" UNION SELECT "IMG_6569_hp.jpg" UNION SELECT "IMG_6584_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1652, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "sieger_hgr_d_lat_hp.jpg" UNION SELECT "sieger_hgr_c_lat_hp.jpg" UNION SELECT "sieger_hgr_b_lat6_hp.jpg" UNION SELECT "sieger_hgr_a_lat3_hp.jpg" UNION SELECT "sieger_d_std_hp.jpg" UNION SELECT "sieger_hgr_c_std_hp.jpg" UNION SELECT "sieger_hgr__b_std-hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1662, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Tanzparty_2013_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1672, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_3018_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1682, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Schweitzer-Schuster_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1692, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8267_hp.jpg" UNION SELECT "DSC_8280_hp.jpg" UNION SELECT "DSC_8300_hp.jpg" UNION SELECT "SEN_IV_S_Siegerehrung_02-11-2013.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1702, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Salsa_2013_A3_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1732, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Weihnachten_2013.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1742, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Kids_Weihnachten_2013.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1752, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Soiree-Parisienne_2014.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1732, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8361_hp.jpg" UNION SELECT "DSC_8366-hp.jpg" UNION SELECT "DSC_8410_hp.jpg" UNION SELECT "DSC_8392_hp.jpg" UNION SELECT "DSC_8414_hp.jpg" UNION SELECT "DSC_8431_hp.jpg" UNION SELECT "DSC_8442_hp.jpg" UNION SELECT "DSC_8458-hp.jpg" UNION SELECT "DSC_8459-hp.jpg" UNION SELECT "DSC_8471_hp.jpg" UNION SELECT "DSC_8492_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1742, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8500_hp.jpg" UNION SELECT "DSC_8504_hp.jpg" UNION SELECT "DSC_8506_hp.jpg" UNION SELECT "DSC_8523_hp.jpg" UNION SELECT "DSC_8526_hp.jpg" UNION SELECT "DSC_8531_hp.jpg" UNION SELECT "DSC_8533_hp.jpg" UNION SELECT "DSC_8542_hp.jpg" UNION SELECT "DSC_8550_hp.jpg" UNION SELECT "DSC_8570_hp.jpg" UNION SELECT "DSC_8574_hp.jpg" UNION SELECT "DSC_8613_hp.jpg" UNION SELECT "IMG_7908_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1752, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Soiree-Parisienne_2014_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3332, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Tanz_in_den_Mai_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1762, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "JM_HP_2_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1782, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8669_hp.jpg" UNION SELECT "DSC_8672_hp.jpg" UNION SELECT "DSC_8682_hp.jpg" UNION SELECT "DSC_8711_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1752, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8719_hp.jpg" UNION SELECT "DSC_8737_hp.jpg" UNION SELECT "DSC_8755_hp.jpg" UNION SELECT "DSC_8789_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1752, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Soiree-Parisienne_2014_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1852, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG-20140126-WA0000.jpg" UNION SELECT "Roswag_20140126_hp.jpg" UNION SELECT "Bohn_20140126_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1882, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8851_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1882, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8882_hp.jpg" UNION SELECT "DSC_8891_hp.jpg" UNION SELECT "DSC_8935_hp.jpg" UNION SELECT "DSC_9035_hp.jpg" UNION SELECT "DSC_9044_hp.jpg" UNION SELECT "DSC_9071_hp.jpg" UNION SELECT "DSC_9075_hp.jpg" UNION SELECT "DSC_9083_hp.jpg" UNION SELECT "DSC_9086_hp.jpg" UNION SELECT "DSC_9092_hp.jpg" UNION SELECT "DSC_9102_hp.jpg" UNION SELECT "DSC_9125_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1892, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_2662_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1902, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Fruehling2014_A3_DRUCK.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1912, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "platzhalter_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1922, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8471_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1932, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Studentenkurs_2014_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1942, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tanz_um_den_strombergpokal_februar_2014_Wu_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1942, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "tanz_um_den_strombergpokal_februar_2014_Wu.jpg" UNION SELECT "tanz_m_den_strombergpokal_februar_2014_58_20140218_1670479407.jpg" UNION SELECT "tanz_m_den_strombergpokal_februar_2014_72_20140218_2037683180.jpg" UNION SELECT "tanz_um_den_strombergpokal_februar_2014_107_20140218_1457788726.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1792, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Fruehlingsball.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1952, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "plakat_neu.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1962, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Herrenberg_20140223.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1351, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "NeckarAlb_TanzFestival_2014.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1982, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8669_hp_01.jpg" UNION SELECT "DSC_8672_hp_01.jpg" UNION SELECT "DSC_8682_hp_03.jpg" UNION SELECT "DSC_8711_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1992, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "LM_SEN_II_D_Standard.jpg" UNION SELECT "LM_SEN_II_C_Standard.jpg" UNION SELECT "LM_SEN_IV_S_Standard.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2012, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "NeckarAlb_TanzFestival_2014_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2012, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "natf_hesse-2_hp_20140315.jpg" UNION SELECT "DSC_0104-hp.jpg" UNION SELECT "DSC_0111_hp.jpg" UNION SELECT "DSC_0124_hp.jpg" UNION SELECT "DSC_0152_hp.jpg" UNION SELECT "DSC_9370_hp.jpg" UNION SELECT "DSC_9379-hp.jpg" UNION SELECT "DSC_9384_hp.jpg" UNION SELECT "DSC_9390_hp_01.jpg" UNION SELECT "DSC_9414_hp.jpg" UNION SELECT "DSC_9438_hp.jpg" UNION SELECT "DSC_9457_01_hp.jpg" UNION SELECT "DSC_9461_hp.jpg" UNION SELECT "DSC_9514_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1902, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_9339_hp.jpg" UNION SELECT "DSC_9232-hp.jpg" UNION SELECT "DSC_9210-hp.jpg" UNION SELECT "DSC_9260_hp.jpg" UNION SELECT "DSC_0046_hp.jpg" UNION SELECT "DSC_9313_hp.jpg" UNION SELECT "DSC_9299_01_hp.jpg" UNION SELECT "DSC_9350_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1952, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "sitzplan-ball.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 671, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turniervorschau_20140909.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2202, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "platzhalter_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3832, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_TanzInDenMai.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Cover_01-2014-116.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2042, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_8682_hp_05.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2052, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_5768-1_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2072, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Hesse_Waiblingen__hp_01.jpg" UNION SELECT "Bohn_2014_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2062, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_1122_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2082, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Wu_20140609_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2102, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_1180_hp_01.jpg" UNION SELECT "Roswag_20140705_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2112, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_9968-1_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2142, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "WP_20140413_040-1_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2142, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSCN3923_hp_01.jpg" UNION SELECT "WP_20140412_009_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2132, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_9582_hp_01.jpg" UNION SELECT "DSC_9585_hp_01.jpg" UNION SELECT "DSC_9587_hp_01.jpg" UNION SELECT "DSC_9591-hp_01.jpg" UNION SELECT "DSC_9601-hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2152, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "140622_hgrtrophy_hgr2sst_9970_pd-220x195_01.jpg" UNION SELECT "Vogel_20140621-hp_01.jpg" UNION SELECT "140622_trophy_hgr2blat_sieger_9914_pd-150x150_01.jpg" UNION SELECT "140622_trophy_hgralat_sieger_0023_pd-150x150_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2112, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_9976_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2162, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0335_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2272, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Foto.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2212, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Viernheim_kwok-wai_hp.jpg" UNION SELECT "IMG_6111_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1642, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Schuelerkurs_Herbst_2014.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2262, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Plakat_05.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1351, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "NeckarAlb_TanzFestival_2014-Herbst.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2262, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0041_hp_01.jpg" UNION SELECT "DSC_0005_hp_01.jpg" UNION SELECT "DSC_0027-hp.jpg" UNION SELECT "DSC_0019_hp_01.jpg" UNION SELECT "DSC_1023_hp.jpg" UNION SELECT "DSC_1026_hp.jpg" UNION SELECT "DSC_0958_hp.jpg" UNION SELECT "DSC_0091_hp.jpg" UNION SELECT "DSC_0098_hp.jpg" UNION SELECT "DSC_0091_hp_01.jpg" UNION SELECT "DSC_0044_hp.jpg" UNION SELECT "DSC_0185_hp.jpg" UNION SELECT "DSC_0192-hp.jpg" UNION SELECT "DSC_0138_hp.jpg" UNION SELECT "DSC_1127_hp.jpg" UNION SELECT "DSC_1125_hp.jpg" UNION SELECT "DSC_1068_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2282, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0124_hp_01.jpg" UNION SELECT "DSC_0125_hp.jpg" UNION SELECT "DSC_0143_hp.jpg" UNION SELECT "DSC_0154_hp.jpg" UNION SELECT "DSC_0167_hp.jpg" UNION SELECT "DSC_0172_hp.jpg" UNION SELECT "DSC_0180_hp.jpg" UNION SELECT "DSC_0185_hp_01.jpg" UNION SELECT "DSC_0200_hp.jpg" UNION SELECT "DSC_0207_hp.jpg" UNION SELECT "DSC_0223_hp.jpg" UNION SELECT "DSC_0243_hp_01.jpg" UNION SELECT "DSC_0127_hp.jpg" UNION SELECT "DSC_0174_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2292, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6192_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2302, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "platzhalter_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2312, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "platzhalter_04.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2332, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0020_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2322, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_6192_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2342, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_1517_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2342, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_1511_hp.jpg" UNION SELECT "DSC_1561_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2352, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "85eabe34b1_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Cover_2014_nr_117.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2362, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Siegerpaare_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2362, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Siegerehrung_C-Latein_hp.jpg" UNION SELECT "2366_-_1014_hp.jpg" UNION SELECT "Siegerehrung_B_latein_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2372, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "TC_Silvester_2014_A2_DRUCK.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2392, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_1570_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2392, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_1575_hp.jpg" UNION SELECT "DSC_1572_hp.jpg" UNION SELECT "DSC_1580-hp.jpg" UNION SELECT "DSC_1584_hp.jpg" UNION SELECT "DSC_1606_hp.jpg" UNION SELECT "DSC_1617_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2392, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_1608_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2392, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_1619-hp.jpg" UNION SELECT "DSC_1710_hp.jpg" UNION SELECT "DSC_1638_hp.jpg" UNION SELECT "DSC_1702_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2392, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_1620-hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2402, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_1726_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2372, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_1965_hp.jpg" UNION SELECT "DSC_1955_hp.jpg" UNION SELECT "DSC_1968_hp.jpg" UNION SELECT "DSC_1975_hp.jpg" UNION SELECT "DSC_2021_hp.jpg" UNION SELECT "DSC_2046_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2402, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_1757_hp.jpg" UNION SELECT "DSC_1752_hp.jpg" UNION SELECT "DSC_1768_hp.jpg" UNION SELECT "DSC_1780_hp.jpg" UNION SELECT "DSC_1775_hp.jpg" UNION SELECT "DSC_1794_hp.jpg" UNION SELECT "DSC_1801_hp.jpg" UNION SELECT "IMG_8257_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "greiner_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2472, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_1351-1_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2482, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_Fruehlingsball_1.jpg" UNION SELECT "2018_Fruehlingsball_2.jpg" UNION SELECT "2018_Fruehlingsball_3.jpg" UNION SELECT "2018_Fruehlingsball_4.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3242, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DM_S_Latein.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2482, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Sitzplan-Fruehlingsball-2017_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3252, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Finnish_Open_17.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2352, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0008_hp_01.jpg" UNION SELECT "DSC_0019_hp_03.jpg" UNION SELECT "DSC_0037_hp_01.jpg" UNION SELECT "DSC_0040_hp.jpg" UNION SELECT "DSC_0041_hp_02.jpg" UNION SELECT "DSC_0044_1_hp.jpg" UNION SELECT "DSC_0050_hp.jpg" UNION SELECT "DSC_0057-1_hp.jpg" UNION SELECT "DSC_0065_hp.jpg" UNION SELECT "DSC_0102_hp.jpg" UNION SELECT "DSC_0104-1_hp.jpg" UNION SELECT "DSC_0106-1_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2492, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "85eabe34b1.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_0373_1_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2512, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_6954_Cierpka_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2522, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2015_Plakat_Fruehlingsball_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2522, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Goetz_hp.jpg" UNION SELECT "IMG_8381_hp.jpg" UNION SELECT "IMG_8385_hp.jpg" UNION SELECT "IMG_8383_hp.jpg" UNION SELECT "Siegerehrung_Latein_hp.jpg" UNION SELECT "IMG_8402_1_hp.jpg" UNION SELECT "Lever_Laiblin_hp.jpg" UNION SELECT "Blickle_Graeser_hp.jpg" UNION SELECT "Siegerehrung_SEN_II_hp.jpg" UNION SELECT "Kuchenbecker_hp_01.jpg" UNION SELECT "DSC_2328_hp.jpg" UNION SELECT "DSC_2215_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2562, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "MarkusSilkeVogel_hp.jpg" UNION SELECT "MarkusSilkeVogelAktion_hp_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1351, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Tiurnierleiter_hp.jpg" UNION SELECT "IMG_8470_hp.jpg" UNION SELECT "Wertungsrichter_hp.jpg" UNION SELECT "Siegerehrung_SEN_III_D_hp.jpg" UNION SELECT "Siegerehrung_SEN_III_C_hp.jpg" UNION SELECT "Sieger_SEN_III_C_Standard.jpg" UNION SELECT "Goetz_2_hp_01.jpg" UNION SELECT "Goetz_2_hp.jpg" UNION SELECT "Siegerehrung_SEN_III_B_1_hp.jpg" UNION SELECT "Sieger_SEN_III_B_hp.jpg" UNION SELECT "Siegerehrung_SEN_III_A_hp.jpg" UNION SELECT "Sieger_SEN_III_A_hp.jpg" UNION SELECT "Hesse_hp.jpg" UNION SELECT "Wolk_hp.jpg" UNION SELECT "Siegerehrung_SEN_III_S_hp.jpg" UNION SELECT "Sieger_SEN_III_S_hp.jpg" UNION SELECT "Siegerehrung_SEN_IV_S_hp.jpg" UNION SELECT "IMG_8487_hp.jpg" UNION SELECT "Cierpka_hp.jpg" UNION SELECT "IMG_8503_hp.jpg" UNION SELECT "IMG_8497_1_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2542, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2366_-_0698_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2532, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "LetsDance_1.jpg" UNION SELECT "LetsDance_2.jpg" UNION SELECT "LetsDance_3.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2562, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "MarkusSilkeVogelAktion_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2632, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2015_07_Trophy_Tuebingen_MarkusSilkeVogel3vl.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 28, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Cover_2015_118.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2562, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "MarkusSilkeVogel_hp_01.jpg" UNION SELECT "MarkusSilkeVogelAktion_hp_02.jpg" UNION SELECT "Gruppenfoto_hp.jpg" UNION SELECT "Ssiegerehrung_C-Latein.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2552, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DSC_0038_hp_01.jpg" UNION SELECT "DSC_0039_hp.jpg" UNION SELECT "DSC_0041_hp_03.jpg" UNION SELECT "IMG_8529_hp.jpg" UNION SELECT "DSC_0043_hp.jpg" UNION SELECT "DSC_0044_hp_01.jpg" UNION SELECT "DSC_0045_hp.jpg" UNION SELECT "DSC_0048_hp.jpg" UNION SELECT "DSC_0059_hp.jpg" UNION SELECT "DSC_0090_hp_01.jpg" UNION SELECT "IMG_8531_hp.jpg" UNION SELECT "DSC_0093_hp.jpg" UNION SELECT "DSC_0101_hp.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "VorstandFinanzreferentPeterNeumaier.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vorstand_WolfgangHesse.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "VorstandBeisitzerSportreferentMarcelBlickle2014.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vorstand_BeateLever.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vorstand_GertiGoetz.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vorstand_ChristineSchuster.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3522, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnieruebersicht_NaTaFe.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vorstand_MonikaNeumeier.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2582, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_3618_02.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2602, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_1734_2.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "VorstandVorsitzendeGabrieleOlbrichAlber.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2462, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vorstand_PeterNeumeier.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2582, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_3618.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2582, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "IMG_3618_01.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2592, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "HP_Hessen_tanzt_MarkusundSilkeVogel.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2622, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Plakat_West_Coast_Swing.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 671, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Meldeuebersicht_Seite_1.pdf" UNION SELECT "Meldeuebersicht_Seite_2.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 671, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Meldeuebersicht_01.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 671, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Meldeuebersicht_02.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2682, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "D-Standard.jpg" UNION SELECT "C-Standard.jpg" UNION SELECT "B-Standard.jpg" UNION SELECT "D-Latein.jpg" UNION SELECT "C-Latein.jpg" UNION SELECT "B-Latein.jpg" UNION SELECT "Turnierbuero_01.jpg" UNION SELECT "Auftritt.jpg" UNION SELECT "Auftritt_2.jpg" UNION SELECT "Auftritt_3_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2712, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Salsa_Workshop.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2722, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Walter_Greiner_HP.jpeg" UNION SELECT "Klavierduo_HP.jpeg" UNION SELECT "Gerti_Goetz_HP.jpeg" UNION SELECT "Christine_und_Florian_HP.jpeg" UNION SELECT "Markus_und_Silke_HP.jpeg" UNION SELECT "Marcel_und_Jessica_HP.jpeg" UNION SELECT "Hesse_HP_01.jpg" UNION SELECT "Helfer_01.jpeg" UNION SELECT "UEbungsleiter_HP_01.jpeg" UNION SELECT "Bruno_und_Monika_HP_01.jpeg" UNION SELECT "Tanzrunde_HP_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2852, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Markus_und_Silke_Vogel.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2772, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DTSA-korr.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2782, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2016-02-07-Salsa__Kurs_jpg.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2792, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2016-01-25-Disco__Kurs_Fortsetzung-1.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2982, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Wolfgang_und_Petra_Hesse_GOC_Stuttgart.jpg" UNION SELECT "Vogel_GOC.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2872, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2016-05-08Salsa_Kurs_neu.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2822, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Illingen.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2842, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Walter_Greiner_01.jpg" UNION SELECT "Band_01.jpg" UNION SELECT "Marcel_Blickle_und_Jessica_Graeser_01.JPG" UNION SELECT "Finale_HGR_A_01.jpg" UNION SELECT "Senioren_II_S_STD_01.jpg" UNION SELECT "Helfer_01.jpg" UNION SELECT "Tanzrunde_01.jpg" UNION SELECT "Tanzrunde2_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2832, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Sen_III_A_13.3..jpg" UNION SELECT "Sen_III_S_13.3..jpg" UNION SELECT "Tanzbild_Hesse_13.3..jpg" UNION SELECT "Sen_IV_S_13.3..jpg" UNION SELECT "Cierpka_13.3..jpg" UNION SELECT "Lilly_13.3..jpg" UNION SELECT "Gerti_13.3..jpg" UNION SELECT "Kasse_13.3..jpg" UNION SELECT "Kuchen_13.3..jpg" UNION SELECT "Turnierbuero2_13.3..jpg" UNION SELECT "Turnierbuero_13.3..jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2862, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Neumaier_Heiligenhafen_Foto_Butenschoen.jpg" UNION SELECT "Neumaier_Heiligenhafen_2_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2862, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Neumaier_Heiligenhafen_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2882, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vorstand_mv.jpg" UNION SELECT "ehrungen.jpg" UNION SELECT "Abzeichen.jpg" UNION SELECT "DSC_3435_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2892, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vogel_Hessen.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2922, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "LM_D_Standard.png" UNION SELECT "LM_D_Standard_Tanz.png" UNION SELECT "LM_Standard_Vogel.png" UNION SELECT "Urkunden_LM_Standard.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2932, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "platzhalter_06.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2912, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_QuangBarth.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2942, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Platzhalter_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2962, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Dance_Comp_16.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2992, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Quang_Barth_LM.jpg" UNION SELECT "Hesse_LM.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3012, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Flyer_Homepage_Silvesterparty_2016_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3022, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Flyer_Homepage_Weihnachtsfeier_2016.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1351, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnieruebersicht_NaTaFe_01.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3042, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Trophy-Sieger_2016.jpg" UNION SELECT "Siegerehrung_Turnier_am_09-10-16.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3042, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Siegerehrung_Turnier_am_09-10-16_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3052, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "NaTaFe_1.jpg" UNION SELECT "Turnierleiterin_Silke_Vogel.jpg" UNION SELECT "Turnierbuero_bei_der_Arbeit.jpg" UNION SELECT "Silke_und_Marcel.jpg" UNION SELECT "Siegerehrung_D_Latein.jpg" UNION SELECT "Siegerehrung_C_Latein.jpg" UNION SELECT "Siegerehrung_Jug_C_Standard.jpg" UNION SELECT "Siergehrung_HGR_C_Standard.jpg" UNION SELECT "Siegerehrung_Jug_B_Latein.jpg" UNION SELECT "Siegerehrung_HGR_B_Latein.jpg" UNION SELECT "Siegerehrung_Jug_B_Standard.jpg" UNION SELECT "Siegerehrung_HGR_B_Standard.jpg" UNION SELECT "Kuchenbuffet.jpg" UNION SELECT "Turnierbuero_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3432, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vogel_GOC_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3112, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Fruehlingsball_2017.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3132, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "NeckarAlb_Tanz-Festival.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3072, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "KWF_16_1.jpg" UNION SELECT "KWF_16_2.jpg" UNION SELECT "KWF_16_3.jpg" UNION SELECT "KWF_16_4.jpg" UNION SELECT "KWF_16_5.jpg" UNION SELECT "KWF_16_6.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3092, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "WF_16_1.jpg" UNION SELECT "WF_16_2.jpg" UNION SELECT "WF_16_3.jpg" UNION SELECT "WF_16_4.jpg" UNION SELECT "WF_16_5.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3112, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Sitzplan-Fruehlingsball-2017.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3112, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Sitzplan-Fruehlingsball-2017_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3112, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Sitzplan-Fruehlingsball-2017_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3142, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2017_02_04_Siegerehrung_Sen._IV_S.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3262, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20170325_lm-standard-pia-marc.jpg" UNION SELECT "20170325_Siegerehrung_II_D_lat.jpg" UNION SELECT "20170325_Siegerehrung_D_Std.jpg" UNION SELECT "20170325_Siegergehrung_C_Std.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3202, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "LM_Heidenheim_Neumaier.jpg" UNION SELECT "LM_Heidenheim_Siegerehrung2017_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 2482, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Saalplan_01.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3202, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "LM_Heidenheim_Siegerehrung2017.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3162, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "platzhalter_05.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3532, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Siegerehrung-Bohn-LM_2017.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3542, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Oktoberfest_17.jpg" UNION SELECT "Oktoberfest_2017_2.jpg" UNION SELECT "Oktoberfest_Deko_2017.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1792, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "___aaa.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3552, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Turnierpaar_SchollLever_l.jpg" UNION SELECT "Turnierpaar_SchollLever_r.jpg" UNION SELECT "Turnierpaar_SchollLever.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3212, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "NaTaFe_17_1.JPG" UNION SELECT "NaTaFe_17_2.JPG" UNION SELECT "NaTaFe_17_3.JPG" UNION SELECT "NaTaFe_17_4.JPG" UNION SELECT "NaTaFe_17_5.JPG" UNION SELECT "NaTaFe_17_6.JPG" UNION SELECT "NaTaFe_17_7.JPG" UNION SELECT "NaTaFe_17_8.JPG" UNION SELECT "NaTaFe_17_9.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3222, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "FB_17_Band.JPG" UNION SELECT "FB_17_Turnierleiterin.jpg" UNION SELECT "FB_17_Wertungsrichter.jpg" UNION SELECT "FB_17_Siegerehrung_A_Lat.jpg" UNION SELECT "FB_17_Siegertanz_A_Lat.jpg" UNION SELECT "FB_17_Kuchenbecker_Tanz.jpg" UNION SELECT "FB_17_Siegerehrung_STD.jpg" UNION SELECT "FB_17_Turniermusik.jpg" UNION SELECT "FB_17_Vorstand.JPG" UNION SELECT "FB_17_Tanzrunde.jpg" UNION SELECT "FB_17_Tanzrunde_2_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 1792, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "ErdeUndMond.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3292, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bodenseetanzfest_2017.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3302, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Finnish_Open_01.jpg" UNION SELECT "Vienna_Dance_Concours.png") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3312, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "MV_17_Ehrungen.jpg" UNION SELECT "MV_17_Dank_Vorstand.jpg" UNION SELECT "MV_17_Neuer_Vorstand.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3282, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2017_Dt.Meisterschaft_Hesse.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3322, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Vogel_GOC_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3352, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Tanz_in_den_Mai_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3362, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Muttertag_01.jpg" UNION SELECT "Muttertag_2_02.jpg" UNION SELECT "Muttertag_3.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3372, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Muttertag_03.jpg" UNION SELECT "Muttertag_2_01.jpg" UNION SELECT "Muttertag_3_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3382, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "FB_17_Kuchenbecker_Tanz_02.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3382, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "FB_17_Kuchenbecker_Tanz_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3392, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Bohn_Hessen_tanzt.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3402, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2017_05_27_Paris_Open.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3422, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Grillabend.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3442, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "170730_LS_66.jpg" UNION SELECT "17_07_30_LS_66_Siegerehrung.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3452, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "GOC_2017_Vogel.jpg" UNION SELECT "GOC_2017_Vogel_2.jpg" UNION SELECT "GOC_2017_FloTine.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3472, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20170827_Bembelturnier_Siegerehrung.jpg" UNION SELECT "20170827_Bembelturnier.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3492, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Oktoberfest_2017.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3532, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Foto-Bohn-LM_2017.jpg" UNION SELECT "Siegerehrung-Bohn-LM_2017_01.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3572, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Trophy_Senioren.jpg" UNION SELECT "Trophy_Senioren_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3582, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Weihnachtsfeier_17.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3592, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "20171126_BSW_Siegerehrung.jpg" UNION SELECT "20171126_BSW_Felix_Mona_Latein.jpg" UNION SELECT "20171126_BSW_Gunther_Beate_Standard.jpg" UNION SELECT "20171126_BSW_Felix_Mona_Standard.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3602, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Mutscheltag_18.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3612, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_SalsaKurs.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3622, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_NeueKurse.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3632, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "WF17_Begruessung_Gerti_HP.jpg" UNION SELECT "WF17_Klaviermusik_HP.jpg" UNION SELECT "WF17_Deko_Liedblatt_HP.jpg" UNION SELECT "WF17_Gaeste_HP.jpg" UNION SELECT "WF_17_Tanzrunden_HP.jpg" UNION SELECT "WF_17_Dank_Helfer_HP.jpg" UNION SELECT "WF_17_Dank_UEbungsleiter_HP.jpg" UNION SELECT "WF17_Franzi_und_Felix_HP.jpg" UNION SELECT "WF17_Markus_und_Silke_HP.jpg" UNION SELECT "WF17_Nonnen_HP.jpg" UNION SELECT "WF17_Nonnen_und_Jive_HP.jpg" UNION SELECT "KFW_2_HP.jpg" UNION SELECT "KFW_3_HP.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3642, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_DiscoFoxKurs.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3652, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_Mutscheln_1.jpg" UNION SELECT "2018_Mutscheln_2.jpg" UNION SELECT "2018_Mutscheln_3.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3662, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_AachenerTanzsporttage_1.jpg" UNION SELECT "2018_AachenerTanzsporttage_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3682, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_TanzsporttagSinsheim_1.jpg" UNION SELECT "2018_TanzsporttagSinsheim_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3722, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Saalplan.JPG") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3732, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_Fasching_01.jpg" UNION SELECT "2018_Fasching_02.jpg" UNION SELECT "2018_Fasching_03.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3742, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "NeckarAlb_TanzFestival_Progr._Sonntag.pdf") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3892, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_VierfachesTurnierwochenende_1.jpg" UNION SELECT "2018_VierfachesTurnierwochenende_2.jpg" UNION SELECT "2018_VierfachesTurnierwochenende_3.jpg" UNION SELECT "2018_VierfachesTurnierwochenende_4.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3792, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_Breitensportwettbewerb.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3802, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "FB-18_-Band-HP.jpg" UNION SELECT "FB-18_Siegerehrung-B-HP.jpg" UNION SELECT "FB-18_Siegerehrung-STD-hp.jpg" UNION SELECT "FB-18_Tanzrunde-HP.jpg" UNION SELECT "NATF-18_Lever-Scholl-HP.jpg" UNION SELECT "NATF-Ingrid-Werner-HP.jpg" UNION SELECT "NATF_Gabi-Thomas-HP.jpg" UNION SELECT "NATF_Cierpka-HP.jpg" UNION SELECT "NATF_Hesse-HP.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3852, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Botafe_LeverScholl.jpg" UNION SELECT "BOTAFE_18.jpg" UNION SELECT "Botafe_Siegerehrung_C.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3862, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_TurnierStylingkurs_01.jpg" UNION SELECT "2018_TurnierStylingkurs_02.jpg" UNION SELECT "2018_TurnierStylingkurs_03.jpg" UNION SELECT "2018_TurnierStylingkurs_04.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3872, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_Deutschlandpokal_1.jpg" UNION SELECT "2018_Deutschlandpokal_2.jpg" UNION SELECT "2018_Deutschlandpokal_3.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3882, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_BlauesBandBerlin.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3902, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_HessenTanzt_1.jpg" UNION SELECT "2018_HessenTanzt_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3912, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_Hochrhein_Tanzsporttage_1.jpg" UNION SELECT "2018_Hochrhein_Tanzsporttage_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3922, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "201805_LindyHopWorkshop.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3942, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "201805_WM_SenIIIS_Kuchenbecker.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3952, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "2018_ThropyKarlsruhe.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 3962, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "201805_Mitgliederversammlung_LangjaehrigeMitglieder.jpg" UNION SELECT "201805_Mitgliederversammlung_Vorstand.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 4082, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "Hesse_Siegerehrung_2.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 4092, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "DanceComp_Hesse.jpg" UNION SELECT "DanceComp_MC.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 4152, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "1807_Rosenheim.jpg") A WHERE img IS NOT NULL;
+REPLACE INTO sys_file_reference_temp
+SELECT NULL, 4202, img
+FROM (
+  SELECT NULL img
+  UNION SELECT "201808_Hesse.jpg" UNION SELECT "201808_Rieker.jpg" UNION SELECT "201808_LeverScholl.jpg") A WHERE img IS NOT NULL;
