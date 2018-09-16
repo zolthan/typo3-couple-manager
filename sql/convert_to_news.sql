@@ -22,10 +22,13 @@ WHERE pid NOT IN (SELECT uid FROM d02b2c81.pages_OLD)
    OR deleted = 1
    OR hidden = 1;
 
+/** DELETE ALL NEWS IN IMPORTED FOLDER */
 DELETE
 FROM d02b2c81.tx_news_domain_model_news
 WHERE pid = 163;
 
+/** IMPORT NEWS FROM OLD TT_CONTENT */
+SET @@group_concat_max_len = 1024*10;
 INSERT INTO d02b2c81.tx_news_domain_model_news (uid, pid, tstamp, crdate, cruser_id, title, bodytext, datetime, archive, import_id, import_source)
 SELECT
     -- uid
@@ -133,6 +136,17 @@ WHERE p.pid IN (35, 3672, 3182, 2742, 2412, 1772, 1391, 862, 482, 201, 184, 183,
   AND c.hidden = 0
 GROUP BY c.pid
 ORDER BY p.uid ASC;
+
+/** UPDATE CUT BODY TEXTS */
+UPDATE d02b2c81.tx_news_domain_model_news n
+SET bodytext = 
+    (SELECT TRIM('\n' FROM GROUP_CONCAT(DISTINCT NULLIF(REPLACE(trim(strip_tags(c.bodytext)),'&nbsp;', ' '),'') ORDER BY c.tstamp ASC SEPARATOR '\n')) AS bodytext
+        FROM d02b2c81.pages_OLD p
+		  INNER JOIN d02b2c81.tt_content_OLD c ON p.uid = c.pid
+        WHERE n.import_id = CONCAT('pid-', p.uid)
+GROUP BY c.pid)
+;
+
 
 /** REPLACE OLD FILE REFERENCES WITH IMAGE NAMES **/
 UPDATE d02b2c81.tt_content_OLD c1
