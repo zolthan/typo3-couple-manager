@@ -1,4 +1,6 @@
 <?php
+$modelFields = 'title,organizer,date_start,date_end,size_dance_floor,city,country,address,phone,info';
+
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition',
@@ -7,23 +9,20 @@ return [
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'versioningWS' => true,
-//        'languageField' => 'sys_language_uid',
-//        'transOrigPointerField' => 'l10n_parent',
-//        'transOrigDiffSourceField' => 'l10n_diffsource',
         'delete' => 'deleted',
         'enablecolumns' => [
             'disabled' => 'hidden',
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'title,date_start,date_end,organizer,size_dance_floor,country,city,address',
+        'searchFields' => $modelFields,
         'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_competition.svg'
     ],
     'interface' => [
-        'showRecordFieldList' => 'hidden,title,date_start,date_end,organizer,size_dance_floor,country,city,address',
+        'showRecordFieldList' => 'hidden,' . $modelFields,
     ],
     'types' => [
-        '0' => ['showitem' => 'hidden,title,organizer,date_start,date_end,size_dance_floor,city,country,address'],
+        '0' => ['showitem' => 'hidden,' . $modelFields],
     ],
     'columns' => [
         't3ver_label' => [
@@ -56,6 +55,22 @@ return [
 
             ],
         ],
+        'organizer' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.organizer',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['', 0],
+                ],
+                'foreign_table' => 'tx_couplemanager_domain_model_organizer',
+                'foreign_table_where' => 'ORDER BY tx_couplemanager_domain_model_organizer.name',
+                'size' => 1,
+                'minitems' => 0,
+                'maxitems' => 1
+            ],
+        ],
         'date_start' => [
             'exclude' => true,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.date_start',
@@ -80,15 +95,6 @@ return [
                 'default' => '0000-00-00'
             ],
         ],
-        'organizer' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.organizer',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
         'size_dance_floor' => [
             'exclude' => true,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.size_dance_floor',
@@ -99,7 +105,15 @@ return [
                 'eval' => 'trim'
             ],
         ],
-
+        'city' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.city',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
         'country' => [
             'exclude' => true,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.country',
@@ -117,18 +131,28 @@ return [
                 'maxitems' => 1
             ],
         ],
-        'city' => [
+        'address' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.city',
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.address',
+            'config' => [
+                'type' => 'text',
+                'cols' => 30,
+                'rows' => 5,
+                'eval' => 'trim'
+            ]
+        ],
+        'phone' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.phone',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
                 'eval' => 'trim'
-            ],
+            ]
         ],
-        'address' => [
+        'info' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.address',
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.info',
             'config' => [
                 'type' => 'text',
                 'cols' => 30,
