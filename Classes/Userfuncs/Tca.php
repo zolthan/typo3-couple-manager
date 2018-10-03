@@ -21,7 +21,10 @@ use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionTypeReposi
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+use TYPO3\CMS\Extbase\Persistence\Repository;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
 /**
@@ -35,7 +38,9 @@ class Tca
     protected $coupleRepository;
     /** @var LocalizationUtility */
     protected $localize;
+    /** @var ResultRepository */
     protected $resultRepository;
+    /** @var CompetitionTypeRepository */
     protected $competitionTypeRepository;
 
     /**
@@ -43,30 +48,44 @@ class Tca
      */
     public function __construct()
     {
-        $this->objectManager             = GeneralUtility::makeInstance(ObjectManager::class);
-        $this->coupleRepository          = $this->objectManager->get(CoupleRepository::class);
-        $this->resultRepository          = $this->objectManager->get(ResultRepository::class);
+        $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
+        $this->coupleRepository = $this->objectManager->get(CoupleRepository::class);
+        $this->resultRepository = $this->objectManager->get(ResultRepository::class);
         $this->competitionTypeRepository = $this->objectManager->get(CompetitionTypeRepository::class);
     }
 
     /**
+     * @param Repository $repository
+     * @param int $uid
+     *
+     * @return AbstractEntity
+     */
+    protected function getObjectByUid($repository, $uid)
+    {
+        $query = $repository->createQuery();
+        $query->getQuerySettings()->setIgnoreEnableFields(true);
+        $query->matching($query->equals('uid', $uid));
+        return $query->execute()->getFirst();
+    }
+
+    /**
      * @param array $parameters
-     * @param Tca   $parentObject
+     * @param Tca $parentObject
      */
     public function getResultTitle(&$parameters, $parentObject)
     {
         /** @var Result $result */
-        $result = $this->resultRepository->findByUid($parameters['row']['uid']);
+        $result = $this->getObjectByUid($this->resultRepository, $parameters['row']['uid']);
         if ($result) {
             /** @var Competition $competition */
-            $competition     = $result->getCompetition()->current();
+            $competition = $result->getCompetition()->current();
             $competitionName = '[N/A]';
             if ($competition) {
                 $competitionName = $competition->getTitle();
             }
 
             /** @var Couple $couple */
-            $couple     = $result->getCouple()->current();
+            $couple = $result->getCouple()->current();
             $coupleName = '[N/A]';
             if ($couple) {
                 $coupleName = $couple->getCoupleName();
@@ -77,12 +96,12 @@ class Tca
 
     /**
      * @param array $parameters
-     * @param Tca   $parentObject
+     * @param Tca $parentObject
      */
     public function getCompetitionTypeTitle(&$parameters, $parentObject)
     {
         /** @var CompetitionType $type */
-        $type = $this->competitionTypeRepository->findByUid($parameters['row']['uid']);
+        $type = $this->getObjectByUid($this->competitionTypeRepository, $parameters['row']['uid']);
         if ($type) {
             $parameters['title'] = sprintf('%s (%s)', $type->getName(), $type->getOrganization());
         }
@@ -90,15 +109,45 @@ class Tca
 
     /**
      * @param array $parameters
-     * @param Tca   $parentObject
+     * @param Tca $parentObject
      */
     public function getCoupleName(&$parameters, $parentObject)
     {
         /** @var Couple $couple */
-        $couple = $this->coupleRepository->findByUid($parameters['row']['uid']);
+        $couple = $this->getObjectByUid($this->coupleRepository, $parameters['row']['uid']);
         if ($couple) {
             $parameters['title'] = $couple->getCoupleName();
         }
+    }
+
+    /**
+     * @param array $config
+     *
+     * @return array
+     */
+    public function getCoupleOptionList($config)
+    {
+        $optionList = [];
+        $query = $this->coupleRepository->createQuery();
+        $query->getQuerySettings()
+            ->setIgnoreEnableFields(true)
+            ->setStoragePageIds([$config['row']['pid']]);
+        $query->setOrderings([
+                'active_couple' => QueryInterface::ORDER_DESCENDING,
+                'man_last_name' => QueryInterface::ORDER_ASCENDING,
+                'man_first_name' => QueryInterface::ORDER_ASCENDING,
+                'woman_last_name' => QueryInterface::ORDER_ASCENDING,
+                'woman_first_name' => QueryInterface::ORDER_ASCENDING,
+            ]
+        );
+        $result = $query->execute();
+        foreach ($result AS $couple) {
+            /** @var Couple $couple */
+            $optionList[] = [$couple->getCoupleName(), $couple->getUid()];
+        }
+        // return config
+        $config['items'] = array_merge($config['items'], $optionList);
+        return $config;
     }
 
     /**
