@@ -58,6 +58,7 @@ CREATE TABLE tx_couplemanager_domain_model_competition (
   pid              INT(11) DEFAULT '0'              NOT NULL,
 
   result           INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
+  organizer        INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
 
   title            VARCHAR(255) DEFAULT ''          NOT NULL,
   date_start       DATE                                      DEFAULT '0000-00-00',
@@ -65,8 +66,9 @@ CREATE TABLE tx_couplemanager_domain_model_competition (
   country          INT(11) DEFAULT '0'              NOT NULL,
   city             VARCHAR(255) DEFAULT ''          NOT NULL,
   address          TEXT,
-  organizer        VARCHAR(255) DEFAULT ''          NOT NULL,
-  size_dance_floor VARCHAR(255) DEFAULT ''          NOT NULL,
+  phone            VARCHAR(255)                              DEFAULT '',
+  size_dance_floor VARCHAR(255)                              DEFAULT '',
+  info             VARCHAR(255)                              DEFAULT '',
 
   tstamp           INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
   crdate           INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
@@ -109,6 +111,7 @@ CREATE TABLE tx_couplemanager_domain_model_result (
   couple            INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
   competition       INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
   competition_type  INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
+
   date              DATE                                      DEFAULT '0000-00-00',
   starting_group    VARCHAR(5) DEFAULT '0'           NOT NULL,
   starting_class    VARCHAR(2) DEFAULT '0'           NOT NULL,
@@ -191,16 +194,18 @@ CREATE TABLE tx_couplemanager_domain_model_competitiontype (
 );
 
 #
-# Table structure for table 'tx_couplemanager_domain_model_competitiontype'
+# Table structure for table 'tx_couplemanager_domain_model_organizer'
 #
 CREATE TABLE tx_couplemanager_domain_model_organizer (
 
   uid              INT(11)                          NOT NULL AUTO_INCREMENT,
   pid              INT(11) DEFAULT '0'              NOT NULL,
 
+  country          INT(11) DEFAULT '0'              NOT NULL,
+
   name             VARCHAR(255) DEFAULT ''          NOT NULL,
   city             VARCHAR(255) DEFAULT ''          NOT NULL,
-  zn_country_uid   INT(11) DEFAULT '0'              NOT NULL,
+  website          VARCHAR(255)                              DEFAULT '',
 
   tstamp           INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
   crdate           INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
