@@ -26,7 +26,8 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             '
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:couple_manager/Configuration/TSconfig/ContentElementWizard.txt">
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:couple_manager/Configuration/TSconfig/TableSorting.typoscript">
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:couple_manager/Configuration/TSconfig/ContentElementWizard.typoscript">
     '
         );
 
