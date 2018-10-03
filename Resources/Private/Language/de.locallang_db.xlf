@@ -21,6 +21,9 @@
             <trans-unit id="tx_couplemanager_domain_model_organizer.country">
                 <target>Land</target>
             </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_organizer.website">
+                <target>Website</target>
+            </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple">
                 <target>Paar</target>
             </trans-unit>
@@ -74,6 +77,12 @@
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition.address">
                 <target>Adresse</target>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competition.phone">
+                <target>Telefon</target>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_competition.info">
+                <target>Info</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition.organizer">
                 <target>Veranstalter</target>
