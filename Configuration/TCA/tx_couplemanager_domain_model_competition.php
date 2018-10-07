@@ -60,15 +60,25 @@ return [
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.organizer',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    ['', 0],
-                ],
+                'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_couplemanager_domain_model_organizer',
                 'foreign_table_where' => 'ORDER BY tx_couplemanager_domain_model_organizer.name',
-                'size' => 1,
-                'minitems' => 0,
-                'maxitems' => 1
+                'MM' => 'tx_couplemanager_domain_model_organizer_competition',
+                'enableMultiSelectFilterTextfield' => true,
+                'fieldControl' => [
+                    'addRecord' => [
+                        'disabled' => false,
+                        'options' => [
+//                            'title' => 'Edit a selected record!',
+                        ],
+                    ],
+                    'editPopup' => [
+                        'disabled' => false,
+                        'options' => [
+//                            'title' => 'Edit a selected record!',
+                        ],
+                    ],
+                ],
             ],
         ],
         'date_start' => [

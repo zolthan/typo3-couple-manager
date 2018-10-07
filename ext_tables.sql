@@ -2,7 +2,6 @@
 # Table structure for table 'tx_couplemanager_domain_model_couple'
 #
 CREATE TABLE tx_couplemanager_domain_model_couple (
-
   uid                     INT(11)                          NOT NULL AUTO_INCREMENT,
   pid                     INT(11) DEFAULT '0'              NOT NULL,
 
@@ -45,15 +44,15 @@ CREATE TABLE tx_couplemanager_domain_model_couple (
   PRIMARY KEY (uid),
   KEY parent (pid),
   KEY t3ver_oid (t3ver_oid, t3ver_wsid),
-  KEY language (l10n_parent, sys_language_uid)
-
+  KEY language (l10n_parent, sys_language_uid),
+  KEY man (man_last_name, man_first_name),
+  KEY woman (woman_last_name, woman_first_name)
 );
 
 #
 # Table structure for table 'tx_couplemanager_domain_model_competition'
 #
 CREATE TABLE tx_couplemanager_domain_model_competition (
-
   uid              INT(11)                          NOT NULL AUTO_INCREMENT,
   pid              INT(11) DEFAULT '0'              NOT NULL,
 
@@ -97,14 +96,12 @@ CREATE TABLE tx_couplemanager_domain_model_competition (
   KEY parent (pid),
   KEY t3ver_oid (t3ver_oid, t3ver_wsid),
   KEY language (l10n_parent, sys_language_uid)
-
 );
 
 #
 # Table structure for table 'tx_couplemanager_domain_model_result'
 #
 CREATE TABLE tx_couplemanager_domain_model_result (
-
   uid               INT(11)                          NOT NULL AUTO_INCREMENT,
   pid               INT(11) DEFAULT '0'              NOT NULL,
 
@@ -147,14 +144,12 @@ CREATE TABLE tx_couplemanager_domain_model_result (
   KEY parent (pid),
   KEY t3ver_oid (t3ver_oid, t3ver_wsid),
   KEY language (l10n_parent, sys_language_uid)
-
 );
 
 #
 # Table structure for table 'tx_couplemanager_domain_model_competitiontype'
 #
 CREATE TABLE tx_couplemanager_domain_model_competitiontype (
-
   uid              INT(11)                          NOT NULL AUTO_INCREMENT,
   pid              INT(11) DEFAULT '0'              NOT NULL,
 
@@ -190,14 +185,12 @@ CREATE TABLE tx_couplemanager_domain_model_competitiontype (
   KEY parent (pid),
   KEY t3ver_oid (t3ver_oid, t3ver_wsid),
   KEY language (l10n_parent, sys_language_uid)
-
 );
 
 #
 # Table structure for table 'tx_couplemanager_domain_model_organizer'
 #
 CREATE TABLE tx_couplemanager_domain_model_organizer (
-
   uid              INT(11)                          NOT NULL AUTO_INCREMENT,
   pid              INT(11) DEFAULT '0'              NOT NULL,
 
@@ -234,4 +227,30 @@ CREATE TABLE tx_couplemanager_domain_model_organizer (
   KEY parent (pid),
   KEY t3ver_oid (t3ver_oid, t3ver_wsid),
   KEY language (l10n_parent, sys_language_uid)
+);
+
+#
+# MM Table structure for table 'tx_couplemanager_domain_model_organizer_competition_mm'
+#
+CREATE TABLE tx_couplemanager_domain_model_organizer_competition (
+  uid              int(11) unsigned DEFAULT '0'     NOT NULL auto_increment,
+  pid              int(11) DEFAULT '0'              NOT NULL,
+
+  uid_local        int(11) unsigned DEFAULT '0'     NOT NULL,
+  uid_foreign      int(11) unsigned DEFAULT '0'     NOT NULL,
+  sorting          int(11) unsigned DEFAULT '0'     NOT NULL,
+  sorting_foreign  int(11) unsigned DEFAULT '0'     NOT NULL,
+
+  tstamp           INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
+  crdate           INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
+  deleted          SMALLINT(5) UNSIGNED DEFAULT '0' NOT NULL,
+  hidden           SMALLINT(5) UNSIGNED DEFAULT '0' NOT NULL,
+
+  sys_language_uid INT(11) DEFAULT '0'              NOT NULL,
+  l10n_parent      INT(11) DEFAULT '0'              NOT NULL,
+  l10n_diffsource  MEDIUMBLOB,
+  l10n_state       TEXT,
+
+  PRIMARY KEY (uid),
+  KEY parent (pid, uid_local, uid_foreign)
 );
