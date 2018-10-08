@@ -4,6 +4,10 @@
           product-name="couple_manager">
         <header/>
         <body>
+            <trans-unit id="3_4">
+                <source>3:4</source>
+            </trans-unit>
+
             <!-- custom translations -->
             <trans-unit id="please_choose">
                 <source>-- Please choose --</source>

@@ -230,7 +230,7 @@ CREATE TABLE tx_couplemanager_domain_model_organizer (
 );
 
 #
-# MM Table structure for table 'tx_couplemanager_domain_model_organizer_competition_mm'
+# MM Table structure for table 'tx_couplemanager_domain_model_organizer_competition'
 #
 CREATE TABLE tx_couplemanager_domain_model_organizer_competition (
   uid              int(11) unsigned DEFAULT '0'     NOT NULL auto_increment,
