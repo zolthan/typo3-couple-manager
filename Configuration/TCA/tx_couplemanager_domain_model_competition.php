@@ -5,6 +5,7 @@ return [
     'ctrl' => [
         'title' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition',
         'label' => 'title',
+        'sortby' => 'date_start DESC, title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',

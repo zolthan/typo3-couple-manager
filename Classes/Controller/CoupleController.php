@@ -63,6 +63,7 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     public function listAction()
     {
         $orderArray = [
+            'image' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
             'man_last_name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
         ];
         if ($this->settings['list']['activeCouplesFirst']) {

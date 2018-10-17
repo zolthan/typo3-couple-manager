@@ -5,6 +5,7 @@ return [
     'ctrl' => [
         'title' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_organizer',
         'label' => 'name',
+        'sortby' => 'name',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -18,7 +19,7 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'name,city',
+        'searchFields' => $modelFields,
         'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_organizer.svg'
     ],
     'interface' => [

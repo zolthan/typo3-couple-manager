@@ -113,6 +113,10 @@ class Tca
      */
     public function getCoupleName(&$parameters, $parentObject)
     {
+//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($GLOBALS['TCA']['tx_couplemanager_domain_model_couple']['columns']['image']['config']['overrideChildTca'], 'couple');
+//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($GLOBALS['TCA']['pages']['columns']['media']['config']['overrideChildTca'], 'pages');
+
+
         /** @var Couple $couple */
         $couple = $this->getObjectByUid($this->coupleRepository, $parameters['row']['uid']);
         if ($couple) {
