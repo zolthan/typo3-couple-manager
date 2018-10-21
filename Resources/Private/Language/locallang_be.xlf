@@ -108,6 +108,12 @@
 			<trans-unit id="pleaseChoose" xml:space="preserve">
 				<source>--- Please choose ---</source>
 			</trans-unit>
+			<trans-unit id="addRecord" xml:space="preserve">
+				<source>Add a new record</source>
+			</trans-unit>
+			<trans-unit id="editRecord" xml:space="preserve">
+				<source>Edit a selected record</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

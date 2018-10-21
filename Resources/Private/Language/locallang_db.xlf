@@ -24,6 +24,9 @@
 			<trans-unit id="tx_couplemanager_domain_model_organizer.website">
 				<source>Website</source>
 			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_organizer.info">
+				<source>Info</source>
+			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple">
 				<source>Couple</source>
 			</trans-unit>
@@ -122,6 +125,9 @@
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_result.competition_type">
 				<source>Competition Type</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_result.info">
+				<source>Info</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_competitiontype">
 				<source>Competition Type</source>
