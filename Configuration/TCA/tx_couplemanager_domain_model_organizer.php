@@ -1,5 +1,5 @@
 <?php
-$modelFields = 'name,city,country,website';
+$modelFields = 'name,city,country,website,info';
 
 return [
     'ctrl' => [
@@ -92,6 +92,16 @@ return [
                 'size' => 30,
                 'eval' => 'trim'
             ],
+        ],
+        'info' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_organizer.info',
+            'config' => [
+                'type' => 'text',
+                'cols' => 30,
+                'rows' => 5,
+                'eval' => 'trim'
+            ]
         ],
     ],
 ];
