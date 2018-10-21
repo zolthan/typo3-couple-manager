@@ -72,4 +72,14 @@ class CompetitionType extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->organization = $organization;
     }
+
+    /**
+     * Gets the label for competition type select fields
+     *
+     * @return string
+     */
+    public function getOptionLabel()
+    {
+        return sprintf('%s (%s)', $this->getName(), $this->getOrganization());
+    }
 }

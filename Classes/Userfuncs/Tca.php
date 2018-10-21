@@ -17,6 +17,7 @@ use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Result;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionRepository;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionTypeRepository;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository;
@@ -40,6 +41,8 @@ class Tca
     protected $localize;
     /** @var ResultRepository */
     protected $resultRepository;
+    /** @var CompetitionRepository */
+    protected $competitionRepository;
     /** @var CompetitionTypeRepository */
     protected $competitionTypeRepository;
 
@@ -51,6 +54,7 @@ class Tca
         $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         $this->coupleRepository = $this->objectManager->get(CoupleRepository::class);
         $this->resultRepository = $this->objectManager->get(ResultRepository::class);
+        $this->competitionRepository = $this->objectManager->get(CompetitionRepository::class);
         $this->competitionTypeRepository = $this->objectManager->get(CompetitionTypeRepository::class);
     }
 
@@ -58,7 +62,7 @@ class Tca
      * @param Repository $repository
      * @param int $uid
      *
-     * @return AbstractEntity
+     * @return object
      */
     protected function getObjectByUid($repository, $uid)
     {
@@ -79,18 +83,31 @@ class Tca
         if ($result) {
             /** @var Competition $competition */
             $competition = $result->getCompetition()->current();
-            $competitionName = '[N/A]';
+            $competitionName = '[No/Av]';
             if ($competition) {
                 $competitionName = $competition->getTitle();
             }
 
             /** @var Couple $couple */
             $couple = $result->getCouple()->current();
-            $coupleName = '[N/A]';
+            $coupleName = '[No/Av]';
             if ($couple) {
                 $coupleName = $couple->getCoupleName();
             }
             $parameters['title'] = sprintf('%s - %s - %s', $result->getDate()->format('d.m.Y'), $coupleName, $competitionName);
+        }
+    }
+
+    /**
+     * @param array $parameters
+     * @param Tca $parentObject
+     */
+    public function getCompetitionIdentifier(&$parameters, $parentObject)
+    {
+        /** @var CompetitionType $type */
+        $type = $this->getObjectByUid($this->competitionRepository, $parameters['row']['uid']);
+        if ($type) {
+            $parameters['title'] = $type->getIdentifier();
         }
     }
 
@@ -103,7 +120,7 @@ class Tca
         /** @var CompetitionType $type */
         $type = $this->getObjectByUid($this->competitionTypeRepository, $parameters['row']['uid']);
         if ($type) {
-            $parameters['title'] = sprintf('%s (%s)', $type->getName(), $type->getOrganization());
+            $parameters['title'] = $type->getOptionLabel();
         }
     }
 
@@ -113,10 +130,6 @@ class Tca
      */
     public function getCoupleName(&$parameters, $parentObject)
     {
-//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($GLOBALS['TCA']['tx_couplemanager_domain_model_couple']['columns']['image']['config']['overrideChildTca'], 'couple');
-//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($GLOBALS['TCA']['pages']['columns']['media']['config']['overrideChildTca'], 'pages');
-
-
         /** @var Couple $couple */
         $couple = $this->getObjectByUid($this->coupleRepository, $parameters['row']['uid']);
         if ($couple) {
@@ -151,6 +164,70 @@ class Tca
         }
         // return config
         $config['items'] = array_merge($config['items'], $optionList);
+        return $config;
+    }
+
+    /**
+     * @param array $config
+     *
+     * @return array
+     */
+    public function getCompetionOptionList($config)
+    {
+        $optionList = [];
+        $query = $this->competitionRepository->createQuery();
+        $query->getQuerySettings()
+            ->setIgnoreEnableFields(true)
+            ->setStoragePageIds([$config['row']['pid']]);
+        $query->setOrderings([
+                'date_start' => QueryInterface::ORDER_DESCENDING,
+                'title' => QueryInterface::ORDER_ASCENDING,
+                'organizer' => QueryInterface::ORDER_ASCENDING,
+                'city' => QueryInterface::ORDER_ASCENDING,
+            ]
+        );
+        $result = $query->execute();
+        foreach ($result AS $competition) {
+            /** @var Competition $competition */
+            $optionList[] = [
+                $competition->getIdentifier(),
+                $competition->getUid(),
+                'tcarecords-tx_couplemanager_domain_model_competition-default'
+            ];
+        }
+        // return config
+        $config['items'] = $optionList;
+        return $config;
+    }
+
+    /**
+     * @param array $config
+     *
+     * @return array
+     */
+    public function getCompetionTypeOptionList($config)
+    {
+        $optionList = [];
+        $query = $this->competitionTypeRepository->createQuery();
+        $query->getQuerySettings()
+            ->setIgnoreEnableFields(true)
+            ->setStoragePageIds([$config['row']['pid']]);
+        $query->setOrderings([
+                'organization' => QueryInterface::ORDER_ASCENDING,
+                'name' => QueryInterface::ORDER_ASCENDING,
+            ]
+        );
+        $result = $query->execute();
+        foreach ($result AS $type) {
+            /** @var CompetitionType $type */
+            $optionList[] = [
+                $type->getOptionLabel(),
+                $type->getUid(),
+                'tcarecords-tx_couplemanager_domain_model_competitiontype-default'
+            ];
+        }
+        // return config
+        $config['items'] = $optionList;
         return $config;
     }
 
