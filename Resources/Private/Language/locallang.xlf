@@ -52,6 +52,9 @@
             <trans-unit id="sen1">
                 <source>Senioren I</source>
             </trans-unit>
+            <trans-unit id="adult">
+                <source>Adult (WDSF)</source>
+            </trans-unit>
             <trans-unit id="sen2">
                 <source>Senioren II</source>
             </trans-unit>

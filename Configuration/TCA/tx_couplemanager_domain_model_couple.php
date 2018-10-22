@@ -6,7 +6,7 @@ return [
         'title' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple',
         'label' => 'man_last_name',
         'label_userFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getCoupleName',
-        'sortby' => 'active_couple DESC,man_last_name ASC',
+        'default_sortby' => 'active_couple DESC, man_last_name ASC',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',

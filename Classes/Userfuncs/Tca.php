@@ -22,7 +22,6 @@ use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionTypeReposi
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
@@ -81,13 +80,16 @@ class Tca
         /** @var Result $result */
         $result = $this->getObjectByUid($this->resultRepository, $parameters['row']['uid']);
         if ($result) {
-            /** @var Competition $competition */
-            $competition = $result->getCompetition()->current();
-            $competitionName = '[No/Av]';
-            if ($competition) {
-                $competitionName = $competition->getTitle();
+            /** @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage $storage */
+            $storage = $result->getCompetition();
+            if ($storage) {
+                /** @var Competition $competition */
+                $competition = $storage->current();
+                $competitionName = '[N/A]';
+                if ($competition) {
+                    $competitionName = $competition->getTitle();
+                }
             }
-
             /** @var Couple $couple */
             $couple = $result->getCouple()->current();
             $coupleName = '[No/Av]';
@@ -258,7 +260,9 @@ class Tca
         $config['items'] = [
             [LocalizationUtility::translate('please_choose', 'couple_manager'), 0],
             ['S', 's'],
+            ['A/S', 'as'],
             ['A', 'a'],
+            ['B/A', 'ba'],
             ['B', 'b'],
             ['C', 'c'],
             ['D', 'd'],
@@ -282,6 +286,7 @@ class Tca
             [LocalizationUtility::translate('jun1', 'couple_manager'), 'jun1'],
             [LocalizationUtility::translate('jun2', 'couple_manager'), 'jun2'],
             [LocalizationUtility::translate('jug', 'couple_manager'), 'jug'],
+            [LocalizationUtility::translate('adult', 'couple_manager'), 'adult'],
             [LocalizationUtility::translate('hgr', 'couple_manager'), 'hgr'],
             [LocalizationUtility::translate('hgr2', 'couple_manager'), 'hgr2'],
             [LocalizationUtility::translate('sen1', 'couple_manager'), 'sen1'],

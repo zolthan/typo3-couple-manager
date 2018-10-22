@@ -44,6 +44,9 @@
             <trans-unit id="hgr2">
                 <target>Hauptgruppe II</target>
             </trans-unit>
+            <trans-unit id="adult">
+                <target>Adult (WDSF)</target>
+            </trans-unit>
             <trans-unit id="sen1">
                 <target>Senioren I</target>
             </trans-unit>
