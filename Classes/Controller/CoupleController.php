@@ -26,34 +26,13 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     protected $coupleRepository = null;
 
-//    /**
-//     * Checks if we have settings from BE-Editor.
-//     * We always forward to these settings due to the fact, that it
-//     * has to be possible to call two plugins on one page.
-//     */
-//    protected function initializeAction()
-//    {
-//        $controller = FALSE;
-//        $action = FALSE;
-//        var_dump($this->settings, $this->request->getArguments());
-//        die(sprintf('%s || %s', __METHOD__, __LINE__));
-//
-//        // search for specified settings in flexform and take these, if set.
-//        if (is_array($this->settings)
-//            && isset($this->settings)
-//            && isset($this->settings)
-//        ) {
-//            $controller = $this->settings;
-//            $action = $this->settings;
-//        }
-//
-//        if ($controller && $action && $this->actionMethodName != $action . "Action") {
-//            $tmpArgs = $this->request->getArguments();
-//            unset($tmpArgs);
-//            unset($tmpArgs);
-//            $this->forward($action, $controller, $this->extensionName, $tmpArgs);
-//        }
-//    }
+    /**
+     * resultRepository
+     *
+     * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository
+     * @inject
+     */
+    protected $resultRepository = null;
 
     /**
      * action list
@@ -70,6 +49,8 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             $orderArray = ['active_couple' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING] + $orderArray;
         }
         $this->coupleRepository->setDefaultOrderings($orderArray);
+        $couples = $this->coupleRepository->createQuery();
+        \TYPO3\CMS\Core\Utility\DebugUtility::debug($couples, sprintf('%s|%s' . PHP_EOL, __METHOD__, __LINE__));
         $couples = $this->coupleRepository->findAll();
         $this->view->assign('couples', $couples);
     }
@@ -92,8 +73,16 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function detailAction(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple)
     {
-//        \TYPO3\CMS\Core\Utility\DebugUtility::debug($this, sprintf('%s|%s' . PHP_EOL, __METHOD__, __LINE__));
-
         $this->view->assign('couple', $couple);
+
+        $orderArray = [
+            'discipline' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+            'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
+            'starting_class' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+        ];
+        $this->resultRepository->setDefaultOrderings($orderArray);
+        $results = $this->resultRepository->findByCouple($couple->getUid());
+
+        $this->view->assign('results', $results);
     }
 }
