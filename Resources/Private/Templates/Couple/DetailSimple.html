@@ -40,47 +40,6 @@
             </header>
             <f:format.html>{couple.description}</f:format.html>
         </div>
-        <!--<f:if condition="{results}">-->
-        <div class="col-xs-12">
-
-
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped">
-                    <caption>Turnierergebnisse</caption>
-                    <thead>
-                    <tr>
-                        <th>
-                            Title 1
-                        </th>
-                        <th>
-                            Title 2
-                        </th>
-                        <th>
-                            Title 3
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <f:for each="{results}" as="result" key="itemkey"
-                           reverse="false" iteration="iterator">
-                        <tr>
-                            <td>
-                                {result.position}
-                            </td>
-                            <td>
-                                {result.participantCount}
-                            </td>
-                            <td>
-                                {result.competition.title}
-                            </td>
-                        </tr>
-                    </f:for>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!--</f:if>-->
     </div>
 </f:section>
 </html>

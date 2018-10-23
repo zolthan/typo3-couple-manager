@@ -1,13 +1,13 @@
 mod.wizards.newContentElement.wizardItems.plugins {
-	elements {
-		couple_manager {
-			iconIdentifier = ext-couple_manager-wizard-icon
+    elements {
+        couple_manager {
+            iconIdentifier = ext-couple_manager-wizard-icon
             title = LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.plugin
             description = LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.plugin_description
             tt_content_defValues {
                 CType = list
                 list_type = couplemanager_couple
             }
-		}
-	}
+        }
+    }
 }

@@ -9,6 +9,24 @@
 			<trans-unit id="tx_couplemanager_domain_model_couple.plugin_description">
 				<source>Couple Plugin Description</source>
 			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_organizer">
+				<source>Organizer</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_organizer.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_organizer.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_organizer.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_organizer.website">
+				<source>Website</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_organizer.info">
+				<source>Info</source>
+			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple">
 				<source>Couple</source>
 			</trans-unit>
@@ -63,6 +81,12 @@
 			<trans-unit id="tx_couplemanager_domain_model_competition.address">
 				<source>Address</source>
 			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competition.phone">
+				<source>Telephone</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_competition.info">
+				<source>Info</source>
+			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_competition.organizer">
 				<source>Organizer</source>
 			</trans-unit>
@@ -101,6 +125,9 @@
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_result.competition_type">
 				<source>Competition Type</source>
+			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_result.info">
+				<source>Info</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_competitiontype">
 				<source>Competition Type</source>

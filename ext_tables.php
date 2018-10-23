@@ -4,15 +4,22 @@ defined('TYPO3_MODE') || die('Access denied.');
 call_user_func(
     function () {
 
+        $_EXTKEY = 'couple_manager';
+        $extensionName = 'SchwarzWeissReutlingen.CoupleManager';
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'SchwarzWeissReutlingen.CoupleManager',
+            $extensionName,
             'Couple',
             'Couple'
         );
 
         $pluginSignature = str_replace('_', '', 'couple_manager') . '_couple';
         $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:couple_manager/Configuration/FlexForms/flexform_couple.xml');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform_couple.xml');
+
+        $pluginName = 'menu'; // siehe Tx_Extbase_Utility_Extension::registerPlugin
+        $pluginSignature = strtolower($extensionName) . '_' . $pluginName;
+        $TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform_menu.xml');
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('couple_manager', 'Configuration/TypoScript', 'Couple Manager');
 

@@ -1,0 +1,24 @@
+mod.web_list.tableDisplayOrder {
+    tx_couplemanager_domain_model_organizer {
+        #before =
+        #after =
+    }
+
+    tx_couplemanager_domain_model_competition {
+        after = tx_couplemanager_domain_model_organizer
+    }
+
+    tx_couplemanager_domain_model_competitiontype {
+        #before =
+        #after =
+    }
+
+    tx_couplemanager_domain_model_couple {
+        #before =
+        #after =
+    }
+
+    tx_couplemanager_domain_model_result {
+        after = tx_couplemanager_domain_model_competitiontype,tx_couplemanager_domain_model_couple,tx_couplemanager_domain_model_competition
+    }
+}

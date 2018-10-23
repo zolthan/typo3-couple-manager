@@ -111,6 +111,12 @@
 			<trans-unit id="pleaseChoose" xml:space="preserve">
 				<target>--- Bitte wählen ---</target>
 			</trans-unit>
+			<trans-unit id="addRecord" xml:space="preserve">
+				<target>Einen neuen Eintrag einfügen</target>
+			</trans-unit>
+			<trans-unit id="editRecord" xml:space="preserve">
+				<target>Den ausgewählten Eintrag bearbeiten</target>
+			</trans-unit>
         </body>
     </file>
 </xliff>

@@ -4,6 +4,10 @@
           product-name="couple_manager">
         <header/>
         <body>
+            <trans-unit id="3_4">
+                <source>3:4</source>
+            </trans-unit>
+
             <!-- custom translations -->
             <trans-unit id="please_choose">
                 <source>-- Please choose --</source>
@@ -47,6 +51,9 @@
             </trans-unit>
             <trans-unit id="sen1">
                 <source>Senioren I</source>
+            </trans-unit>
+            <trans-unit id="adult">
+                <source>Adult (WDSF)</source>
             </trans-unit>
             <trans-unit id="sen2">
                 <source>Senioren II</source>

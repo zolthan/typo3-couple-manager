@@ -1,0 +1,11 @@
+<div>
+    <f:for each="{couples}" as="couple">
+        <div class="text-item-link">
+            <f:link.action pageUid="{settings.list.detailView}" controller="Couple" action="detail"
+                           arguments="{couple : couple}" title="Zur Seite von {couple.coupleName}">
+                <f:format.crop maxCharacters="100">{couple.coupleName}</f:format.crop>
+            </f:link.action>
+        </div>
+        <div class="clear"></div>
+    </f:for>
+</div>

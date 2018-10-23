@@ -14,8 +14,8 @@ namespace SchwarzWeissReutlingen\CoupleManager\Domain\Repository;
  ***/
 
 /**
- * The repository for Competitions
+ * The repository for Organizers
  */
-class CompetitionRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+class OrganizerRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
 }

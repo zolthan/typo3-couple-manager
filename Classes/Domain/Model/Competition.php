@@ -87,11 +87,12 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the title
      *
      * @param string $title
-     * @return void
+     * @return Competition
      */
     public function setTitle($title)
     {
         $this->title = $title;
+        return $this;
     }
 
     /**
@@ -108,11 +109,12 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the dateStart
      *
      * @param \DateTime $dateStart
-     * @return void
+     * @return Competition
      */
     public function setDateStart(\DateTime $dateStart)
     {
         $this->dateStart = $dateStart;
+        return $this;
     }
 
     /**
@@ -129,11 +131,12 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the dateEnd
      *
      * @param \DateTime $dateEnd
-     * @return void
+     * @return Competition
      */
     public function setDateEnd(\DateTime $dateEnd)
     {
         $this->dateEnd = $dateEnd;
+        return $this;
     }
 
     /**
@@ -150,11 +153,12 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the country
      *
      * @param int $country
-     * @return void
+     * @return Competition
      */
     public function setCountry($country)
     {
         $this->country = $country;
+        return $this;
     }
 
     /**
@@ -171,11 +175,12 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the city
      *
      * @param string $city
-     * @return void
+     * @return Competition
      */
     public function setCity($city)
     {
         $this->city = $city;
+        return $this;
     }
 
     /**
@@ -192,11 +197,12 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the address
      *
      * @param string $address
-     * @return void
+     * @return Competition
      */
     public function setAddress($address)
     {
         $this->address = $address;
+        return $this;
     }
 
     /**
@@ -213,11 +219,12 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the organizer
      *
      * @param string $organizer
-     * @return void
+     * @return Competition
      */
     public function setOrganizer($organizer)
     {
         $this->organizer = $organizer;
+        return $this;
     }
 
     /**
@@ -234,10 +241,21 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the sizeDanceFloor
      *
      * @param string $sizeDanceFloor
-     * @return void
+     * @return Competition
      */
     public function setSizeDanceFloor($sizeDanceFloor)
     {
         $this->sizeDanceFloor = $sizeDanceFloor;
+        return $this;
+    }
+
+    /**
+     * Returns a string that identifies the competition
+     *
+     * @return string
+     */
+    public function getIdentifier()
+    {
+        return sprintf('%s - %s (%s, %s)', $this->getDateStart()->format('Y-m'), $this->getTitle(), $this->getOrganizer(), $this->getCity());
     }
 }
