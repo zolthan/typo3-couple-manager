@@ -5,7 +5,7 @@ call_user_func(
     function () {
 
         if (TYPO3_MODE === 'BE') {
-            $icons        = [
+            $icons = [
                 'apps-pagetree-folder-contains-couples' => 'ext-news-folder-tree.svg',
                 'ext-couple_manager-wizard-icon'        => 'Extension.svg',
             ];
@@ -40,6 +40,14 @@ call_user_func(
                 'Competition' => '',
                 'Result'      => '',
             ]
+        );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'SchwarzWeissReutlingen.CoupleManager',
+            'Menu',
+            [
+                'Menu' => 'show,mobil',
+            ],
+            []
         );
     }
 );
