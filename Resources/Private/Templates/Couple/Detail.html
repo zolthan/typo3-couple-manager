@@ -61,7 +61,8 @@
             </tr>
         </thead>
         <tbody>
-            <f:for each="{results}" as="result">
+            <f:for each="{results}" as="result" key="itemkey"
+                   reverse="false" iteration="iterator">
             <tr>
                 <td>
                     {result.position}
