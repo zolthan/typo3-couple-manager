@@ -42,38 +42,62 @@
         </div>
         <!--<f:if condition="{results}">-->
         <div class="col-xs-12">
-
-
             <div class="table-responsive">
-                <table class="table table-bordered table-striped">
-                    <caption>Turnierergebnisse</caption>
-                    <thead>
-                    <tr>
-                        <th>
-                            Title 1
-                        </th>
-                        <th>
-                            Title 2
-                        </th>
-                        <th>
-                            Title 3
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                    <f:variable name="prevResult" value=""/>
                     <f:for each="{results}" as="result" key="itemkey"
                            reverse="false" iteration="iterator">
-                        <tr>
+
+                        <f:variable name="competition" value="{result.competition.0}"/>
+                        <f:variable name="competitionType" value="{result.competitionType.0}"/>
+
+                        <f:if condition="{iterator.isFirst}">
+                            <table class="table table-condensed table-bordered table-striped">
+                                <caption>Turnierergebnisse {result.discipline}</caption>
+                                <f:render partial="Result/TableHeader"/>
+                                <tbody>
+                        </f:if>
+                        <f:if condition="{result.discipline} != {prevResult.discipline}">
+                                </tbody>
+                            </table>
+                            <table class="table table-condensed table-bordered table-striped">
+                                <caption>Turnierergebnisse {result.discipline}</caption>
+                                <f:render partial="Result/TableHeader"/>
+                                <tbody>
+                        </f:if>
+
+                        <tr class="{f:if(condition: result.promotion, then: 'success', else: '')}">
                             <td>
+                                <f:format.date format="%d.%m.%Y">{result.date}</f:format.date>
+                                <f:if condition="{result.promotion}"><br />Aufstieg</f:if>
+                            </td>
+                            <td>
+                                <f:if condition="{competition.title} && {competitionType.name} != {competition.title}">
+                                    <span>{competition.title}</span><br/>
+                                </f:if>
+                                <em>{competitionType.name}</em>
+                            </td>
+                            <td>
+                                {competition.organizer}
+                                <br/>TC Schwarz-Weiss Reutlingen
+                            </td>
+                            <td>
+                                {competition.city}
+                            </td>
+                            <td>
+                                {result.startingGroup} {result.startingClass} {result.discipline}
+                                <br/><i>HGR B Std</i>
+                            </td>
+                            <td class="hidden-md hidden-lg">
+                                {result.position}/{result.participantCount}
+                            </td>
+                            <td class="hidden-xs hidden-sm">
                                 {result.position}
                             </td>
-                            <td>
+                            <td class="hidden-xs hidden-sm">
                                 {result.participantCount}
                             </td>
-                            <td>
-                                {result.competition.title}
-                            </td>
                         </tr>
+                        <f:variable name="prevResult" value="{result}"/>
                     </f:for>
                     </tbody>
                 </table>
