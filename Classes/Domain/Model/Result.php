@@ -27,23 +27,23 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * discipline
      *
-     * @var int
+     * @var string
      */
-    protected $discipline = 0;
+    protected $discipline = '';
 
     /**
      * startingGroup
      *
-     * @var int
+     * @var string
      */
-    protected $startingGroup = 0;
+    protected $startingGroup = '';
 
     /**
      * startingClass
      *
-     * @var int
+     * @var string
      */
-    protected $startingClass = 0;
+    protected $startingClass = '';
 
     /**
      * position
@@ -141,7 +141,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the discipline
      *
-     * @return int $discipline
+     * @return string $discipline
      */
     public function getDiscipline()
     {
@@ -151,7 +151,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the discipline
      *
-     * @param int $discipline
+     * @param string $discipline
      * @return void
      */
     public function setDiscipline($discipline)
@@ -162,7 +162,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the startingGroup
      *
-     * @return int $startingGroup
+     * @return string $startingGroup
      */
     public function getStartingGroup()
     {
@@ -172,7 +172,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the startingGroup
      *
-     * @param int $startingGroup
+     * @param string $startingGroup
      * @return void
      */
     public function setStartingGroup($startingGroup)
@@ -183,7 +183,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the startingClass
      *
-     * @return int $startingClass
+     * @return string $startingClass
      */
     public function getStartingClass()
     {
@@ -193,7 +193,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the startingClass
      *
-     * @param int $startingClass
+     * @param string $startingClass
      * @return void
      */
     public function setStartingClass($startingClass)

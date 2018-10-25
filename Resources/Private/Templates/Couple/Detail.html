@@ -7,7 +7,7 @@
             <div class="gallery-row row">
                 <div class="gallery-item col-xs-12">
                     <figure class="image">
-                        <!--<a href="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_05286f085d.jpg"
+                        <f:comment><!--<a href="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_05286f085d.jpg"
                            title="" data-lightbox-caption=""
                            class="lightbox"
                            data-lightbox-width="300" data-lightbox-height="300"
@@ -25,7 +25,7 @@
                                 <img src="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_ea4dc11757.jpg"
                                      title="" alt=""/>
                             </noscript>
-                        </a>-->
+                        </a>--></f:comment>
                         <f:render partial="Image"
                                   arguments="{file: couple.image, settings: settings, class: 'card-img-top img-responsive'}"/>
                     </figure>
@@ -43,7 +43,10 @@
         <!--<f:if condition="{results}">-->
         <div class="col-xs-12">
             <div class="table-responsive">
-                    <f:variable name="prevResult" value=""/>
+                <f:variable name="displayMobile" value="hidden-md hidden-lg"/>
+                <f:variable name="displayDesktop" value="hidden-xs hidden-sm"/>
+
+                <f:variable name="prevResult" value=""/>
                     <f:for each="{results}" as="result" key="itemkey"
                            reverse="false" iteration="iterator">
 
@@ -51,16 +54,16 @@
                         <f:variable name="competitionType" value="{result.competitionType.0}"/>
 
                         <f:if condition="{iterator.isFirst}">
-                            <table class="table table-condensed table-bordered table-striped">
-                                <caption>Turnierergebnisse {result.discipline}</caption>
+                            <table class="table table-condensed table-striped">
+                                <caption>Turnierergebnisse <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{result.discipline}" /></caption>
                                 <f:render partial="Result/TableHeader"/>
                                 <tbody>
                         </f:if>
-                        <f:if condition="{result.discipline} != {prevResult.discipline}">
+                        <f:if condition="{prevResult.discipline} && {result.discipline} != {prevResult.discipline}">
                                 </tbody>
                             </table>
-                            <table class="table table-condensed table-bordered table-striped">
-                                <caption>Turnierergebnisse {result.discipline}</caption>
+                            <table class="table table-condensed table-striped">
+                                <caption>Turnierergebnisse <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{result.discipline}" /></caption>
                                 <f:render partial="Result/TableHeader"/>
                                 <tbody>
                         </f:if>
@@ -70,30 +73,47 @@
                                 <f:format.date format="%d.%m.%Y">{result.date}</f:format.date>
                                 <f:if condition="{result.promotion}"><br />Aufstieg</f:if>
                             </td>
-                            <td>
-                                <f:if condition="{competition.title} && {competitionType.name} != {competition.title}">
-                                    <span>{competition.title}</span><br/>
+                            <td class="col-xs-4">
+                                <f:variable name="popoverTitle" value="Veranstalter"/>
+                                <f:variable name="popoverText" value="TC Schwarz-Weiss Reutlingen"/>
+                                <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
+                                    <f:variable name="popoverTitle" value="Turnierart / Veranstalter"/>
+                                    <f:variable name="popoverText" value="{competitionType.name} <br/> TC Schwarz-Weiss Reutlingen"/>
                                 </f:if>
-                                <em>{competitionType.name}</em>
+                                <a tabindex="0" data-toggle="popover" data-placement="top" data-trigger="hover"
+                                   data-container="body" data-html="true"
+                                   title="{popoverTitle}"
+                                   data-content="{popoverText}"
+                                >
+                                    <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
+                                        <f:then>
+                                            <span>{competition.title}</span>
+                                        </f:then>
+                                        <f:else>
+                                            <span>{competitionType.name}</span>
+                                        </f:else>
+                                    </f:if>
+                                    <span class="{displayMobile}"><br/>{competition.city}</span>
+                                </a>
                             </td>
-                            <td>
+                            <td class="{displayDesktop}">
                                 {competition.organizer}
-                                <br/>TC Schwarz-Weiss Reutlingen
+                                <br/>
                             </td>
-                            <td>
+                            <td class="{displayDesktop}">
                                 {competition.city}
                             </td>
-                            <td>
-                                {result.startingGroup} {result.startingClass} {result.discipline}
-                                <br/><i>HGR B Std</i>
+                            <td class="text-nowrap">
+                                <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{result.startingGroup}" />
+                                <f:format.case mode="upper">{result.startingClass}</f:format.case>
+                                <span class="{displayMobile} text-right"><br/>
+                                    {result.position}/{result.participantCount}
+                                </span>
                             </td>
-                            <td class="hidden-md hidden-lg">
-                                {result.position}/{result.participantCount}
-                            </td>
-                            <td class="hidden-xs hidden-sm">
+                            <td class="{displayDesktop} text-right">
                                 {result.position}
                             </td>
-                            <td class="hidden-xs hidden-sm">
+                            <td class="{displayDesktop} text-right">
                                 {result.participantCount}
                             </td>
                         </tr>
