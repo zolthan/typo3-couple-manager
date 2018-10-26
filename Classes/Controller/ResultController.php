@@ -32,7 +32,11 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function listAction()
     {
-        $results = $this->resultRepository->findAll();
+        $orderArray = [
+            'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
+        ];
+        $this->resultRepository->setDefaultOrderings($orderArray);
+        $results = $this->resultRepository->findAll()->getQuery()->setLimit(10)->execute();
         $this->view->assign('results', $results);
     }
 

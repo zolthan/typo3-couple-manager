@@ -1,50 +1,42 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
-
-This Template is responsible for creating a table of domain objects.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        List.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+    <!--
+        =====================
+            Templates/Result/List.html
+    -->
 
 <f:section name="main">
-<h1>Listing for Result</h1>
-
-<f:flashMessages />
-
-<table  class="tx_couplemanager" >
-	<tr>
-		<th><f:translate key="tx_couplemanager_domain_model_result.date" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_result.discipline" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_result.starting_group" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_result.starting_class" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_result.position" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_result.participant_count" /></th>
-		<th><f:translate key="tx_couplemanager_domain_model_result.promotion" /></th>
-		<th> </th>
-		<th> </th>
-	</tr>
-
-	<f:for each="{results}" as="result">
-		<tr>
-			<td><f:link.action action="show" arguments="{result : result}"> {result.date -> f:format.date()}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{result : result}"> {result.discipline}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{result : result}"> {result.startingGroup}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{result : result}"> {result.startingClass}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{result : result}"> {result.position}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{result : result}"> {result.participantCount}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{result : result}"> {result.promotion}</f:link.action></td>
-			<td><f:link.action action="edit" arguments="{result : result}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{result : result}">Delete</f:link.action></td>
-		</tr>
-	</f:for>
-</table>
-
-<f:link.action action="new">New Result</f:link.action>
+    <!--TYPO3SEARCH_end-->
+    <f:if condition="{results}">
+        <div class="results-list-view {f:if(condition: '{settings.templateLayout} == 2', then: 'panel-group')}"
+             id="{f:if(condition: '{settings.templateLayout} == 2', then: 'accordion-{contentObjectData.uid}', else: 'results-container-{contentObjectData.uid}')}"
+             role="{f:if(condition: '{settings.templateLayout} == 2', then: 'tablist')}"
+             aria-multiselectable="{f:if(condition: '{settings.templateLayout} == 2', then: 'true')}">
+            <f:for each="{results}" as="resultItem" iteration="iterator">
+                <f:if condition="{settings.templateLayout} == 1">
+                    <f:then>
+                        <f:render partial="Result/ItemBig"
+                                  arguments="{resultItem:resultItem,settings:settings,iterator:iterator}"/>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{settings.templateLayout} == 2">
+                            <f:then>
+                                <f:render partial="Result/ItemAccordion"
+                                          arguments="{resultItem:resultItem,settings:settings,iterator:iterator,contentObjectData:contentObjectData}"/>
+                            </f:then>
+                            <f:else>
+                                <f:render partial="Result/ItemAccordion"
+                                          arguments="{resultItem:resultItem,settings:settings,iterator:iterator,contentObjectData:contentObjectData}"/>
+                                <!--<f:render partial="Result/Item"-->
+                                          <!--arguments="{resultItem:resultItem,settings:settings,iterator:iterator}"/>-->
+                            </f:else>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </div>
+    </f:if>
+    <!--TYPO3SEARCH_begin-->
 </f:section>
 </html>

@@ -1,0 +1,35 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="accordion-heading-{contentObjectData.uid}-{resultItem.uid}">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-{contentObjectData.uid}"
+               href="#accordion-{contentObjectData.uid}-{resultItem.uid}" aria-expanded="false"
+               aria-controls="accordion-{contentObjectData.uid}-{resultItem.uid}">
+                <span>{resultItem.date -> f:format.date()} {resultItem.title}</span>
+            </a>
+        </h4>
+    </div>
+    <div id="accordion-{contentObjectData.uid}-{resultItem.uid}" class="panel-collapse collapse" role="tabpanel"
+         aria-labelledby="accordion-heading-{contentObjectData.uid}-{resultItem.uid}">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12">
+				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.date -> f:format.date()}</f:link.action>
+				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.discipline}</f:link.action>
+				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.startingGroup}</f:link.action>
+				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.startingClass}</f:link.action>
+				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.position}</f:link.action>
+				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.participantCount}</f:link.action>
+				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.promotion}</f:link.action>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
