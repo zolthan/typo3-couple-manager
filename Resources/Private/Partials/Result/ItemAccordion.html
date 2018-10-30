@@ -5,12 +5,14 @@
 		Partials/List/Item.html
 -->
 <div class="panel panel-default">
+    <f:variable name="competition" value="{resultItem.competition.0}"/>
+    <f:variable name="couple" value="{resultItem.couple.0}"/>
     <div class="panel-heading" role="tab" id="accordion-heading-{contentObjectData.uid}-{resultItem.uid}">
         <h4 class="panel-title">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-{contentObjectData.uid}"
                href="#accordion-{contentObjectData.uid}-{resultItem.uid}" aria-expanded="false"
                aria-controls="accordion-{contentObjectData.uid}-{resultItem.uid}">
-                <span>{resultItem.date -> f:format.date()} {resultItem.title}</span>
+                <span>{f:format.date(date: resultItem.date, format: "%d.%m.")} {couple.coupleName}</span>
             </a>
         </h4>
     </div>
@@ -19,13 +21,14 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12">
-				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.date -> f:format.date()}</f:link.action>
-				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.discipline}</f:link.action>
-				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.startingGroup}</f:link.action>
-				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.startingClass}</f:link.action>
-				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.position}</f:link.action>
-				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.participantCount}</f:link.action>
-				<f:link.action action="show" arguments="{result : resultItem}"> {resultItem.promotion}</f:link.action>
+                    <p>{competition.title} - {competition.city}</p>
+                    <p>
+                        <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{resultItem.startingGroup}" />
+                        <f:format.case mode="upper">{resultItem.startingClass}</f:format.case>
+                        <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}" />
+                    </p>
+                    <p>Platz {resultItem.position} / Gestartete Paare {resultItem.participantCount}</p>
+                    <f:if condition="{resultItem.promotion}"><p><span class="label label-danger">Aufstieg</span></p></f:if>
                 </div>
             </div>
         </div>
