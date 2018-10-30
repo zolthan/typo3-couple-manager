@@ -49,8 +49,8 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             $orderArray = ['active_couple' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING] + $orderArray;
         }
         $this->coupleRepository->setDefaultOrderings($orderArray);
-        $couples = $this->coupleRepository->createQuery();
-        \TYPO3\CMS\Core\Utility\DebugUtility::debug($couples, sprintf('%s|%s' . PHP_EOL, __METHOD__, __LINE__));
+//        $couples = $this->coupleRepository->createQuery();
+//        \TYPO3\CMS\Core\Utility\DebugUtility::debug($couples, sprintf('%s|%s' . PHP_EOL, __METHOD__, __LINE__));
         $couples = $this->coupleRepository->findAll();
         $this->view->assign('couples', $couples);
     }
