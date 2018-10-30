@@ -7,8 +7,8 @@
             <f:for each="{couples}" as="couple">
                 <div class="card col-lg-3 col-sm-6 {f:if(condition:'{couple.activeCouple} != 1',then:'not-active',else:'active')}">
                     <f:if condition="{couple.image}">
-                        <f:media file="{couple.image}" height="250c"
-                                 class="card-img-top img-responsive"/>
+                        <div class="card-img-top img-responsive ratio-4-3"
+                             style="background-image:url('{f:uri.image(src:'{couple.image.uid}',treatIdAsReference:'1')}')"></div>
                     </f:if>
                     <div class="card-body">
                         <f:if condition="{couple.coupleName}">
