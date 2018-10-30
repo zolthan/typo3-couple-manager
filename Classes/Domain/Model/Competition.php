@@ -1,4 +1,5 @@
 <?php
+
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 
 /***
@@ -60,11 +61,12 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $address = '';
 
     /**
-     * organizer
+     * Organizer
      *
-     * @var string
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer>
+     * @lazy
      */
-    protected $organizer = '';
+    protected $organizer;
 
     /**
      * sizeDanceFloor
@@ -206,9 +208,33 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the organizer
+     * Adds an Organizer
      *
-     * @return string $organizer
+     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer $organizer
+     * @return Competition
+     */
+    public function addCategory(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer $organizer)
+    {
+        $this->organizer->attach($organizer);
+        return $this;
+    }
+
+    /**
+     * Removes an Organizer
+     *
+     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer $organizerToRemove The Category to be removed
+     * @return Competition
+     */
+    public function removeCategory(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer $organizerToRemove)
+    {
+        $this->organizer->detach($organizerToRemove);
+        return $this;
+    }
+
+    /**
+     * Returns the Categories
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer> $organizer
      */
     public function getOrganizer()
     {
@@ -216,12 +242,12 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Sets the organizer
+     * Sets the Categories
      *
-     * @param string $organizer
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer> $organizer
      * @return Competition
      */
-    public function setOrganizer($organizer)
+    public function setOrganizer(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $organizer)
     {
         $this->organizer = $organizer;
         return $this;
