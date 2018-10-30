@@ -107,6 +107,14 @@
                                 </span>
                             </td>
                             <td class="{displayDesktop} text-right">
+                                <f:if condition="{result.position} <= 3">
+                                    <f:switch expression="{result.position}">
+                                        <f:case value="1"><f:variable name="trophyColor" value="gold"/></f:case>
+                                        <f:case value="2"><f:variable name="trophyColor" value="silver"/></f:case>
+                                        <f:defaultCase><f:variable name="trophyColor" value="bronze"/></f:defaultCase>
+                                    </f:switch>
+                                    <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>
+                                </f:if>
                                 {result.position}
                             </td>
                             <td class="{displayDesktop} text-right">
