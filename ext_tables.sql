@@ -67,7 +67,7 @@ CREATE TABLE tx_couplemanager_domain_model_competition (
   address          TEXT,
   phone            VARCHAR(50),
   size_dance_floor VARCHAR(25),
-  info             VARCHAR(255),
+  info             TEXT,
 
   tstamp           INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
   crdate           INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
@@ -116,7 +116,7 @@ CREATE TABLE tx_couplemanager_domain_model_result (
   position          INT(11),
   participant_count INT(11),
   promotion         SMALLINT(5) UNSIGNED DEFAULT '0'  NOT NULL,
-  info              VARCHAR(255),
+  info             TEXT,
 
   tstamp            INT(11) UNSIGNED DEFAULT '0'      NOT NULL,
   crdate            INT(11) UNSIGNED DEFAULT '0'      NOT NULL,
@@ -200,7 +200,7 @@ CREATE TABLE tx_couplemanager_domain_model_organizer (
   name             VARCHAR(255) DEFAULT ''          NOT NULL,
   city             VARCHAR(255) DEFAULT ''          NOT NULL,
   website          VARCHAR(255)                              DEFAULT '',
-  info             VARCHAR(255)                              DEFAULT '',
+  info             TEXT,
 
   tstamp           INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
   crdate           INT(11) UNSIGNED DEFAULT '0'     NOT NULL,
