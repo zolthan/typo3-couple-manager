@@ -75,6 +75,13 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $activeCouple = true;
 
     /**
+     * hideResults
+     *
+     * @var bool
+     */
+    protected $hideResults = false;
+
+    /**
      * description
      *
      * @var string
@@ -145,11 +152,12 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the activeCouple
      *
      * @param bool $activeCouple
-     * @return void
+     * @return Couple
      */
     public function setActiveCouple($activeCouple)
     {
         $this->activeCouple = $activeCouple;
+        return $this;
     }
 
     /**
@@ -160,6 +168,38 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function isActiveCouple()
     {
         return $this->activeCouple;
+    }
+
+    /**
+     * Returns the hideResults
+     *
+     * @return bool $hideResults
+     */
+    public function getHideResults()
+    {
+        return $this->hideResults;
+    }
+
+    /**
+     * Sets the hideResults
+     *
+     * @param bool $hideResults
+     * @return Couple
+     */
+    public function setHideResults($hideResults)
+    {
+        $this->hideResults = $hideResults;
+        return $this;
+    }
+
+    /**
+     * Returns the boolean state of hideResults
+     *
+     * @return bool
+     */
+    public function isHideResults()
+    {
+        return $this->hideResults;
     }
 
     /**

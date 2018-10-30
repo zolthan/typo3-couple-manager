@@ -40,7 +40,7 @@
                                         <numIndex index="0">
                                             LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.couple_detail
                                         </numIndex>
-                                        <numIndex index="1">Couple->detail;Couple->list;Result->list</numIndex>
+                                        <numIndex index="1">Couple->detail</numIndex>
                                     </numIndex>
                                     <numIndex index="21">
                                         <numIndex index="0">
@@ -52,7 +52,7 @@
                                         <numIndex index="0">
                                             LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.result_list
                                         </numIndex>
-                                        <numIndex index="1">Result->list;Couple->list;Couple->detail</numIndex>
+                                        <numIndex index="1">Result->list</numIndex>
                                     </numIndex>
                                 </items>
                             </config>
@@ -66,7 +66,7 @@
             <ROOT>
                 <TCEforms>
                     <sheetTitle>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list</sheetTitle>
-                    <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Couple->list;Couple->detail;Result->list]]></displayCond>
+                    <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Couple->list]]></displayCond>
                 </TCEforms>
                 <type>array</type>
                 <el>

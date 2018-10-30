@@ -49,8 +49,6 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             $orderArray = ['active_couple' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING] + $orderArray;
         }
         $this->coupleRepository->setDefaultOrderings($orderArray);
-//        $couples = $this->coupleRepository->createQuery();
-//        \TYPO3\CMS\Core\Utility\DebugUtility::debug($couples, sprintf('%s|%s' . PHP_EOL, __METHOD__, __LINE__));
         $couples = $this->coupleRepository->findAll();
         $this->view->assign('couples', $couples);
     }
@@ -81,7 +79,10 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             'starting_class' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
         ];
         $this->resultRepository->setDefaultOrderings($orderArray);
-        $results = $this->resultRepository->findByCouple($couple->getUid());
+        $results = [];
+        if (!$couple->isHideResults()) {
+            $results = $this->resultRepository->findByCouple($couple->getUid());
+        }
 
         $this->view->assign('results', $results);
     }

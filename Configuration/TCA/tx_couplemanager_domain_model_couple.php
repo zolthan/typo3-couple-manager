@@ -1,5 +1,5 @@
 <?php
-$modelFields = 'active_couple,image,man_last_name,man_first_name,woman_last_name,woman_first_name,starting_group,starting_class_latin,starting_class_standard,description';
+$modelFields = 'hide_results,active_couple,image,man_last_name,man_first_name,woman_last_name,woman_first_name,starting_group,starting_class_latin,starting_class_standard,description';
 
 return [
     'ctrl' => [
@@ -137,6 +137,19 @@ return [
         'active_couple' => [
             'exclude' => true,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.active_couple',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled'
+                    ]
+                ],
+                'default' => 1,
+            ]
+        ],
+        'hide_results' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.hide_results',
             'config' => [
                 'type' => 'check',
                 'items' => [

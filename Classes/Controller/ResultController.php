@@ -1,4 +1,5 @@
 <?php
+
 namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 
 /***
@@ -18,6 +19,14 @@ namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
+     * coupleRepository
+     *
+     * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository
+     * @inject
+     */
+    protected $coupleRepository = null;
+
+    /**
      * resultRepository
      *
      * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository
@@ -36,7 +45,16 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
         ];
         $this->resultRepository->setDefaultOrderings($orderArray);
-        $results = $this->resultRepository->findAll()->getQuery()->setLimit(10)->execute();
+
+        $query = $this->resultRepository->createQuery();
+        $query
+            ->matching(
+                $query->equals('couple.hide_results', 0)
+            )
+            ->setLimit(10);
+
+        $results = $query
+            ->execute();
         $this->view->assign('results', $results);
     }
 
