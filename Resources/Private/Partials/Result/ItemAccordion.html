@@ -5,6 +5,11 @@
 		Partials/List/Item.html
 -->
 <div class="panel panel-default">
+    <f:switch expression="{resultItem.position}">
+        <f:case value="1"><f:variable name="trophyColor" value="gold"/></f:case>
+        <f:case value="2"><f:variable name="trophyColor" value="silver"/></f:case>
+        <f:defaultCase><f:variable name="trophyColor" value="bronze"/></f:defaultCase>
+    </f:switch>
     <f:variable name="competition" value="{resultItem.competition.0}"/>
     <f:variable name="couple" value="{resultItem.couple.0}"/>
     <div class="panel-heading" role="tab" id="accordion-heading-{contentObjectData.uid}-{resultItem.uid}">
@@ -12,10 +17,15 @@
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-{contentObjectData.uid}"
                href="#accordion-{contentObjectData.uid}-{resultItem.uid}" aria-expanded="false"
                aria-controls="accordion-{contentObjectData.uid}-{resultItem.uid}">
-                <span>{f:format.date(date: resultItem.date, format: "%d.%m.")} {couple.coupleName}</span>
+                {f:format.date(date: resultItem.date, format: "%d.%m.")}
+                <f:if condition="{resultItem.position} <= 3">
+                    <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>
+                </f:if>
+                {couple.coupleName}
             </a>
         </h4>
     </div>
+
     <div id="accordion-{contentObjectData.uid}-{resultItem.uid}" class="panel-collapse collapse" role="tabpanel"
          aria-labelledby="accordion-heading-{contentObjectData.uid}-{resultItem.uid}">
         <div class="panel-body">

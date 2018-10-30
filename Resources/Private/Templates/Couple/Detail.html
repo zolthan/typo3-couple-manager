@@ -75,7 +75,7 @@
                             </td>
                             <td class="col-xs-4">
                                 <f:variable name="popoverTitle" value="Veranstalter"/>
-                                <f:variable name="popoverText" value="TC Schwarz-Weiss Reutlingen"/>
+                                <f:variable name="popoverText" value=""/>
                                 <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
                                     <f:variable name="popoverTitle" value="Turnierart / Veranstalter"/>
                                     <f:variable name="popoverText" value="{competitionType.name} <br/>"/>
@@ -99,20 +99,23 @@
                             <td class="{displayDesktop}">
                                 {competition.city}
                             </td>
+                            <f:switch expression="{result.position}">
+                                <f:case value="1"><f:variable name="trophyColor" value="gold"/></f:case>
+                                <f:case value="2"><f:variable name="trophyColor" value="silver"/></f:case>
+                                <f:defaultCase><f:variable name="trophyColor" value="bronze"/></f:defaultCase>
+                            </f:switch>
                             <td class="text-nowrap">
                                 <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{result.startingGroup}" />
                                 <f:format.case mode="upper">{result.startingClass}</f:format.case>
                                 <span class="{displayMobile} text-right"><br/>
+                                    <f:if condition="{result.position} <= 3">
+                                        <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>
+                                    </f:if>
                                     {result.position}/{result.participantCount}
                                 </span>
                             </td>
                             <td class="{displayDesktop} text-right">
                                 <f:if condition="{result.position} <= 3">
-                                    <f:switch expression="{result.position}">
-                                        <f:case value="1"><f:variable name="trophyColor" value="gold"/></f:case>
-                                        <f:case value="2"><f:variable name="trophyColor" value="silver"/></f:case>
-                                        <f:defaultCase><f:variable name="trophyColor" value="bronze"/></f:defaultCase>
-                                    </f:switch>
                                     <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>
                                 </f:if>
                                 {result.position}
