@@ -78,12 +78,12 @@
                                 <f:variable name="popoverText" value="TC Schwarz-Weiss Reutlingen"/>
                                 <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
                                     <f:variable name="popoverTitle" value="Turnierart / Veranstalter"/>
-                                    <f:variable name="popoverText" value="{competitionType.name} <br/> TC Schwarz-Weiss Reutlingen"/>
+                                    <f:variable name="popoverText" value="{competitionType.name} <br/>"/>
                                 </f:if>
                                 <a tabindex="0" data-toggle="popover" data-placement="top" data-trigger="hover"
                                    data-container="body" data-html="true"
                                    title="{popoverTitle}"
-                                   data-content="{popoverText}"
+                                   data-content="{popoverText} <em>{f:if(condition: i.isLast, then: '{organizer.name}', else: '{organizer.name},<br/>')->f:for(each:competition.organizer, as:'organizer', iteration: 'i')}</em>"
                                 >
                                     <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
                                         <f:then>
@@ -95,10 +95,6 @@
                                     </f:if>
                                     <span class="{displayMobile}"><br/>{competition.city}</span>
                                 </a>
-                            </td>
-                            <td class="{displayDesktop}">
-                                {competition.organizer}
-                                <br/>
                             </td>
                             <td class="{displayDesktop}">
                                 {competition.city}
