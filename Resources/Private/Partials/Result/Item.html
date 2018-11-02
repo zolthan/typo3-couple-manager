@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="result">
+	<!-- header -->
+	<div class="header">
+		<h3>
+			<f:link.action action="show" arguments="{result : resultItem}" title="{resultItem.title}">
+				{resultItem.title}
+			</f:link.action>
+		</h3>
+	</div>
+
+	<!-- result -->
+	<div class="content">
+		<table  class="tx_couplemanager" >
+			<tr>
+				<th><f:translate key="tx_couplemanager_domain_model_result.date" /></th>
+				<th><f:translate key="tx_couplemanager_domain_model_result.discipline" /></th>
+				<th><f:translate key="tx_couplemanager_domain_model_result.starting_group" /></th>
+				<th><f:translate key="tx_couplemanager_domain_model_result.starting_class" /></th>
+				<th><f:translate key="tx_couplemanager_domain_model_result.position" /></th>
+				<th><f:translate key="tx_couplemanager_domain_model_result.participant_count" /></th>
+				<th><f:translate key="tx_couplemanager_domain_model_result.promotion" /></th>
+				<th> </th>
+				<th> </th>
+			</tr>
+			<tr>
+				<td><f:link.action action="show" arguments="{result : resultItem}"> {resultItem.date -> f:format.date()}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{result : resultItem}"> {resultItem.discipline}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{result : resultItem}"> {resultItem.startingGroup}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{result : resultItem}"> {resultItem.startingClass}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{result : resultItem}"> {resultItem.position}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{result : resultItem}"> {resultItem.participantCount}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{result : resultItem}"> {resultItem.promotion}</f:link.action></td>
+			</tr>
+		</table>
+
+		<f:link.action action="show" arguments="{result : resultItem}" title="{resultItem.title}">
+			<f:translate key="more-link"/>
+		</f:link.action >
+	</div>
+</div>
+</html>

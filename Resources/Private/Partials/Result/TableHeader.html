@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:variable name="displayMobile" value="hidden-md hidden-lg"/>
+<f:variable name="displayDesktop" value="hidden-xs hidden-sm"/>
+
+    <thead>
+    <tr>
+        <th>
+            Datum
+        </th>
+        <th>
+            Turnier <span class="{displayMobile}">/ Ort</span>
+        </th>
+        <th class="{displayDesktop}">
+            Turnierort
+        </th>
+        <th>
+            Klasse <span class="{displayMobile}">/ Platz</span>
+        </th>
+        <th class="{displayDesktop}">
+            Platz
+        </th>
+        <th class="{displayDesktop}">
+            Paare
+        </th>
+    </tr>
+    </thead>
+</html>

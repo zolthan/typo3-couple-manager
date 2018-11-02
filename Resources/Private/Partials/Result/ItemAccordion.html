@@ -1,0 +1,48 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="panel panel-default">
+    <f:switch expression="{resultItem.position}">
+        <f:case value="1"><f:variable name="trophyColor" value="gold"/></f:case>
+        <f:case value="2"><f:variable name="trophyColor" value="silver"/></f:case>
+        <f:defaultCase><f:variable name="trophyColor" value="bronze"/></f:defaultCase>
+    </f:switch>
+    <f:variable name="competition" value="{resultItem.competition.0}"/>
+    <f:variable name="couple" value="{resultItem.couple.0}"/>
+    <div class="panel-heading" role="tab" id="accordion-heading-{contentObjectData.uid}-{resultItem.uid}">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-{contentObjectData.uid}"
+               href="#accordion-{contentObjectData.uid}-{resultItem.uid}" aria-expanded="false"
+               aria-controls="accordion-{contentObjectData.uid}-{resultItem.uid}">
+                {f:format.date(date: resultItem.date, format: "%d.%m.")}
+                <f:if condition="{resultItem.position} <= 3">
+                    <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>
+                </f:if>
+                {couple.coupleName}
+            </a>
+        </h4>
+    </div>
+
+    <div id="accordion-{contentObjectData.uid}-{resultItem.uid}" class="panel-collapse collapse" role="tabpanel"
+         aria-labelledby="accordion-heading-{contentObjectData.uid}-{resultItem.uid}">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>{competition.title} - {competition.city}</p>
+                    <p>
+                        <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{resultItem.startingGroup}" />
+                        <f:format.case mode="upper">{resultItem.startingClass}</f:format.case>
+                        <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}" />
+                    </p>
+                    <p>Platz {resultItem.position} / Gestartete Paare {resultItem.participantCount}</p>
+                    <f:if condition="{resultItem.promotion}"><p><span class="label label-danger">Aufstieg</span></p></f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

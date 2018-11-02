@@ -67,6 +67,49 @@
             <trans-unit id="sen5">
                 <source>Senioren V</source>
             </trans-unit>
+            <!-- Starting Groups Short -->
+            <trans-unit id="short.kin">
+                <source>KIN</source>
+            </trans-unit>
+            <trans-unit id="short.kin1">
+                <source>KIN I</source>
+            </trans-unit>
+            <trans-unit id="short.kin2">
+                <source>KIN II</source>
+            </trans-unit>
+            <trans-unit id="short.jun1">
+                <source>JUN I</source>
+            </trans-unit>
+            <trans-unit id="short.jun2">
+                <source>JUN II</source>
+            </trans-unit>
+            <trans-unit id="short.jug">
+                <source>JUG</source>
+            </trans-unit>
+            <trans-unit id="short.hgr">
+                <source>HGR</source>
+            </trans-unit>
+            <trans-unit id="short.hgr2">
+                <source>HGR II</source>
+            </trans-unit>
+            <trans-unit id="short.sen1">
+                <source>SEN I</source>
+            </trans-unit>
+            <trans-unit id="short.adult">
+                <source>Adult (WDSF)</source>
+            </trans-unit>
+            <trans-unit id="short.sen2">
+                <source>SEN II</source>
+            </trans-unit>
+            <trans-unit id="short.sen3">
+                <source>SEN III</source>
+            </trans-unit>
+            <trans-unit id="short.sen4">
+                <source>SEN IV</source>
+            </trans-unit>
+            <trans-unit id="short.sen5">
+                <source>SEN V</source>
+            </trans-unit>
 
             <!-- generated translations -->
             <trans-unit id="tx_couplemanager_domain_model_couple">
@@ -101,6 +144,9 @@
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.active_couple">
                 <source>Active couple</source>
+            </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.hide_results">
+                <source>Hide results</source>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.image">
                 <source>Image</source>

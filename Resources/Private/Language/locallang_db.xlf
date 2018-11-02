@@ -57,6 +57,9 @@
 			<trans-unit id="tx_couplemanager_domain_model_couple.active_couple">
 				<source>Active couple</source>
 			</trans-unit>
+			<trans-unit id="tx_couplemanager_domain_model_couple.hide_results">
+				<source>Hide results</source>
+			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple.image">
 				<source>Image</source>
 			</trans-unit>
