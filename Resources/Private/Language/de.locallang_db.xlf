@@ -64,7 +64,7 @@
                 <target>Bild</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition">
-                <target>Wettbewerb</target>
+                <target>Veranstaltung</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition.title">
                 <target>Titel</target>
@@ -124,7 +124,7 @@
                 <target>Paar</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_result.competition">
-                <target>Wettbewerb</target>
+                <target>Veranstaltung</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_result.competition_type">
                 <target>Wettbewerbstyp</target>

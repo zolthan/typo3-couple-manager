@@ -8,7 +8,7 @@
 				<target>Paar-Verwaltung</target>
 			</trans-unit>
 			<trans-unit id="pi1_plus_wiz_description" xml:space="preserve">
-				<target>Verwaltung von paaren, Wettbewerben und Ergebnissen</target>
+				<target>Verwaltung von Paaren, Veranstaltungen und Ergebnissen</target>
 			</trans-unit>
 
             <!-- View modes -->
@@ -25,7 +25,7 @@
 				<target>Detailansicht (Paar)</target>
 			</trans-unit>
 			<trans-unit id="flexforms_tab.mode.competition_list" xml:space="preserve">
-				<target>Listenansicht (Wettbewerbe)</target>
+				<target>Listenansicht (Veranstaltungen)</target>
 			</trans-unit>
 			<trans-unit id="flexforms_tab.mode.result_list" xml:space="preserve">
 				<target>Listenansicht (Ergebnisse)</target>

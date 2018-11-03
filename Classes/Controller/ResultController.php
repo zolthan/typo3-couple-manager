@@ -38,6 +38,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * action list
      *
      * @return void
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     public function listAction()
     {
@@ -47,14 +48,16 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $this->resultRepository->setDefaultOrderings($orderArray);
 
         $query = $this->resultRepository->createQuery();
-        $query
-            ->matching(
-                $query->equals('couple.hide_results', 0)
-            )
-            ->setLimit(10);
-
+        $constraints = [
+            $query->equals('couple.hide_results', 0),
+            $query->lessThanOrEqual('date', strftime('%Y-%m-%d')),
+            $query->greaterThan('position', 0),
+        ];
         $results = $query
+            ->matching($query->logicalAnd($constraints))
+            ->setLimit(10)
             ->execute();
+
         $this->view->assign('results', $results);
     }
 
