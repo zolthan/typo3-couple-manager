@@ -165,7 +165,8 @@ class Tca
             $optionList[] = [$couple->getCoupleName(), $couple->getUid()];
         }
         // return config
-        $config['items'] = array_merge($config['items'], $optionList);
+        // $config['items'] = array_merge($config['items'], $optionList);
+        $config['items'] = $optionList;
         return $config;
     }
 
