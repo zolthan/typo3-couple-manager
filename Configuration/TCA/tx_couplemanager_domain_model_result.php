@@ -55,17 +55,26 @@ return [
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.couple',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectSingle',
+                'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_couplemanager_domain_model_couple',
+//                    'foreign_table_where' => 'ORDER BY date_start DESC, title ASC',
                 'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getCoupleOptionList',
-                'items' => [
-                    ['LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:pleaseChoose', 0],
-                ],
                 'minitems' => 1,
                 'maxitems' => 1,
-                'appearance' => [
-                    'collapseAll' => 1,
-                    'expandSingle' => 1,
+                'enableMultiSelectFilterTextfield' => true,
+                'fieldControl' => [
+                    'addRecord' => [
+                        'disabled' => false,
+                        'options' => [
+                            'title' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:addRecord',
+                        ],
+                    ],
+                    'editPopup' => [
+                        'disabled' => false,
+                        'options' => [
+                            'title' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:editRecord',
+                        ],
+                    ],
                 ],
             ],
         ],
