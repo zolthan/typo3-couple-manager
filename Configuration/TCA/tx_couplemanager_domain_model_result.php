@@ -1,5 +1,5 @@
 <?php
-$modelFields = 'couple,promotion,date,competition,competition_type,discipline,starting_group,starting_class,position,participant_count,info';
+$modelFields = 'competition,competition_type,couple,promotion,date,discipline,starting_group,starting_class,position,participant_count,info';
 
 return [
     'ctrl' => [

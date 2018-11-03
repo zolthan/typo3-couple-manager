@@ -3,11 +3,12 @@
 <f:section name="main">
     <f:flashMessages/>
     <div class="row">
-        <div class="col-md-6 col-xs-12">
-            <div class="gallery-row row">
-                <div class="gallery-item col-xs-12">
-                    <figure class="image">
-                        <f:comment><!--<a href="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_05286f085d.jpg"
+        <div class="{f:if(condition: '{couple.image}', then: 'col-md-6 ')}col-xs-12">
+            <f:if condition="{couple.image}">
+                <div class="gallery-row row">
+                    <div class="gallery-item col-xs-12">
+                        <figure class="image">
+                            <f:comment><!--<a href="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_05286f085d.jpg"
                            title="" data-lightbox-caption=""
                            class="lightbox"
                            data-lightbox-width="300" data-lightbox-height="300"
@@ -26,13 +27,14 @@
                                      title="" alt=""/>
                             </noscript>
                         </a>--></f:comment>
-                        <f:render partial="Image"
-                                  arguments="{file: couple.image, settings: settings, class: 'card-img-top img-responsive'}"/>
-                    </figure>
+                            <f:render partial="Image"
+                                      arguments="{file: couple.image, settings: settings, class: 'card-img-top img-responsive'}"/>
+                        </figure>
+                    </div>
                 </div>
-            </div>
+            </f:if>
         </div>
-        <div class="col-md-6 col-xs-12">
+        <div class="{f:if(condition: '{couple.image}', then: 'col-md-6 ')}col-xs-12">
             <header>
                 <h1 class="element-header text-center">
                     {couple.coupleName}
@@ -40,98 +42,113 @@
             </header>
             <f:format.html>{couple.description}</f:format.html>
         </div>
-        <!--<f:if condition="{results}">-->
         <div class="col-xs-12">
             <div class="table-responsive">
                 <f:variable name="displayMobile" value="hidden-md hidden-lg"/>
                 <f:variable name="displayDesktop" value="hidden-xs hidden-sm"/>
 
                 <f:variable name="prevResult" value=""/>
-                    <f:for each="{results}" as="result" key="itemkey"
-                           reverse="false" iteration="iterator">
+                <f:for each="{results}" as="result" key="itemkey"
+                       reverse="false" iteration="iterator">
 
-                        <f:variable name="competition" value="{result.competition.0}"/>
-                        <f:variable name="competitionType" value="{result.competitionType.0}"/>
+                    <f:variable name="competition" value="{result.competition.0}"/>
+                    <f:variable name="competitionType" value="{result.competitionType.0}"/>
 
-                        <f:if condition="{iterator.isFirst}">
-                            <table class="table table-condensed table-striped">
-                                <caption>Turnierergebnisse <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{result.discipline}" /></caption>
-                                <f:render partial="Result/TableHeader"/>
-                                <tbody>
-                        </f:if>
-                        <f:if condition="{prevResult.discipline} && {result.discipline} != {prevResult.discipline}">
-                                </tbody>
-                            </table>
-                            <table class="table table-condensed table-striped">
-                                <caption>Turnierergebnisse <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{result.discipline}" /></caption>
-                                <f:render partial="Result/TableHeader"/>
-                                <tbody>
-                        </f:if>
+                    <f:if condition="{iterator.isFirst}">
+                        <table class="table table-condensed table-striped">
+                            <caption>Turnierergebnisse
+                                <f:translate
+                                        key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{result.discipline}"/>
+                            </caption>
+                            <f:render partial="Result/TableHeader"/>
+                            <tbody>
+                    </f:if>
+                    <f:if condition="{prevResult.discipline} && {result.discipline} != {prevResult.discipline}">
+                        </tbody>
+                        </table>
+                        <table class="table table-condensed table-striped">
+                            <caption>Turnierergebnisse
+                                <f:translate
+                                        key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{result.discipline}"/>
+                            </caption>
+                            <f:render partial="Result/TableHeader"/>
+                            <tbody>
+                    </f:if>
 
-                        <tr class="{f:if(condition: result.promotion, then: 'success', else: '')}">
-                            <td>
-                                <f:format.date format="%d.%m.%Y">{result.date}</f:format.date>
-                                <f:if condition="{result.promotion}"><br />Aufstieg</f:if>
-                            </td>
-                            <td class="col-xs-4">
-                                <f:variable name="popoverTitle" value="Veranstalter"/>
-                                <f:variable name="popoverText" value=""/>
+                    <tr class="{f:if(condition: result.promotion, then: 'danger', else: '')}">
+                        <td>
+                            <f:format.date format="%d.%m.%Y">{result.date}</f:format.date>
+                        </td>
+                        <td class="col-xs-4">
+                            <f:variable name="popoverTitle" value="Veranstalter"/>
+                            <f:variable name="popoverText" value=""/>
+                            <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
+                                <f:variable name="popoverTitle" value="Turnierart / Veranstalter"/>
+                                <f:variable name="popoverText" value="{competitionType.name} <br/>"/>
+                            </f:if>
+                            <a tabindex="0" data-toggle="popover" data-placement="top" data-trigger="hover"
+                               data-container="body" data-html="true"
+                               title="{popoverTitle}"
+                               data-content="{popoverText} <em>{f:if(condition: i.isLast, then: '{organizer.name}', else: '{organizer.name},<br/>')->f:for(each:competition.organizer, as:'organizer', iteration: 'i')}</em>"
+                            >
                                 <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
-                                    <f:variable name="popoverTitle" value="Turnierart / Veranstalter"/>
-                                    <f:variable name="popoverText" value="{competitionType.name} <br/>"/>
+                                    <f:then>
+                                        <span>{competition.title}</span>
+                                    </f:then>
+                                    <f:else>
+                                        <span>{competitionType.name}</span>
+                                    </f:else>
                                 </f:if>
-                                <a tabindex="0" data-toggle="popover" data-placement="top" data-trigger="hover"
-                                   data-container="body" data-html="true"
-                                   title="{popoverTitle}"
-                                   data-content="{popoverText} <em>{f:if(condition: i.isLast, then: '{organizer.name}', else: '{organizer.name},<br/>')->f:for(each:competition.organizer, as:'organizer', iteration: 'i')}</em>"
-                                >
-                                    <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
-                                        <f:then>
-                                            <span>{competition.title}</span>
-                                        </f:then>
-                                        <f:else>
-                                            <span>{competitionType.name}</span>
-                                        </f:else>
-                                    </f:if>
-                                    <span class="{displayMobile}"><br/>{competition.city}</span>
-                                </a>
-                            </td>
-                            <td class="{displayDesktop}">
-                                {competition.city}
-                            </td>
-                            <f:switch expression="{result.position}">
-                                <f:case value="1"><f:variable name="trophyColor" value="gold"/></f:case>
-                                <f:case value="2"><f:variable name="trophyColor" value="silver"/></f:case>
-                                <f:defaultCase><f:variable name="trophyColor" value="bronze"/></f:defaultCase>
-                            </f:switch>
-                            <td class="text-nowrap">
-                                <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{result.startingGroup}" />
-                                <f:format.case mode="upper">{result.startingClass}</f:format.case>
-                                <span class="{displayMobile} text-right"><br/>
-                                    <f:if condition="{result.position} <= 3">
-                                        <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>
-                                    </f:if>
-                                    {result.position}/{result.participantCount}
-                                </span>
-                            </td>
-                            <td class="{displayDesktop} text-right">
+                                <span class="{displayMobile}"><br/>{competition.city}</span>
+                            </a>
+                        </td>
+                        <td class="{displayDesktop}">
+                            {competition.city}
+                        </td>
+                        <f:switch expression="{result.position}">
+                            <f:case value="1">
+                                <f:variable name="trophyColor" value="gold"/>
+                            </f:case>
+                            <f:case value="2">
+                                <f:variable name="trophyColor" value="silver"/>
+                            </f:case>
+                            <f:defaultCase>
+                                <f:variable name="trophyColor" value="bronze"/>
+                            </f:defaultCase>
+                        </f:switch>
+                        <td class="text-nowrap">
+                            <f:translate
+                                    key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{result.startingGroup}"/>
+                            <f:format.case mode="upper">{result.startingClass}</f:format.case>
+                            <span class="{displayMobile} text-right"><br/>
+                                <f:if condition="{result.promotion}">
+                                    <i class="fa fa-level-up-alt" aria-hidden="true" title="Aufstieg"></i>&nbsp;
+                                </f:if>
                                 <f:if condition="{result.position} <= 3">
-                                    <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>
+                                    <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>&nbsp;
                                 </f:if>
-                                {result.position}
-                            </td>
-                            <td class="{displayDesktop} text-right">
-                                {result.participantCount}
-                            </td>
-                        </tr>
-                        <f:variable name="prevResult" value="{result}"/>
-                    </f:for>
-                    </tbody>
+                                {result.position}/{result.participantCount}
+                            </span>
+                        </td>
+                        <td class="{displayDesktop} text-right">
+                            <f:if condition="{result.promotion}">
+                                <i class="fa fa-level-up-alt" aria-hidden="true" title="Aufstieg"></i>&nbsp;
+                            </f:if>
+                            <f:if condition="{result.position} <= 3">
+                                <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>&nbsp;
+                            </f:if>
+                            {result.position}
+                        </td>
+                        <td class="{displayDesktop} text-right">
+                            {result.participantCount}
+                        </td>
+                    </tr>
+                    <f:variable name="prevResult" value="{result}"/>
+                </f:for>
+                </tbody>
                 </table>
             </div>
         </div>
-
-        <!--</f:if>-->
     </div>
 </f:section>
 </html>

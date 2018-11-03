@@ -68,6 +68,7 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      *
      * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple
      * @return void
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     public function detailAction(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple)
     {
@@ -78,10 +79,31 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
             'starting_class' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
         ];
-        $this->resultRepository->setDefaultOrderings($orderArray);
+
+//        $query
+//            ->matching(
+//                $query->equals('couple', $couple->getUid())
+//            )
+//            ->matching(
+//                $query->lessThanOrEqual('date', strftime('%Y-%m-%d'))
+//            )
+//            ->matching(
+//                $query->greaterThan('position', 0)
+//            );
+
         $results = [];
         if (!$couple->isHideResults()) {
-            $results = $this->resultRepository->findByCouple($couple->getUid());
+            $this->resultRepository->setDefaultOrderings($orderArray);
+
+            $query = $this->resultRepository->createQuery();
+            $constraints = [
+                $query->equals('couple', $couple->getUid()),
+                $query->lessThanOrEqual('date', strftime('%Y-%m-%d')),
+                $query->greaterThan('position', 0),
+            ];
+            $results = $query
+                ->matching($query->logicalAnd($constraints))
+                ->execute();
         }
 
         $this->view->assign('results', $results);

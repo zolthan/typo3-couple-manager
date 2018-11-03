@@ -21,6 +21,9 @@
                 <f:if condition="{resultItem.position} <= 3">
                     <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>
                 </f:if>
+                <f:if condition="{resultItem.promotion}"><p>
+                    <i class="fa fa-level-up-alt" aria-hidden="true"></i>
+                </f:if>
                 {couple.coupleName}
             </a>
         </h4>
@@ -38,7 +41,10 @@
                         <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}" />
                     </p>
                     <p>Platz {resultItem.position} / Gestartete Paare {resultItem.participantCount}</p>
-                    <f:if condition="{resultItem.promotion}"><p><span class="label label-danger">Aufstieg</span></p></f:if>
+                    <f:if condition="{resultItem.promotion}"><p>
+                        <i class="fa fa-level-up-alt" aria-hidden="true"></i>
+                        <span class="label label-danger">Aufstieg</span>
+                    </p></f:if>
                 </div>
             </div>
         </div>

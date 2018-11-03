@@ -282,6 +282,10 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function getIdentifier()
     {
-        return sprintf('%s - %s (%s)', $this->getDateStart()->format('Y-m'), $this->getTitle(), $this->getCity());
+        $date = '';
+        if ($this->getDateStart()) {
+            $date = $this->getDateStart()->format('Y-m');
+        }
+        return sprintf('%s - %s (%s)', $date, $this->getTitle(), $this->getCity());
     }
 }
