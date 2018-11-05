@@ -1,16 +1,14 @@
 {
     "name": "schwarz-weiss-reutlingen/couple-manager",
     "type": "typo3-cms-extension",
-    "description": "",
+    "homepage": "https://www.schwarz-weiss-rt.de",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Sebastian Wilhelm",
             "role": "Developer"
         }
     ],
-    "require": {
-        "typo3/cms-core": "^8.7.1"
-    },
     "autoload": {
         "psr-4": {
             "SchwarzWeissReutlingen\\CoupleManager\\": "Classes"
