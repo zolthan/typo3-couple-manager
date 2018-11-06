@@ -20,7 +20,7 @@
                                   arguments="{resultItem:resultItem,settings:settings,iterator:iterator}"/>
                     </f:then>
                     <f:else>
-                        <f:if condition="{settings.templateLayout} != 2">
+                        <f:if condition="{settings.list.templateLayout} == 2">
                             <f:then>
                                 <f:render partial="Result/ItemAccordion"
                                           arguments="{resultItem:resultItem,settings:settings,iterator:iterator,contentObjectData:contentObjectData}"/>

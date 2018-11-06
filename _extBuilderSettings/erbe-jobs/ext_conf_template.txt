@@ -1,8 +1,0 @@
-# cat=backend modules/enable/1; type=string; label=LLL:EXT:erbe_jobs/Resources/Private/Language/locallang_be.xlf:extmng.pathToXmlFiles
-pathToXmlFiles =
-
-# cat=backend modules/enable/1; type=string; label=LLL:EXT:erbe_jobs/Resources/Private/Language/locallang_be.xlf:extmng.storagePid
-storagePid =
-
-# cat=backend modules/enable/1; type=string; label=LLL:EXT:erbe_products/Resources/Private/Language/locallang_be.xlf:extmng.importNotificationEmails
-importNotificationEmails =

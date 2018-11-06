@@ -27,7 +27,9 @@
 
                                 <items>
                                     <numIndex index="0" type="array">
-                                        <numIndex index="0">LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:pleaseChoose</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:pleaseChoose
+                                        </numIndex>
                                         <numIndex index="1"></numIndex>
                                     </numIndex>
                                     <numIndex index="1">
@@ -62,10 +64,11 @@
             </ROOT>
         </main>
 
-        <list>
+        <couple.list>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list</sheetTitle>
+                    <sheetTitle>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list
+                    </sheetTitle>
                     <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Couple->list]]></displayCond>
                 </TCEforms>
                 <type>array</type>
@@ -73,7 +76,9 @@
                     <!-- activeCouplesFirst -->
                     <settings.list.activeCouplesFirst>
                         <TCEforms>
-                            <label>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list.active_couples_first</label>
+                            <label>
+                                LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list.active_couples_first
+                            </label>
                             <config>
                                 <type>check</type>
                             </config>
@@ -82,7 +87,9 @@
 
                     <settings.list.detailView>
                         <TCEforms>
-                            <label>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list.select_detail_view</label>
+                            <label>
+                                LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list.select_detail_view
+                            </label>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
@@ -101,6 +108,52 @@
                     </settings.list.detailView>
                 </el>
             </ROOT>
-        </list>
+        </couple.list>
+
+        <result.list>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list
+                    </sheetTitle>
+                    <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Result->list]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <!-- Template Layout -->
+                    <settings.list.templateLayout>
+                        <TCEforms>
+                            <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Result->list]]></displayCond>
+                            <label>
+                                LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_template.templateLayout
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:pleaseChoose
+                                        </numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">
+                                            Erfolge
+                                        </numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">
+                                            Home Accordion
+                                        </numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.list.templateLayout>
+                </el>
+            </ROOT>
+        </result.list>
     </sheets>
 </T3DataStructure>

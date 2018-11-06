@@ -7,7 +7,7 @@ call_user_func(
         if (TYPO3_MODE === 'BE') {
             $icons = [
                 'apps-pagetree-folder-contains-couples' => 'ext-news-folder-tree.svg',
-                'ext-couple_manager-wizard-icon'        => 'Extension.svg',
+                'ext-couple_manager-wizard-icon' => 'Extension.svg',
             ];
             $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
             foreach ($icons as $identifier => $path) {
@@ -30,15 +30,9 @@ call_user_func(
             'SchwarzWeissReutlingen.CoupleManager',
             'Couple',
             [
-                'Couple'      => 'list,detail',
+                'Couple' => 'list,detail',
                 'Competition' => 'list',
-                'Result'      => 'list',
-            ],
-            // non-cacheable actions
-            [
-                'Couple'      => '',
-                'Competition' => '',
-                'Result'      => '',
+                'Result' => 'list',
             ]
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
