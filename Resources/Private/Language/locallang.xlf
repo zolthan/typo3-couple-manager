@@ -23,6 +23,15 @@
             <trans-unit id="10dance">
                 <source>10 Dance</source>
             </trans-unit>
+            <trans-unit id="short.standard">
+                <source>Std.</source>
+            </trans-unit>
+            <trans-unit id="short.latin">
+                <source>Lat.</source>
+            </trans-unit>
+            <trans-unit id="short.10dance">
+                <source>10D.</source>
+            </trans-unit>
 
             <!-- Starting Groups -->
             <trans-unit id="kin">

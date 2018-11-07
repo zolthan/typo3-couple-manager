@@ -19,6 +19,15 @@
             <trans-unit id="10dance">
                 <target>10 Tänze</target>
             </trans-unit>
+            <trans-unit id="short.standard">
+                <target>Std.</target>
+            </trans-unit>
+            <trans-unit id="short.latin">
+                <target>Lat.</target>
+            </trans-unit>
+            <trans-unit id="short.10dance">
+                <target>10T.</target>
+            </trans-unit>
 
             <trans-unit id="kin">
                 <target>Kinder</target>

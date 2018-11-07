@@ -7,19 +7,26 @@
         <th>
             Datum
         </th>
+        <f:if condition="{omit.couple} != 1">
+        <th>
+            Paar
+        </th>
+        </f:if>
         <th>
             Turnier <span class="{displayMobile}">/ Ort</span>
         </th>
+        <f:if condition="{omit.city} != 1">
         <th class="{displayDesktop}">
             Turnierort
         </th>
+        </f:if>
         <th>
             Klasse <span class="{displayMobile}">/ Platz</span>
         </th>
-        <th class="{displayDesktop}">
+        <th class="{displayDesktop} text-right">
             Platz
         </th>
-        <th class="{displayDesktop}">
+        <th class="{displayDesktop} text-right">
             Paare
         </th>
     </tr>
