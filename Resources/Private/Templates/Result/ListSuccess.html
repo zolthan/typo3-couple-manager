@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<!--
+    =====================
+        Templates/Result/List.html
+-->
+
+<f:section name="main">
+    <!--TYPO3SEARCH_end-->
+    <f:if condition="{results}">
+        <div class="results-list-view {f:if(condition: '{settings.templateLayout} != 2', then: 'panel-group')}"
+             id="{f:if(condition: '{settings.templateLayout} != 2', then: 'accordion-{contentObjectData.uid}', else: 'results-container-{contentObjectData.uid}')}"
+             role="{f:if(condition: '{settings.templateLayout} != 2', then: 'tablist')}"
+             aria-multiselectable="{f:if(condition: '{settings.templateLayout} != 2', then: 'true')}">
+            <f:for each="{results}" as="resultItem" iteration="iterator">
+                <f:if condition="{settings.templateLayout} == 1">
+                    <f:then>
+                        <f:render partial="Result/ItemBig"
+                                  arguments="{resultItem:resultItem,settings:settings,iterator:iterator}"/>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{settings.list.templateLayout} == 2">
+                            <f:then>
+                                <f:render partial="Result/ItemAccordion"
+                                          arguments="{resultItem:resultItem,settings:settings,iterator:iterator,contentObjectData:contentObjectData}"/>
+                            </f:then>
+                            <f:else>
+                                <f:render partial="Result/Item"
+                                          arguments="{resultItem:resultItem,settings:settings,iterator:iterator}"/>
+                            </f:else>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </div>
+    </f:if>
+    <!--TYPO3SEARCH_begin-->
+</f:section>
+</html>

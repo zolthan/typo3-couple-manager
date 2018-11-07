@@ -56,6 +56,12 @@
                                         </numIndex>
                                         <numIndex index="1">Result->list</numIndex>
                                     </numIndex>
+                                    <numIndex index="32">
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.result_list_success
+                                        </numIndex>
+                                        <numIndex index="1">Result->listSuccess</numIndex>
+                                    </numIndex>
                                 </items>
                             </config>
                         </TCEforms>
@@ -67,7 +73,8 @@
         <couple.list>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list
+                    <sheetTitle>
+                        LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list
                     </sheetTitle>
                     <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Couple->list]]></displayCond>
                 </TCEforms>
@@ -115,14 +122,18 @@
                 <TCEforms>
                     <sheetTitle>LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list
                     </sheetTitle>
-                    <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Result->list]]></displayCond>
+                    <displayCond>
+                        <OR>
+                            <numIndex index="0">FIELD:main.switchableControllerActions:=:Result->list</numIndex>
+                            <numIndex index="1">FIELD:main.switchableControllerActions:=:Result->listSuccess</numIndex>
+                        </OR>
+                    </displayCond>
                 </TCEforms>
                 <type>array</type>
                 <el>
                     <!-- Template Layout -->
                     <settings.list.templateLayout>
                         <TCEforms>
-                            <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Result->list]]></displayCond>
                             <label>
                                 LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_template.templateLayout
                             </label>
@@ -152,6 +163,48 @@
                             </config>
                         </TCEforms>
                     </settings.list.templateLayout>
+
+                    <!-- Limit Start -->
+                    <settings.list.limit>
+                        <TCEforms>
+                            <label>LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_additional.limit
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>num</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.list.limit>
+
+                    <!-- Time limit Low -->
+                    <settings.list.timeRestrictionLow>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.timeRestriction
+                            </label>
+                            <config>
+                                <checkbox>1</checkbox>
+                                <type>input</type>
+                                <size>15</size>
+                            </config>
+                        </TCEforms>
+                    </settings.list.timeRestrictionLow>
+
+                    <!-- Time limit High -->
+                    <settings.list.timeRestrictionHigh>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.timeRestrictionHigh
+                            </label>
+                            <config>
+                                <checkbox>1</checkbox>
+                                <type>input</type>
+                                <size>15</size>
+                            </config>
+                        </TCEforms>
+                    </settings.list.timeRestrictionHigh>
+
                 </el>
             </ROOT>
         </result.list>
