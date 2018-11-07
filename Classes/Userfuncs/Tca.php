@@ -261,9 +261,9 @@ class Tca
         $config['items'] = [
             [LocalizationUtility::translate('please_choose', 'couple_manager'), 0],
             ['S', 's'],
-            ['A/S', 'as'],
+            ['A/S', 'a/s'],
             ['A', 'a'],
-            ['B/A', 'ba'],
+            ['B/A', 'b/a'],
             ['B', 'b'],
             ['C', 'c'],
             ['D', 'd'],
