@@ -9,10 +9,10 @@
 <f:section name="main">
     <!--TYPO3SEARCH_end-->
     <f:if condition="{results}">
-        <div class="results-list-view {f:if(condition: '{settings.templateLayout} != 2', then: 'panel-group')}"
-             id="{f:if(condition: '{settings.templateLayout} != 2', then: 'accordion-{contentObjectData.uid}', else: 'results-container-{contentObjectData.uid}')}"
-             role="{f:if(condition: '{settings.templateLayout} != 2', then: 'tablist')}"
-             aria-multiselectable="{f:if(condition: '{settings.templateLayout} != 2', then: 'true')}">
+        <div class="results-list-view {f:if(condition: '{settings.list.templateLayout} == 2', then: 'panel-group')}"
+             id="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'accordion-{contentObjectData.uid}', else: 'results-container-{contentObjectData.uid}')}"
+             role="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'tablist')}"
+             aria-multiselectable="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'true')}">
             <f:for each="{results}" as="resultItem" iteration="iterator">
                 <f:if condition="{settings.templateLayout} == 1">
                     <f:then>

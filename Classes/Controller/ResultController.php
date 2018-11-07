@@ -2,6 +2,8 @@
 
 namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Result;
+
 /***
  *
  * This file is part of the "Couple Manager" Extension for TYPO3 CMS.
@@ -98,15 +100,6 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     }
 
     /**
-     * Get the ConnectionPool object
-     *
-     * @return \TYPO3\CMS\Core\Database\ConnectionPool
-     */
-    protected function getConnectionPool(): \TYPO3\CMS\Core\Database\ConnectionPool{
-        return \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class);
-    }
-
-    /**
      * action listSuccess
      *
      * @return void
@@ -121,40 +114,55 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
          * Group by Meisterschaften, Aufstiegen, 1-3 Plätze
          * und Erfolge where Platzierung/Teilnehmer < 0,25
          */
-        $orConstraints = $query->logicalOr([
-            $query->lessThanOrEqual('position', 3),
-            $query->equals('promotion', 1),
-//            $query->lessThanOrEqual('position/participant_count', 0.25),
-        ]);
-        $constraints [] = $orConstraints;
-
-        $queryResult  = $query
-            ->matching($query->logicalAnd($constraints))
-            ->execute();
-
-        // create a new logger for the database queries to log
-        $logger = new \Doctrine\DBAL\Logging\EchoSQLLogger();
-        // get the Docrine Connection configuration object
-        $connectionConfiguration = $this->getConnectionPool()->getConnectionForTable('tx_couplemanager_domain_model_result')->getConfiguration();
-        // backup the current logger
-        $loggerBackup = $connectionConfiguration->getSQLLogger();
-        // set our logger as the active logger object of the Doctrine connection
-        $connectionConfiguration->setSQLLogger($logger);
-        // we need to fetch our results here, to enable doctrine to fetch the results
+        $constraints [] = $query->equals('promotion', 1);
+        $query->matching($query->logicalAnd($constraints));
+        $queryResult = $query->execute();
         $entities = $queryResult->toArray();
-        // restore the old logger
-        $connectionConfiguration->setSQLLogger($loggerBackup);
+        $this->view->assign('promotions', $entities);
 
-        $this->view->assign('results', $entities);
+        array_pop($constraints);
+        $constraints [] = $query->lessThanOrEqual('position', 3);
+        $orderArray = [
+            'position' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+            'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
+        ];
+        $query
+            ->setOrderings($orderArray)
+            ->matching($query->logicalAnd($constraints));
+        $queryResult = $query->execute();
+        $entities = $queryResult->toArray();
+        $this->view->assign('top3', $entities);
+
+        array_pop($constraints);
+        $constraints [] = $query->greaterThan('position', 3);
+        $orderArray = [
+            'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
+            'position' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+        ];
+        $query
+            ->setOrderings($orderArray)
+            ->matching($query->logicalAnd($constraints));
+        $queryResult = $query->execute();
+        $entities = $queryResult->toArray();
+        $filteredEntities = [];
+        foreach ($entities as $entity) {
+            /** @var Result $entity */
+            $quotient = $entity->getPosition() / $entity->getParticipantCount();
+            if ($quotient < 0.25) {
+                $filteredEntities[] = $entity;
+            }
+        }
+
+        $this->view->assign('goodOnes', $filteredEntities);
     }
 
     /**
      * action show
      *
-     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Result $result
+     * @param Result $result
      * @return void
      */
-    public function showAction(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Result $result)
+    public function showAction(Result $result)
     {
         $this->view->assign('result', $result);
     }
