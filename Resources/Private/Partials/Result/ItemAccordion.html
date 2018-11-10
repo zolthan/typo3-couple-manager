@@ -14,13 +14,6 @@
                href="#accordion-{contentObjectData.uid}-{resultItem.uid}" aria-expanded="false"
                aria-controls="accordion-{contentObjectData.uid}-{resultItem.uid}">
                 <span class="date">{f:format.date(date: resultItem.date, format: "%d.%m.")}</span>
-                <f:if condition="{resultItem.position} <= 3 || {resultItem.promotion}">
-                    <span class="highlight pull-right">
-                    <f:if condition="{resultItem.position} <= 3">
-                        <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>
-                    </f:if>
-                    </span>
-                </f:if>
                 <span class="couple">
                     {couple.coupleName}
                 </span>
@@ -28,7 +21,7 @@
                     (<f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}" />)
                 </span>
                 <f:if condition="{resultItem.promotion}">
-                    <span class="label label-danger pull-right">
+                    &nbsp;<span class="label label-danger pull-right">
                         Aufstieg von <f:format.case mode="upper">{resultItem.startingClass}</f:format.case> nach
                         <f:switch expression="{resultItem.startingClass}">
                            <f:case value="d">C</f:case>
@@ -37,6 +30,9 @@
                            <f:case value="a">S</f:case>
                         </f:switch>
                     </span>
+                </f:if>
+                <f:if condition="{resultItem.position} <= 3">
+                    <span class="highlight pull-right">&nbsp;<i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>&nbsp;</span>
                 </f:if>
             </a>
         </h4>
