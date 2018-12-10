@@ -62,6 +62,12 @@
                                         </numIndex>
                                         <numIndex index="1">Result->listSuccess</numIndex>
                                     </numIndex>
+                                    <numIndex index="33">
+                                        <numIndex index="0">
+                                            LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:flexforms_tab.mode.result_list_future
+                                        </numIndex>
+                                        <numIndex index="1">Result->listFuture</numIndex>
+                                    </numIndex>
                                 </items>
                             </config>
                         </TCEforms>

@@ -41,47 +41,53 @@
         </a>
     </td>
     <f:if condition="{omit.city} != 1">
-    <td class="{displayDesktop}">
-        {competition.city}
-    </td>
+        <td class="{displayDesktop}">
+            {competition.city}
+        </td>
     </f:if>
-    <f:switch expression="{result.position}">
-        <f:case value="1">
-            <f:variable name="trophyColor" value="gold"/>
-        </f:case>
-        <f:case value="2">
-            <f:variable name="trophyColor" value="silver"/>
-        </f:case>
-        <f:defaultCase>
-            <f:variable name="trophyColor" value="bronze"/>
-        </f:defaultCase>
-    </f:switch>
+    <f:if condition="{omit.result} != 1">
+        <f:switch expression="{result.position}">
+            <f:case value="1">
+                <f:variable name="trophyColor" value="gold"/>
+            </f:case>
+            <f:case value="2">
+                <f:variable name="trophyColor" value="silver"/>
+            </f:case>
+            <f:defaultCase>
+                <f:variable name="trophyColor" value="bronze"/>
+            </f:defaultCase>
+        </f:switch>
+    </f:if>
     <td class="text-nowrap">
         <f:translate
                 key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{result.startingGroup}"/>
         <f:format.case mode="upper">{result.startingClass}</f:format.case>
-        <span class="{displayMobile} text-right"><br/>
+        <f:if condition="{omit.result} != 1">
+            <span class="{displayMobile} text-right"><br/>
+                <f:if condition="{result.promotion}">
+                    <i class="fa fa-level-up-alt" aria-hidden="true" title="Aufstieg"></i>&nbsp;
+                </f:if>
+                <f:if condition="{result.position} <= 3">
+                    <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>&nbsp;
+                </f:if>
+                {result.position}/{result.participantCount}
+            </span>
+        </f:if>
+    </td>
+    <f:if condition="{omit.result} != 1">
+        <td class="{displayDesktop} text-right text-nowrap">
             <f:if condition="{result.promotion}">
                 <i class="fa fa-level-up-alt" aria-hidden="true" title="Aufstieg"></i>&nbsp;
             </f:if>
             <f:if condition="{result.position} <= 3">
                 <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>&nbsp;
             </f:if>
-            {result.position}/{result.participantCount}
-        </span>
-    </td>
-    <td class="{displayDesktop} text-right text-nowrap">
-        <f:if condition="{result.promotion}">
-            <i class="fa fa-level-up-alt" aria-hidden="true" title="Aufstieg"></i>&nbsp;
-        </f:if>
-        <f:if condition="{result.position} <= 3">
-            <i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i>&nbsp;
-        </f:if>
-        {result.position}
-    </td>
-    <td class="{displayDesktop} text-right">
-        {result.participantCount}
-    </td>
+            {result.position}
+        </td>
+        <td class="{displayDesktop} text-right">
+            {result.participantCount}
+        </td>
+    </f:if>
 </tr>
 
 </html>

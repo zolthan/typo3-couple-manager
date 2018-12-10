@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<!--
+    =====================
+        Templates/Result/List.html
+-->
+
+<f:section name="main">
+    <!--TYPO3SEARCH_end-->
+    <f:if condition="{competitions}">
+        <table class="table table-condensed table-striped">
+            <f:render partial="Result/TableHeader" arguments="{omit:{result:1}}"/>
+            <tbody>
+            <f:for each="{competitions}" as="result" key="itemkey" reverse="false" iteration="iterator">
+                <f:render partial="Result/TableRow" arguments="{result:result, omit:{result:1}}"/>
+            </f:for>
+            </tbody>
+        </table>
+    </f:if>
+    <!--TYPO3SEARCH_begin-->
+</f:section>
+</html>
