@@ -30,6 +30,12 @@
 			<trans-unit id="flexforms_tab.mode.result_list" xml:space="preserve">
 				<source>List view (results)</source>
 			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.result_list_success" xml:space="preserve">
+				<source>List view (success)</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.result_list_future" xml:space="preserve">
+				<source>List view (future)</source>
+			</trans-unit>
 
             <!-- List view settings -->
             <trans-unit id="flexforms_tab.list" xml:space="preserve">

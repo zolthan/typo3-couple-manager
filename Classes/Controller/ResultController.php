@@ -57,19 +57,25 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     }
 
     /**
+     * @param bool $future
      * @return array
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    protected function getCommonConstraints()
+    protected function getCommonConstraints($future = false)
     {
         $query = $this->getListQuery();
 
         $constraints = [
             $query->equals('couple.hide_results', 0),
-            $query->lessThanOrEqual('date', strftime('%Y-%m-%d')),
-            $query->greaterThan('position', 0),
         ];
 
+        if ($future) {
+            $constraints[] = $query->greaterThanOrEqual('date', strftime('%Y-%m-%d', strtotime('-2 Weeks')));
+            $constraints[] = $query->lessThanOrEqual('position', 0);
+        } else {
+            $constraints[] = $query->lessThanOrEqual('date', strftime('%Y-%m-%d'));
+            $constraints[] = $query->greaterThan('position', 0);
+        }
         $timeLow = $this->settings['list']['timeRestrictionLow'];
         if (!empty($timeLow)) {
             $constraints[] = $query->greaterThanOrEqual('date', strftime('%Y-%m-%d', strtotime($timeLow)));
@@ -154,6 +160,27 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         }
 
         $this->view->assign('goodOnes', $filteredEntities);
+    }
+
+    /**
+     * action listFuture
+     *
+     * @return void
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     */
+    public function listFutureAction()
+    {
+        $query = $this->getListQuery();
+        $constraints = $this->getCommonConstraints(true);
+        $orderArray = [
+            'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+        ];
+        $query
+            ->setOrderings($orderArray)
+            ->matching($query->logicalAnd($constraints));
+        $queryResult = $query->execute();
+        $entities = $queryResult->toArray();
+        $this->view->assign('competitions', $entities);
     }
 
     /**

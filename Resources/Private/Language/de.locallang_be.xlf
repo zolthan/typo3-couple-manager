@@ -30,6 +30,12 @@
 			<trans-unit id="flexforms_tab.mode.result_list" xml:space="preserve">
 				<target>Listenansicht (Ergebnisse)</target>
 			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.result_list_success" xml:space="preserve">
+				<target>Listenansicht (Erfolge)</target>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.mode.result_list_future" xml:space="preserve">
+				<target>Listenansicht (Zukünftige)</target>
+			</trans-unit>
 
             <!-- List view settings -->
             <trans-unit id="flexforms_tab.list" xml:space="preserve">
