@@ -6,6 +6,12 @@
         <f:case value="2"><f:variable name="trophyColor" value="silver"/></f:case>
         <f:defaultCase><f:variable name="trophyColor" value="bronze"/></f:defaultCase>
     </f:switch>
+    <f:switch expression="{resultItem.competitionType.0.name}">
+        <f:case value="Landesmeisterschaft"><f:variable name="championTitle" value="Landesmeister"/></f:case>
+        <f:case value="Gebietsmeisterschaft"><f:variable name="championTitle" value="Gebietsmeister"/></f:case>
+        <f:case value="Weltmeisterschaft"><f:variable name="championTitle" value="Weltmeister"/></f:case>
+        <f:case value="Deutsche Meisterschaft"><f:variable name="championTitle" value="Deutsche Meister"/></f:case>
+    </f:switch>
     <f:variable name="competition" value="{resultItem.competition.0}"/>
     <f:variable name="couple" value="{resultItem.couple.0}"/>
     <div class="panel-heading" role="tab" id="accordion-heading-{contentObjectData.uid}-{resultItem.uid}">
@@ -29,7 +35,17 @@
                     </div>
                 </f:if>
                 <f:if condition="{resultItem.position} <= 3">
-                    <span class="badge highlight"><i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i></span>
+                    <f:if condition="{championTitle} && {resultItem.position} == 1">
+                        <f:then>
+                            <span class="badge highlight fa-stack" aria-hidden="true">
+                              <i class="far fa-circle fa-stack-2x {trophyColor}" aria-hidden="true"></i>
+                              <i class="fa fa-trophy fa-stack-1x {trophyColor}" aria-hidden="true"></i>
+                            </span>
+                        </f:then>
+                        <f:else>
+                            <span class="badge highlight"><i class="fa fa-trophy {trophyColor}" aria-hidden="true"></i></span>
+                        </f:else>
+                    </f:if>
                 </f:if>
                 <span class="date">{f:format.date(date: resultItem.date, format: "%d.%m.")}</span>
                 <span class="couple">

@@ -1,0 +1,49 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<div class="panel panel-default">
+    <f:switch expression="{resultItem.position}">
+        <f:case value="1"><f:variable name="trophyColor" value="gold"/></f:case>
+        <f:case value="2"><f:variable name="trophyColor" value="silver"/></f:case>
+        <f:defaultCase><f:variable name="trophyColor" value="bronze"/></f:defaultCase>
+    </f:switch>
+    <f:switch expression="{resultItem.competitionType.0.name}">
+        <f:case value="Landesmeisterschaft"><f:variable name="championTitle" value="Landesmeister"/></f:case>
+        <f:case value="Gebietsmeisterschaft"><f:variable name="championTitle" value="Gebietsmeister"/></f:case>
+        <f:case value="Weltmeisterschaft"><f:variable name="championTitle" value="Weltmeister"/></f:case>
+        <f:case value="Deutsche Meisterschaft"><f:variable name="championTitle" value="Deutsche Meister"/></f:case>
+    </f:switch>
+    <f:variable name="competition" value="{resultItem.competition.0}"/>
+    <f:variable name="couple" value="{resultItem.couple.0}"/>
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <f:if condition="{resultItem.position} <= 3">
+                <span class="badge highlight fa-stack" aria-hidden="true">
+                  <i class="far fa-circle fa-stack-2x {trophyColor}" aria-hidden="true"></i>
+                  <i class="fa fa-trophy fa-stack-1x {trophyColor}" aria-hidden="true"></i>
+                </span>
+            </f:if>
+            <span class="couple">{couple.coupleName}</span>
+        </h4>
+    </div>
+
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-12">
+                <p>
+                    <strong class="champions-title">
+                        {championTitle}
+                        <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{resultItem.startingGroup}" />
+                        <f:format.case mode="upper">{resultItem.startingClass}</f:format.case>
+                        - <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}"/>
+                    </strong>
+                </p>
+                <p>{f:format.date(date: resultItem.date, format: "%d.%m.%Y")} - {competition.title} - {competition.city}</p>
+                <p>
+                    Platz {resultItem.position} / Gestartete Paare {resultItem.participantCount}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

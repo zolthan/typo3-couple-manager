@@ -85,6 +85,13 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         if (!empty($timeHigh)) {
             $constraints[] = $query->lessThanOrEqual('date', strftime('%Y-%m-%d', strtotime($timeHigh)));
         }
+
+        $timeRolling = $this->settings['list']['timeRestrictionRolling'];
+        if (!empty($timeRolling)) {
+            $rollingDate = strftime('%Y-%m-%d', strtotime('-' . abs($timeRolling) . ' days'));
+            $constraints[] = $query->greaterThanOrEqual('date', $rollingDate);
+        }
+
         return $constraints;
     }
 
@@ -120,13 +127,30 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
          * Group by Meisterschaften, Aufstiegen, 1-3 Plätze
          * und Erfolge where Platzierung/Teilnehmer < 0,25
          */
+        $championshipArray = [
+            'Landesmeisterschaft',
+            'Gebietsmeisterschaft',
+            'Deutsche Meisterschaft',
+            'Weltmeisterschaft',
+        ];
+        $constraints [] = $query->in('competitionType.name', $championshipArray);
+        $constraints [] = $query->lessThanOrEqual('position', 1);
+        $query->matching($query->logicalAnd($constraints));
+        $queryResult = $query->execute();
+        $entities = $queryResult->toArray();
+        // reset constraints
+        array_pop($constraints);
+        array_pop($constraints);
+        $this->view->assign('championchips', $entities);
+
         $constraints [] = $query->equals('promotion', 1);
         $query->matching($query->logicalAnd($constraints));
         $queryResult = $query->execute();
         $entities = $queryResult->toArray();
+        // reset constraints
+        array_pop($constraints);
         $this->view->assign('promotions', $entities);
 
-        array_pop($constraints);
         $constraints [] = $query->lessThanOrEqual('position', 3);
         $orderArray = [
             'position' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
@@ -137,9 +161,10 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             ->matching($query->logicalAnd($constraints));
         $queryResult = $query->execute();
         $entities = $queryResult->toArray();
+        // reset constraints
+        array_pop($constraints);
         $this->view->assign('top3', $entities);
 
-        array_pop($constraints);
         $constraints [] = $query->greaterThan('position', 3);
         $orderArray = [
             'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,

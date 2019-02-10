@@ -187,7 +187,7 @@
                     <settings.list.timeRestrictionLow>
                         <TCEforms>
                             <label>
-                                LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.timeRestriction
+                                LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:timeRestriction
                             </label>
                             <config>
                                 <checkbox>1</checkbox>
@@ -201,7 +201,7 @@
                     <settings.list.timeRestrictionHigh>
                         <TCEforms>
                             <label>
-                                LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.timeRestrictionHigh
+                                LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:timeRestrictionHigh
                             </label>
                             <config>
                                 <checkbox>1</checkbox>
@@ -210,6 +210,20 @@
                             </config>
                         </TCEforms>
                     </settings.list.timeRestrictionHigh>
+
+                    <!-- Time limit Rolling in days -->
+                    <settings.list.timeRestrictionRolling>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:couple_manager/Resources/Private/Language/locallang_be.xlf:timeRestrictionRolling
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>num</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.list.timeRestrictionRolling>
 
                 </el>
             </ROOT>

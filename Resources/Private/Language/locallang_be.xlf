@@ -50,6 +50,15 @@
 			<trans-unit id="couples-folder" xml:space="preserve">
 				<source>Couple management</source>
 			</trans-unit>
+			<trans-unit id="timeRestriction" xml:space="preserve">
+				<source>Time limit (LOW): higher than given time</source>
+			</trans-unit>
+			<trans-unit id="timeRestrictionHigh" xml:space="preserve">
+				<source>Time limit (HIGH): News less than given time</source>
+			</trans-unit>
+			<trans-unit id="timeRestrictionRolling" xml:space="preserve">
+				<source>Time limit (Rolling): News within the last X days</source>
+			</trans-unit>
 
 			<trans-unit id="flexforms_tab.additional" xml:space="preserve">
 				<source>Additional</source>

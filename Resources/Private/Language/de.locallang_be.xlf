@@ -50,6 +50,15 @@
 			<trans-unit id="couples-folder" xml:space="preserve">
 				<target>Paar-Verwaltung</target>
 			</trans-unit>
+			<trans-unit id="timeRestriction" xml:space="preserve">
+				<target>Zeitbeschränkung (START): Artikel nach dem angegebenem Datum</target>
+			</trans-unit>
+			<trans-unit id="timeRestrictionHigh" xml:space="preserve">
+				<target>Zeitbeschränkung (ENDE): Artikel vor dem angegebenem Datum</target>
+			</trans-unit>
+			<trans-unit id="timeRestrictionRolling" xml:space="preserve">
+				<target>Zeitbeschränkung (Rolling): Artikel im Bereich der letzten X Tage</target>
+			</trans-unit>
 
 			<trans-unit id="flexforms_tab.additional" xml:space="preserve">
 				<target>Weitere Einstellungen</target>
