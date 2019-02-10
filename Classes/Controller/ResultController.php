@@ -85,6 +85,13 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         if (!empty($timeHigh)) {
             $constraints[] = $query->lessThanOrEqual('date', strftime('%Y-%m-%d', strtotime($timeHigh)));
         }
+
+        $timeRolling = $this->settings['list']['timeRestrictionRolling'];
+        if (!empty($timeRolling)) {
+            $rollingDate = strftime('%Y-%m-%d', strtotime('-' . abs($timeRolling) . ' days'));
+            $constraints[] = $query->greaterThanOrEqual('date', $rollingDate);
+        }
+
         return $constraints;
     }
 
