@@ -14,6 +14,7 @@
     </f:switch>
     <f:variable name="competition" value="{resultItem.competition.0}"/>
     <f:variable name="couple" value="{resultItem.couple.0}"/>
+    <f:variable name="competitionType" value="{resultItem.competitionType.0}"/>
     <div class="panel-heading" role="tab" id="accordion-heading-{contentObjectData.uid}-{resultItem.uid}">
         <h4 class="panel-title"
             data-toggle="collapse"
@@ -54,6 +55,9 @@
                 <span class="discipline text-nowrap">
                     (<f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}" />)
                 </span>
+                <f:if condition="{competitionType.name} == 'World Championship'">
+                    &nbsp;<i aria-hidden="true" class="fa fa-globe"></i>
+                </f:if>
         </h4>
     </div>
 
@@ -64,9 +68,12 @@
                 <div class="col-xs-12">
                     <p>{competition.title} - {competition.city}</p>
                     <p>
-                        <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{resultItem.startingGroup}" />
-                        <f:format.case mode="upper">{resultItem.startingClass}</f:format.case>
-                        <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}" />
+                        <span>
+                            <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{resultItem.startingGroup}" />
+                            <f:format.case mode="upper">{resultItem.startingClass}</f:format.case>
+                        </span>
+                        <span><f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}" /></span>
+                        - <span>{competitionType.name}</span>
                     </p>
                     <p>
                         Platz {resultItem.position} / Gestartete Paare {resultItem.participantCount}
