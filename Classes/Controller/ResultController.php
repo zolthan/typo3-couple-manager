@@ -197,6 +197,8 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     {
         $query = $this->getListQuery();
         $constraints = $this->getCommonConstraints(true);
+        $constraints [] = $query->equals('couple.show_future', 1);
+
         $orderArray = [
             'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
         ];
