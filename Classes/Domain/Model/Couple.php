@@ -82,6 +82,13 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $hideResults = false;
 
     /**
+     * showFuture
+     *
+     * @var bool
+     */
+    protected $showFuture = false;
+
+    /**
      * description
      *
      * @var string
@@ -200,6 +207,38 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function isHideResults()
     {
         return $this->hideResults;
+    }
+
+    /**
+     * Returns the showFuture
+     *
+     * @return bool $showFuture
+     */
+    public function getShowFuture()
+    {
+        return $this->showFuture;
+    }
+
+    /**
+     * Sets the showFuture
+     *
+     * @param $showFuture
+     * @return Couple
+     */
+    public function setShowFuture($showFuture)
+    {
+        $this->showFuture = $showFuture;
+        return $this;
+    }
+
+    /**
+     * Returns the boolean state of showFuture
+     *
+     * @return bool
+     */
+    public function isShowFuture()
+    {
+        return $this->showFuture;
     }
 
     /**

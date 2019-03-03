@@ -60,6 +60,9 @@
             <trans-unit id="tx_couplemanager_domain_model_couple.hide_results">
                 <target>Ergebnisse verbergen</target>
             </trans-unit>
+            <trans-unit id="tx_couplemanager_domain_model_couple.show_future">
+                <target>Künftige Wettbewerbe anzeigen</target>
+            </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.image">
                 <target>Bild</target>
             </trans-unit>

@@ -36,9 +36,12 @@
                 </f:else>
             </f:if>
             <f:if condition="{omit.city} != 1">
-            <span class="{displayMobile}"><br/>{competition.city}</span>
+                <span class="{displayMobile}"><br/>{competition.city}</span>
             </f:if>
         </a>
+        <f:if condition="{competitionType.name} == 'World Championship'">
+            &nbsp;<i aria-hidden="true" class="fa fa-globe"></i>
+        </f:if>
     </td>
     <f:if condition="{omit.city} != 1">
         <td class="{displayDesktop}">
