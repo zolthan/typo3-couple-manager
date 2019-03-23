@@ -44,10 +44,6 @@
         </div>
         <div class="col-xs-12">
             <div class="table-responsive">
-                <f:variable name="displayMobile" value="hidden-md hidden-lg"/>
-                <f:variable name="displayDesktop" value="hidden-xs hidden-sm"/>
-
-                <f:variable name="prevResult" value=""/>
                 <f:groupedFor each="{results}" as="resultsByDiscipline" groupBy="discipline" groupKey="discipline">
                     <table class="table table-condensed table-striped">
                         <caption>Turnierergebnisse

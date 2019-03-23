@@ -200,7 +200,9 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $constraints [] = $query->equals('couple.show_future', 1);
 
         $orderArray = [
+            'discipline' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
             'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+            'couple.man_last_name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
         ];
         $query
             ->setOrderings($orderArray)
