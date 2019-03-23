@@ -9,14 +9,22 @@
 <f:section name="main">
     <!--TYPO3SEARCH_end-->
     <f:if condition="{competitions}">
-        <table class="table table-condensed table-striped">
-            <f:render partial="Result/TableHeader" arguments="{omit:{result:1}}"/>
-            <tbody>
-            <f:for each="{competitions}" as="result" key="itemkey" reverse="false" iteration="iterator">
-                <f:render partial="Result/TableRow" arguments="{result:result, omit:{result:1}}"/>
-            </f:for>
-            </tbody>
-        </table>
+
+        <f:groupedFor each="{competitions}" as="resultsByDiscipline" groupBy="discipline" groupKey="discipline">
+            <table class="table table-condensed table-striped">
+                <caption>Turnieranmeldungen
+                    <f:translate
+                            key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{discipline}"/>
+                </caption>
+                <f:render partial="Result/TableHeader" arguments="{omit:{result:1}}"/>
+                <tbody>
+                <f:for each="{resultsByDiscipline}" as="result" key="itemkey"
+                       reverse="false" iteration="iterator">
+                    <f:render partial="Result/TableRow" arguments="{result:result, omit:{result:1}}"/>
+                </f:for>
+                </tbody>
+            </table>
+        </f:groupedFor>
     </f:if>
     <!--TYPO3SEARCH_begin-->
 </f:section>
