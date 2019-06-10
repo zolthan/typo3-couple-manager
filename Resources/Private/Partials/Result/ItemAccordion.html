@@ -15,13 +15,13 @@
     <f:variable name="competition" value="{resultItem.competition.0}"/>
     <f:variable name="couple" value="{resultItem.couple.0}"/>
     <f:variable name="competitionType" value="{resultItem.competitionType.0}"/>
-    <div class="panel-heading" role="tab" id="accordion-heading-{contentObjectData.uid}-{resultItem.uid}">
+    <div class="panel-heading" role="tab" id="accordion-heading-{contentObjectUid}-{resultItem.uid}">
         <h4 class="panel-title"
             data-toggle="collapse"
-            data-parent="#accordion-{contentObjectData.uid}"
-            data-target="#accordion-{contentObjectData.uid}-{resultItem.uid}"
+            data-parent="#accordion-{contentObjectUid}"
+            data-target="#accordion-{contentObjectUid}-{resultItem.uid}"
             aria-expanded="false"
-            aria-controls="accordion-{contentObjectData.uid}-{resultItem.uid}">
+            aria-controls="accordion-{contentObjectUid}-{resultItem.uid}">
                 <f:if condition="{resultItem.promotion}">
                     <div class="promotion">
                         <span class="label label-danger">
@@ -61,8 +61,8 @@
         </h4>
     </div>
 
-    <div id="accordion-{contentObjectData.uid}-{resultItem.uid}" class="panel-collapse collapse" role="tabpanel"
-         aria-labelledby="accordion-heading-{contentObjectData.uid}-{resultItem.uid}">
+    <div id="accordion-{contentObjectUid}-{resultItem.uid}" class="panel-collapse collapse" role="tabpanel"
+         aria-labelledby="accordion-heading-{contentObjectUid}-{resultItem.uid}">
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12">
