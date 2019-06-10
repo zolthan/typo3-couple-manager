@@ -2,6 +2,10 @@
 
 namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
+use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+
 /***
  *
  * This file is part of the "Couple Manager" Extension for TYPO3 CMS.
@@ -35,6 +39,20 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     protected $resultRepository = null;
 
     /**
+     * @param ViewInterface $view
+     * @return void
+     */
+    public function initializeView(ViewInterface $view)
+    {
+        parent::initializeView($view);
+        $view->assign('page', $GLOBALS['TSFE']->page);
+        $view->assign('user', $GLOBALS['TSFE']->fe_user->user);
+        $view->assign('contentObjectUid', $this->configurationManager->getContentObject()->data['uid']);
+        $view->assign('cookies', $_COOKIE);
+        $view->assign('session', $_SESSION);
+    }
+
+    /**
      * action list
      *
      * @return void
@@ -42,11 +60,11 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     public function listAction()
     {
         $orderArray = [
-            'image' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
-            'man_last_name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+            'image' => QueryInterface::ORDER_DESCENDING,
+            'man_last_name' => QueryInterface::ORDER_ASCENDING,
         ];
         if ($this->settings['list']['activeCouplesFirst']) {
-            $orderArray = ['active_couple' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING] + $orderArray;
+            $orderArray = ['active_couple' => QueryInterface::ORDER_DESCENDING] + $orderArray;
         }
         $this->coupleRepository->setDefaultOrderings($orderArray);
         $couples = $this->coupleRepository->findAll();
@@ -66,18 +84,18 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     /**
      * action show
      *
-     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple
+     * @param Couple $couple
      * @return void
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function detailAction(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple)
+    public function detailAction(Couple $couple)
     {
         $this->view->assign('couple', $couple);
 
         $orderArray = [
-            'discipline' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-            'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
-            'starting_class' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+            'discipline' => QueryInterface::ORDER_ASCENDING,
+            'date' => QueryInterface::ORDER_DESCENDING,
+            'starting_class' => QueryInterface::ORDER_ASCENDING,
         ];
 
 //        $query

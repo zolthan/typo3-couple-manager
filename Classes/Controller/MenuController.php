@@ -2,6 +2,8 @@
 
 namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+
 /**
  * MenuController
  */
@@ -23,15 +25,12 @@ class MenuController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function showAction()
     {
         $orderArray = [
-            'image' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
-            'man_last_name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+            'image' => QueryInterface::ORDER_DESCENDING,
+            'man_last_name' => QueryInterface::ORDER_ASCENDING,
         ];
-//        if ($this->settings['list']['activeCouplesFirst']) {
-        $orderArray = ['active_couple' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING] + $orderArray;
-//        }
+        $orderArray = ['active_couple' => QueryInterface::ORDER_DESCENDING] + $orderArray;
         $this->coupleRepository->setDefaultOrderings($orderArray);
         $couples = $this->coupleRepository->findAll();
         $this->view->assign('couples', $couples);
-
     }
 }

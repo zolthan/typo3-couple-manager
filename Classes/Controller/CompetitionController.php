@@ -1,5 +1,9 @@
 <?php
+
 namespace SchwarzWeissReutlingen\CoupleManager\Controller;
+
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition;
+use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 
 /***
  *
@@ -26,6 +30,20 @@ class CompetitionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
     protected $competitionRepository = null;
 
     /**
+     * @param ViewInterface $view
+     * @return void
+     */
+    public function initializeView(ViewInterface $view)
+    {
+        parent::initializeView($view);
+        $view->assign('page', $GLOBALS['TSFE']->page);
+        $view->assign('user', $GLOBALS['TSFE']->fe_user->user);
+        $view->assign('contentObjectUid', $this->configurationManager->getContentObject()->data['uid']);
+        $view->assign('cookies', $_COOKIE);
+        $view->assign('session', $_SESSION);
+    }
+
+    /**
      * action list
      *
      * @return void
@@ -39,10 +57,10 @@ class CompetitionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
     /**
      * action show
      *
-     * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $competition
+     * @param Competition $competition
      * @return void
      */
-    public function showAction(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $competition)
+    public function showAction(Competition $competition)
     {
         $this->view->assign('competition', $competition);
     }
