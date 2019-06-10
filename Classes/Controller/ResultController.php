@@ -3,6 +3,8 @@
 namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Result;
+use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
 /***
  *
@@ -36,14 +38,27 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     protected $resultRepository = null;
 
+    /**
+     * @param ViewInterface $view
+     * @return void
+     */
+    public function initializeView(ViewInterface $view)
+    {
+        parent::initializeView($view);
+        $view->assign('page', $GLOBALS['TSFE']->page);
+        $view->assign('user', $GLOBALS['TSFE']->fe_user->user);
+        $view->assign('contentObjectUid', $this->configurationManager->getContentObject()->data['uid']);
+        $view->assign('cookies', $_COOKIE);
+        $view->assign('session', $_SESSION);
+    }
 
     /**
-     * @return \TYPO3\CMS\Extbase\Persistence\QueryInterface
+     * @return QueryInterface
      */
     protected function getListQuery()
     {
         $orderArray = [
-            'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
+            'date' => QueryInterface::ORDER_DESCENDING,
         ];
         $this->resultRepository->setDefaultOrderings($orderArray);
 
@@ -153,8 +168,8 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
         $constraints [] = $query->lessThanOrEqual('position', 3);
         $orderArray = [
-            'position' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-            'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
+            'position' => QueryInterface::ORDER_ASCENDING,
+            'date' => QueryInterface::ORDER_DESCENDING,
         ];
         $query
             ->setOrderings($orderArray)
@@ -167,8 +182,8 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
         $constraints [] = $query->greaterThan('position', 3);
         $orderArray = [
-            'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
-            'position' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+            'date' => QueryInterface::ORDER_DESCENDING,
+            'position' => QueryInterface::ORDER_ASCENDING,
         ];
         $query
             ->setOrderings($orderArray)
@@ -200,9 +215,9 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $constraints [] = $query->equals('couple.show_future', 1);
 
         $orderArray = [
-            'discipline' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-            'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-            'couple.man_last_name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+            'discipline' => QueryInterface::ORDER_ASCENDING,
+            'date' => QueryInterface::ORDER_ASCENDING,
+            'couple.man_last_name' => QueryInterface::ORDER_ASCENDING,
         ];
         $query
             ->setOrderings($orderArray)

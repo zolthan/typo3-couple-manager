@@ -3,46 +3,48 @@
 <f:section name="main">
     <f:flashMessages/>
     <f:if condition="{couples}">
-        <div class="card-deck list row">
+        <div class="couple-list-view card-deck list row">
             <f:for each="{couples}" as="couple">
-                <div class="card col-lg-3 col-sm-6 {f:if(condition:'{couple.activeCouple} != 1',then:'not-active',else:'active')}">
-                    <f:if condition="{couple.image}">
-                        <div class="card-img-top img-responsive ratio-4-3"
-                             style="background-image:url('{f:uri.image(src:'{couple.image.uid}',treatIdAsReference:'1')}')"></div>
-                    </f:if>
-                    <div class="card-body">
-                        <f:if condition="{couple.coupleName}">
-                            <h3 class="card-title">
-                                <f:format.crop maxCharacters="100">{couple.coupleName}</f:format.crop>
-                            </h3>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="card {f:if(condition:'{couple.activeCouple} != 1',then:'not-active',else:'active')}">
+                        <f:if condition="{couple.image}">
+                            <div class="card-img-top img-responsive ratio-4-3"
+                                 style="background-image:url('{f:uri.image(src:'{couple.image.uid}',treatIdAsReference:'1')}')"></div>
                         </f:if>
-                        <p class="card-text">
-                            <f:if condition="{couple.startingClassStandard}">
-                                Standard:
-                                <f:if condition="{couple.startingGroup}">
-                                    {f:translate(key: couple.startingGroup, extensionName: 'couple_manager')}
-                                </f:if>
-                                <f:format.case mode="upper">{couple.startingClassStandard}</f:format.case>
-                                <br/>
+                        <div class="card-body">
+                            <f:if condition="{couple.coupleName}">
+                                <h3 class="card-title">
+                                    <f:format.crop maxCharacters="100">{couple.coupleName}</f:format.crop>
+                                </h3>
                             </f:if>
-                            <f:if condition="{couple.startingClassLatin}">
-                                Latein:
-                                <f:if condition="{couple.startingGroup}">
-                                    {f:translate(key: couple.startingGroup, extensionName: 'couple_manager')}
+                            <p class="card-text">
+                                <f:if condition="{couple.startingClassStandard}">
+                                    Standard:
+                                    <f:if condition="{couple.startingGroup}">
+                                        {f:translate(key: couple.startingGroup, extensionName: 'couple_manager')}
+                                    </f:if>
+                                    <f:format.case mode="upper">{couple.startingClassStandard}</f:format.case>
+                                    <br/>
                                 </f:if>
-                                <f:format.case mode="upper">{couple.startingClassLatin}</f:format.case>
-                                <br/>
+                                <f:if condition="{couple.startingClassLatin}">
+                                    Latein:
+                                    <f:if condition="{couple.startingGroup}">
+                                        {f:translate(key: couple.startingGroup, extensionName: 'couple_manager')}
+                                    </f:if>
+                                    <f:format.case mode="upper">{couple.startingClassLatin}</f:format.case>
+                                    <br/>
+                                </f:if>
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <f:link.action pageUid="{settings.list.detailView}" controller="Couple" action="detail"
+                                           arguments="{couple : couple}" title="Zur Seite von {couple.coupleName}"
+                                           class="btn btn-primary">weiter
+                            </f:link.action>
+                            <f:if condition="{couple.activeCouple} != 1">
+                                <span class="label label-primary">nicht mehr<br/>für uns aktiv</span>
                             </f:if>
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <f:link.action pageUid="{settings.list.detailView}" controller="Couple" action="detail"
-                                       arguments="{couple : couple}" title="Zur Seite von {couple.coupleName}"
-                                       class="btn btn-primary">weiter
-                        </f:link.action>
-                        <f:if condition="{couple.activeCouple} != 1">
-                            <span class="label label-primary">nicht mehr<br/>für uns aktiv</span>
-                        </f:if>
+                        </div>
                     </div>
                 </div>
             </f:for>

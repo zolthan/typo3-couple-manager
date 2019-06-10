@@ -9,29 +9,27 @@
 <f:section name="main">
     <!--TYPO3SEARCH_end-->
     <f:if condition="{results}">
-        <div class="results-list-view {f:if(condition: '{settings.list.templateLayout} == 2', then: 'panel-group')}"
-             id="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'accordion-{contentObjectData.uid}', else: 'results-container-{contentObjectData.uid}')}"
+        <div class="results-list-view
+        {f:if(condition: '{settings.list.templateLayout} == 2', then: ' panel-group')}
+        {f:if(condition: '{settings.list.templateLayout} == 3', then: ' card-deck list row')}"
+             id="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'accordion-{contentObjectUid}', else: 'results-container-{contentObjectUid}')}"
              role="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'tablist')}"
              aria-multiselectable="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'true')}">
             <f:for each="{results}" as="resultItem" iteration="iterator">
-                <f:if condition="{settings.templateLayout} == 1">
-                    <f:then>
-                        <f:render partial="Result/ItemBig"
+                <f:switch expression="{settings.list.templateLayout}">
+                    <f:case value="2">
+                        <f:render partial="Result/ItemAccordion"
+                                  arguments="{resultItem:resultItem,settings:settings,iterator:iterator,contentObjectData:contentObjectData}"/>
+                    </f:case>
+                    <f:case value="3">
+                        <f:render partial="Result/ItemCard"
+                                  arguments="{resultItem:resultItem,settings:settings,iterator:iterator,contentObjectData:contentObjectData}"/>
+                    </f:case>
+                    <f:defaultCase>
+                        <f:render partial="Result/Item"
                                   arguments="{resultItem:resultItem,settings:settings,iterator:iterator}"/>
-                    </f:then>
-                    <f:else>
-                        <f:if condition="{settings.list.templateLayout} == 2">
-                            <f:then>
-                                <f:render partial="Result/ItemAccordion"
-                                          arguments="{resultItem:resultItem,settings:settings,iterator:iterator,contentObjectData:contentObjectData}"/>
-                            </f:then>
-                            <f:else>
-                                <f:render partial="Result/Item"
-                                          arguments="{resultItem:resultItem,settings:settings,iterator:iterator}"/>
-                            </f:else>
-                        </f:if>
-                    </f:else>
-                </f:if>
+                    </f:defaultCase>
+                </f:switch>
             </f:for>
         </div>
     </f:if>
