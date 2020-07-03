@@ -4,13 +4,13 @@
         <header/>
         <body>
             <trans-unit id="tx_couplemanager_domain_model_couple.plugin">
-                <target>Paar-Plugin</target>
+                <target>Paar-Verwaltung</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.plugin_description">
                 <target>Plugin der Paar-Verwaltung</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_organizer">
-                <target>Veranstalter</target>
+                <target>Paar-Verwaltung - Veranstalter</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_organizer.name">
                 <target>Name</target>
@@ -28,7 +28,7 @@
                 <target>Info</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple">
-                <target>Paar</target>
+                <target>Paar-Verwaltung - Paar</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_couple.man_last_name">
                 <target>Nachname, Herr</target>
@@ -67,7 +67,7 @@
                 <target>Bild</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition">
-                <target>Veranstaltung</target>
+                <target>Paar-Verwaltung - Veranstaltung</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_competition.title">
                 <target>Titel</target>
@@ -100,7 +100,7 @@
                 <target>Größe Tanzfläche</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_result">
-                <target>Ergebnis</target>
+                <target>Paar-Verwaltung - Ergebnis</target>
             </trans-unit>
             <trans-unit id="tx_couplemanager_domain_model_result.date">
                 <target>Datum</target>
