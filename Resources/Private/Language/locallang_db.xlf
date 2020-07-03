@@ -4,13 +4,13 @@
 		<header/>
 		<body>
 			<trans-unit id="tx_couplemanager_domain_model_couple.plugin">
-				<source>Couple Plugin</source>
+				<source>Couple Management</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple.plugin_description">
 				<source>Couple Plugin Description</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_organizer">
-				<source>Organizer</source>
+				<source>Couple Management - Organizer</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_organizer.name">
 				<source>Name</source>
@@ -28,7 +28,7 @@
 				<source>Info</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple">
-				<source>Couple</source>
+				<source>Couple Management - Couple</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_couple.man_last_name">
 				<source>Man Last Name</source>
@@ -67,7 +67,7 @@
 				<source>Image</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_competition">
-				<source>Competition</source>
+				<source>Couple Management - Competition</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_competition.title">
 				<source>Title</source>
@@ -100,7 +100,7 @@
 				<source>Size Dance Floor</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_result">
-				<source>Result</source>
+				<source>Couple Management - Result</source>
 			</trans-unit>
 			<trans-unit id="tx_couplemanager_domain_model_result.date">
 				<source>Date</source>
