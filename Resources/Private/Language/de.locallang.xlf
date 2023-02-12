@@ -57,19 +57,19 @@
                 <target>Adult (WDSF)</target>
             </trans-unit>
             <trans-unit id="sen1">
-                <target>Senioren I</target>
+                <target>Masters I</target>
             </trans-unit>
             <trans-unit id="sen2">
-                <target>Senioren II</target>
+                <target>Masters II</target>
             </trans-unit>
             <trans-unit id="sen3">
-                <target>Senioren III</target>
+                <target>Masters III</target>
             </trans-unit>
             <trans-unit id="sen4">
-                <target>Senioren IV</target>
+                <target>Masters IV</target>
             </trans-unit>
             <trans-unit id="sen5">
-                <target>Senioren V</target>
+                <target>Masters V</target>
             </trans-unit>
 
             <!-- generated translations -->
