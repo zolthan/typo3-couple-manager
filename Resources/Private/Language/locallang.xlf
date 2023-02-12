@@ -59,22 +59,22 @@
                 <source>Hauptgruppe II</source>
             </trans-unit>
             <trans-unit id="sen1">
-                <source>Senioren I</source>
+                <source>Masters I</source>
             </trans-unit>
             <trans-unit id="adult">
                 <source>Adult (WDSF)</source>
             </trans-unit>
             <trans-unit id="sen2">
-                <source>Senioren II</source>
+                <source>Masters II</source>
             </trans-unit>
             <trans-unit id="sen3">
-                <source>Senioren III</source>
+                <source>Masters III</source>
             </trans-unit>
             <trans-unit id="sen4">
-                <source>Senioren IV</source>
+                <source>Masters IV</source>
             </trans-unit>
             <trans-unit id="sen5">
-                <source>Senioren V</source>
+                <source>Masters V</source>
             </trans-unit>
             <!-- Starting Groups Short -->
             <trans-unit id="short.kin">
@@ -102,22 +102,22 @@
                 <source>HGR II</source>
             </trans-unit>
             <trans-unit id="short.sen1">
-                <source>SEN I</source>
+                <source>MAS I</source>
             </trans-unit>
             <trans-unit id="short.adult">
                 <source>Adult (WDSF)</source>
             </trans-unit>
             <trans-unit id="short.sen2">
-                <source>SEN II</source>
+                <source>MAS II</source>
             </trans-unit>
             <trans-unit id="short.sen3">
-                <source>SEN III</source>
+                <source>MAS III</source>
             </trans-unit>
             <trans-unit id="short.sen4">
-                <source>SEN IV</source>
+                <source>MAS IV</source>
             </trans-unit>
             <trans-unit id="short.sen5">
-                <source>SEN V</source>
+                <source>MAS V</source>
             </trans-unit>
 
             <!-- generated translations -->
