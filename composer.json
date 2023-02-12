@@ -13,5 +13,10 @@
         "psr-4": {
             "SchwarzWeissReutlingen\\CoupleManager\\": "Classes"
         }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "couple_manager"
+        }
     }
 }
