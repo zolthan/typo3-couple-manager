@@ -64,7 +64,10 @@
     <td class="text-nowrap">
         <f:translate
                 key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{result.startingGroup}"/>
-        <f:format.case mode="upper">{result.startingClass}</f:format.case>
+        <f:format.case mode="upper">{result.startingClass}</f:format.case><br/>
+        <span class="discipline text-nowrap">
+            (<f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{result.discipline}" />)
+        </span>
         <f:if condition="{omit.result} != 1">
             <span class="{displayMobile} text-right"><br/>
                 <f:if condition="{result.promotion}">
