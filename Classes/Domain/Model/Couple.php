@@ -2,6 +2,9 @@
 
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+
 /***
  *
  * This file is part of the "Couple Manager" Extension for TYPO3 CMS.
@@ -16,7 +19,7 @@ namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 /**
  * Couple
  */
-class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Couple extends AbstractEntity
 {
     /**
      * manLastName
@@ -98,59 +101,27 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * image
      *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @var FileReference
      * @cascade remove
      */
     protected $image = null;
-
-    /**
-     * Returns the manLastName
-     *
-     * @return string $manLastName
-     */
-    public function getManLastName()
-    {
-        return $this->manLastName;
-    }
-
-    /**
-     * Sets the manLastName
-     *
-     * @param string $manLastName
-     * @return void
-     */
-    public function setManLastName($manLastName)
-    {
-        $this->manLastName = $manLastName;
-    }
-
-    /**
-     * Returns the manFirstName
-     *
-     * @return string $manFirstName
-     */
-    public function getManFirstName()
-    {
-        return $this->manFirstName;
-    }
-
-    /**
-     * Sets the manFirstName
-     *
-     * @param string $manFirstName
-     * @return void
-     */
-    public function setManFirstName($manFirstName)
-    {
-        $this->manFirstName = $manFirstName;
-    }
 
     /**
      * Returns the activeCouple
      *
      * @return bool $activeCouple
      */
-    public function getActiveCouple()
+    public function getActiveCouple(): bool
+    {
+        return $this->activeCouple;
+    }
+
+    /**
+     * Returns the boolean state of activeCouple
+     *
+     * @return bool
+     */
+    public function isActiveCouple(): bool
     {
         return $this->activeCouple;
     }
@@ -161,20 +132,20 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param bool $activeCouple
      * @return Couple
      */
-    public function setActiveCouple($activeCouple)
+    public function setActiveCouple(bool $activeCouple): self
     {
         $this->activeCouple = $activeCouple;
         return $this;
     }
 
     /**
-     * Returns the boolean state of activeCouple
+     * Returns the boolean state of hideResults
      *
      * @return bool
      */
-    public function isActiveCouple()
+    public function isHideResults(): bool
     {
-        return $this->activeCouple;
+        return $this->hideResults;
     }
 
     /**
@@ -182,7 +153,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return bool $hideResults
      */
-    public function getHideResults()
+    public function getHideResults(): bool
     {
         return $this->hideResults;
     }
@@ -193,20 +164,10 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param bool $hideResults
      * @return Couple
      */
-    public function setHideResults($hideResults)
+    public function setHideResults(bool $hideResults): self
     {
         $this->hideResults = $hideResults;
         return $this;
-    }
-
-    /**
-     * Returns the boolean state of hideResults
-     *
-     * @return bool
-     */
-    public function isHideResults()
-    {
-        return $this->hideResults;
     }
 
     /**
@@ -214,7 +175,17 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return bool $showFuture
      */
-    public function getShowFuture()
+    public function getShowFuture(): bool
+    {
+        return $this->showFuture;
+    }
+
+    /**
+     * Returns the boolean state of showFuture
+     *
+     * @return bool
+     */
+    public function isShowFuture(): bool
     {
         return $this->showFuture;
     }
@@ -225,62 +196,11 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param $showFuture
      * @return Couple
      */
-    public function setShowFuture($showFuture)
+    public function setShowFuture($showFuture): self
     {
         $this->showFuture = $showFuture;
+
         return $this;
-    }
-
-    /**
-     * Returns the boolean state of showFuture
-     *
-     * @return bool
-     */
-    public function isShowFuture()
-    {
-        return $this->showFuture;
-    }
-
-    /**
-     * Returns the womanLastName
-     *
-     * @return string $womanLastName
-     */
-    public function getWomanLastName()
-    {
-        return $this->womanLastName;
-    }
-
-    /**
-     * Sets the womanLastName
-     *
-     * @param string $womanLastName
-     * @return void
-     */
-    public function setWomanLastName($womanLastName)
-    {
-        $this->womanLastName = $womanLastName;
-    }
-
-    /**
-     * Returns the womanFirstName
-     *
-     * @return string $womanFirstName
-     */
-    public function getWomanFirstName()
-    {
-        return $this->womanFirstName;
-    }
-
-    /**
-     * Sets the womanFirstName
-     *
-     * @param string $womanFirstName
-     * @return void
-     */
-    public function setWomanFirstName($womanFirstName)
-    {
-        $this->womanFirstName = $womanFirstName;
     }
 
     /**
@@ -288,7 +208,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return string $startingClassLatin
      */
-    public function getStartingClassLatin()
+    public function getStartingClassLatin(): string
     {
         return $this->startingClassLatin;
     }
@@ -299,7 +219,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param string $startingClassLatin
      * @return void
      */
-    public function setStartingClassLatin($startingClassLatin)
+    public function setStartingClassLatin(string $startingClassLatin): void
     {
         $this->startingClassLatin = $startingClassLatin;
     }
@@ -309,7 +229,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return string $startingClassStandard
      */
-    public function getStartingClassStandard()
+    public function getStartingClassStandard(): string
     {
         return $this->startingClassStandard;
     }
@@ -320,7 +240,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param string $startingClassStandard
      * @return void
      */
-    public function setStartingClassStandard($startingClassStandard)
+    public function setStartingClassStandard(string $startingClassStandard): void
     {
         $this->startingClassStandard = $startingClassStandard;
     }
@@ -330,7 +250,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return string $startingGroup
      */
-    public function getStartingGroup()
+    public function getStartingGroup(): string
     {
         return $this->startingGroup;
     }
@@ -341,7 +261,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param string $startingGroup
      * @return void
      */
-    public function setStartingGroup($startingGroup)
+    public function setStartingGroup(string $startingGroup): void
     {
         $this->startingGroup = $startingGroup;
     }
@@ -351,7 +271,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return string $description
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -362,7 +282,7 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param string $description
      * @return void
      */
-    public function setDescription($description)
+    public function setDescription(string $description): void
     {
         $this->description = $description;
     }
@@ -370,9 +290,9 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the image
      *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @return FileReference $image
      */
-    public function getImage()
+    public function getImage(): ?FileReference
     {
         return $this->image;
     }
@@ -380,10 +300,10 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the image
      *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @param FileReference $image
      * @return void
      */
-    public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image)
+    public function setImage(FileReference $image): void
     {
         $this->image = $image;
     }
@@ -406,5 +326,89 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         }
 
         return sprintf('%s %s & %s %s', $this->getManFirstName(), $this->getManLastName(), $this->getWomanFirstName(), $this->getWomanLastName());
+    }
+
+    /**
+     * Returns the womanLastName
+     *
+     * @return string $womanLastName
+     */
+    public function getWomanLastName(): string
+    {
+        return $this->womanLastName;
+    }
+
+    /**
+     * Sets the womanLastName
+     *
+     * @param string $womanLastName
+     * @return void
+     */
+    public function setWomanLastName(string $womanLastName): void
+    {
+        $this->womanLastName = $womanLastName;
+    }
+
+    /**
+     * Returns the manFirstName
+     *
+     * @return string $manFirstName
+     */
+    public function getManFirstName(): string
+    {
+        return $this->manFirstName;
+    }
+
+    /**
+     * Sets the manFirstName
+     *
+     * @param string $manFirstName
+     * @return void
+     */
+    public function setManFirstName(string $manFirstName): void
+    {
+        $this->manFirstName = $manFirstName;
+    }
+
+    /**
+     * Returns the manLastName
+     *
+     * @return string $manLastName
+     */
+    public function getManLastName(): string
+    {
+        return $this->manLastName;
+    }
+
+    /**
+     * Sets the manLastName
+     *
+     * @param string $manLastName
+     * @return void
+     */
+    public function setManLastName(string $manLastName): void
+    {
+        $this->manLastName = $manLastName;
+    }
+
+    /**
+     * Returns the womanFirstName
+     *
+     * @return string $womanFirstName
+     */
+    public function getWomanFirstName(): string
+    {
+        return $this->womanFirstName;
+    }
+
+    /**
+     * Sets the womanFirstName
+     *
+     * @param string $womanFirstName
+     * @return void
+     */
+    public function setWomanFirstName(string $womanFirstName): void
+    {
+        $this->womanFirstName = $womanFirstName;
     }
 }

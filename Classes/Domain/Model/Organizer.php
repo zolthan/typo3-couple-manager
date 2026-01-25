@@ -1,5 +1,8 @@
 <?php
+
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
+
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /***
  *
@@ -15,7 +18,7 @@ namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 /**
  * CompetitionType
  */
-class Organizer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Organizer extends AbstractEntity
 {
     /**
      * name

@@ -1,5 +1,10 @@
 <?php
+
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
+
+use DateTime;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /***
  *
@@ -15,12 +20,12 @@ namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 /**
  * Result
  */
-class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Result extends AbstractEntity
 {
     /**
      * date
      *
-     * @var \DateTime
+     * @var DateTime
      */
     protected $date = null;
 
@@ -69,7 +74,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * couple
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple>
+     * @var ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple>
      * @cascade remove
      * @lazy
      */
@@ -78,7 +83,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * competition
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition>
+     * @var ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition>
      * @cascade remove
      * @lazy
      */
@@ -87,7 +92,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * competitionType
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType>
+     * @var ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType>
      * @cascade remove
      * @lazy
      */
@@ -112,15 +117,15 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected function initStorageObjects()
     {
-        $this->couple = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->competition = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->competitionType = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->couple = new ObjectStorage();
+        $this->competition = new ObjectStorage();
+        $this->competitionType = new ObjectStorage();
     }
 
     /**
      * Returns the date
      *
-     * @return \DateTime $date
+     * @return DateTime $date
      */
     public function getDate()
     {
@@ -130,10 +135,10 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the date
      *
-     * @param \DateTime $date
+     * @param DateTime $date
      * @return void
      */
-    public function setDate(\DateTime $date)
+    public function setDate(DateTime $date)
     {
         $this->date = $date;
     }
@@ -244,6 +249,16 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * Returns the boolean state of promotion
+     *
+     * @return bool
+     */
+    public function isPromotion()
+    {
+        return $this->promotion;
+    }
+
+    /**
      * Returns the promotion
      *
      * @return bool $promotion
@@ -262,16 +277,6 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setPromotion($promotion)
     {
         $this->promotion = $promotion;
-    }
-
-    /**
-     * Returns the boolean state of promotion
-     *
-     * @return bool
-     */
-    public function isPromotion()
-    {
-        return $this->promotion;
     }
 
     /**
@@ -299,7 +304,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the couple
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple> $couple
+     * @return ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple> $couple
      */
     public function getCouple()
     {
@@ -309,10 +314,10 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the couple
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple> $couple
+     * @param ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple> $couple
      * @return void
      */
-    public function setCouple(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $couple)
+    public function setCouple(ObjectStorage $couple)
     {
         $this->couple = $couple;
     }
@@ -342,7 +347,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the competition
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition> $competition
+     * @return ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition> $competition
      */
     public function getCompetition()
     {
@@ -352,10 +357,10 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the competition
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition> $competition
+     * @param ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition> $competition
      * @return void
      */
-    public function setCompetition(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $competition)
+    public function setCompetition(ObjectStorage $competition)
     {
         $this->competition = $competition;
     }
@@ -385,7 +390,7 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the competitionType
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType> $competitionType
+     * @return ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType> $competitionType
      */
     public function getCompetitionType()
     {
@@ -395,10 +400,10 @@ class Result extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the competitionType
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType> $competitionType
+     * @param ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType> $competitionType
      * @return void
      */
-    public function setCompetitionType(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $competitionType)
+    public function setCompetitionType(ObjectStorage $competitionType)
     {
         $this->competitionType = $competitionType;
     }

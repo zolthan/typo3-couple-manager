@@ -1,5 +1,8 @@
 <?php
+
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
+
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /***
  *
@@ -15,7 +18,7 @@ namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 /**
  * CompetitionType
  */
-class CompetitionType extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class CompetitionType extends AbstractEntity
 {
     /**
      * name
@@ -30,6 +33,16 @@ class CompetitionType extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $organization = '';
+
+    /**
+     * Gets the label for competition type select fields
+     *
+     * @return string
+     */
+    public function getOptionLabel()
+    {
+        return sprintf('%s (%s)', $this->getName(), $this->getOrganization());
+    }
 
     /**
      * Returns the name
@@ -71,15 +84,5 @@ class CompetitionType extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setOrganization($organization)
     {
         $this->organization = $organization;
-    }
-
-    /**
-     * Gets the label for competition type select fields
-     *
-     * @return string
-     */
-    public function getOptionLabel()
-    {
-        return sprintf('%s (%s)', $this->getName(), $this->getOrganization());
     }
 }

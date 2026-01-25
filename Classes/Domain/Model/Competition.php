@@ -2,6 +2,10 @@
 
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 
+use DateTime;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+
 /***
  *
  * This file is part of the "Couple Manager" Extension for TYPO3 CMS.
@@ -16,7 +20,7 @@ namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 /**
  * Competition
  */
-class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Competition extends AbstractEntity
 {
     /**
      * title
@@ -28,14 +32,14 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * dateStart
      *
-     * @var \DateTime
+     * @var DateTime
      */
     protected $dateStart = null;
 
     /**
      * dateEnd
      *
-     * @var \DateTime
+     * @var DateTime
      */
     protected $dateEnd = null;
 
@@ -63,7 +67,7 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Organizer
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer>
+     * @var ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer>
      * @lazy
      */
     protected $organizer;
@@ -76,55 +80,11 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $sizeDanceFloor = '';
 
     /**
-     * Returns the title
-     *
-     * @return string $title
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    /**
-     * Sets the title
-     *
-     * @param string $title
-     * @return Competition
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-        return $this;
-    }
-
-    /**
-     * Returns the dateStart
-     *
-     * @return \DateTime $dateStart
-     */
-    public function getDateStart()
-    {
-        return $this->dateStart;
-    }
-
-    /**
-     * Sets the dateStart
-     *
-     * @param \DateTime $dateStart
-     * @return Competition
-     */
-    public function setDateStart(\DateTime $dateStart)
-    {
-        $this->dateStart = $dateStart;
-        return $this;
-    }
-
-    /**
      * Returns the dateEnd
      *
-     * @return \DateTime $dateEnd
+     * @return DateTime $dateEnd
      */
-    public function getDateEnd()
+    public function getDateEnd(): ?DateTime
     {
         return $this->dateEnd;
     }
@@ -132,10 +92,10 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the dateEnd
      *
-     * @param \DateTime $dateEnd
+     * @param DateTime $dateEnd
      * @return Competition
      */
-    public function setDateEnd(\DateTime $dateEnd)
+    public function setDateEnd(DateTime $dateEnd): self
     {
         $this->dateEnd = $dateEnd;
         return $this;
@@ -146,7 +106,7 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return int $country
      */
-    public function getCountry()
+    public function getCountry(): int
     {
         return $this->country;
     }
@@ -157,31 +117,9 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param int $country
      * @return Competition
      */
-    public function setCountry($country)
+    public function setCountry(int $country): self
     {
         $this->country = $country;
-        return $this;
-    }
-
-    /**
-     * Returns the city
-     *
-     * @return string $city
-     */
-    public function getCity()
-    {
-        return $this->city;
-    }
-
-    /**
-     * Sets the city
-     *
-     * @param string $city
-     * @return Competition
-     */
-    public function setCity($city)
-    {
-        $this->city = $city;
         return $this;
     }
 
@@ -190,7 +128,7 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return string $address
      */
-    public function getAddress()
+    public function getAddress(): string
     {
         return $this->address;
     }
@@ -201,7 +139,7 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param string $address
      * @return Competition
      */
-    public function setAddress($address)
+    public function setAddress(string $address): self
     {
         $this->address = $address;
         return $this;
@@ -213,7 +151,7 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer $organizer
      * @return Competition
      */
-    public function addCategory(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer $organizer)
+    public function addCategory(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer $organizer): self
     {
         $this->organizer->attach($organizer);
         return $this;
@@ -225,7 +163,7 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer $organizerToRemove The Category to be removed
      * @return Competition
      */
-    public function removeCategory(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer $organizerToRemove)
+    public function removeCategory(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer $organizerToRemove): self
     {
         $this->organizer->detach($organizerToRemove);
         return $this;
@@ -234,9 +172,9 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the Categories
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer> $organizer
+     * @return ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer> $organizer
      */
-    public function getOrganizer()
+    public function getOrganizer(): ObjectStorage
     {
         return $this->organizer;
     }
@@ -244,10 +182,10 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the Categories
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer> $organizer
+     * @param ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer> $organizer
      * @return Competition
      */
-    public function setOrganizer(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $organizer)
+    public function setOrganizer(ObjectStorage $organizer): self
     {
         $this->organizer = $organizer;
         return $this;
@@ -258,7 +196,7 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return string $sizeDanceFloor
      */
-    public function getSizeDanceFloor()
+    public function getSizeDanceFloor(): string
     {
         return $this->sizeDanceFloor;
     }
@@ -269,7 +207,7 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param string $sizeDanceFloor
      * @return Competition
      */
-    public function setSizeDanceFloor($sizeDanceFloor)
+    public function setSizeDanceFloor(string $sizeDanceFloor): self
     {
         $this->sizeDanceFloor = $sizeDanceFloor;
         return $this;
@@ -280,12 +218,78 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return string
      */
-    public function getIdentifier()
+    public function getIdentifier(): string
     {
         $date = '';
         if ($this->getDateStart()) {
             $date = $this->getDateStart()->format('Y-m');
         }
         return sprintf('%s - %s (%s)', $date, $this->getTitle(), $this->getCity());
+    }
+
+    /**
+     * Returns the dateStart
+     *
+     * @return DateTime $dateStart
+     */
+    public function getDateStart(): ?DateTime
+    {
+        return $this->dateStart;
+    }
+
+    /**
+     * Sets the dateStart
+     *
+     * @param DateTime $dateStart
+     * @return Competition
+     */
+    public function setDateStart(DateTime $dateStart): self
+    {
+        $this->dateStart = $dateStart;
+        return $this;
+    }
+
+    /**
+     * Returns the title
+     *
+     * @return string $title
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    /**
+     * Sets the title
+     *
+     * @param string $title
+     * @return Competition
+     */
+    public function setTitle($title): self
+    {
+        $this->title = $title;
+        return $this;
+    }
+
+    /**
+     * Returns the city
+     *
+     * @return string $city
+     */
+    public function getCity(): string
+    {
+        return $this->city;
+    }
+
+    /**
+     * Sets the city
+     *
+     * @param string $city
+     * @return Competition
+     */
+    public function setCity(string $city): self
+    {
+        $this->city = $city;
+        return $this;
     }
 }
