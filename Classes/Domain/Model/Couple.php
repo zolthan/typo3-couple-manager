@@ -2,7 +2,6 @@
 
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 
-use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /***
@@ -101,7 +100,7 @@ class Couple extends AbstractEntity
     /**
      * image
      *
-     * @var FileReference
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      * @cascade remove
      */
     protected $image = null;
@@ -290,9 +289,9 @@ class Couple extends AbstractEntity
     /**
      * Returns the image
      *
-     * @return FileReference $image
+     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
      */
-    public function getImage(): ?FileReference
+    public function getImage()
     {
         return $this->image;
     }
@@ -300,10 +299,10 @@ class Couple extends AbstractEntity
     /**
      * Sets the image
      *
-     * @param FileReference $image
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
      * @return void
      */
-    public function setImage(FileReference $image): void
+    public function setImage($image): void
     {
         $this->image = $image;
     }
