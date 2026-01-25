@@ -393,14 +393,18 @@ class Couple extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return string
      */
-    public function getCoupleName()
+    public function getCoupleName(): string
     {
-        if ($this->getManLastName() == $this->getWomanLastName()) {
-            $nameCombined = sprintf('%s & %s %s', $this->getManFirstName(), $this->getWomanFirstName(), $this->getManLastName());
-        } else {
-            $nameCombined = sprintf('%s %s & %s %s', $this->getManFirstName(), $this->getManLastName(), $this->getWomanFirstName(), $this->getWomanLastName());
+        if (empty($this->getWomanLastName())) {
+            return sprintf('%s %s %s', $this->getManFirstName(), $this->getManLastName(), '(Solo)');
+        }
+        if (empty($this->getManLastName())) {
+            return sprintf('%s %s %s', $this->getWomanFirstName(), $this->getWomanLastName(), '(Solo)');
+        }
+        if ($this->getManLastName() === $this->getWomanLastName()) {
+            return sprintf('%s & %s %s', $this->getManFirstName(), $this->getWomanFirstName(), $this->getManLastName());
         }
 
-        return $nameCombined;
+        return sprintf('%s %s & %s %s', $this->getManFirstName(), $this->getManLastName(), $this->getWomanFirstName(), $this->getWomanLastName());
     }
 }
