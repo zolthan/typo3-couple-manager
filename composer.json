@@ -2,7 +2,7 @@
     "name": "schwarz-weiss-reutlingen/couple-manager",
     "type": "typo3-cms-extension",
     "homepage": "https://www.schwarz-weiss-rt.de",
-    "license": "proprietary",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Sebastian Wilhelm",
