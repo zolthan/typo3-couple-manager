@@ -34,14 +34,14 @@ class Competition extends AbstractEntity
      *
      * @var DateTime
      */
-    protected $dateStart = null;
+    protected $dateStart;
 
     /**
      * dateEnd
      *
      * @var DateTime
      */
-    protected $dateEnd = null;
+    protected $dateEnd;
 
     /**
      * country
@@ -78,6 +78,26 @@ class Competition extends AbstractEntity
      * @var string
      */
     protected $sizeDanceFloor = '';
+
+    /**
+     * __construct
+     */
+    public function __construct()
+    {
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     */
+    protected function initStorageObjects()
+    {
+        $this->organizer = new ObjectStorage();
+    }
 
     /**
      * Returns the dateEnd

@@ -48,7 +48,6 @@ class Organizer extends AbstractEntity
      * Sets the name
      *
      * @param string $name
-     * @return void
      */
     public function setName($name)
     {
@@ -69,7 +68,6 @@ class Organizer extends AbstractEntity
      * Sets the city
      *
      * @param string $city
-     * @return void
      */
     public function setCity($city)
     {

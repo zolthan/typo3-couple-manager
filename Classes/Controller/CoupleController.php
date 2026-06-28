@@ -28,7 +28,7 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository
      * @inject
      */
-    protected $coupleRepository = null;
+    protected $coupleRepository;
 
     /**
      * resultRepository
@@ -36,11 +36,10 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository
      * @inject
      */
-    protected $resultRepository = null;
+    protected $resultRepository;
 
     /**
      * @param ViewInterface $view
-     * @return void
      */
     public function initializeView(ViewInterface $view)
     {
@@ -54,8 +53,6 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
     /**
      * action list
-     *
-     * @return void
      */
     public function listAction()
     {
@@ -73,8 +70,6 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
     /**
      * action list
-     *
-     * @return void
      */
     public function listSimpleAction()
     {
@@ -85,7 +80,6 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * action show
      *
      * @param Couple $couple
-     * @return void
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     public function detailAction(Couple $couple)

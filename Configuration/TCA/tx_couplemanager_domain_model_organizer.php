@@ -1,4 +1,5 @@
 <?php
+
 $modelFields = 'name,city,country,website,info';
 
 return [
@@ -20,7 +21,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => $modelFields,
-        'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_organizer.svg'
+        'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_organizer.svg',
     ],
     'interface' => [
         'showRecordFieldList' => 'hidden,' . $modelFields,
@@ -44,8 +45,8 @@ return [
                 'type' => 'check',
                 'items' => [
                     '1' => [
-                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled'
-                    ]
+                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled',
+                    ],
                 ],
             ],
         ],
@@ -55,7 +56,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'city' => [
@@ -64,7 +65,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'country' => [
@@ -81,7 +82,7 @@ return [
                 'itemsProcFunc' => SJBR\StaticInfoTables\Hook\Backend\Form\FormDataProvider\TcaSelectItemsProcessor::class . '->translateCountriesSelector',
                 'size' => 1,
                 'minitems' => 0,
-                'maxitems' => 1
+                'maxitems' => 1,
             ],
         ],
         'website' => [
@@ -90,7 +91,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'info' => [
@@ -100,8 +101,8 @@ return [
                 'type' => 'text',
                 'cols' => 30,
                 'rows' => 5,
-                'eval' => 'trim'
-            ]
+                'eval' => 'trim',
+            ],
         ],
     ],
 ];

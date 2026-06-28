@@ -1,4 +1,5 @@
 <?php
+
 $modelFields = 'competition,competition_type,couple,promotion,date,discipline,starting_group,starting_class,position,participant_count,info';
 
 return [
@@ -21,7 +22,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => $modelFields,
-        'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_result.svg'
+        'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_result.svg',
     ],
     'interface' => [
         'showRecordFieldList' => 'hidden,' . $modelFields,
@@ -45,8 +46,8 @@ return [
                 'type' => 'check',
                 'items' => [
                     '1' => [
-                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled'
-                    ]
+                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled',
+                    ],
                 ],
             ],
         ],
@@ -85,11 +86,11 @@ return [
                 'type' => 'check',
                 'items' => [
                     '1' => [
-                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled'
-                    ]
+                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled',
+                    ],
                 ],
                 'default' => 0,
-            ]
+            ],
         ],
         'competition' => [
             'exclude' => false,
@@ -158,7 +159,7 @@ return [
                 'renderType' => 'inputDateTime',
                 'size' => 7,
                 'eval' => 'date',
-                'default' => '0000-00-00'
+                'default' => '0000-00-00',
             ],
         ],
         'starting_group' => [
@@ -171,7 +172,7 @@ return [
                 'size' => 1,
                 'minitems' => 1,
                 'maxitems' => 1,
-                'eval' => ''
+                'eval' => '',
             ],
         ],
         'starting_class' => [
@@ -183,7 +184,7 @@ return [
                 'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getStartingClassItems',
                 'size' => 1,
                 'maxitems' => 1,
-                'eval' => ''
+                'eval' => '',
             ],
         ],
         'discipline' => [
@@ -196,7 +197,7 @@ return [
                 'size' => 1,
                 'minitems' => 1,
                 'maxitems' => 1,
-                'eval' => ''
+                'eval' => '',
             ],
         ],
         'position' => [
@@ -205,8 +206,8 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 4,
-                'eval' => 'int'
-            ]
+                'eval' => 'int',
+            ],
         ],
         'participant_count' => [
             'exclude' => true,
@@ -214,8 +215,8 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 4,
-                'eval' => 'int'
-            ]
+                'eval' => 'int',
+            ],
         ],
         'info' => [
             'exclude' => true,
@@ -224,8 +225,8 @@ return [
                 'type' => 'text',
                 'cols' => 30,
                 'rows' => 5,
-                'eval' => 'trim'
-            ]
+                'eval' => 'trim',
+            ],
         ],
 
     ],

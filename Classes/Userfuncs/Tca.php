@@ -151,7 +151,8 @@ class Tca
         $query->getQuerySettings()
             ->setIgnoreEnableFields(true)
             ->setStoragePageIds([$config['row']['pid']]);
-        $query->setOrderings([
+        $query->setOrderings(
+            [
                 'active_couple' => QueryInterface::ORDER_DESCENDING,
                 'man_last_name' => QueryInterface::ORDER_ASCENDING,
                 'man_first_name' => QueryInterface::ORDER_ASCENDING,
@@ -160,7 +161,7 @@ class Tca
             ]
         );
         $result = $query->execute();
-        foreach ($result AS $couple) {
+        foreach ($result as $couple) {
             /** @var Couple $couple */
             $optionList[] = [$couple->getCoupleName(), $couple->getUid()];
         }
@@ -182,7 +183,8 @@ class Tca
         $query->getQuerySettings()
             ->setIgnoreEnableFields(true)
             ->setStoragePageIds([$config['row']['pid']]);
-        $query->setOrderings([
+        $query->setOrderings(
+            [
                 'date_start' => QueryInterface::ORDER_DESCENDING,
                 'title' => QueryInterface::ORDER_ASCENDING,
                 'organizer' => QueryInterface::ORDER_ASCENDING,
@@ -190,12 +192,12 @@ class Tca
             ]
         );
         $result = $query->execute();
-        foreach ($result AS $competition) {
+        foreach ($result as $competition) {
             /** @var Competition $competition */
             $optionList[] = [
                 $competition->getIdentifier(),
                 $competition->getUid(),
-                'tcarecords-tx_couplemanager_domain_model_competition-default'
+                'tcarecords-tx_couplemanager_domain_model_competition-default',
             ];
         }
         // return config
@@ -215,18 +217,19 @@ class Tca
         $query->getQuerySettings()
             ->setIgnoreEnableFields(true)
             ->setStoragePageIds([$config['row']['pid']]);
-        $query->setOrderings([
+        $query->setOrderings(
+            [
                 'organization' => QueryInterface::ORDER_ASCENDING,
                 'name' => QueryInterface::ORDER_ASCENDING,
             ]
         );
         $result = $query->execute();
-        foreach ($result AS $type) {
+        foreach ($result as $type) {
             /** @var CompetitionType $type */
             $optionList[] = [
                 $type->getOptionLabel(),
                 $type->getUid(),
-                'tcarecords-tx_couplemanager_domain_model_competitiontype-default'
+                'tcarecords-tx_couplemanager_domain_model_competitiontype-default',
             ];
         }
         // return config

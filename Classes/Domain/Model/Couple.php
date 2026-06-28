@@ -103,7 +103,7 @@ class Couple extends AbstractEntity
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      * @cascade remove
      */
-    protected $image = null;
+    protected $image;
 
     /**
      * Returns the activeCouple
@@ -216,7 +216,6 @@ class Couple extends AbstractEntity
      * Sets the startingClassLatin
      *
      * @param string $startingClassLatin
-     * @return void
      */
     public function setStartingClassLatin(string $startingClassLatin): void
     {
@@ -237,7 +236,6 @@ class Couple extends AbstractEntity
      * Sets the startingClassStandard
      *
      * @param string $startingClassStandard
-     * @return void
      */
     public function setStartingClassStandard(string $startingClassStandard): void
     {
@@ -258,7 +256,6 @@ class Couple extends AbstractEntity
      * Sets the startingGroup
      *
      * @param string $startingGroup
-     * @return void
      */
     public function setStartingGroup(string $startingGroup): void
     {
@@ -279,7 +276,6 @@ class Couple extends AbstractEntity
      * Sets the description
      *
      * @param string $description
-     * @return void
      */
     public function setDescription(string $description): void
     {
@@ -300,7 +296,6 @@ class Couple extends AbstractEntity
      * Sets the image
      *
      * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
-     * @return void
      */
     public function setImage($image): void
     {
@@ -341,7 +336,6 @@ class Couple extends AbstractEntity
      * Sets the womanLastName
      *
      * @param string $womanLastName
-     * @return void
      */
     public function setWomanLastName(string $womanLastName): void
     {
@@ -362,7 +356,6 @@ class Couple extends AbstractEntity
      * Sets the manFirstName
      *
      * @param string $manFirstName
-     * @return void
      */
     public function setManFirstName(string $manFirstName): void
     {
@@ -383,7 +376,6 @@ class Couple extends AbstractEntity
      * Sets the manLastName
      *
      * @param string $manLastName
-     * @return void
      */
     public function setManLastName(string $manLastName): void
     {
@@ -404,7 +396,6 @@ class Couple extends AbstractEntity
      * Sets the womanFirstName
      *
      * @param string $womanFirstName
-     * @return void
      */
     public function setWomanFirstName(string $womanFirstName): void
     {

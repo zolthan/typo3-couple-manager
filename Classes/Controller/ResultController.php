@@ -28,7 +28,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository
      * @inject
      */
-    protected $coupleRepository = null;
+    protected $coupleRepository;
 
     /**
      * resultRepository
@@ -36,11 +36,10 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository
      * @inject
      */
-    protected $resultRepository = null;
+    protected $resultRepository;
 
     /**
      * @param ViewInterface $view
-     * @return void
      */
     public function initializeView(ViewInterface $view)
     {
@@ -113,7 +112,6 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     /**
      * action list
      *
-     * @return void
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     public function listAction()
@@ -130,7 +128,6 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     /**
      * action listSuccess
      *
-     * @return void
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     public function listSuccessAction()
@@ -205,7 +202,6 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     /**
      * action listFuture
      *
-     * @return void
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     public function listFutureAction()
@@ -231,7 +227,6 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * action show
      *
      * @param Result $result
-     * @return void
      */
     public function showAction(Result $result)
     {

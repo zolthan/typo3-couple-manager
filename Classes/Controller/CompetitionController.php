@@ -27,11 +27,10 @@ class CompetitionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
      * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionRepository
      * @inject
      */
-    protected $competitionRepository = null;
+    protected $competitionRepository;
 
     /**
      * @param ViewInterface $view
-     * @return void
      */
     public function initializeView(ViewInterface $view)
     {
@@ -45,8 +44,6 @@ class CompetitionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 
     /**
      * action list
-     *
-     * @return void
      */
     public function listAction()
     {
@@ -58,7 +55,6 @@ class CompetitionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
      * action show
      *
      * @param Competition $competition
-     * @return void
      */
     public function showAction(Competition $competition)
     {

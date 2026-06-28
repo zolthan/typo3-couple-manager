@@ -1,9 +1,9 @@
 <?php
+
 defined('TYPO3_MODE') || die('Access denied.');
 
 call_user_func(
     function () {
-
         if (TYPO3_MODE === 'BE') {
             $icons = [
                 'apps-pagetree-folder-contains-couples' => 'ext-news-folder-tree.svg',

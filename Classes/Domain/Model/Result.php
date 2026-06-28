@@ -27,7 +27,7 @@ class Result extends AbstractEntity
      *
      * @var DateTime
      */
-    protected $date = null;
+    protected $date;
 
     /**
      * discipline
@@ -78,7 +78,7 @@ class Result extends AbstractEntity
      * @cascade remove
      * @lazy
      */
-    protected $couple = null;
+    protected $couple;
 
     /**
      * competition
@@ -87,7 +87,7 @@ class Result extends AbstractEntity
      * @cascade remove
      * @lazy
      */
-    protected $competition = null;
+    protected $competition;
 
     /**
      * competitionType
@@ -96,7 +96,7 @@ class Result extends AbstractEntity
      * @cascade remove
      * @lazy
      */
-    protected $competitionType = null;
+    protected $competitionType;
 
     /**
      * __construct
@@ -112,8 +112,6 @@ class Result extends AbstractEntity
      * Do not modify this method!
      * It will be rewritten on each save in the extension builder
      * You may modify the constructor of this class instead
-     *
-     * @return void
      */
     protected function initStorageObjects()
     {
@@ -136,7 +134,6 @@ class Result extends AbstractEntity
      * Sets the date
      *
      * @param DateTime $date
-     * @return void
      */
     public function setDate(DateTime $date)
     {
@@ -157,7 +154,6 @@ class Result extends AbstractEntity
      * Sets the discipline
      *
      * @param string $discipline
-     * @return void
      */
     public function setDiscipline($discipline)
     {
@@ -178,7 +174,6 @@ class Result extends AbstractEntity
      * Sets the startingGroup
      *
      * @param string $startingGroup
-     * @return void
      */
     public function setStartingGroup($startingGroup)
     {
@@ -199,7 +194,6 @@ class Result extends AbstractEntity
      * Sets the startingClass
      *
      * @param string $startingClass
-     * @return void
      */
     public function setStartingClass($startingClass)
     {
@@ -220,7 +214,6 @@ class Result extends AbstractEntity
      * Sets the position
      *
      * @param int $position
-     * @return void
      */
     public function setPosition($position)
     {
@@ -241,7 +234,6 @@ class Result extends AbstractEntity
      * Sets the participantCount
      *
      * @param int $participantCount
-     * @return void
      */
     public function setParticipantCount($participantCount)
     {
@@ -272,7 +264,6 @@ class Result extends AbstractEntity
      * Sets the promotion
      *
      * @param bool $promotion
-     * @return void
      */
     public function setPromotion($promotion)
     {
@@ -283,7 +274,6 @@ class Result extends AbstractEntity
      * Adds a Couple
      *
      * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple
-     * @return void
      */
     public function addCouple(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $couple)
     {
@@ -294,7 +284,6 @@ class Result extends AbstractEntity
      * Removes a Couple
      *
      * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $coupleToRemove The Couple to be removed
-     * @return void
      */
     public function removeCouple(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple $coupleToRemove)
     {
@@ -315,7 +304,6 @@ class Result extends AbstractEntity
      * Sets the couple
      *
      * @param ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple> $couple
-     * @return void
      */
     public function setCouple(ObjectStorage $couple)
     {
@@ -326,7 +314,6 @@ class Result extends AbstractEntity
      * Adds a Competition
      *
      * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $competition
-     * @return void
      */
     public function addCompetition(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $competition)
     {
@@ -337,7 +324,6 @@ class Result extends AbstractEntity
      * Removes a Competition
      *
      * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $competitionToRemove The Competition to be removed
-     * @return void
      */
     public function removeCompetition(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition $competitionToRemove)
     {
@@ -358,7 +344,6 @@ class Result extends AbstractEntity
      * Sets the competition
      *
      * @param ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition> $competition
-     * @return void
      */
     public function setCompetition(ObjectStorage $competition)
     {
@@ -369,7 +354,6 @@ class Result extends AbstractEntity
      * Adds a CompetitionType
      *
      * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType $competitionType
-     * @return void
      */
     public function addCompetitionType(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType $competitionType)
     {
@@ -380,7 +364,6 @@ class Result extends AbstractEntity
      * Removes a CompetitionType
      *
      * @param \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType $competitionTypeToRemove The CompetitionType to be removed
-     * @return void
      */
     public function removeCompetitionType(\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType $competitionTypeToRemove)
     {
@@ -401,7 +384,6 @@ class Result extends AbstractEntity
      * Sets the competitionType
      *
      * @param ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType> $competitionType
-     * @return void
      */
     public function setCompetitionType(ObjectStorage $competitionType)
     {

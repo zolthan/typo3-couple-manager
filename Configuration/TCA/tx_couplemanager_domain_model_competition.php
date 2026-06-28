@@ -1,4 +1,5 @@
 <?php
+
 $modelFields = 'title,organizer,date_start,date_end,size_dance_floor,city,country,address,phone,info';
 
 return [
@@ -17,7 +18,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => $modelFields,
-        'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_competition.svg'
+        'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_competition.svg',
     ],
     'interface' => [
         'showRecordFieldList' => 'hidden,' . $modelFields,
@@ -41,8 +42,8 @@ return [
                 'type' => 'check',
                 'items' => [
                     '1' => [
-                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled'
-                    ]
+                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled',
+                    ],
                 ],
             ],
         ],
@@ -52,7 +53,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
 
             ],
         ],
@@ -91,7 +92,7 @@ return [
                 'renderType' => 'inputDateTime',
                 'size' => 7,
                 'eval' => 'date',
-                'default' => '0000-00-00'
+                'default' => '0000-00-00',
             ],
         ],
         'date_end' => [
@@ -103,7 +104,7 @@ return [
                 'renderType' => 'inputDateTime',
                 'size' => 7,
                 'eval' => 'date',
-                'default' => '0000-00-00'
+                'default' => '0000-00-00',
             ],
         ],
         'size_dance_floor' => [
@@ -113,7 +114,7 @@ return [
                 'type' => 'input',
                 'size' => 7,
                 'max' => 15,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'city' => [
@@ -122,7 +123,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'country' => [
@@ -139,7 +140,7 @@ return [
                 'itemsProcFunc' => SJBR\StaticInfoTables\Hook\Backend\Form\FormDataProvider\TcaSelectItemsProcessor::class . '->translateCountriesSelector',
                 'size' => 1,
                 'minitems' => 0,
-                'maxitems' => 1
+                'maxitems' => 1,
             ],
         ],
         'address' => [
@@ -149,8 +150,8 @@ return [
                 'type' => 'text',
                 'cols' => 30,
                 'rows' => 5,
-                'eval' => 'trim'
-            ]
+                'eval' => 'trim',
+            ],
         ],
         'phone' => [
             'exclude' => true,
@@ -158,8 +159,8 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
-            ]
+                'eval' => 'trim',
+            ],
         ],
         'info' => [
             'exclude' => true,
@@ -168,8 +169,8 @@ return [
                 'type' => 'text',
                 'cols' => 30,
                 'rows' => 5,
-                'eval' => 'trim'
-            ]
+                'eval' => 'trim',
+            ],
         ],
 
         'result' => [

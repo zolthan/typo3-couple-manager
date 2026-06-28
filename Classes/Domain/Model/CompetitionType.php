@@ -58,7 +58,6 @@ class CompetitionType extends AbstractEntity
      * Sets the name
      *
      * @param string $name
-     * @return void
      */
     public function setName($name)
     {
@@ -79,7 +78,6 @@ class CompetitionType extends AbstractEntity
      * Sets the organization
      *
      * @param string $organization
-     * @return void
      */
     public function setOrganization($organization)
     {

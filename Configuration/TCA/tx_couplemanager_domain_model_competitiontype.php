@@ -1,4 +1,5 @@
 <?php
+
 $modelFields = 'name,organization';
 
 return [
@@ -21,7 +22,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => $modelFields,
-        'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_competitiontype.svg'
+        'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_competitiontype.svg',
     ],
     'interface' => [
         'showRecordFieldList' => 'hidden,' . $modelFields,
@@ -45,8 +46,8 @@ return [
                 'type' => 'check',
                 'items' => [
                     '1' => [
-                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled'
-                    ]
+                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled',
+                    ],
                 ],
             ],
         ],
@@ -56,7 +57,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'organization' => [
@@ -65,7 +66,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
 
