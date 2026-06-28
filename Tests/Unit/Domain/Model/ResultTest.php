@@ -1,391 +1,185 @@
 <?php
+
+declare(strict_types=1);
+
 namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Domain\Model;
 
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Result;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+
 /**
- * Test case.
- *
- * @author Sebastian Wilhelm <wilhelm79@web.de>
+ * Test case for the Result domain model.
  */
-class ResultTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class ResultTest extends UnitTestCase
 {
     /**
-     * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Result
+     * @var Result
      */
-    protected $subject = null;
+    protected $subject;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
-        $this->subject = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Result();
-    }
-
-    protected function tearDown()
-    {
-        parent::tearDown();
+        $this->subject = new Result();
     }
 
     /**
      * @test
      */
-    public function getDateReturnsInitialValueForDateTime()
+    public function getDateReturnsNullInitially(): void
     {
-        self::assertEquals(
-            null,
-            $this->subject->getDate()
-        );
+        self::assertNull($this->subject->getDate());
     }
 
     /**
      * @test
      */
-    public function setDateForDateTimeSetsDate()
+    public function setDateSetsDate(): void
     {
-        $dateTimeFixture = new \DateTime();
-        $this->subject->setDate($dateTimeFixture);
-
-        self::assertAttributeEquals(
-            $dateTimeFixture,
-            'date',
-            $this->subject
-        );
+        $date = new \DateTime();
+        $this->subject->setDate($date);
+        self::assertSame($date, $this->subject->getDate());
     }
 
     /**
      * @test
      */
-    public function getDisciplineReturnsInitialValueForInt()
+    public function disciplineIsEmptyStringInitially(): void
     {
-        self::assertSame(
-            0,
-            $this->subject->getDiscipline()
-        );
+        self::assertSame('', $this->subject->getDiscipline());
     }
 
     /**
      * @test
      */
-    public function setDisciplineForIntSetsDiscipline()
+    public function setDisciplineSetsDiscipline(): void
     {
-        $this->subject->setDiscipline(12);
-
-        self::assertAttributeEquals(
-            12,
-            'discipline',
-            $this->subject
-        );
+        $this->subject->setDiscipline('Standard');
+        self::assertSame('Standard', $this->subject->getDiscipline());
     }
 
     /**
      * @test
      */
-    public function getStartingGroupReturnsInitialValueForInt()
+    public function setStartingGroupSetsStartingGroup(): void
     {
-        self::assertSame(
-            0,
-            $this->subject->getStartingGroup()
-        );
+        $this->subject->setStartingGroup('Hgr II');
+        self::assertSame('Hgr II', $this->subject->getStartingGroup());
     }
 
     /**
      * @test
      */
-    public function setStartingGroupForIntSetsStartingGroup()
+    public function setStartingClassSetsStartingClass(): void
     {
-        $this->subject->setStartingGroup(12);
-
-        self::assertAttributeEquals(
-            12,
-            'startingGroup',
-            $this->subject
-        );
+        $this->subject->setStartingClass('S');
+        self::assertSame('S', $this->subject->getStartingClass());
     }
 
     /**
      * @test
      */
-    public function getStartingClassReturnsInitialValueForInt()
+    public function positionIsZeroInitially(): void
     {
-        self::assertSame(
-            0,
-            $this->subject->getStartingClass()
-        );
+        self::assertSame(0, $this->subject->getPosition());
     }
 
     /**
      * @test
      */
-    public function setStartingClassForIntSetsStartingClass()
+    public function setPositionSetsPosition(): void
     {
-        $this->subject->setStartingClass(12);
-
-        self::assertAttributeEquals(
-            12,
-            'startingClass',
-            $this->subject
-        );
+        $this->subject->setPosition(3);
+        self::assertSame(3, $this->subject->getPosition());
     }
 
     /**
      * @test
      */
-    public function getPositionReturnsInitialValueForInt()
+    public function setParticipantCountSetsParticipantCount(): void
     {
-        self::assertSame(
-            0,
-            $this->subject->getPosition()
-        );
+        $this->subject->setParticipantCount(42);
+        self::assertSame(42, $this->subject->getParticipantCount());
     }
 
     /**
      * @test
      */
-    public function setPositionForIntSetsPosition()
+    public function promotionIsFalseInitially(): void
     {
-        $this->subject->setPosition(12);
-
-        self::assertAttributeEquals(
-            12,
-            'position',
-            $this->subject
-        );
+        self::assertFalse($this->subject->getPromotion());
     }
 
     /**
      * @test
      */
-    public function getParticipantCountReturnsInitialValueForInt()
-    {
-        self::assertSame(
-            0,
-            $this->subject->getParticipantCount()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setParticipantCountForIntSetsParticipantCount()
-    {
-        $this->subject->setParticipantCount(12);
-
-        self::assertAttributeEquals(
-            12,
-            'participantCount',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getPromotionReturnsInitialValueForBool()
-    {
-        self::assertSame(
-            false,
-            $this->subject->getPromotion()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setPromotionForBoolSetsPromotion()
+    public function setPromotionSetsPromotion(): void
     {
         $this->subject->setPromotion(true);
-
-        self::assertAttributeEquals(
-            true,
-            'promotion',
-            $this->subject
-        );
+        self::assertTrue($this->subject->getPromotion());
     }
 
     /**
      * @test
      */
-    public function getCoupleReturnsInitialValueForCouple()
+    public function coupleIsInitializedAsEmptyObjectStorage(): void
     {
-        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        self::assertEquals(
-            $newObjectStorage,
-            $this->subject->getCouple()
-        );
+        self::assertEquals(new ObjectStorage(), $this->subject->getCouple());
     }
 
     /**
      * @test
      */
-    public function setCoupleForObjectStorageContainingCoupleSetsCouple()
+    public function addCoupleAttachesCouple(): void
     {
-        $couple = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple();
-        $objectStorageHoldingExactlyOneCouple = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $objectStorageHoldingExactlyOneCouple->attach($couple);
-        $this->subject->setCouple($objectStorageHoldingExactlyOneCouple);
-
-        self::assertAttributeEquals(
-            $objectStorageHoldingExactlyOneCouple,
-            'couple',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function addCoupleToObjectStorageHoldingCouple()
-    {
-        $couple = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple();
-        $coupleObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
-            ->setMethods(['attach'])
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $coupleObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($couple));
-        $this->inject($this->subject, 'couple', $coupleObjectStorageMock);
-
+        $couple = new Couple();
         $this->subject->addCouple($couple);
+        self::assertTrue($this->subject->getCouple()->contains($couple));
     }
 
     /**
      * @test
      */
-    public function removeCoupleFromObjectStorageHoldingCouple()
+    public function removeCoupleDetachesCouple(): void
     {
-        $couple = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple();
-        $coupleObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
-            ->setMethods(['detach'])
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $coupleObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($couple));
-        $this->inject($this->subject, 'couple', $coupleObjectStorageMock);
-
+        $couple = new Couple();
+        $this->subject->addCouple($couple);
         $this->subject->removeCouple($couple);
+        self::assertFalse($this->subject->getCouple()->contains($couple));
     }
 
     /**
      * @test
      */
-    public function getCompetitionReturnsInitialValueForCompetition()
+    public function setCoupleReplacesObjectStorage(): void
     {
-        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        self::assertEquals(
-            $newObjectStorage,
-            $this->subject->getCompetition()
-        );
+        $storage = new ObjectStorage();
+        $storage->attach(new Couple());
+        $this->subject->setCouple($storage);
+        self::assertSame($storage, $this->subject->getCouple());
     }
 
     /**
      * @test
      */
-    public function setCompetitionForObjectStorageContainingCompetitionSetsCompetition()
+    public function addCompetitionAttachesCompetition(): void
     {
-        $competition = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
-        $objectStorageHoldingExactlyOneCompetition = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $objectStorageHoldingExactlyOneCompetition->attach($competition);
-        $this->subject->setCompetition($objectStorageHoldingExactlyOneCompetition);
-
-        self::assertAttributeEquals(
-            $objectStorageHoldingExactlyOneCompetition,
-            'competition',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function addCompetitionToObjectStorageHoldingCompetition()
-    {
-        $competition = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
-        $competitionObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
-            ->setMethods(['attach'])
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $competitionObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($competition));
-        $this->inject($this->subject, 'competition', $competitionObjectStorageMock);
-
+        $competition = new Competition();
         $this->subject->addCompetition($competition);
+        self::assertTrue($this->subject->getCompetition()->contains($competition));
     }
 
     /**
      * @test
      */
-    public function removeCompetitionFromObjectStorageHoldingCompetition()
+    public function addCompetitionTypeAttachesCompetitionType(): void
     {
-        $competition = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
-        $competitionObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
-            ->setMethods(['detach'])
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $competitionObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($competition));
-        $this->inject($this->subject, 'competition', $competitionObjectStorageMock);
-
-        $this->subject->removeCompetition($competition);
-    }
-
-    /**
-     * @test
-     */
-    public function getCompetitionTypeReturnsInitialValueForCompetitionType()
-    {
-        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        self::assertEquals(
-            $newObjectStorage,
-            $this->subject->getCompetitionType()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setCompetitionTypeForObjectStorageContainingCompetitionTypeSetsCompetitionType()
-    {
-        $competitionType = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType();
-        $objectStorageHoldingExactlyOneCompetitionType = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $objectStorageHoldingExactlyOneCompetitionType->attach($competitionType);
-        $this->subject->setCompetitionType($objectStorageHoldingExactlyOneCompetitionType);
-
-        self::assertAttributeEquals(
-            $objectStorageHoldingExactlyOneCompetitionType,
-            'competitionType',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function addCompetitionTypeToObjectStorageHoldingCompetitionType()
-    {
-        $competitionType = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType();
-        $competitionTypeObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
-            ->setMethods(['attach'])
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $competitionTypeObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($competitionType));
-        $this->inject($this->subject, 'competitionType', $competitionTypeObjectStorageMock);
-
+        $competitionType = new CompetitionType();
         $this->subject->addCompetitionType($competitionType);
-    }
-
-    /**
-     * @test
-     */
-    public function removeCompetitionTypeFromObjectStorageHoldingCompetitionType()
-    {
-        $competitionType = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType();
-        $competitionTypeObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
-            ->setMethods(['detach'])
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $competitionTypeObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($competitionType));
-        $this->inject($this->subject, 'competitionType', $competitionTypeObjectStorageMock);
-
-        $this->subject->removeCompetitionType($competitionType);
+        self::assertTrue($this->subject->getCompetitionType()->contains($competitionType));
     }
 }

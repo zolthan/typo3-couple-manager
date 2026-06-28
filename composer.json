@@ -9,14 +9,43 @@
             "role": "Developer"
         }
     ],
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "typo3/cms-core": "^9.5",
+        "typo3/cms-extbase": "^9.5",
+        "typo3/cms-fluid": "^9.5"
+    },
+    "require-dev": {
+        "typo3/coding-standards": "^0.5",
+        "typo3/testing-framework": "^4.15"
+    },
     "autoload": {
         "psr-4": {
             "SchwarzWeissReutlingen\\CoupleManager\\": "Classes"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "SchwarzWeissReutlingen\\CoupleManager\\Tests\\": "Tests"
+        }
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin",
+        "allow-plugins": {
+            "typo3/cms-composer-installers": true,
+            "typo3/class-alias-loader": true
+        }
+    },
+    "scripts": {
+        "cs:check": "php-cs-fixer fix --dry-run --diff",
+        "cs:fix": "php-cs-fixer fix",
+        "test:unit": "phpunit -c Build/phpunit/UnitTests.xml"
+    },
     "extra": {
         "typo3/cms": {
-            "extension-key": "couple_manager"
+            "extension-key": "couple_manager",
+            "web-dir": ".Build/Web"
         }
     }
 }

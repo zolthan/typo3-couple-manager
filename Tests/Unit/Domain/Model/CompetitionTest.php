@@ -1,228 +1,102 @@
 <?php
+
+declare(strict_types=1);
+
 namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Domain\Model;
 
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+
 /**
- * Test case.
- *
- * @author Sebastian Wilhelm <wilhelm79@web.de>
+ * Test case for the Competition domain model.
  */
-class CompetitionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class CompetitionTest extends UnitTestCase
 {
     /**
-     * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition
+     * @var Competition
      */
-    protected $subject = null;
+    protected $subject;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
-        $this->subject = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition();
-    }
-
-    protected function tearDown()
-    {
-        parent::tearDown();
+        $this->subject = new Competition();
     }
 
     /**
      * @test
      */
-    public function getTitleReturnsInitialValueForString()
+    public function setTitleSetsTitle(): void
     {
-        self::assertSame(
-            '',
-            $this->subject->getTitle()
-        );
+        $this->subject->setTitle('Landesmeisterschaft');
+        self::assertSame('Landesmeisterschaft', $this->subject->getTitle());
     }
 
     /**
      * @test
      */
-    public function setTitleForStringSetsTitle()
+    public function setCitySetsCity(): void
     {
-        $this->subject->setTitle('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'title',
-            $this->subject
-        );
+        $this->subject->setCity('Reutlingen');
+        self::assertSame('Reutlingen', $this->subject->getCity());
     }
 
     /**
      * @test
      */
-    public function getDateStartReturnsInitialValueForDateTime()
+    public function countryIsZeroInitially(): void
     {
-        self::assertEquals(
-            null,
-            $this->subject->getDateStart()
-        );
+        self::assertSame(0, $this->subject->getCountry());
     }
 
     /**
      * @test
      */
-    public function setDateStartForDateTimeSetsDateStart()
+    public function setCountrySetsCountry(): void
     {
-        $dateTimeFixture = new \DateTime();
-        $this->subject->setDateStart($dateTimeFixture);
-
-        self::assertAttributeEquals(
-            $dateTimeFixture,
-            'dateStart',
-            $this->subject
-        );
+        $this->subject->setCountry(54);
+        self::assertSame(54, $this->subject->getCountry());
     }
 
     /**
      * @test
      */
-    public function getDateEndReturnsInitialValueForDateTime()
+    public function setDateStartSetsDateStart(): void
     {
-        self::assertEquals(
-            null,
-            $this->subject->getDateEnd()
-        );
+        $date = new \DateTime('2024-03-01');
+        $this->subject->setDateStart($date);
+        self::assertSame($date, $this->subject->getDateStart());
     }
 
     /**
      * @test
      */
-    public function setDateEndForDateTimeSetsDateEnd()
+    public function organizerIsInitializedAsEmptyObjectStorage(): void
     {
-        $dateTimeFixture = new \DateTime();
-        $this->subject->setDateEnd($dateTimeFixture);
-
-        self::assertAttributeEquals(
-            $dateTimeFixture,
-            'dateEnd',
-            $this->subject
-        );
+        self::assertEquals(new ObjectStorage(), $this->subject->getOrganizer());
     }
 
     /**
      * @test
      */
-    public function getCountryReturnsInitialValueForInt()
+    public function addCategoryAttachesOrganizer(): void
     {
-        self::assertSame(
-            0,
-            $this->subject->getCountry()
-        );
+        $organizer = new Organizer();
+        $this->subject->addCategory($organizer);
+        self::assertTrue($this->subject->getOrganizer()->contains($organizer));
     }
 
     /**
      * @test
      */
-    public function setCountryForIntSetsCountry()
+    public function identifierCombinesDateTitleAndCity(): void
     {
-        $this->subject->setCountry(12);
+        $this->subject->setDateStart(new \DateTime('2024-03-15'));
+        $this->subject->setTitle('Gebietsmeisterschaft');
+        $this->subject->setCity('Stuttgart');
 
-        self::assertAttributeEquals(
-            12,
-            'country',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getCityReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getCity()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setCityForStringSetsCity()
-    {
-        $this->subject->setCity('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'city',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getAddressReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getAddress()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setAddressForStringSetsAddress()
-    {
-        $this->subject->setAddress('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'address',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getOrganizerReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getOrganizer()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setOrganizerForStringSetsOrganizer()
-    {
-        $this->subject->setOrganizer('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'organizer',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getSizeDanceFloorReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getSizeDanceFloor()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setSizeDanceFloorForStringSetsSizeDanceFloor()
-    {
-        $this->subject->setSizeDanceFloor('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'sizeDanceFloor',
-            $this->subject
-        );
+        self::assertSame('2024-03 - Gebietsmeisterschaft (Stuttgart)', $this->subject->getIdentifier());
     }
 }

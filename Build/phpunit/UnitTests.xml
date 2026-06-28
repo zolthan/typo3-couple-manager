@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+    PHPUnit configuration for the "couple_manager" unit tests.
+
+    Standalone / CI: run `composer install` in the extension, then
+        composer test:unit
+    (bootstrap is resolved from the extension's own .Build/vendor).
+
+    Locally inside the TYPO3 instance you can instead run the tests against
+    the app toolchain, e.g.:
+        ddev exec app/vendor/bin/phpunit \
+            -c app/vendor/typo3/testing-framework/Resources/Core/Build/UnitTests.xml \
+            app/public/typo3conf/ext/couple_manager/Tests/Unit
+-->
+<phpunit
+    bootstrap="../../.Build/vendor/typo3/testing-framework/Resources/Core/Build/UnitTestsBootstrap.php"
+    backupGlobals="true"
+    backupStaticAttributes="false"
+    cacheResult="false"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertWarningsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertDeprecationsToExceptions="false"
+    forceCoversAnnotation="false"
+    processIsolation="false"
+    stopOnError="false"
+    stopOnFailure="false"
+    stopOnIncomplete="false"
+    stopOnSkipped="false"
+    verbose="false"
+    beStrictAboutTestsThatDoNotTestAnything="false"
+>
+    <testsuites>
+        <testsuite name="couple_manager unit tests">
+            <directory>../../Tests/Unit/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

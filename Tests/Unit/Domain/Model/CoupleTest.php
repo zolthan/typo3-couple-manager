@@ -1,252 +1,116 @@
 <?php
+
+declare(strict_types=1);
+
 namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Domain\Model;
 
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
+use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+
 /**
- * Test case.
- *
- * @author Sebastian Wilhelm <wilhelm79@web.de>
+ * Test case for the Couple domain model.
  */
-class CoupleTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class CoupleTest extends UnitTestCase
 {
     /**
-     * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple
+     * @var Couple
      */
-    protected $subject = null;
+    protected $subject;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
-        $this->subject = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple();
-    }
-
-    protected function tearDown()
-    {
-        parent::tearDown();
+        $this->subject = new Couple();
     }
 
     /**
      * @test
      */
-    public function getManLastNameReturnsInitialValueForString()
+    public function activeCoupleIsTrueInitially(): void
     {
-        self::assertSame(
-            '',
-            $this->subject->getManLastName()
-        );
+        self::assertTrue($this->subject->isActiveCouple());
     }
 
     /**
      * @test
      */
-    public function setManLastNameForStringSetsManLastName()
+    public function hideResultsIsFalseInitially(): void
     {
-        $this->subject->setManLastName('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'manLastName',
-            $this->subject
-        );
+        self::assertFalse($this->subject->isHideResults());
     }
 
     /**
      * @test
      */
-    public function getManFirstNameReturnsInitialValueForString()
+    public function setHideResultsSetsHideResults(): void
     {
-        self::assertSame(
-            '',
-            $this->subject->getManFirstName()
-        );
+        $this->subject->setHideResults(true);
+        self::assertTrue($this->subject->isHideResults());
     }
 
     /**
      * @test
      */
-    public function setManFirstNameForStringSetsManFirstName()
+    public function setShowFutureSetsShowFuture(): void
     {
-        $this->subject->setManFirstName('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'manFirstName',
-            $this->subject
-        );
+        $this->subject->setShowFuture(true);
+        self::assertTrue($this->subject->isShowFuture());
     }
 
     /**
      * @test
      */
-    public function getWomanLastNameReturnsInitialValueForString()
+    public function setManLastNameSetsManLastName(): void
     {
-        self::assertSame(
-            '',
-            $this->subject->getWomanLastName()
-        );
+        $this->subject->setManLastName('Müller');
+        self::assertSame('Müller', $this->subject->getManLastName());
     }
 
     /**
      * @test
      */
-    public function setWomanLastNameForStringSetsWomanLastName()
+    public function coupleNameWithBothPartnersAndDifferentLastNames(): void
     {
-        $this->subject->setWomanLastName('Conceived at T3CON10');
+        $this->subject->setManFirstName('Max');
+        $this->subject->setManLastName('Mustermann');
+        $this->subject->setWomanFirstName('Erika');
+        $this->subject->setWomanLastName('Musterfrau');
 
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'womanLastName',
-            $this->subject
-        );
+        self::assertSame('Max Mustermann & Erika Musterfrau', $this->subject->getCoupleName());
     }
 
     /**
      * @test
      */
-    public function getWomanFirstNameReturnsInitialValueForString()
+    public function coupleNameWithSharedLastNameIsCondensed(): void
     {
-        self::assertSame(
-            '',
-            $this->subject->getWomanFirstName()
-        );
+        $this->subject->setManFirstName('Max');
+        $this->subject->setManLastName('Mustermann');
+        $this->subject->setWomanFirstName('Erika');
+        $this->subject->setWomanLastName('Mustermann');
+
+        self::assertSame('Max & Erika Mustermann', $this->subject->getCoupleName());
     }
 
     /**
      * @test
      */
-    public function setWomanFirstNameForStringSetsWomanFirstName()
+    public function coupleNameWithoutWomanIsMarkedSolo(): void
     {
-        $this->subject->setWomanFirstName('Conceived at T3CON10');
+        $this->subject->setManFirstName('Max');
+        $this->subject->setManLastName('Mustermann');
 
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'womanFirstName',
-            $this->subject
-        );
+        self::assertSame('Max Mustermann (Solo)', $this->subject->getCoupleName());
     }
 
     /**
      * @test
      */
-    public function getStartingClassLatinReturnsInitialValueForInt()
+    public function coupleNameWithoutManIsMarkedSolo(): void
     {
-        self::assertSame(
-            0,
-            $this->subject->getStartingClassLatin()
-        );
-    }
+        $this->subject->setWomanFirstName('Erika');
+        $this->subject->setWomanLastName('Musterfrau');
 
-    /**
-     * @test
-     */
-    public function setStartingClassLatinForIntSetsStartingClassLatin()
-    {
-        $this->subject->setStartingClassLatin(12);
-
-        self::assertAttributeEquals(
-            12,
-            'startingClassLatin',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getStartingClassStandardReturnsInitialValueForInt()
-    {
-        self::assertSame(
-            0,
-            $this->subject->getStartingClassStandard()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setStartingClassStandardForIntSetsStartingClassStandard()
-    {
-        $this->subject->setStartingClassStandard(12);
-
-        self::assertAttributeEquals(
-            12,
-            'startingClassStandard',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getStartingGroupReturnsInitialValueForInt()
-    {
-        self::assertSame(
-            0,
-            $this->subject->getStartingGroup()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setStartingGroupForIntSetsStartingGroup()
-    {
-        $this->subject->setStartingGroup(12);
-
-        self::assertAttributeEquals(
-            12,
-            'startingGroup',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getDescriptionReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getDescription()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setDescriptionForStringSetsDescription()
-    {
-        $this->subject->setDescription('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'description',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getImageReturnsInitialValueForFileReference()
-    {
-        self::assertEquals(
-            null,
-            $this->subject->getImage()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setImageForFileReferenceSetsImage()
-    {
-        $fileReferenceFixture = new \TYPO3\CMS\Extbase\Domain\Model\FileReference();
-        $this->subject->setImage($fileReferenceFixture);
-
-        self::assertAttributeEquals(
-            $fileReferenceFixture,
-            'image',
-            $this->subject
-        );
+        self::assertSame('Erika Musterfrau (Solo)', $this->subject->getCoupleName());
     }
 }

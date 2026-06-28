@@ -1,76 +1,53 @@
 <?php
+
+declare(strict_types=1);
+
 namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Domain\Model;
 
+use SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType;
+use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+
 /**
- * Test case.
- *
- * @author Sebastian Wilhelm <wilhelm79@web.de>
+ * Test case for the CompetitionType domain model.
  */
-class CompetitionTypeTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class CompetitionTypeTest extends UnitTestCase
 {
     /**
-     * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType
+     * @var CompetitionType
      */
-    protected $subject = null;
+    protected $subject;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
-        $this->subject = new \SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType();
-    }
-
-    protected function tearDown()
-    {
-        parent::tearDown();
+        $this->subject = new CompetitionType();
     }
 
     /**
      * @test
      */
-    public function getNameReturnsInitialValueForString()
+    public function setNameSetsName(): void
     {
-        self::assertSame(
-            '',
-            $this->subject->getName()
-        );
+        $this->subject->setName('Deutsche Meisterschaft');
+        self::assertSame('Deutsche Meisterschaft', $this->subject->getName());
     }
 
     /**
      * @test
      */
-    public function setNameForStringSetsName()
+    public function setOrganizationSetsOrganization(): void
     {
-        $this->subject->setName('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'name',
-            $this->subject
-        );
+        $this->subject->setOrganization('DTV');
+        self::assertSame('DTV', $this->subject->getOrganization());
     }
 
     /**
      * @test
      */
-    public function getOrganizationReturnsInitialValueForString()
+    public function optionLabelCombinesNameAndOrganization(): void
     {
-        self::assertSame(
-            '',
-            $this->subject->getOrganization()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setOrganizationForStringSetsOrganization()
-    {
-        $this->subject->setOrganization('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'organization',
-            $this->subject
-        );
+        $this->subject->setName('Weltmeisterschaft');
+        $this->subject->setOrganization('WDSF');
+        self::assertSame('Weltmeisterschaft (WDSF)', $this->subject->getOptionLabel());
     }
 }
