@@ -74,7 +74,7 @@ class Result extends AbstractEntity
     /**
      * couple
      *
-     * @var ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple>
      * @cascade remove
      * @lazy
      */
@@ -83,7 +83,7 @@ class Result extends AbstractEntity
     /**
      * competition
      *
-     * @var ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition>
      * @cascade remove
      * @lazy
      */
@@ -92,7 +92,7 @@ class Result extends AbstractEntity
     /**
      * competitionType
      *
-     * @var ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType>
      * @cascade remove
      * @lazy
      */
