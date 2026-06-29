@@ -1,0 +1,165 @@
+// Couple Manager styles — variables.less is provided by sitepackage/theme.less at import time
+
+.tx-couple-manager {
+    .gold {
+        color: #FFD700;
+    }
+
+    .silver {
+        color: #C0C0C0;
+    }
+
+    .bronze {
+        color: #CD7F32;
+    }
+
+    .table {
+        border: 0 none;
+    }
+
+    .ratio-4-3 {
+        width:           100%;
+        position:        relative;
+        background:      none top 50% no-repeat;
+        background-size: cover;
+        background-clip: content-box;
+
+        &:before {
+            display:     block;
+            content:     "";
+            padding-top: 90%;
+        }
+    }
+
+    .results-list-view {
+        .panel > .panel-heading {
+            .panel-title {
+                cursor: pointer;
+
+                .champion {
+                    background-color: transparent;
+                    float:            right;
+                    margin-right:     7px;
+
+                    &.fa-stack {
+                        position: relative;
+                        top:      -8px;
+                        margin:   0;
+                    }
+                }
+            }
+
+            + .panel-collapse > .panel-body {
+                border-top-color: transparent;
+            }
+        }
+
+        .date {
+            display: inline-block;
+            width:   53px;
+        }
+
+        .promotion {
+            padding-bottom: 7px;
+        }
+    }
+
+    .list {
+        .card {
+            &.not-active {
+                opacity: 0.65;
+            }
+
+            border:        1px solid darken(@body-bg, 10%);
+            margin-bottom: @grid-gutter-width;
+
+            .card-body {
+                padding: 1.25rem;
+
+                .card-text {
+                    font-size: @font-size-small;
+                }
+            }
+
+            .card-footer {
+                padding:          .75rem 1.25rem;
+                background-color: darken(@body-bg, 3%);
+                border-top:       1px solid darken(@body-bg, 10%);
+
+                .label {
+                    font-weight: normal;
+                    float:       right;
+                }
+
+                .badge {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .couple-list-view.list {
+        @media (min-width: @screen-sm) {
+            .card-title {
+                font-size: (@font-size-card-title * @headline-scaling-sm);
+                height:    (@font-size-card-title * @headline-scaling-sm) * 2.5;
+            }
+        }
+        @media (min-width: @screen-md) {
+            .card-title {
+                font-size: (@font-size-card-title * @headline-scaling-md);
+                height:    (@font-size-card-title * @headline-scaling-md) * 2.5;
+            }
+        }
+        @media (min-width: @screen-lg) {
+            .card-title {
+                font-size: (@font-size-card-title * @headline-scaling-lg) - 0.05;
+                height:    (@font-size-card-title * @headline-scaling-lg) * 2.5;
+            }
+        }
+
+        .card-body {
+            .card-text {
+                height: @font-size-small * 2.5;
+            }
+        }
+    }
+
+    .results-list-view.list {
+        @media (min-width: @screen-sm) {
+            .card-body {
+                height: (@font-size-h5 * @headline-scaling-sm) * 8;
+
+                .card-title {
+                    font-size: (@font-size-h5 * @headline-scaling-sm);
+                }
+            }
+        }
+        @media (min-width: @screen-md) {
+            .card-body {
+                height: (@font-size-h5 * @headline-scaling-md) * 8;
+
+                .card-title {
+                    font-size: (@font-size-h5 * @headline-scaling-md);
+                }
+            }
+        }
+        @media (min-width: @screen-lg) {
+            .card-body {
+                height: (@font-size-h5 * @headline-scaling-lg) * 8;
+
+                .card-title {
+                    font-size: (@font-size-h5 * @headline-scaling-lg) - 0.05;
+                }
+            }
+        }
+
+        .card-body {
+            background-color: @body-bg;
+        }
+
+        .card-footer {
+            background-color: darken(@section-light-bg, 3%);
+        }
+    }
+}

@@ -3,38 +3,19 @@
 <f:section name="main">
     <f:flashMessages/>
     <div class="row">
-        <div class="{f:if(condition: '{couple.image}', then: 'col-md-6 ')}col-xs-12">
+        <div class="{f:if(condition: '{couple.image}', then: 'col-md-6 ')}col-12">
             <f:if condition="{couple.image}">
                 <div class="gallery-row row">
-                    <div class="gallery-item col-xs-12">
+                    <div class="gallery-item col-12">
                         <figure class="image">
-                            <f:comment><!--<a href="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_05286f085d.jpg"
-                           title="" data-lightbox-caption=""
-                           class="lightbox"
-                           data-lightbox-width="300" data-lightbox-height="300"
-                           rel="lightbox-group-199">
-                            <img src="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_045c0bd231.jpg"
-                                 data-src="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_ea4dc11757.jpg"
-                                 data-large="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_045c0bd231.jpg"
-                                 data-medium="/fileadmin/swrt/images/inhalte/paare/turnierpaar-kuchenbecker.jpg"
-                                 data-small="/fileadmin/swrt/images/inhalte/paare/turnierpaar-kuchenbecker.jpg"
-                                 data-extrasmall="/fileadmin/swrt/images/inhalte/paare/turnierpaar-kuchenbecker.jpg"
-                                 title="" alt=""
-                                 class="lazyload" data-preload="false"
-                                 style="opacity: 1;">
-                            <noscript>
-                                <img src="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_ea4dc11757.jpg"
-                                     title="" alt=""/>
-                            </noscript>
-                        </a>--></f:comment>
                             <f:render partial="Image"
-                                      arguments="{file: couple.image, settings: settings, class: 'card-img-top img-responsive'}"/>
+                                      arguments="{file: couple.image, settings: settings, class: 'img-fluid'}"/>
                         </figure>
                     </div>
                 </div>
             </f:if>
         </div>
-        <div class="{f:if(condition: '{couple.image}', then: 'col-md-6 ')}col-xs-12">
+        <div class="{f:if(condition: '{couple.image}', then: 'col-md-6 ')}col-12">
             <header>
                 <h1 class="element-header text-center">
                     {couple.coupleName}
@@ -42,10 +23,10 @@
             </header>
             <f:format.html>{couple.description}</f:format.html>
         </div>
-        <div class="col-xs-12">
+        <div class="col-12">
             <div class="table-responsive">
                 <f:groupedFor each="{results}" as="resultsByDiscipline" groupBy="discipline" groupKey="discipline">
-                    <table class="table table-condensed table-striped">
+                    <table class="table table-sm table-striped">
                         <caption>Turnierergebnisse
                             <f:translate
                                     key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{discipline}"/>
