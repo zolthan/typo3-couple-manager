@@ -10,7 +10,7 @@
     <!--TYPO3SEARCH_end-->
     <f:if condition="{results}">
         <div class="results-list-view
-        {f:if(condition: '{settings.list.templateLayout} == 2', then: ' panel-group')}
+        {f:if(condition: '{settings.list.templateLayout} == 2', then: ' accordion')}
         {f:if(condition: '{settings.list.templateLayout} == 3', then: ' card-deck list row')}"
              id="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'accordion-{contentObjectUid}', else: 'results-container-{contentObjectUid}')}"
              role="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'tablist')}"
@@ -19,7 +19,7 @@
                 <f:switch expression="{settings.list.templateLayout}">
                     <f:case value="2">
                         <f:render partial="Result/ItemAccordion"
-                                  arguments="{resultItem:resultItem,settings:settings,iterator:iterator,contentObjectData:contentObjectData}"/>
+                                  arguments="{resultItem:resultItem,settings:settings,iterator:iterator,contentObjectData:contentObjectData,contentObjectUid:contentObjectUid}"/>
                     </f:case>
                     <f:case value="3">
                         <f:render partial="Result/ItemCard"
