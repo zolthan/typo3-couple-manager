@@ -11,7 +11,7 @@
     <f:if condition="{championchips}">
         <div class="frame frame-ruler-after frame-type-textpic frame-background-none frame-no-backgroundimage frame-space-before-none frame-space-after-none">
             <h5>Landesmeisterschaften</h5>
-            <div class="results-list-view panel-group">
+            <div class="results-list-view accordion">
                 <f:for each="{championchips}" as="resultItem" iteration="iterator">
                     <f:render partial="Result/ItemChampion"
                               arguments="{resultItem:resultItem,settings:settings,iterator:iterator}"/>
@@ -22,7 +22,7 @@
     <f:if condition="{promotions}">
         <div class="frame frame-ruler-after frame-type-textpic frame-background-none frame-no-backgroundimage frame-space-before-none frame-space-after-none">
             <h5>Aufstiege</h5>
-            <div class="results-list-view {f:if(condition: '{settings.templateLayout} != 2', then: 'panel-group')}"
+            <div class="results-list-view {f:if(condition: '{settings.templateLayout} != 2', then: 'accordion')}"
                  id="{f:if(condition: '{settings.templateLayout} != 2', then: 'accordion-{contentObjectData.uid}', else: 'results-container-{contentObjectData.uid}')}"
                  role="{f:if(condition: '{settings.templateLayout} != 2', then: 'tablist')}"
                  aria-multiselectable="{f:if(condition: '{settings.templateLayout} != 2', then: 'true')}">
@@ -37,7 +37,7 @@
         <f:groupedFor each="{top3}" as="resultsByPosition" groupBy="position" groupKey="position">
             <div class="frame frame-ruler-after frame-type-textpic frame-background-none frame-no-backgroundimage frame-space-before-none frame-space-after-none">
                 <h5>{position}. Platz</h5>
-                <table class="table table-condensed table-striped">
+                <table class="table table-sm table-striped">
                     <f:render partial="Result/TableHeader" arguments="{omit:{city:1}}"/>
                     <tbody>
                     <f:for each="{resultsByPosition}" as="result" key="itemkey" reverse="false" iteration="iterator">
@@ -51,7 +51,7 @@
     <f:if condition="{goodOnes}">
         <div class="frame frame-ruler-after frame-type-textpic frame-background-none frame-no-backgroundimage frame-space-before-none frame-space-after-none">
             <h5>Oberes Viertel</h5>
-            <table class="table table-condensed table-striped">
+            <table class="table table-sm table-striped">
                 <f:render partial="Result/TableHeader" arguments="{omit:{city:1}}"/>
                 <tbody>
                 <f:for each="{goodOnes}" as="result" key="itemkey" reverse="false" iteration="iterator">

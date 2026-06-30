@@ -1,6 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       data-namespace-typo3-fluid="true">
-<div class="panel panel-default">
+<div class="card">
     <f:switch expression="{resultItem.position}">
         <f:case value="1"><f:variable name="trophyColor" value="gold"/></f:case>
         <f:case value="2"><f:variable name="trophyColor" value="silver"/></f:case>
@@ -14,8 +14,8 @@
     </f:switch>
     <f:variable name="competition" value="{resultItem.competition.0}"/>
     <f:variable name="couple" value="{resultItem.couple.0}"/>
-    <div class="panel-heading">
-        <h4 class="panel-title">
+    <div class="card-header">
+        <h4 class="mb-0">
             <f:if condition="{resultItem.position} <= 3">
                 <span class="champion fa-stack" aria-hidden="true">
                   <i class="far fa-circle fa-stack-2x {trophyColor}" aria-hidden="true"></i>
@@ -26,9 +26,9 @@
         </h4>
     </div>
 
-    <div class="panel-body">
+    <div class="card-body">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-12">
                 <p>
                     <strong class="champions-title">
                         {championTitle}

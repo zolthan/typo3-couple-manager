@@ -1,6 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       data-namespace-typo3-fluid="true">
-<div class="panel panel-default">
+<div class="card">
     <f:switch expression="{resultItem.position}">
         <f:case value="1"><f:variable name="trophyColor" value="gold"/></f:case>
         <f:case value="2"><f:variable name="trophyColor" value="silver"/></f:case>
@@ -15,8 +15,8 @@
     <f:variable name="competition" value="{resultItem.competition.0}"/>
     <f:variable name="couple" value="{resultItem.couple.0}"/>
     <f:variable name="competitionType" value="{resultItem.competitionType.0}"/>
-    <div class="panel-heading" role="tab" id="accordion-heading-{contentObjectUid}-{resultItem.uid}">
-        <h4 class="panel-title"
+    <div class="card-header" role="tab" id="accordion-heading-{contentObjectUid}-{resultItem.uid}">
+        <h4 class="mb-0"
             data-toggle="collapse"
             data-parent="#accordion-{contentObjectUid}"
             data-target="#accordion-{contentObjectUid}-{resultItem.uid}"
@@ -24,7 +24,7 @@
             aria-controls="accordion-{contentObjectUid}-{resultItem.uid}">
                 <f:if condition="{resultItem.promotion}">
                     <div class="promotion">
-                        <span class="label label-danger">
+                        <span class="badge badge-danger">
                             Aufstieg von <f:format.case mode="upper">{resultItem.startingClass}</f:format.case> nach
                             <f:switch expression="{resultItem.startingClass}">
                                <f:case value="d">C</f:case>
@@ -61,11 +61,11 @@
         </h4>
     </div>
 
-    <div id="accordion-{contentObjectUid}-{resultItem.uid}" class="panel-collapse collapse" role="tabpanel"
+    <div id="accordion-{contentObjectUid}-{resultItem.uid}" class="collapse" role="tabpanel"
          aria-labelledby="accordion-heading-{contentObjectUid}-{resultItem.uid}">
-        <div class="panel-body">
+        <div class="card-body">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-12">
                     <p>{competition.title} - {competition.city}</p>
                     <p>
                         <span>

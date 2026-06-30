@@ -3,9 +3,9 @@
 <f:section name="main">
     <f:flashMessages/>
     <div class="row">
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-6 col-12">
             <div class="gallery-row row">
-                <div class="gallery-item col-xs-12">
+                <div class="gallery-item col-12">
                     <figure class="image">
                         <!--<a href="/fileadmin/_processed_/3/7/csm_turnierpaar-kuchenbecker_05286f085d.jpg"
                            title="" data-lightbox-caption=""
@@ -27,12 +27,12 @@
                             </noscript>
                         </a>-->
                         <f:render partial="Image"
-                                  arguments="{file: couple.image, settings: settings, class: 'card-img-top img-responsive'}"/>
+                                  arguments="{file: couple.image, settings: settings, class: 'card-img-top img-fluid'}"/>
                     </figure>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-6 col-12">
             <header>
                 <h1 class="element-header text-center">
                     {couple.coupleName}
