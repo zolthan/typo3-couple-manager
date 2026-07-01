@@ -15,7 +15,7 @@
             {couple.coupleName}
         </td>
     </f:if>
-    <td>
+    <td class="popover-cell">
         <f:variable name="popoverTitle" value="Veranstalter"/>
         <f:variable name="popoverText" value=""/>
         <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
@@ -26,23 +26,22 @@
            data-container="body" data-html="true"
            title="{popoverTitle}"
            data-content="{popoverText} <em>{f:if(condition: i.isLast, then: '{organizer.name}', else: '{organizer.name},<br/>')->f:for(each:competition.organizer, as:'organizer', iteration: 'i')}</em>"
-        >
-            <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
-                <f:then>
-                    <span>{competition.title}</span>
-                </f:then>
-                <f:else>
-                    <span>{competitionType.name}</span>
-                </f:else>
-            </f:if>
-            <i class="fa fa-info-circle ml-1" aria-hidden="true"></i>
-            <f:if condition="{omit.city} != 1">
-                <span class="{displayMobile}"><br/>{competition.city}</span>
-            </f:if>
-            <f:if condition="{competitionType.name} == 'World Championship'">
-                &nbsp;<i aria-hidden="true" class="fa fa-globe"></i>
-            </f:if>
-        </a>
+           class="popover-icon"
+        ><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+        <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
+            <f:then>
+                <span>{competition.title}</span>
+            </f:then>
+            <f:else>
+                <span>{competitionType.name}</span>
+            </f:else>
+        </f:if>
+        <f:if condition="{omit.city} != 1">
+            <span class="{displayMobile}"><br/>{competition.city}</span>
+        </f:if>
+        <f:if condition="{competitionType.name} == 'World Championship'">
+            &nbsp;<i aria-hidden="true" class="fa fa-globe"></i>
+        </f:if>
     </td>
     <f:if condition="{omit.city} != 1">
         <td class="{displayDesktop}">
