@@ -119,5 +119,25 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         }
 
         $this->view->assign('results', $results);
+
+        $futureTournaments = [];
+        if ($couple->isShowFuture()) {
+            $futureOrderArray = [
+                'discipline' => QueryInterface::ORDER_ASCENDING,
+                'date' => QueryInterface::ORDER_ASCENDING,
+            ];
+            $this->resultRepository->setDefaultOrderings($futureOrderArray);
+            $futureQuery = $this->resultRepository->createQuery();
+            $futureConstraints = [
+                $futureQuery->equals('couple', $couple->getUid()),
+                $futureQuery->greaterThanOrEqual('date', strftime('%Y-%m-%d', strtotime('-2 Weeks'))),
+                $futureQuery->lessThanOrEqual('position', 0),
+            ];
+            $futureTournaments = $futureQuery
+                ->matching($futureQuery->logicalAnd($futureConstraints))
+                ->execute()
+                ->toArray();
+        }
+        $this->view->assign('futureTournaments', $futureTournaments);
     }
 }

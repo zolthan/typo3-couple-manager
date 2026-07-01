@@ -29,11 +29,12 @@ class CoupleControllerTest extends UnitTestCase
         $controller = new CoupleController();
 
         $view = $this->createMock(ViewInterface::class);
-        $view->expects(self::exactly(2))
+        $view->expects(self::exactly(3))
             ->method('assign')
             ->withConsecutive(
                 ['couple', $couple],
-                ['results', []]
+                ['results', []],
+                ['futureTournaments', []]
             );
 
         $property = new \ReflectionProperty(ActionController::class, 'view');
