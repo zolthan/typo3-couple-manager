@@ -8,8 +8,10 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="card h-100 {f:if(condition:'{couple.activeCouple} != 1',then:'not-active',else:'active')}">
                         <f:if condition="{couple.image}">
-                            <div class="card-img-top ratio-4-3"
-                                 style="background-image:url('{f:uri.image(src:'{couple.image.uid}',treatIdAsReference:'1')}'); background-size:cover; background-position:center top;"></div>
+                            <div class="card-img-top ratio-4-3">
+                                <f:image src="{couple.image.uid}" treatIdAsReference="1"
+                                         alt="{couple.coupleName}" maxWidth="600"/>
+                            </div>
                         </f:if>
                         <div class="card-body">
                             <f:if condition="{couple.coupleName}">

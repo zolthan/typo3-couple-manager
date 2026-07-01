@@ -2,46 +2,100 @@
 <f:layout name="Default"/>
 <f:section name="main">
     <f:flashMessages/>
-    <div class="row">
-        <div class="{f:if(condition: '{couple.image}', then: 'col-md-6 ')}col-12">
+    <div class="couple-detail-view">
+
+        <!-- ── Header: Foto + Info ──────────────── -->
+        <div class="row couple-detail-header">
             <f:if condition="{couple.image}">
-                <div class="gallery-row row">
-                    <div class="gallery-item col-12">
-                        <figure class="image">
-                            <f:render partial="Image"
-                                      arguments="{file: couple.image, settings: settings, class: 'img-fluid'}"/>
-                        </figure>
-                    </div>
+                <div class="col-md-5 col-12 couple-detail-image">
+                    <f:render partial="Image"
+                              arguments="{file: couple.image, settings: settings, class: 'img-fluid'}"/>
                 </div>
             </f:if>
-        </div>
-        <div class="{f:if(condition: '{couple.image}', then: 'col-md-6 ')}col-12">
-            <header>
-                <h1 class="element-header text-center">
-                    {couple.coupleName}
-                </h1>
-            </header>
-            <f:format.html>{couple.description}</f:format.html>
-        </div>
-        <div class="col-12">
-            <div class="table-responsive">
-                <f:groupedFor each="{results}" as="resultsByDiscipline" groupBy="discipline" groupKey="discipline">
-                    <table class="table table-sm table-striped">
-                        <caption>Turnierergebnisse
-                            <f:translate
-                                    key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{discipline}"/>
-                        </caption>
-                        <f:render partial="Result/TableHeader" arguments="{omit:{couple:1}}"/>
-                        <tbody>
-                        <f:for each="{resultsByDiscipline}" as="result" key="itemkey"
-                               reverse="false" iteration="iterator">
-                            <f:render partial="Result/TableRow" arguments="{result:result, omit:{couple:1}}"/>
-                        </f:for>
-                        </tbody>
-                    </table>
-                </f:groupedFor>
+            <div class="{f:if(condition: '{couple.image}', then: 'col-md-7', else: 'col-12')} couple-detail-info">
+                <h1 class="couple-detail-name">{couple.coupleName}</h1>
+
+                <div class="couple-detail-classes">
+                    <f:if condition="{couple.startingClassStandard}">
+                        <span class="couple-class-chip">
+                            Standard
+                            <f:if condition="{couple.startingGroup}">
+                                <span class="couple-class-sep">·</span>
+                                {f:translate(key: couple.startingGroup, extensionName: 'couple_manager')}
+                            </f:if>
+                            <span class="couple-class-sep">·</span>
+                            <f:format.case mode="upper">{couple.startingClassStandard}</f:format.case>
+                        </span>
+                    </f:if>
+                    <f:if condition="{couple.startingClassLatin}">
+                        <span class="couple-class-chip">
+                            Latein
+                            <f:if condition="{couple.startingGroup}">
+                                <span class="couple-class-sep">·</span>
+                                {f:translate(key: couple.startingGroup, extensionName: 'couple_manager')}
+                            </f:if>
+                            <span class="couple-class-sep">·</span>
+                            <f:format.case mode="upper">{couple.startingClassLatin}</f:format.case>
+                        </span>
+                    </f:if>
+                </div>
+
+                <f:if condition="{couple.activeCouple} != 1">
+                    <div class="couple-inactive">
+                        <span class="badge badge-secondary">nicht mehr aktiv</span>
+                    </div>
+                </f:if>
+
+                <f:if condition="{couple.description}">
+                    <div class="couple-detail-description">
+                        <f:format.html>{couple.description}</f:format.html>
+                    </div>
+                </f:if>
             </div>
         </div>
+
+        <!-- ── Nächste Starts ──────────────────── -->
+        <f:if condition="{futureTournaments}">
+            <div class="couple-future-starts">
+                <h2 class="couple-section-heading couple-section-heading--future">Nächste Starts</h2>
+                <div class="table-responsive">
+                    <f:groupedFor each="{futureTournaments}" as="tournamentsByDiscipline" groupBy="discipline" groupKey="discipline">
+                        <table class="table table-sm table-striped">
+                            <caption><f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{discipline}"/></caption>
+                            <f:render partial="Result/TableHeader" arguments="{omit:{couple:1, result:1}}"/>
+                            <tbody>
+                            <f:for each="{tournamentsByDiscipline}" as="result" key="itemkey"
+                                   reverse="false" iteration="iterator">
+                                <f:render partial="Result/TableRow" arguments="{result:result, omit:{couple:1, result:1}}"/>
+                            </f:for>
+                            </tbody>
+                        </table>
+                    </f:groupedFor>
+                </div>
+            </div>
+        </f:if>
+
+        <!-- ── Turnierergebnisse ───────────────── -->
+        <f:if condition="{results}">
+            <div class="couple-results">
+                <h2 class="couple-section-heading">Turnierergebnisse</h2>
+                <div class="table-responsive">
+                    <f:groupedFor each="{results}" as="resultsByDiscipline" groupBy="discipline" groupKey="discipline">
+                        <table class="table table-sm table-striped">
+                            <caption><f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{discipline}"/></caption>
+                            <f:render partial="Result/TableHeader" arguments="{omit:{couple:1}}"/>
+                            <tbody>
+                            <f:for each="{resultsByDiscipline}" as="result" key="itemkey"
+                                   reverse="false" iteration="iterator">
+                                <f:render partial="Result/TableRow" arguments="{result:result, omit:{couple:1}}"/>
+                            </f:for>
+                            </tbody>
+                        </table>
+                    </f:groupedFor>
+                </div>
+            </div>
+        </f:if>
+
     </div>
 </f:section>
 </html>
