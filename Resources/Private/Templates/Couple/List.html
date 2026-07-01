@@ -14,7 +14,10 @@
                         <div class="card-body">
                             <f:if condition="{couple.coupleName}">
                                 <h3 class="card-title">
-                                    <f:format.crop maxCharacters="100">{couple.coupleName}</f:format.crop>
+                                    <f:link.action pageUid="{settings.list.detailView}" controller="Couple" action="detail"
+                                                   arguments="{couple : couple}" title="Zur Seite von {couple.coupleName}"
+                                                   class="stretched-link"><f:format.crop maxCharacters="100">{couple.coupleName}</f:format.crop>
+                                    </f:link.action>
                                 </h3>
                             </f:if>
                             <p class="card-text">
@@ -38,10 +41,6 @@
                             <f:if condition="{couple.activeCouple} != 1">
                                 <span class="badge badge-secondary">nicht mehr aktiv</span>
                             </f:if>
-                            <f:link.action pageUid="{settings.list.detailView}" controller="Couple" action="detail"
-                                           arguments="{couple : couple}" title="Zur Seite von {couple.coupleName}"
-                                           class="stretched-link sr-only sr-only-focusable">Zur Seite von <f:format.crop maxCharacters="100">{couple.coupleName}</f:format.crop>
-                            </f:link.action>
                         </div>
                     </div>
                 </div>
