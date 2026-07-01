@@ -115,7 +115,25 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             ];
             $results = $query
                 ->matching($query->logicalAnd($constraints))
-                ->execute();
+                ->execute()
+                ->toArray();
+
+            // Reorder discipline groups by most recently active.
+            // DB order within each group (date DESC) is preserved; only group sequence changes.
+            if ($results) {
+                $byDiscipline = [];
+                foreach ($results as $result) {
+                    $byDiscipline[$result->getDiscipline()][] = $result;
+                }
+                usort($byDiscipline, static function (array $a, array $b): int {
+                    $dateA = $a[0]->getDate();
+                    $dateB = $b[0]->getDate();
+                    $tsA = $dateA instanceof \DateTime ? $dateA->getTimestamp() : 0;
+                    $tsB = $dateB instanceof \DateTime ? $dateB->getTimestamp() : 0;
+                    return $tsB <=> $tsA;
+                });
+                $results = array_merge(...array_values($byDiscipline));
+            }
         }
 
         $this->view->assign('results', $results);
