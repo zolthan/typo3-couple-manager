@@ -5,7 +5,7 @@
     <f:if condition="{couples}">
         <div class="couple-list-view card-deck list row">
             <f:for each="{couples}" as="couple">
-                <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="col-lg-4 col-sm-6">
                     <div class="card h-100 {f:if(condition:'{couple.activeCouple} != 1',then:'not-active',else:'active')}">
                         <f:if condition="{couple.image}">
                             <div class="card-img-top ratio-4-3"
@@ -35,15 +35,13 @@
                                     <br/>
                                 </f:if>
                             </p>
-                        </div>
-                        <div class="card-footer">
-                            <f:link.action pageUid="{settings.list.detailView}" controller="Couple" action="detail"
-                                           arguments="{couple : couple}" title="Zur Seite von {couple.coupleName}"
-                                           class="btn btn-primary stretched-link">weiter
-                            </f:link.action>
                             <f:if condition="{couple.activeCouple} != 1">
                                 <span class="badge badge-secondary">nicht mehr aktiv</span>
                             </f:if>
+                            <f:link.action pageUid="{settings.list.detailView}" controller="Couple" action="detail"
+                                           arguments="{couple : couple}" title="Zur Seite von {couple.coupleName}"
+                                           class="stretched-link sr-only sr-only-focusable">Zur Seite von <f:format.crop maxCharacters="100">{couple.coupleName}</f:format.crop>
+                            </f:link.action>
                         </div>
                     </div>
                 </div>
