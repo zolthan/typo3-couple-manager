@@ -3,6 +3,7 @@
 namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
+use SchwarzWeissReutlingen\CoupleManager\PageTitle\CouplePageTitleProvider;
 use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
@@ -84,6 +85,7 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function detailAction(Couple $couple)
     {
+        CouplePageTitleProvider::setTitle($couple->getCoupleName());
         $this->view->assign('couple', $couple);
 
         $orderArray = [

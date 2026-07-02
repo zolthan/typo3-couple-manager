@@ -1,6 +1,6 @@
 <?php
 
-$modelFields = 'hide_results,show_future,active_couple,image,man_last_name,man_first_name,woman_last_name,woman_first_name,starting_group,starting_class_latin,starting_class_standard,description';
+$modelFields = 'hide_results,show_future,active_couple,image,man_last_name,man_first_name,woman_last_name,woman_first_name,starting_group,starting_class_latin,starting_class_standard,description,slug';
 
 return [
     'ctrl' => [
@@ -203,6 +203,23 @@ return [
         'result' => [
             'config' => [
                 'type' => 'passthrough',
+            ],
+        ],
+
+        'slug' => [
+            'exclude' => true,
+            'label' => 'Slug (URL)',
+            'config' => [
+                'type' => 'slug',
+                'generatorOptions' => [
+                    'fields' => ['man_first_name', 'man_last_name', 'woman_first_name', 'woman_last_name'],
+                    'fieldSeparator' => '-',
+                    'uniqueInSite' => true,
+                    'fallbackCharacter' => '-',
+                ],
+                'fallbackCharacter' => '-',
+                'eval' => 'uniqueInSite',
+                'default' => '',
             ],
         ],
     ],

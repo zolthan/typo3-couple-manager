@@ -21,6 +21,11 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 class Couple extends AbstractEntity
 {
     /**
+     * @var string
+     */
+    protected $slug = '';
+
+    /**
      * manLastName
      *
      * @var string
@@ -300,6 +305,16 @@ class Couple extends AbstractEntity
     public function setImage($image): void
     {
         $this->image = $image;
+    }
+
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): void
+    {
+        $this->slug = $slug;
     }
 
     /**

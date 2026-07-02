@@ -8,6 +8,8 @@ CREATE TABLE tx_couplemanager_domain_model_couple
 
   result                  INT(11) UNSIGNED     DEFAULT '0' NOT NULL,
 
+  slug                    VARCHAR(255)         DEFAULT ''  NOT NULL,
+
   man_last_name           VARCHAR(255)         DEFAULT ''  NOT NULL,
   man_first_name          VARCHAR(255)         DEFAULT ''  NOT NULL,
   woman_last_name         VARCHAR(255)         DEFAULT ''  NOT NULL,
