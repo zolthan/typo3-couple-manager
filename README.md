@@ -5,7 +5,7 @@
 [![TYPO3](https://img.shields.io/badge/TYPO3-9.5+-orange.svg)](https://typo3.org)
 [![PHP](https://img.shields.io/badge/PHP-7.2+-blue.svg)](https://php.net)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.3.0-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
+[![Version](https://img.shields.io/badge/version-1.7.0-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
 
 ---
 
@@ -16,6 +16,8 @@
 - **Competition calendar** — upcoming events with organizer, location, and date
 - **Smart frontend plugins** — switchable views (list, detail, results, future events) via FlexForm
 - **Highlights view** — automatically surfaces championships, promotions, and top-3 placements
+- **Speaking URLs** — per-couple slug field for clean detail-page URLs via TYPO3 RouteEnhancer
+- **Custom page title** — `CouplePageTitleProvider` surfaces the couple's name in the page title/breadcrumb
 - **Backend optimised** — custom TCA labels, sorted selects, full workspace and localization support
 
 ---
@@ -67,6 +69,49 @@ In the configured SysFolder, create:
 - **Organizers** (`tx_couplemanager_domain_model_organizer`)
 - **Competitions** (`tx_couplemanager_domain_model_competition`)
 - **Results** (`tx_couplemanager_domain_model_result`)
+
+### 4. Enable speaking URLs (optional)
+
+Each couple has a `slug` field (`uniqueInSite`). To resolve it into clean detail-page URLs,
+add a RouteEnhancer to your site's `config.yaml`:
+
+```yaml
+routeEnhancers:
+  CoupleDetail:
+    type: Extbase
+    limitToPages: [<detail-page-uid>]
+    extension: CoupleManager
+    plugin: Couple
+    routes:
+      - routePath: '/{couple_slug}'
+        _controller: 'Couple::detail'
+        _arguments:
+          couple_slug: couple
+    defaultController: 'Couple::detail'
+    aspects:
+      couple_slug:
+        type: PersistedAliasMapper
+        tableName: tx_couplemanager_domain_model_couple
+        routeFieldName: slug
+```
+
+⚠️ If other RouteEnhancers (e.g. `georgringer/news`) are also configured on the same page and
+lack a strict `_arguments` mapping, they may match the URL first. Place `CoupleDetail` **before**
+such enhancers in `config.yaml` — enhancers are evaluated in declaration order.
+
+### 5. Enable the couple name as page title (optional)
+
+Register `CouplePageTitleProvider` in your site's TypoScript to surface the couple's name in the
+page title and breadcrumb instead of the static page title:
+
+```typoscript
+config.pageTitleProviders {
+    couple {
+        provider = SchwarzWeissReutlingen\CoupleManager\PageTitle\CouplePageTitleProvider
+        before = altPageTitle
+    }
+}
+```
 
 ---
 
@@ -131,6 +176,7 @@ Competition >── Organizer
 | `hideResults` | bool | Suppress results on frontend |
 | `showFuture` | bool | Include in upcoming-events view |
 | `image` | FileReference | Couple photo (FAL) |
+| `slug` | string | URL slug for the detail page, unique per site — see [Setup](#4-enable-speaking-urls-optional) |
 
 `getCoupleName()` automatically formats the display name — handles soloists, shared surnames, and full couple names.
 
@@ -193,6 +239,24 @@ composer test:unit
 ---
 
 ## Changelog
+
+### 1.7.0
+- Added `slug` field to Couple (TCA + model) for speaking detail-page URLs
+- Migration script to generate slugs for all existing couples
+- Works together with a `PersistedAliasMapper` RouteEnhancer in the consuming site
+- Added `CouplePageTitleProvider` to surface the couple's name as page title/breadcrumb
+
+### 1.6.1
+- `ListFuture` logic moved into `CoupleController::detailAction()` — upcoming tournaments
+  ("Nächste Starts") now shown directly on the couple detail page, grouped by discipline
+- Detail and List templates redesigned
+
+### 1.5.0
+- Accordion IDs now based on `contentObjectUid` (avoids ID collisions with multiple plugin instances)
+- `panel-group` → `accordion` markup (Bootstrap 4)
+
+### 1.4.0
+- Bootstrap 3 → 4 template migration (7 templates)
 
 ### 1.3.0
 - Enhanced couple listing and detail templates
