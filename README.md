@@ -5,7 +5,7 @@
 [![TYPO3](https://img.shields.io/badge/TYPO3-9.5+-orange.svg)](https://typo3.org)
 [![PHP](https://img.shields.io/badge/PHP-7.2+-blue.svg)](https://php.net)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.7.0-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
+[![Version](https://img.shields.io/badge/version-1.7.1-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
 
 ---
 
@@ -239,6 +239,13 @@ composer test:unit
 ---
 
 ## Changelog
+
+### 1.7.1
+- `ListFuture` ("Wer tanzt wo?") mobile view replaced with a non-interactive list
+  (`FutureStartItem` partial) instead of a squeezed table — date, couple, tournament,
+  tournament type/city, and starting class all visible without tapping
+- Desktop table wrapped in `.table-responsive` and given subtle themed styling
+  (caption, header row, striped rows) instead of default Bootstrap grey
 
 ### 1.7.0
 - Added `slug` field to Couple (TCA + model) for speaking detail-page URLs
