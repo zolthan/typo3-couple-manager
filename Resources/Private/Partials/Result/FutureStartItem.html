@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:variable name="competition" value="{result.competition.0}"/>
+<f:variable name="competitionType" value="{result.competitionType.0}"/>
+<f:variable name="couple" value="{result.couple.0}"/>
+<f:variable name="hasOwnTitle" value="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}"/>
+
+<div class="future-start-row">
+    <div class="future-start-row__date">
+        <f:format.date format="%d.%m.">{result.date}</f:format.date>
+    </div>
+    <div class="future-start-row__body">
+        <div class="future-start-row__couple">{couple.coupleName}</div>
+        <f:if condition="{hasOwnTitle}">
+            <div class="future-start-row__title">{competition.title}</div>
+        </f:if>
+        <div class="future-start-row__type {f:if(condition: hasOwnTitle, then: 'future-start-row__type--secondary')}">
+            {competitionType.name}
+            <f:if condition="{competitionType.name} == 'World Championship'">
+                &nbsp;<i aria-hidden="true" class="fa fa-globe"></i>
+            </f:if>
+            <span class="future-start-row__sep">&middot;</span> {competition.city}
+        </div>
+        <div class="future-start-row__class">
+            <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{result.discipline}"/>
+            <span class="future-start-row__sep">&middot;</span>
+            <f:translate
+                    key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{result.startingGroup}"/>
+            <span class="future-start-row__sep">&middot;</span>
+            <f:format.case mode="upper">{result.startingClass}</f:format.case>
+        </div>
+    </div>
+</div>
+</html>

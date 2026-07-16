@@ -11,17 +11,27 @@
     <f:if condition="{competitions}">
 
         <f:groupedFor each="{competitions}" as="resultsByDiscipline" groupBy="discipline" groupKey="discipline">
-            <div class="table-responsive">
-                <table class="table table-sm table-striped">
+            <h5 class="d-md-none">
+                Turnieranmeldungen
+                <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{discipline}"/>
+            </h5>
+            <div class="future-starts-list d-md-none">
+                <f:for each="{resultsByDiscipline}" as="result" key="itemkey" reverse="false" iteration="iterator">
+                    <f:render partial="Result/FutureStartItem" arguments="{result:result}"/>
+                </f:for>
+            </div>
+
+            <div class="table-responsive d-none d-md-block">
+                <table class="table table-striped future-starts-table">
                     <caption>Turnieranmeldungen
                         <f:translate
                                 key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{discipline}"/>
                     </caption>
-                    <f:render partial="Result/TableHeader" arguments="{omit:{result:1}, compactClassColumn:1}"/>
+                    <f:render partial="Result/TableHeader" arguments="{omit:{result:1}}"/>
                     <tbody>
                     <f:for each="{resultsByDiscipline}" as="result" key="itemkey"
                            reverse="false" iteration="iterator">
-                        <f:render partial="Result/TableRow" arguments="{result:result, omit:{result:1}, compactClassColumn:1}"/>
+                        <f:render partial="Result/TableRow" arguments="{result:result, omit:{result:1}}"/>
                     </f:for>
                     </tbody>
                 </table>

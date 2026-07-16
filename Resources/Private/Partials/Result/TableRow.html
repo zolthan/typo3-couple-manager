@@ -13,14 +13,6 @@
     <f:if condition="{omit.couple} != 1">
         <td>
             {couple.coupleName}
-            <f:if condition="{compactClassColumn}">
-                <span class="{displayMobile} d-block text-muted small">
-                    <f:translate
-                            key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{result.startingGroup}"/>
-                    <f:format.case mode="upper">{result.startingClass}</f:format.case>
-                    (<f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{result.discipline}"/>)
-                </span>
-            </f:if>
         </td>
     </f:if>
     <td class="popover-cell">
@@ -69,7 +61,7 @@
             </f:defaultCase>
         </f:switch>
     </f:if>
-    <td class="text-nowrap {f:if(condition: compactClassColumn, then: displayDesktop)}">
+    <td class="text-nowrap">
         <f:translate
                 key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:short.{result.startingGroup}"/>
         <f:format.case mode="upper">{result.startingClass}</f:format.case><br/>
