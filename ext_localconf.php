@@ -27,19 +27,19 @@ call_user_func(
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'SchwarzWeissReutlingen.CoupleManager',
+            'CoupleManager',
             'Couple',
             [
-                'Couple' => 'list,detail',
-                'Competition' => 'list',
-                'Result' => 'list',
+                \SchwarzWeissReutlingen\CoupleManager\Controller\CoupleController::class => 'list,detail',
+                \SchwarzWeissReutlingen\CoupleManager\Controller\CompetitionController::class => 'list',
+                \SchwarzWeissReutlingen\CoupleManager\Controller\ResultController::class => 'list',
             ]
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'SchwarzWeissReutlingen.CoupleManager',
+            'CoupleManager',
             'Menu',
             [
-                'Menu' => 'show,mobil',
+                \SchwarzWeissReutlingen\CoupleManager\Controller\MenuController::class => 'show,mobil',
             ],
             []
         );
