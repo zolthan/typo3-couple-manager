@@ -3,6 +3,7 @@
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 
 use DateTime;
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
@@ -68,7 +69,7 @@ class Competition extends AbstractEntity
      * Organizer
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer>
-     * @lazy
+     * @Lazy
      */
     protected $organizer;
 

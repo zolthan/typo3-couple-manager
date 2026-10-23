@@ -25,9 +25,13 @@ class CompetitionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
      * competitionRepository
      *
      * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionRepository
-     * @inject
      */
     protected $competitionRepository;
+
+    public function __construct(\SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionRepository $competitionRepository)
+    {
+        $this->competitionRepository = $competitionRepository;
+    }
 
     /**
      * @param ViewInterface $view

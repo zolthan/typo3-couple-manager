@@ -3,6 +3,8 @@
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 
 use DateTime;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
@@ -75,8 +77,8 @@ class Result extends AbstractEntity
      * couple
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple>
-     * @cascade remove
-     * @lazy
+     * @Cascade("remove")
+     * @Lazy
      */
     protected $couple;
 
@@ -84,8 +86,8 @@ class Result extends AbstractEntity
      * competition
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition>
-     * @cascade remove
-     * @lazy
+     * @Cascade("remove")
+     * @Lazy
      */
     protected $competition;
 
@@ -93,8 +95,8 @@ class Result extends AbstractEntity
      * competitionType
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType>
-     * @cascade remove
-     * @lazy
+     * @Cascade("remove")
+     * @Lazy
      */
     protected $competitionType;
 

@@ -27,7 +27,6 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * coupleRepository
      *
      * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository
-     * @inject
      */
     protected $coupleRepository;
 
@@ -35,9 +34,14 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * resultRepository
      *
      * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository
-     * @inject
      */
     protected $resultRepository;
+
+    public function __construct(\SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository $coupleRepository, \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository $resultRepository)
+    {
+        $this->coupleRepository = $coupleRepository;
+        $this->resultRepository = $resultRepository;
+    }
 
     /**
      * @param ViewInterface $view

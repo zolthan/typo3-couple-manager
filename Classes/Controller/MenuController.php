@@ -13,9 +13,13 @@ class MenuController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * coupleRepository
      *
      * @var \SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository
-     * @inject
      */
     protected $coupleRepository;
+
+    public function __construct(\SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository $coupleRepository)
+    {
+        $this->coupleRepository = $coupleRepository;
+    }
 
     /**
      * action show

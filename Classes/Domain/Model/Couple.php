@@ -2,6 +2,7 @@
 
 namespace SchwarzWeissReutlingen\CoupleManager\Domain\Model;
 
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /***
@@ -106,7 +107,7 @@ class Couple extends AbstractEntity
      * image
      *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @cascade remove
+     * @Cascade("remove")
      */
     protected $image;
 
