@@ -11,9 +11,9 @@
     ],
     "require": {
         "php": "^7.2 || ^8.0",
-        "typo3/cms-core": "^9.5",
-        "typo3/cms-extbase": "^9.5",
-        "typo3/cms-fluid": "^9.5"
+        "typo3/cms-core": "^9.5 || ^10.4",
+        "typo3/cms-extbase": "^9.5 || ^10.4",
+        "typo3/cms-fluid": "^9.5 || ^10.4"
     },
     "require-dev": {
         "typo3/coding-standards": "^0.5",
