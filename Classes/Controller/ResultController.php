@@ -58,6 +58,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     {
         $orderArray = [
             'date' => QueryInterface::ORDER_DESCENDING,
+            'uid' => QueryInterface::ORDER_DESCENDING,
         ];
         $this->resultRepository->setDefaultOrderings($orderArray);
 
