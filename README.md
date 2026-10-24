@@ -2,10 +2,10 @@
 
 > TYPO3 Extbase extension to manage dance couples, competition results, and events — built for the dance sport community.
 
-[![TYPO3](https://img.shields.io/badge/TYPO3-9.5+-orange.svg)](https://typo3.org)
-[![PHP](https://img.shields.io/badge/PHP-7.2+-blue.svg)](https://php.net)
+[![TYPO3](https://img.shields.io/badge/TYPO3-13.4-orange.svg)](https://typo3.org)
+[![PHP](https://img.shields.io/badge/PHP-8.2--8.4-blue.svg)](https://php.net)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.7.1-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
+[![Version](https://img.shields.io/badge/version-3.0.0-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
 
 ---
 
@@ -14,8 +14,9 @@
 - **Couple profiles** — manage dance couples and soloists with photo, starting group, class, and active status
 - **Competition results** — record placements, disciplines, promotion flags, and participant counts
 - **Competition calendar** — upcoming events with organizer, location, and date
-- **Smart frontend plugins** — switchable views (list, detail, results, future events) via FlexForm
+- **One content element per view** — couple list, couple detail, competition list, result list, highlights, and upcoming starts
 - **Highlights view** — automatically surfaces championships, promotions, and top-3 placements
+- **Championship icons** — WM, EM, DM, and Landesmeisterschaft marked with an icon, a tooltip, and a screen-reader text
 - **Speaking URLs** — per-couple slug field for clean detail-page URLs via TYPO3 RouteEnhancer
 - **Custom page title** — `CouplePageTitleProvider` surfaces the couple's name in the page title/breadcrumb
 - **Backend optimised** — custom TCA labels, sorted selects, full workspace and localization support
@@ -26,42 +27,51 @@
 
 | Component | Version |
 |-----------|---------|
-| TYPO3 | 9.5 or higher |
-| PHP | 7.2, 7.4, 8.0, 8.1, 8.2 |
+| TYPO3 | 13.4 |
+| PHP | 8.2, 8.3, 8.4 |
 | EXT:extbase | bundled with TYPO3 |
 | EXT:fluid | bundled with TYPO3 |
+
+Markup targets **Bootstrap 5** (for example via `bk2k/bootstrap-package` 15).
+
+| Extension version | TYPO3 | PHP |
+|-------------------|-------|-----|
+| 3.x | 13.4 | 8.2 – 8.4 |
+| 2.x | 12.4 | 8.1 – 8.3 |
+| 1.x | 9.5 – 11.5 | 7.2 – 8.2 |
 
 ---
 
 ## Installation
 
-### Via Composer (recommended)
-
 ```bash
 composer require schwarz-weiss-reutlingen/couple-manager
 ```
 
-### Via TYPO3 Extension Manager
+The extension is Composer-only. After installation run the database comparison and the upgrade wizards:
 
-Download the extension and install it through **Admin Tools → Extensions**.
+```bash
+vendor/bin/typo3 extension:setup
+vendor/bin/typo3 upgrade:run
+```
 
 ---
 
 ## Setup
 
-### 1. Include Static TypoScript
+### 1. Include the static TypoScript
 
 In **Web → Template**, add the static template **"Couple Manager"** to your root template.
 
-### 2. Configure the Storage PID
+### 2. Configure the storage PID
 
-The extension defaults to `storagePid = 137`. Override this in your site's TypoScript constants to match the SysFolder where your records live:
+The extension defaults to `storagePid = 137`. Override it in your TypoScript constants to match the SysFolder where your records live:
 
 ```typoscript
 plugin.tx_couplemanager.persistence.storagePid = <your-pid>
 ```
 
-### 3. Create Backend Records
+### 3. Create backend records
 
 In the configured SysFolder, create:
 - **Couples** (`tx_couplemanager_domain_model_couple`)
@@ -117,42 +127,38 @@ config.pageTitleProviders {
 
 ## Plugins
 
-### Couple Manager (`tx_couplemanager_couple`)
+Every view is its own content element (CType). Add it through **Create new content element → Plugins**.
 
-The main plugin. Select the action via the **Mode** tab in the FlexForm.
+| Plugin | CType | Controller action | Description |
+|--------|-------|-------------------|-------------|
+| Couple detail | `couplemanager_couple` | `Couple → detail` | Single couple profile with past results and upcoming starts |
+| Couple list | `couplemanager_couplelist` | `Couple → list` | Grid of all couples, optionally linking to the detail page |
+| Competition list | `couplemanager_competitionlist` | `Competition → list` | List of all competitions |
+| Result list | `couplemanager_resultlist` | `Result → list` | Past results with optional date/limit filters |
+| Result highlights | `couplemanager_resultlistsuccess` | `Result → listSuccess` | Championships, promotions, top-3, strong finishes |
+| Upcoming starts | `couplemanager_resultlistfuture` | `Result → listFuture` | Upcoming events for couples with *Show Future* enabled |
 
-| Action | Description |
-|--------|-------------|
-| `Couple → list` | Grid of all couples, optionally with a link to the detail page |
-| `Couple → detail` | Single couple profile with past results |
-| `Competition → list` | List of all competitions |
-| `Result → list` | Paginated past results with optional date/limit filters |
-| `Result → listSuccess` | Highlights: championships, promotions, top-3, strong finishes |
-| `Result → listFuture` | Upcoming events for couples with *Show Future* enabled |
+The detail plugin is named `Couple`, so the RouteEnhancer above (`plugin: Couple`) keeps working.
 
-#### FlexForm options
+The `Menu` plugin (`MenuController`) is configured for TypoScript use only; it is not offered in the backend.
 
-**Couple List tab**
+### FlexForm options
+
+**Couple list** (sheet `list`)
 
 | Setting | Description |
 |---------|-------------|
 | Active couples first | Sort active couples before inactive ones |
-| Detail view page | Page UID that contains the Couple Detail plugin |
+| Detail view page | Page UID that contains the Couple detail plugin |
 
-**Result List tab**
+**Result list, highlights, upcoming starts** (sheet `result.list`)
 
 | Setting | Description |
 |---------|-------------|
-| Template layout | `Erfolge` (achievements) or `Home Accordion` |
+| Template layout | e.g. `Erfolge` (achievements) or `Home Accordion` |
 | Limit | Maximum number of results to display |
 | Date from / to | Fixed date range filter |
 | Rolling window (days) | Show results from the last N days |
-
----
-
-### Couple Manager: Menu (`schwarzweissreutlingen_couplemanager_menu`)
-
-Renders a compact couple navigation menu. Shows active couples sorted by name.
 
 ---
 
@@ -207,6 +213,13 @@ Competition >── Organizer
 
 Lookup tables for categorising competitions and storing organizer contact data.
 
+### Championship icons
+
+The partial `Resources/Private/Partials/Result/CompetitionIcon.html` renders an icon with tooltip and
+screen-reader text for the competition types `World Championship` (WM), `European Championship` (EM),
+`Deutsche Meisterschaft` (DM), and `Landesmeisterschaft` (LM, Baden-Württemberg lion). Override the partial
+in your sitepackage to change icons or labels.
+
 ---
 
 ## Result Highlights Logic (`listSuccess`)
@@ -219,6 +232,25 @@ The **Erfolge** view automatically groups results into four tiers:
 | **Promotions** | `promotion = true` |
 | **Top 3** | `position ∈ {1, 2, 3}` |
 | **Strong finishes** | `position / participantCount < 0.25` (top quarter) |
+
+---
+
+## Upgrading
+
+### From 2.x (TYPO3 12.4) to 3.0 (TYPO3 13.4)
+
+Update TYPO3 first, then require `^3.0`. No data migration is needed. The couple image field now uses the
+TCA type `file`; page, frontend user, and content object are read from the request.
+
+### From 1.x (TYPO3 9.5 – 11.5) to 2.0 (TYPO3 12.4)
+
+`switchableControllerActions` no longer exists in TYPO3 12. The former single plugin `Couple` is split into one
+content element per mode (see [Plugins](#plugins)). Run the upgrade wizard **"Couple Manager: split plugin into one plugin per mode"**
+(`coupleManagerPluginSplit`) to convert existing `list` content elements and their FlexForm values:
+
+```bash
+vendor/bin/typo3 upgrade:run coupleManagerPluginSplit
+```
 
 ---
 
@@ -239,6 +271,29 @@ composer test:unit
 ---
 
 ## Changelog
+
+### 3.0.0
+- Breaking: TYPO3 13.4 only (PHP 8.2 – 8.4)
+- Couple image uses the TCA type `file` instead of `getFileFieldTCAConfig()`
+- Page, frontend user, and content object come from the request instead of `$GLOBALS['TSFE']`
+
+### 2.0.0
+- Breaking: TYPO3 12.4 only; Services.yaml, PSR-7 responses, Fluid `ViewInterface`, PHP attributes, TCA overrides, `Icons.php`, `page.tsconfig`
+- Breaking: one content element plugin per mode (`CoupleList`, `CompetitionList`, `ResultList`, `ResultListSuccess`, `ResultListFuture`); upgrade wizard `coupleManagerPluginSplit`
+- Championship icons with tooltip for WM, EM, DM, and Landesmeisterschaft (Baden-Württemberg lion)
+- Champion card styling and `date()` formats instead of `strftime()`
+
+### 1.10.x
+- Bootstrap 5 markup (`data-bs-*` attributes, `badge`, `text-end`, no `card-deck`)
+- Null-safe access to session and list settings for PHP 8
+
+### 1.9.x
+- TYPO3 11.5 support (plugins registered with controller class names), TYPO3 9.5 dropped
+- TCA: valid checkbox items so `hidden`, `hide_results`, and `show_future` work
+
+### 1.8.0
+- TYPO3 10.4 support (constructor injection, Extbase ORM annotations)
+- Stable result ordering via uid tie-breaker
 
 ### 1.7.1
 - `ListFuture` ("Wer tanzt wo?") mobile view replaced with a non-interactive list
