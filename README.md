@@ -118,7 +118,7 @@ page title and breadcrumb instead of the static page title:
 config.pageTitleProviders {
     couple {
         provider = SchwarzWeissReutlingen\CoupleManager\PageTitle\CouplePageTitleProvider
-        before = altPageTitle
+        before = record
     }
 }
 ```
