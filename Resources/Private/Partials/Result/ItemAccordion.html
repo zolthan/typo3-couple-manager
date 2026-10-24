@@ -49,13 +49,9 @@
                     </f:if>
                 </f:if>
                 <span class="date">{f:format.date(date: resultItem.date, format: "d.m.")}</span>
-                <span class="couple">
-                    {couple.coupleName}
-                </span>
-                <span class="discipline text-nowrap">
-                    (<f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}" />)
-                </span>
-                <f:render partial="Result/CompetitionIcon" arguments="{competitionType: competitionType}"/>
+                <span class="competition-slot"><f:render partial="Result/CompetitionIcon" arguments="{competitionType: competitionType}"/></span>
+                <span class="result-name"><span class="couple">{couple.coupleName}</span>
+                    <span class="discipline">(<f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}" />)</span></span>
         </h4>
     </div>
 
