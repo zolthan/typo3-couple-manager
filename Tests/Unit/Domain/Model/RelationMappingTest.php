@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Domain\Model;
 
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Test;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer;
@@ -29,7 +31,7 @@ class RelationMappingTest extends UnitTestCase
     /**
      * @return array<string, array{0: class-string, 1: string, 2: class-string}>
      */
-    public function objectStorageRelationProvider(): array
+    public static function objectStorageRelationProvider(): array
     {
         return [
             'Result.couple' => [Result::class, 'couple', Couple::class],
@@ -39,10 +41,8 @@ class RelationMappingTest extends UnitTestCase
         ];
     }
 
-    /**
-     * @test
-     * @dataProvider objectStorageRelationProvider
-     */
+    #[Test]
+    #[DataProvider('objectStorageRelationProvider')]
     public function objectStorageRelationDeclaresParsableElementType(
         string $className,
         string $propertyName,

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Domain\Model;
 
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition;
+use PHPUnit\Framework\Attributes\Test;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -25,44 +26,34 @@ class CompetitionTest extends UnitTestCase
         $this->subject = new Competition();
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function setTitleSetsTitle(): void
     {
         $this->subject->setTitle('Landesmeisterschaft');
         self::assertSame('Landesmeisterschaft', $this->subject->getTitle());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function setCitySetsCity(): void
     {
         $this->subject->setCity('Reutlingen');
         self::assertSame('Reutlingen', $this->subject->getCity());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function countryIsZeroInitially(): void
     {
         self::assertSame(0, $this->subject->getCountry());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function setCountrySetsCountry(): void
     {
         $this->subject->setCountry(54);
         self::assertSame(54, $this->subject->getCountry());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function setDateStartSetsDateStart(): void
     {
         $date = new \DateTime('2024-03-01');
@@ -70,17 +61,13 @@ class CompetitionTest extends UnitTestCase
         self::assertSame($date, $this->subject->getDateStart());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function organizerIsInitializedAsEmptyObjectStorage(): void
     {
         self::assertEquals(new ObjectStorage(), $this->subject->getOrganizer());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function addCategoryAttachesOrganizer(): void
     {
         $organizer = new Organizer();
@@ -88,9 +75,7 @@ class CompetitionTest extends UnitTestCase
         self::assertTrue($this->subject->getOrganizer()->contains($organizer));
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function identifierCombinesDateTitleAndCity(): void
     {
         $this->subject->setDateStart(new \DateTime('2024-03-15'));

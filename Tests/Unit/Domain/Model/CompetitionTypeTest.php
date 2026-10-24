@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Domain\Model;
 
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType;
+use PHPUnit\Framework\Attributes\Test;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
 /**
@@ -23,27 +24,21 @@ class CompetitionTypeTest extends UnitTestCase
         $this->subject = new CompetitionType();
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function setNameSetsName(): void
     {
         $this->subject->setName('Deutsche Meisterschaft');
         self::assertSame('Deutsche Meisterschaft', $this->subject->getName());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function setOrganizationSetsOrganization(): void
     {
         $this->subject->setOrganization('DTV');
         self::assertSame('DTV', $this->subject->getOrganization());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function optionLabelCombinesNameAndOrganization(): void
     {
         $this->subject->setName('Weltmeisterschaft');

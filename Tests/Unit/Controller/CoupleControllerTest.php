@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Controller;
 
 use SchwarzWeissReutlingen\CoupleManager\Controller\CoupleController;
+use PHPUnit\Framework\Attributes\Test;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository;
@@ -19,12 +20,13 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
  */
 class CoupleControllerTest extends UnitTestCase
 {
+    protected bool $resetSingletonInstances = true;
+
     /**
      * For a couple that hides its results, detailAction must not query the
      * repository and assigns the couple plus an empty results set.
-     *
-     * @test
      */
+    #[Test]
     public function detailActionAssignsCoupleAndEmptyResultsWhenResultsAreHidden(): void
     {
         $couple = new Couple();
@@ -34,6 +36,7 @@ class CoupleControllerTest extends UnitTestCase
 
         $assigned = [];
         $view = $this->createMock(ViewInterface::class);
+        $view->method('render')->willReturn('');
         $view->expects(self::exactly(3))
             ->method('assign')
             ->willReturnCallback(static function (string $key, mixed $value) use (&$assigned, $view): ViewInterface {

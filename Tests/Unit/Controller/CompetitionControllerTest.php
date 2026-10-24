@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Controller;
 
 use SchwarzWeissReutlingen\CoupleManager\Controller\CompetitionController;
+use PHPUnit\Framework\Attributes\Test;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionRepository;
 use TYPO3\CMS\Core\Http\ResponseFactory;
@@ -18,15 +19,14 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
  */
 class CompetitionControllerTest extends UnitTestCase
 {
-    /**
-     * @test
-     */
+    #[Test]
     public function showActionAssignsGivenCompetitionToView(): void
     {
         $competition = new Competition();
         $controller = new CompetitionController($this->createMock(CompetitionRepository::class));
 
         $view = $this->createMock(ViewInterface::class);
+        $view->method('render')->willReturn('');
         $view->expects(self::once())->method('assign')->with('competition', $competition);
 
         $property = new \ReflectionProperty(ActionController::class, 'view');
