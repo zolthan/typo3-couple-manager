@@ -1,0 +1,28 @@
+<T3DataStructure>
+    <sheets>
+        <list>
+            <ROOT>
+                <sheetTitle>lll:ext:couple_manager/resources/private/language/locallang_be.xlfexforms_tab.list</sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.list.activeCouplesFirst>
+                        <label>lll:ext:couple_manager/resources/private/language/locallang_be.xlfexforms_tab.list.active_couples_first</label>
+                        <config>
+                            <type>check</type>
+                        </config>
+                    </settings.list.activeCouplesFirst>
+                    <settings.list.detailView>
+                        <label>lll:ext:couple_manager/resources/private/language/locallang_be.xlfexforms_tab.list.select_detail_view</label>
+                        <config>
+                            <type>group</type>
+                            <allowed>pages</allowed>
+                            <size>1</size>
+                            <maxitems>1</maxitems>
+                            <minitems>1</minitems>
+                        </config>
+                    </settings.list.detailView>
+                </el>
+            </ROOT>
+        </list>
+    </sheets>
+</T3DataStructure>
