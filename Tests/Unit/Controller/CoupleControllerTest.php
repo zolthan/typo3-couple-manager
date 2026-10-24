@@ -6,6 +6,8 @@ namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Controller;
 
 use SchwarzWeissReutlingen\CoupleManager\Controller\CoupleController;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -26,7 +28,7 @@ class CoupleControllerTest extends UnitTestCase
         $couple = new Couple();
         $couple->setHideResults(true);
 
-        $controller = new CoupleController();
+        $controller = new CoupleController($this->createMock(CoupleRepository::class), $this->createMock(ResultRepository::class));
 
         $view = $this->createMock(ViewInterface::class);
         $view->expects(self::exactly(3))

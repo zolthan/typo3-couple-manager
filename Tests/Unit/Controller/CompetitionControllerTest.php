@@ -6,6 +6,7 @@ namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Controller;
 
 use SchwarzWeissReutlingen\CoupleManager\Controller\CompetitionController;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition;
+use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -21,7 +22,7 @@ class CompetitionControllerTest extends UnitTestCase
     public function showActionAssignsGivenCompetitionToView(): void
     {
         $competition = new Competition();
-        $controller = new CompetitionController();
+        $controller = new CompetitionController($this->createMock(CompetitionRepository::class));
 
         $view = $this->createMock(ViewInterface::class);
         $view->expects(self::once())->method('assign')->with('competition', $competition);
