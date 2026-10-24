@@ -16,9 +16,7 @@
         </f:if>
         <div class="future-start-row__type {f:if(condition: hasOwnTitle, then: 'future-start-row__type--secondary')}">
             {competitionType.name}
-            <f:if condition="{competitionType.name} == 'World Championship'">
-                &nbsp;<i aria-hidden="true" class="fa fa-globe"></i>
-            </f:if>
+            <f:render partial="Result/CompetitionIcon" arguments="{competitionType: competitionType}"/>
             <span class="future-start-row__sep">&middot;</span> {competition.city}
         </div>
         <div class="future-start-row__class">

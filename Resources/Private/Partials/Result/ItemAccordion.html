@@ -55,9 +55,7 @@
                 <span class="discipline text-nowrap">
                     (<f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}" />)
                 </span>
-                <f:if condition="{competitionType.name} == 'World Championship'">
-                    &nbsp;<i aria-hidden="true" class="fa fa-globe"></i>
-                </f:if>
+                <f:render partial="Result/CompetitionIcon" arguments="{competitionType: competitionType}"/>
         </h4>
     </div>
 

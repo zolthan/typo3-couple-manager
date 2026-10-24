@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:switch expression="{competitionType.name}">
+    <f:case value="World Championship">
+        <span class="competition-icon" title="Weltmeisterschaft (WM)"><i aria-hidden="true" class="fa fa-globe"></i><span class="visually-hidden">Weltmeisterschaft (WM)</span></span>
+    </f:case>
+    <f:case value="European Championship">
+        <span class="competition-icon" title="Europameisterschaft (EM)"><i aria-hidden="true" class="fa fa-globe-europe"></i><span class="visually-hidden">Europameisterschaft (EM)</span></span>
+    </f:case>
+    <f:case value="Deutsche Meisterschaft">
+        <span class="competition-icon" title="Deutsche Meisterschaft (DM)"><i aria-hidden="true" class="fa fa-flag"></i><span class="visually-hidden">Deutsche Meisterschaft (DM)</span></span>
+    </f:case>
+</f:switch>
+</html>
