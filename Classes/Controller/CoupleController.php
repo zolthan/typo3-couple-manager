@@ -5,6 +5,8 @@ namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 use Psr\Http\Message\ResponseInterface;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
 use SchwarzWeissReutlingen\CoupleManager\PageTitle\CouplePageTitleProvider;
+use TYPO3\CMS\Core\MetaTag\MetaTagManagerRegistry;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\View\ViewInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
@@ -93,7 +95,13 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function detailAction(Couple $couple): ResponseInterface
     {
-        CouplePageTitleProvider::setTitle($couple->getCoupleName());
+        $name = $couple->getCoupleName();
+        CouplePageTitleProvider::setTitle($name);
+        $description = $name . ': Turnierpaar im TC Schwarz-Weiß Reutlingen mit Startklassen, Erfolgen und nächsten Starts.';
+        $metaTags = GeneralUtility::makeInstance(MetaTagManagerRegistry::class);
+        foreach (['description' => $description, 'og:title' => $name, 'og:description' => $description] as $property => $content) {
+            $metaTags->getManagerForProperty($property)->addProperty($property, $content, [], true);
+        }
         $this->view->assign('couple', $couple);
 
         $orderArray = [
