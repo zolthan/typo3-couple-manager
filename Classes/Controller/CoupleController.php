@@ -53,7 +53,7 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $view->assign('user', $GLOBALS['TSFE']->fe_user->user);
         $view->assign('contentObjectUid', $this->configurationManager->getContentObject()->data['uid']);
         $view->assign('cookies', $_COOKIE);
-        $view->assign('session', $_SESSION);
+        $view->assign('session', $_SESSION ?? []);
     }
 
     /**

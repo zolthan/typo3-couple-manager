@@ -52,7 +52,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $view->assign('user', $GLOBALS['TSFE']->fe_user->user);
         $view->assign('contentObjectUid', $this->configurationManager->getContentObject()->data['uid']);
         $view->assign('cookies', $_COOKIE);
-        $view->assign('session', $_SESSION);
+        $view->assign('session', $_SESSION ?? []);
     }
 
     /**
@@ -68,7 +68,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
         $query = $this->resultRepository->createQuery();
 
-        $limit = (int)$this->settings['list']['limit'];
+        $limit = (int)($this->settings['list']['limit'] ?? 0);
         if ($limit > 0) {
             $query->setLimit($limit);
         }
@@ -95,17 +95,17 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             $constraints[] = $query->lessThanOrEqual('date', strftime('%Y-%m-%d'));
             $constraints[] = $query->greaterThan('position', 0);
         }
-        $timeLow = $this->settings['list']['timeRestrictionLow'];
+        $timeLow = $this->settings['list']['timeRestrictionLow'] ?? null;
         if (!empty($timeLow)) {
             $constraints[] = $query->greaterThanOrEqual('date', strftime('%Y-%m-%d', strtotime($timeLow)));
         }
 
-        $timeHigh = $this->settings['list']['timeRestrictionHigh'];
+        $timeHigh = $this->settings['list']['timeRestrictionHigh'] ?? null;
         if (!empty($timeHigh)) {
             $constraints[] = $query->lessThanOrEqual('date', strftime('%Y-%m-%d', strtotime($timeHigh)));
         }
 
-        $timeRolling = $this->settings['list']['timeRestrictionRolling'];
+        $timeRolling = $this->settings['list']['timeRestrictionRolling'] ?? null;
         if (!empty($timeRolling)) {
             $rollingDate = strftime('%Y-%m-%d', strtotime('-' . abs($timeRolling) . ' days'));
             $constraints[] = $query->greaterThanOrEqual('date', $rollingDate);
