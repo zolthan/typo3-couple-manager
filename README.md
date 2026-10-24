@@ -5,7 +5,7 @@
 [![TYPO3](https://img.shields.io/badge/TYPO3-13.4-orange.svg)](https://typo3.org)
 [![PHP](https://img.shields.io/badge/PHP-8.2--8.4-blue.svg)](https://php.net)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-3.0.0-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
+[![Version](https://img.shields.io/badge/version-3.0.2-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
 
 ---
 
@@ -271,6 +271,14 @@ composer test:unit
 ---
 
 ## Changelog
+
+### 3.0.2
+- Fix: `CouplePageTitleProvider` is public, so it can be used as a page title provider in TYPO3 13
+- The couple detail page sets a meta description and the Open Graph tags `og:title` and `og:description`
+- Unit tests migrated to PHPUnit 11 attributes
+
+### 3.0.1
+- Added the GPL-2.0 license text and updated the README
 
 ### 3.0.0
 - Breaking: TYPO3 13.4 only (PHP 8.2 – 8.4)
