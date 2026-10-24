@@ -2,8 +2,9 @@
 
 namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 
+use Psr\Http\Message\ResponseInterface;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Result;
-use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
+use TYPO3Fluid\Fluid\View\ViewInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
 /***
@@ -47,7 +48,6 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function initializeView(ViewInterface $view)
     {
-        parent::initializeView($view);
         $view->assign('page', $GLOBALS['TSFE']->page);
         $view->assign('user', $GLOBALS['TSFE']->fe_user->user);
         $view->assign('contentObjectUid', $this->configurationManager->getContentObject()->data['uid']);
@@ -119,7 +119,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      *
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function listAction()
+    public function listAction(): ResponseInterface
     {
         $query = $this->getListQuery();
         $constraints = $this->getCommonConstraints();
@@ -128,6 +128,8 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             ->execute();
 
         $this->view->assign('results', $results);
+
+        return $this->htmlResponse();
     }
 
     /**
@@ -135,7 +137,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      *
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function listSuccessAction()
+    public function listSuccessAction(): ResponseInterface
     {
         $query = $this->getListQuery();
         $constraints = $this->getCommonConstraints();
@@ -202,6 +204,8 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         }
 
         $this->view->assign('goodOnes', $filteredEntities);
+
+        return $this->htmlResponse();
     }
 
     /**
@@ -209,7 +213,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      *
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function listFutureAction()
+    public function listFutureAction(): ResponseInterface
     {
         $query = $this->getListQuery();
         $constraints = $this->getCommonConstraints(true);
@@ -226,6 +230,8 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $queryResult = $query->execute();
         $entities = $queryResult->toArray();
         $this->view->assign('competitions', $entities);
+
+        return $this->htmlResponse();
     }
 
     /**
@@ -233,8 +239,10 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      *
      * @param Result $result
      */
-    public function showAction(Result $result)
+    public function showAction(Result $result): ResponseInterface
     {
         $this->view->assign('result', $result);
+
+        return $this->htmlResponse();
     }
 }

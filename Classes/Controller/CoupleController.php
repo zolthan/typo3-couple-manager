@@ -2,9 +2,10 @@
 
 namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 
+use Psr\Http\Message\ResponseInterface;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple;
 use SchwarzWeissReutlingen\CoupleManager\PageTitle\CouplePageTitleProvider;
-use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
+use TYPO3Fluid\Fluid\View\ViewInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
 /***
@@ -48,7 +49,6 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function initializeView(ViewInterface $view)
     {
-        parent::initializeView($view);
         $view->assign('page', $GLOBALS['TSFE']->page);
         $view->assign('user', $GLOBALS['TSFE']->fe_user->user);
         $view->assign('contentObjectUid', $this->configurationManager->getContentObject()->data['uid']);
@@ -59,26 +59,30 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     /**
      * action list
      */
-    public function listAction()
+    public function listAction(): ResponseInterface
     {
         $orderArray = [
             'image' => QueryInterface::ORDER_DESCENDING,
             'man_last_name' => QueryInterface::ORDER_ASCENDING,
         ];
-        if ($this->settings['list']['activeCouplesFirst']) {
+        if (($this->settings['list']['activeCouplesFirst'] ?? false)) {
             $orderArray = ['active_couple' => QueryInterface::ORDER_DESCENDING] + $orderArray;
         }
         $this->coupleRepository->setDefaultOrderings($orderArray);
         $couples = $this->coupleRepository->findAll();
         $this->view->assign('couples', $couples);
+
+        return $this->htmlResponse();
     }
 
     /**
      * action list
      */
-    public function listSimpleAction()
+    public function listSimpleAction(): ResponseInterface
     {
         $this->listAction();
+
+        return $this->htmlResponse();
     }
 
     /**
@@ -87,7 +91,7 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * @param Couple $couple
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function detailAction(Couple $couple)
+    public function detailAction(Couple $couple): ResponseInterface
     {
         CouplePageTitleProvider::setTitle($couple->getCoupleName());
         $this->view->assign('couple', $couple);
@@ -163,5 +167,7 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
                 ->toArray();
         }
         $this->view->assign('futureTournaments', $futureTournaments);
+
+        return $this->htmlResponse();
     }
 }

@@ -2,6 +2,7 @@
 
 namespace SchwarzWeissReutlingen\CoupleManager\Controller;
 
+use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
 /**
@@ -24,7 +25,7 @@ class MenuController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * action show
      */
-    public function showAction()
+    public function showAction(): ResponseInterface
     {
         $orderArray = [
             'image' => QueryInterface::ORDER_DESCENDING,
@@ -34,5 +35,7 @@ class MenuController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $this->coupleRepository->setDefaultOrderings($orderArray);
         $couples = $this->coupleRepository->findAll();
         $this->view->assign('couples', $couples);
+
+        return $this->htmlResponse();
     }
 }

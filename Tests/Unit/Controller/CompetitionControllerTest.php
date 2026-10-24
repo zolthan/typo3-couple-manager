@@ -7,8 +7,10 @@ namespace SchwarzWeissReutlingen\CoupleManager\Tests\Unit\Controller;
 use SchwarzWeissReutlingen\CoupleManager\Controller\CompetitionController;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionRepository;
+use TYPO3\CMS\Core\Http\ResponseFactory;
+use TYPO3\CMS\Core\Http\StreamFactory;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
+use TYPO3Fluid\Fluid\View\ViewInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
 /**
@@ -30,6 +32,8 @@ class CompetitionControllerTest extends UnitTestCase
         $property = new \ReflectionProperty(ActionController::class, 'view');
         $property->setAccessible(true);
         $property->setValue($controller, $view);
+        $controller->injectResponseFactory(new ResponseFactory());
+        $controller->injectStreamFactory(new StreamFactory());
 
         $controller->showAction($competition);
     }
