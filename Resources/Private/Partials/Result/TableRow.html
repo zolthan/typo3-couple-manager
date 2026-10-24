@@ -22,10 +22,10 @@
             <f:variable name="popoverTitle" value="Turnierart / Veranstalter"/>
             <f:variable name="popoverText" value="{competitionType.name} <br/>"/>
         </f:if>
-        <a tabindex="0" data-toggle="popover" data-placement="top" data-trigger="hover"
-           data-container="body" data-html="true"
+        <a tabindex="0" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover"
+           data-bs-container="body" data-bs-html="true"
            title="{popoverTitle}"
-           data-content="{popoverText} <em>{f:if(condition: i.isLast, then: '{organizer.name}', else: '{organizer.name},<br/>')->f:for(each:competition.organizer, as:'organizer', iteration: 'i')}</em>"
+           data-bs-content="{popoverText} <em>{f:if(condition: i.isLast, then: '{organizer.name}', else: '{organizer.name},<br/>')->f:for(each:competition.organizer, as:'organizer', iteration: 'i')}</em>"
            class="popover-icon"
         ><i class="fa fa-info-circle" aria-hidden="true"></i></a>
         <f:if condition="{competition.title} && {competition.title} != '///---///' && {competitionType.name} != {competition.title}">
@@ -69,7 +69,7 @@
             (<f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{result.discipline}" />)
         </span>
         <f:if condition="{omit.result} != 1">
-            <span class="{displayMobile} text-right"><br/>
+            <span class="{displayMobile} text-end"><br/>
                 <f:if condition="{result.promotion}">
                     <i class="fa fa-level-up-alt" aria-hidden="true" title="Aufstieg"></i>&nbsp;
                 </f:if>
@@ -81,7 +81,7 @@
         </f:if>
     </td>
     <f:if condition="{omit.result} != 1">
-        <td class="{displayDesktop} text-right text-nowrap">
+        <td class="{displayDesktop} text-end text-nowrap">
             <f:if condition="{result.promotion}">
                 <i class="fa fa-level-up-alt" aria-hidden="true" title="Aufstieg"></i>&nbsp;
             </f:if>
@@ -90,7 +90,7 @@
             </f:if>
             {result.position}
         </td>
-        <td class="{displayDesktop} text-right">
+        <td class="{displayDesktop} text-end">
             {result.participantCount}
         </td>
     </f:if>

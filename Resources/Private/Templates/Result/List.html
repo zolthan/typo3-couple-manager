@@ -11,7 +11,7 @@
     <f:if condition="{results}">
         <div class="results-list-view
         {f:if(condition: '{settings.list.templateLayout} == 2', then: ' accordion')}
-        {f:if(condition: '{settings.list.templateLayout} == 3', then: ' card-deck list row')}"
+        {f:if(condition: '{settings.list.templateLayout} == 3', then: ' list row')}"
              id="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'accordion-{contentObjectUid}', else: 'results-container-{contentObjectUid}')}"
              role="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'tablist')}"
              aria-multiselectable="{f:if(condition: '{settings.list.templateLayout} == 2', then: 'true')}">

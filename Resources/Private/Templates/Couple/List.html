@@ -3,7 +3,7 @@
 <f:section name="main">
     <f:flashMessages/>
     <f:if condition="{couples}">
-        <div class="couple-list-view card-deck list row">
+        <div class="couple-list-view list row">
             <f:for each="{couples}" as="couple">
                 <div class="col-lg-4 col-sm-6">
                     <div class="card h-100 {f:if(condition:'{couple.activeCouple} != 1',then:'not-active',else:'active')}">
@@ -41,7 +41,7 @@
                                 </f:if>
                             </p>
                             <f:if condition="{couple.activeCouple} != 1">
-                                <span class="badge badge-secondary">nicht mehr aktiv</span>
+                                <span class="badge bg-secondary">nicht mehr aktiv</span>
                             </f:if>
                         </div>
                     </div>

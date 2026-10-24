@@ -17,14 +17,14 @@
     <f:variable name="competitionType" value="{resultItem.competitionType.0}"/>
     <div class="card-header" role="tab" id="accordion-heading-{contentObjectUid}-{resultItem.uid}">
         <h4 class="mb-0"
-            data-toggle="collapse"
-            data-parent="#accordion-{contentObjectUid}"
-            data-target="#accordion-{contentObjectUid}-{resultItem.uid}"
+            data-bs-toggle="collapse"
+            data-bs-parent="#accordion-{contentObjectUid}"
+            data-bs-target="#accordion-{contentObjectUid}-{resultItem.uid}"
             aria-expanded="false"
             aria-controls="accordion-{contentObjectUid}-{resultItem.uid}">
                 <f:if condition="{resultItem.promotion}">
                     <div class="promotion">
-                        <span class="badge badge-danger">
+                        <span class="badge bg-danger">
                             Aufstieg von <f:format.case mode="upper">{resultItem.startingClass}</f:format.case> nach
                             <f:switch expression="{resultItem.startingClass}">
                                <f:case value="d">C</f:case>
