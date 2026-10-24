@@ -166,27 +166,22 @@ return [
         'image' => [
             'exclude' => true,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_couple.image',
-            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-                'image',
-                [
-                    'appearance' => [
-                        'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-                    ],
-                    'overrideChildTca' => [
-                        'types' => [
-                            'foreign_types' => [
-                                \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
-                                    'showitem' => '
-                                    --palette--;LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette',
-                                ],
-                            ],
+            'config' => [
+                'type' => 'file',
+                'allowed' => 'common-image-types',
+                'appearance' => [
+                    'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
+                ],
+                'overrideChildTca' => [
+                    'types' => [
+                        \TYPO3\CMS\Core\Resource\FileType::IMAGE->value => [
+                            'showitem' => '
+                                --palette--;LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                --palette--;;filePalette',
                         ],
                     ],
-//                    'maxitems' => 1
                 ],
-                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-            ),
+            ],
         ],
 
         'result' => [
