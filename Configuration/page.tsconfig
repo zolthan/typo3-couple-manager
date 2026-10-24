@@ -1,0 +1,2 @@
+@import 'EXT:couple_manager/Configuration/TSconfig/TableSorting.typoscript'
+@import 'EXT:couple_manager/Configuration/TSconfig/ContentElementWizard.typoscript'

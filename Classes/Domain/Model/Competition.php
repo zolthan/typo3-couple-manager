@@ -69,8 +69,8 @@ class Competition extends AbstractEntity
      * Organizer
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Organizer>
-     * @Lazy
      */
+    #[Lazy]
     protected $organizer;
 
     /**

@@ -24,9 +24,6 @@ return [
         'searchFields' => $modelFields,
         'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_couple.svg',
     ],
-    'interface' => [
-        'showRecordFieldList' => 'hidden,' . $modelFields,
-    ],
     'types' => [
         '1' => ['showitem' => 'hidden,' . $modelFields],
     ],
@@ -45,10 +42,7 @@ return [
             'config' => [
                 'type' => 'check',
                 'items' => [
-                    [
-                        0 => 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled',
-                        1 => '',
-                    ],
+                    ['label' => 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled'],
                 ],
             ],
         ],
@@ -142,10 +136,7 @@ return [
             'config' => [
                 'type' => 'check',
                 'items' => [
-                    [
-                        0 => 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled',
-                        1 => '',
-                    ],
+                    ['label' => 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled'],
                 ],
                 'default' => 1,
             ],
@@ -156,10 +147,7 @@ return [
             'config' => [
                 'type' => 'check',
                 'items' => [
-                    [
-                        0 => 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled',
-                        1 => '',
-                    ],
+                    ['label' => 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled'],
                 ],
                 'default' => 1,
             ],
@@ -170,10 +158,7 @@ return [
             'config' => [
                 'type' => 'check',
                 'items' => [
-                    [
-                        0 => 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled',
-                        1 => '',
-                    ],
+                    ['label' => 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled'],
                 ],
                 'default' => 0,
             ],

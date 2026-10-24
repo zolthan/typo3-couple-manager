@@ -77,27 +77,27 @@ class Result extends AbstractEntity
      * couple
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Couple>
-     * @Cascade("remove")
-     * @Lazy
      */
+    #[Cascade(['value' => 'remove'])]
+    #[Lazy]
     protected $couple;
 
     /**
      * competition
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\Competition>
-     * @Cascade("remove")
-     * @Lazy
      */
+    #[Cascade(['value' => 'remove'])]
+    #[Lazy]
     protected $competition;
 
     /**
      * competitionType
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SchwarzWeissReutlingen\CoupleManager\Domain\Model\CompetitionType>
-     * @Cascade("remove")
-     * @Lazy
      */
+    #[Cascade(['value' => 'remove'])]
+    #[Lazy]
     protected $competitionType;
 
     /**

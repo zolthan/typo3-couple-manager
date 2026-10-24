@@ -20,9 +20,6 @@ return [
         'searchFields' => $modelFields,
         'iconfile' => 'EXT:couple_manager/Resources/Public/Icons/tx_couplemanager_domain_model_competition.svg',
     ],
-    'interface' => [
-        'showRecordFieldList' => 'hidden,' . $modelFields,
-    ],
     'types' => [
         '0' => ['showitem' => 'hidden,' . $modelFields],
     ],
@@ -41,10 +38,7 @@ return [
             'config' => [
                 'type' => 'check',
                 'items' => [
-                    [
-                        0 => 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled',
-                        1 => '',
-                    ],
+                    ['label' => 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled'],
                 ],
             ],
         ],
@@ -134,7 +128,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['', 0],
+                    ['label' => '', 'value' => 0],
                 ],
                 'foreign_table' => 'static_countries',
                 'foreign_table_where' => 'ORDER BY static_countries.cn_short_en',

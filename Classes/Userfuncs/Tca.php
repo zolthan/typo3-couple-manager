@@ -22,7 +22,6 @@ use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionTypeReposi
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
@@ -32,8 +31,6 @@ use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
  */
 class Tca
 {
-    /** @var ObjectManager */
-    protected $objectManager;
     /** @var CoupleRepository */
     protected $coupleRepository;
     /** @var LocalizationUtility */
@@ -50,11 +47,10 @@ class Tca
      */
     public function __construct()
     {
-        $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
-        $this->coupleRepository = $this->objectManager->get(CoupleRepository::class);
-        $this->resultRepository = $this->objectManager->get(ResultRepository::class);
-        $this->competitionRepository = $this->objectManager->get(CompetitionRepository::class);
-        $this->competitionTypeRepository = $this->objectManager->get(CompetitionTypeRepository::class);
+        $this->coupleRepository = GeneralUtility::makeInstance(CoupleRepository::class);
+        $this->resultRepository = GeneralUtility::makeInstance(ResultRepository::class);
+        $this->competitionRepository = GeneralUtility::makeInstance(CompetitionRepository::class);
+        $this->competitionTypeRepository = GeneralUtility::makeInstance(CompetitionTypeRepository::class);
     }
 
     /**

@@ -107,8 +107,8 @@ class Couple extends AbstractEntity
      * image
      *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @Cascade("remove")
      */
+    #[Cascade(['value' => 'remove'])]
     protected $image;
 
     /**

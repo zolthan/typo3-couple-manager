@@ -103,7 +103,7 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 //                $query->equals('couple', $couple->getUid())
 //            )
 //            ->matching(
-//                $query->lessThanOrEqual('date', strftime('%Y-%m-%d'))
+//                $query->lessThanOrEqual('date', date('Y-m-d'))
 //            )
 //            ->matching(
 //                $query->greaterThan('position', 0)
@@ -116,11 +116,11 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             $query = $this->resultRepository->createQuery();
             $constraints = [
                 $query->equals('couple', $couple->getUid()),
-                $query->lessThanOrEqual('date', strftime('%Y-%m-%d')),
+                $query->lessThanOrEqual('date', date('Y-m-d')),
                 $query->greaterThan('position', 0),
             ];
             $results = $query
-                ->matching($query->logicalAnd($constraints))
+                ->matching($query->logicalAnd(...$constraints))
                 ->execute()
                 ->toArray();
 
@@ -154,11 +154,11 @@ class CoupleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             $futureQuery = $this->resultRepository->createQuery();
             $futureConstraints = [
                 $futureQuery->equals('couple', $couple->getUid()),
-                $futureQuery->greaterThanOrEqual('date', strftime('%Y-%m-%d', strtotime('-2 Weeks'))),
+                $futureQuery->greaterThanOrEqual('date', date('Y-m-d', strtotime('-2 Weeks'))),
                 $futureQuery->lessThanOrEqual('position', 0),
             ];
             $futureTournaments = $futureQuery
-                ->matching($futureQuery->logicalAnd($futureConstraints))
+                ->matching($futureQuery->logicalAnd(...$futureConstraints))
                 ->execute()
                 ->toArray();
         }

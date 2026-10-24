@@ -89,25 +89,25 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         ];
 
         if ($future) {
-            $constraints[] = $query->greaterThanOrEqual('date', strftime('%Y-%m-%d', strtotime('-2 Weeks')));
+            $constraints[] = $query->greaterThanOrEqual('date', date('Y-m-d', strtotime('-2 Weeks')));
             $constraints[] = $query->lessThanOrEqual('position', 0);
         } else {
-            $constraints[] = $query->lessThanOrEqual('date', strftime('%Y-%m-%d'));
+            $constraints[] = $query->lessThanOrEqual('date', date('Y-m-d'));
             $constraints[] = $query->greaterThan('position', 0);
         }
         $timeLow = $this->settings['list']['timeRestrictionLow'] ?? null;
         if (!empty($timeLow)) {
-            $constraints[] = $query->greaterThanOrEqual('date', strftime('%Y-%m-%d', strtotime($timeLow)));
+            $constraints[] = $query->greaterThanOrEqual('date', date('Y-m-d', strtotime($timeLow)));
         }
 
         $timeHigh = $this->settings['list']['timeRestrictionHigh'] ?? null;
         if (!empty($timeHigh)) {
-            $constraints[] = $query->lessThanOrEqual('date', strftime('%Y-%m-%d', strtotime($timeHigh)));
+            $constraints[] = $query->lessThanOrEqual('date', date('Y-m-d', strtotime($timeHigh)));
         }
 
         $timeRolling = $this->settings['list']['timeRestrictionRolling'] ?? null;
         if (!empty($timeRolling)) {
-            $rollingDate = strftime('%Y-%m-%d', strtotime('-' . abs($timeRolling) . ' days'));
+            $rollingDate = date('Y-m-d', strtotime('-' . abs($timeRolling) . ' days'));
             $constraints[] = $query->greaterThanOrEqual('date', $rollingDate);
         }
 
@@ -124,7 +124,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $query = $this->getListQuery();
         $constraints = $this->getCommonConstraints();
         $results = $query
-            ->matching($query->logicalAnd($constraints))
+            ->matching($query->logicalAnd(...$constraints))
             ->execute();
 
         $this->view->assign('results', $results);
@@ -152,7 +152,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         ];
         $constraints [] = $query->in('competitionType.name', $championshipArray);
         $constraints [] = $query->lessThanOrEqual('position', 1);
-        $query->matching($query->logicalAnd($constraints));
+        $query->matching($query->logicalAnd(...$constraints));
         $queryResult = $query->execute();
         $entities = $queryResult->toArray();
         // reset constraints
@@ -161,7 +161,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $this->view->assign('championchips', $entities);
 
         $constraints [] = $query->equals('promotion', 1);
-        $query->matching($query->logicalAnd($constraints));
+        $query->matching($query->logicalAnd(...$constraints));
         $queryResult = $query->execute();
         $entities = $queryResult->toArray();
         // reset constraints
@@ -175,7 +175,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         ];
         $query
             ->setOrderings($orderArray)
-            ->matching($query->logicalAnd($constraints));
+            ->matching($query->logicalAnd(...$constraints));
         $queryResult = $query->execute();
         $entities = $queryResult->toArray();
         // reset constraints
@@ -189,7 +189,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         ];
         $query
             ->setOrderings($orderArray)
-            ->matching($query->logicalAnd($constraints));
+            ->matching($query->logicalAnd(...$constraints));
         $queryResult = $query->execute();
         $entities = $queryResult->toArray();
         $filteredEntities = [];
@@ -222,7 +222,7 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         ];
         $query
             ->setOrderings($orderArray)
-            ->matching($query->logicalAnd($constraints));
+            ->matching($query->logicalAnd(...$constraints));
         $queryResult = $query->execute();
         $entities = $queryResult->toArray();
         $this->view->assign('competitions', $entities);
