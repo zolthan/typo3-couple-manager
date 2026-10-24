@@ -1,6 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       data-namespace-typo3-fluid="true">
-<div class="card">
+<div class="card card-champion">
     <f:switch expression="{resultItem.position}">
         <f:case value="1"><f:variable name="trophyColor" value="gold"/></f:case>
         <f:case value="2"><f:variable name="trophyColor" value="silver"/></f:case>
@@ -37,7 +37,7 @@
                         - <f:translate key="LLL:EXT:couple_manager/Resources/Private/Language/locallang.xlf:{resultItem.discipline}"/>
                     </strong>
                 </p>
-                <p>{f:format.date(date: resultItem.date, format: "%d.%m.%Y")} - {competition.title} - {competition.city}</p>
+                <p>{f:format.date(date: resultItem.date, format: "d.m.Y")} - {competition.title} - {competition.city}</p>
                 <p>
                     Platz {resultItem.position} / Gestartete Paare {resultItem.participantCount}
                 </p>
