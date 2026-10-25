@@ -5,7 +5,7 @@
 [![TYPO3](https://img.shields.io/badge/TYPO3-13.4-orange.svg)](https://typo3.org)
 [![PHP](https://img.shields.io/badge/PHP-8.2--8.4-blue.svg)](https://php.net)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-3.0.2-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
+[![Version](https://img.shields.io/badge/version-3.0.3-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
 
 ---
 
@@ -271,6 +271,9 @@ composer test:unit
 ---
 
 ## Changelog
+
+### 3.0.3
+- Fix: the tables of the success list scroll horizontally on small screens instead of being cut off
 
 ### 3.0.2
 - Fix: `CouplePageTitleProvider` is public, so it can be used as a page title provider in TYPO3 13
