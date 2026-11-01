@@ -127,17 +127,11 @@ return [
             'exclude' => false,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.competition_type',
             'config' => [
-                'type' => 'group',
-                'allowed' => 'tx_couplemanager_domain_model_competitiontype',
-                'size' => 1,
-                'minitems' => 1,
-                'maxitems' => 1,
-                'suggestOptions' => [
-                    'default' => [
-                        'additionalSearchFields' => 'organization',
-                        'receiverClass' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\CompetitionTypeSuggestReceiver::class,
-                    ],
-                ],
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_couplemanager_domain_model_competitiontype',
+                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getCompetitionTypeOptionList',
+                'required' => true,
                 'fieldControl' => [
                     'addRecord' => [
                         'disabled' => false,
