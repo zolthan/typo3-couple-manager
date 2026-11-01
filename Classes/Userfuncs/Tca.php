@@ -22,7 +22,6 @@ use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CompetitionTypeReposi
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\CoupleRepository;
 use SchwarzWeissReutlingen\CoupleManager\Domain\Repository\ResultRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
@@ -133,104 +132,6 @@ class Tca
         if ($couple) {
             $parameters['title'] = $couple->getCoupleName();
         }
-    }
-
-    /**
-     * @param array $config
-     *
-     * @return array
-     */
-    public function getCoupleOptionList($config)
-    {
-        $optionList = [];
-        $query = $this->coupleRepository->createQuery();
-        $query->getQuerySettings()
-            ->setIgnoreEnableFields(true)
-            ->setStoragePageIds([$config['row']['pid']]);
-        $query->setOrderings(
-            [
-                'active_couple' => QueryInterface::ORDER_DESCENDING,
-                'man_last_name' => QueryInterface::ORDER_ASCENDING,
-                'man_first_name' => QueryInterface::ORDER_ASCENDING,
-                'woman_last_name' => QueryInterface::ORDER_ASCENDING,
-                'woman_first_name' => QueryInterface::ORDER_ASCENDING,
-            ]
-        );
-        $result = $query->execute();
-        foreach ($result as $couple) {
-            /** @var Couple $couple */
-            $optionList[] = [$couple->getCoupleName(), $couple->getUid()];
-        }
-        // return config
-        // $config['items'] = array_merge($config['items'], $optionList);
-        $config['items'] = array_merge([['label' => '', 'value' => '']], $optionList);
-        return $config;
-    }
-
-    /**
-     * @param array $config
-     *
-     * @return array
-     */
-    public function getCompetionOptionList($config)
-    {
-        $optionList = [];
-        $query = $this->competitionRepository->createQuery();
-        $query->getQuerySettings()
-            ->setIgnoreEnableFields(true)
-            ->setStoragePageIds([$config['row']['pid']]);
-        $query->setOrderings(
-            [
-                'date_start' => QueryInterface::ORDER_DESCENDING,
-                'title' => QueryInterface::ORDER_ASCENDING,
-                'organizer' => QueryInterface::ORDER_ASCENDING,
-                'city' => QueryInterface::ORDER_ASCENDING,
-            ]
-        );
-        $result = $query->execute();
-        foreach ($result as $competition) {
-            /** @var Competition $competition */
-            $optionList[] = [
-                $competition->getIdentifier(),
-                $competition->getUid(),
-                'tcarecords-tx_couplemanager_domain_model_competition-default',
-            ];
-        }
-        // return config
-        $config['items'] = array_merge([['label' => '', 'value' => '']], $optionList);
-        return $config;
-    }
-
-    /**
-     * @param array $config
-     *
-     * @return array
-     */
-    public function getCompetionTypeOptionList($config)
-    {
-        $optionList = [];
-        $query = $this->competitionTypeRepository->createQuery();
-        $query->getQuerySettings()
-            ->setIgnoreEnableFields(true)
-            ->setStoragePageIds([$config['row']['pid']]);
-        $query->setOrderings(
-            [
-                'organization' => QueryInterface::ORDER_ASCENDING,
-                'name' => QueryInterface::ORDER_ASCENDING,
-            ]
-        );
-        $result = $query->execute();
-        foreach ($result as $type) {
-            /** @var CompetitionType $type */
-            $optionList[] = [
-                $type->getOptionLabel(),
-                $type->getUid(),
-                'tcarecords-tx_couplemanager_domain_model_competitiontype-default',
-            ];
-        }
-        // return config
-        $config['items'] = array_merge([['label' => '', 'value' => '']], $optionList);
-        return $config;
     }
 
     /**
