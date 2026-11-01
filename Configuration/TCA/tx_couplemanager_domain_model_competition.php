@@ -56,12 +56,9 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.organizer',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_couplemanager_domain_model_organizer',
-                'foreign_table_where' => 'ORDER BY tx_couplemanager_domain_model_organizer.name',
+                'type' => 'group',
+                'allowed' => 'tx_couplemanager_domain_model_organizer',
                 'MM' => 'tx_couplemanager_domain_model_organizer_competition',
-                'enableMultiSelectFilterTextfield' => true,
                 'fieldControl' => [
                     'addRecord' => [
                         'disabled' => false,

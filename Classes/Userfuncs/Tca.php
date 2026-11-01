@@ -163,7 +163,7 @@ class Tca
         }
         // return config
         // $config['items'] = array_merge($config['items'], $optionList);
-        $config['items'] = $optionList;
+        $config['items'] = array_merge([['label' => '', 'value' => '']], $optionList);
         return $config;
     }
 
@@ -197,7 +197,7 @@ class Tca
             ];
         }
         // return config
-        $config['items'] = $optionList;
+        $config['items'] = array_merge([['label' => '', 'value' => '']], $optionList);
         return $config;
     }
 
@@ -229,7 +229,7 @@ class Tca
             ];
         }
         // return config
-        $config['items'] = $optionList;
+        $config['items'] = array_merge([['label' => '', 'value' => '']], $optionList);
         return $config;
     }
 
