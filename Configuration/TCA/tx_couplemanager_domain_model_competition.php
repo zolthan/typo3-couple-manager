@@ -6,6 +6,7 @@ return [
     'ctrl' => [
         'title' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition',
         'label' => 'title',
+        'label_userFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getCompetitionIdentifier',
         'default_sortby' => 'date_start DESC, title ASC',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -56,12 +57,14 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_competition.organizer',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_couplemanager_domain_model_organizer',
-                'foreign_table_where' => 'ORDER BY tx_couplemanager_domain_model_organizer.name',
+                'type' => 'group',
+                'allowed' => 'tx_couplemanager_domain_model_organizer',
                 'MM' => 'tx_couplemanager_domain_model_organizer_competition',
-                'enableMultiSelectFilterTextfield' => true,
+                'suggestOptions' => [
+                    'default' => [
+                        'receiverClass' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\SuggestReceiver::class,
+                    ],
+                ],
                 'fieldControl' => [
                     'addRecord' => [
                         'disabled' => false,

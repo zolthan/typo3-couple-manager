@@ -50,14 +50,18 @@ return [
             'exclude' => false,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.couple',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_couplemanager_domain_model_couple',
-//                    'foreign_table_where' => 'ORDER BY date_start DESC, title ASC',
-                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getCoupleOptionList',
+                'type' => 'group',
+                'allowed' => 'tx_couplemanager_domain_model_couple',
+                'size' => 1,
                 'minitems' => 1,
                 'maxitems' => 1,
-                'enableMultiSelectFilterTextfield' => true,
+                'suggestOptions' => [
+                    'default' => [
+                        'additionalSearchFields' => 'man_first_name,woman_first_name,woman_last_name',
+                        'orderBy' => 'active_couple DESC, man_last_name ASC',
+                        'receiverClass' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\SuggestReceiver::class,
+                    ],
+                ],
                 'fieldControl' => [
                     'addRecord' => [
                         'disabled' => false,
@@ -89,14 +93,18 @@ return [
             'exclude' => false,
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.competition',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_couplemanager_domain_model_competition',
-                'foreign_table_where' => 'ORDER BY date_start DESC, title ASC',
-                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getCompetionOptionList',
+                'type' => 'group',
+                'allowed' => 'tx_couplemanager_domain_model_competition',
+                'size' => 1,
                 'minitems' => 1,
                 'maxitems' => 1,
-                'enableMultiSelectFilterTextfield' => true,
+                'suggestOptions' => [
+                    'default' => [
+                        'additionalSearchFields' => 'city,date_start',
+                        'orderBy' => 'date_start DESC, title ASC',
+                        'receiverClass' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\SuggestReceiver::class,
+                    ],
+                ],
                 'fieldControl' => [
                     'addRecord' => [
                         'disabled' => false,
@@ -120,13 +128,10 @@ return [
             'label' => 'LLL:EXT:couple_manager/Resources/Private/Language/locallang_db.xlf:tx_couplemanager_domain_model_result.competition_type',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
+                'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_couplemanager_domain_model_competitiontype',
-                'foreign_table_where' => 'ORDER BY organization ASC, name ASC',
-                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getCompetionTypeOptionList',
-                'minitems' => 1,
-                'maxitems' => 1,
-                'enableMultiSelectFilterTextfield' => true,
+                'itemsProcFunc' => \SchwarzWeissReutlingen\CoupleManager\Userfuncs\Tca::class . '->getCompetitionTypeOptionList',
+                'required' => true,
                 'fieldControl' => [
                     'addRecord' => [
                         'disabled' => false,
