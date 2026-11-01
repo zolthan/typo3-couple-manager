@@ -62,7 +62,7 @@ class Tca
     protected function getObjectByUid($repository, $uid)
     {
         $query = $repository->createQuery();
-        $query->getQuerySettings()->setIgnoreEnableFields(true);
+        $query->getQuerySettings()->setIgnoreEnableFields(true)->setRespectStoragePage(false);
         $query->matching($query->equals('uid', $uid));
         return $query->execute()->getFirst();
     }
@@ -92,7 +92,7 @@ class Tca
             if ($couple) {
                 $coupleName = $couple->getCoupleName();
             }
-            $parameters['title'] = sprintf('%s - %s - %s', $result->getDate()->format('d.m.Y'), $coupleName, $competitionName);
+            $parameters['title'] = sprintf('%s - %s - %s', $result->getDate()?->format('d.m.Y'), $coupleName, $competitionName);
         }
     }
 
