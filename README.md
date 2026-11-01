@@ -5,7 +5,7 @@
 [![TYPO3](https://img.shields.io/badge/TYPO3-13.4-orange.svg)](https://typo3.org)
 [![PHP](https://img.shields.io/badge/PHP-8.2--8.4-blue.svg)](https://php.net)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-3.0.3-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
+[![Version](https://img.shields.io/badge/version-3.1.0-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
 
 ---
 
@@ -19,7 +19,7 @@
 - **Championship icons** — WM, EM, DM, and Landesmeisterschaft marked with an icon, a tooltip, and a screen-reader text
 - **Speaking URLs** — per-couple slug field for clean detail-page URLs via TYPO3 RouteEnhancer
 - **Custom page title** — `CouplePageTitleProvider` surfaces the couple's name in the page title/breadcrumb
-- **Backend optimised** — custom TCA labels, sorted selects, full workspace and localization support
+- **Backend optimised** — custom TCA labels, type-ahead search for couples, competitions, and organizers, competition types ordered by last use, full workspace and localization support
 
 ---
 
@@ -271,6 +271,12 @@ composer test:unit
 ---
 
 ## Changelog
+
+### 3.1.0
+- Couple and competition on results, and the organizer on competitions, are search fields with type-ahead and the record browser; they also work on iPad, where the side-by-side select could not be used
+- Competition type on results is a dropdown with the most recently used types first
+- Competitions are labelled with date, title, and city in the backend
+- Fix: backend label functions find their records, so selected records show their names instead of "[No title]"
 
 ### 3.0.3
 - Fix: the tables of the success list scroll horizontally on small screens instead of being cut off
