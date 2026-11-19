@@ -197,6 +197,9 @@ class ResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $filteredEntities = [];
         foreach ($entities as $entity) {
             /** @var Result $entity */
+            if ($entity->getParticipantCount() <= 0) {
+                continue;
+            }
             $quotient = $entity->getPosition() / $entity->getParticipantCount();
             if ($quotient < 0.25) {
                 $filteredEntities[] = $entity;
