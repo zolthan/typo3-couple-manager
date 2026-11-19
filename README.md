@@ -5,7 +5,7 @@
 [![TYPO3](https://img.shields.io/badge/TYPO3-13.4-orange.svg)](https://typo3.org)
 [![PHP](https://img.shields.io/badge/PHP-8.2--8.4-blue.svg)](https://php.net)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-3.1.0-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
+[![Version](https://img.shields.io/badge/version-3.1.1-brightgreen.svg)](https://github.com/zolthan/typo3-couple-manager/releases)
 
 ---
 
@@ -271,6 +271,9 @@ composer test:unit
 ---
 
 ## Changelog
+
+### 3.1.1
+- Fix: the success list skips results without a participant count instead of failing with a division by zero
 
 ### 3.1.0
 - Couple and competition on results, and the organizer on competitions, are search fields with type-ahead and the record browser; they also work on iPad, where the side-by-side select could not be used
